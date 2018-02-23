@@ -1,0 +1,1 @@
+# Blinds static pages
