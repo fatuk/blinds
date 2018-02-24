@@ -1,0 +1,53 @@
+<div class="product" ng-class="{'single': categoryItem.single, 'active': isHover, 'main-category': categoryItem.isMainCategory}" ng-mouseenter="hoverIt(true)" ng-mouseleave="hoverIt(false)" ng-click="touchElement ? hoverIt(false) : ''">
+	<!-- Product view -->
+	<div class="product__wrapper">
+        <div class="product__inner main-category__inner" ng-if="categoryItem.isMainCategory">
+            <!-- Img -->
+            <div class="product__img main-category__img">
+                <div class="product__title main-category__title">
+                    <a href="#!/{{categoryItem.link}}">{{categoryItem.title}}</a>
+                </div>
+                <!-- Btn -->
+                <a href="#!/{{categoryItem.link}}" class="btn btn_green" >
+                    {{categoryItem.productsQuantity}} товаров
+                </a>
+
+            </div>
+        </div>
+
+		<div class="product__inner subCategory" ng-if="!categoryItem.isMainCategory">
+            <!-- Img -->
+            <a
+                    href="#!/{{categoryItem.link}}"
+                    ng-style="{'background-image':'url(' + categoryItem.image + ')'}"
+					class="product__img subCategory__img"
+					ng-attr-alt="{{categoryItem.title}}"
+                    >
+                <button class="btn btn_bordering angle-pointer subCategory__btn-cover">перейти в раздел</button>
+            </a>
+			<div class="product__container">
+				<header class="product__header">
+					<!-- Title -->
+					<div class="product__title subCategory__title">
+						<a href="#!/{{categoryItem.link}}">{{categoryItem.title}}</a>
+					</div>
+				</header>
+
+			</div>
+			<!-- Footer -->
+			<footer class="product__footer">
+				<!-- Price container -->
+				<div class="product__price-container">
+					<!-- New price -->
+					<div class="product__price-new">
+						<strong>от {{categoryItem.price | number:0}} р.</strong><!--/м<sup>2</sup>-->
+					</div>
+				</div>
+				<!-- Btn -->
+                <a href="#!/{{categoryItem.link}}" class="btn btn_blue btn_size-1">
+                    {{categoryItem.productsQuantity}} товаров
+				</a>
+			</footer>
+		</div>
+	</div>
+</div>

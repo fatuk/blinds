@@ -62,6 +62,7 @@ gulp.task('copyAssets', () => {
 gulp.task('handlebars', () => {
 	templateData.timestamp = + new Date();
 	return gulp.src('app/templates/*.handlebars')
+		.pipe(plumber())
 		.pipe(handlebars(templateData, {
 			ignorePartials: true, //ignores the unknown partials
 			partials: {

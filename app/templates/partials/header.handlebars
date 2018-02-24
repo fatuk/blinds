@@ -1,0 +1,89 @@
+<header class="site-header">
+    <div class="site-header__inner">
+        <div class="container">
+            <div class="site-header__container site-header__container_left">
+                <!-- Links set -->
+                <div class="links-set">
+                    <ul class="links-set__list">
+                        <li class="links-set__item hide-in-portrait">
+                            <a href="#!/Payment" class="links-set__link">
+                                <svg class="icon icon-money" xmlns="http://www.w3.org/2000/svg" version="1.1"><use xlink:href="icons/icons.svg#money"></use></svg>
+								<span class="links-set__text">
+									Оплата
+								</span>
+                            </a>
+                        </li>
+                        <li class="links-set__item hide-in-portrait">
+                            <a href="#!/Delivery_and_installation" class="links-set__link">
+                                <svg class="icon icon-truck" xmlns="http://www.w3.org/2000/svg" version="1.1"><use xlink:href="icons/icons.svg#truck"></use></svg>
+								<span class="links-set__text">
+									Доставка
+								</span>
+                            </a>
+                        </li>
+                        <li class="links-set__item hide-in-portrait">
+                            <a href="#!/contacts" class="links-set__link">
+                                <svg class="icon icon-contacts" xmlns="http://www.w3.org/2000/svg" version="1.1"><use xlink:href="icons/icons.svg#contacts"></use></svg>
+								<span class="links-set__text">
+									Контакты
+								</span>
+                            </a>
+                        </li>
+                        <li class="links-set__item show-in-portrait">
+                            <button class="links-set__link" ng-click="openCallme()">
+                                <svg class="icon icon-callme" xmlns="http://www.w3.org/2000/svg" version="1.1"><use xlink:href="icons/icons.svg#callme"></use></svg>
+								<span class="links-set__text">
+									Звонок
+								</span>
+                            </button>
+                        </li>
+                        <li class="links-set__item">
+                            <span class="links-set__link" ng-click="openSearch()">
+                                <svg class="icon icon-search" xmlns="http://www.w3.org/2000/svg" version="1.1"><use xlink:href="icons/icons.svg#search"></use></svg>
+								<span class="links-set__text">
+									Поиск
+								</span>
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- Logo -->
+            <div class="logo">
+                <a href="#!/" class="logo__link">
+                    <span class="logo__img"></span>
+                </a>
+                <div class="logo__shadow"></div>
+            </div>
+            <div class="site-header__container site-header__container_right">
+                <!-- Cart -->
+                {{!-- <cart></cart> --}}
+                {{>cart}}
+                <!-- Call me -->
+                <div class="call-me hide-in-portrait">
+                    <div class="call-me__icon">
+                        <svg class="icon icon-operator" xmlns="http://www.w3.org/2000/svg" version="1.1"><use xlink:href="icons/icons.svg#operator"></use></svg>
+                    </div>
+                    <div class="call-me__actions-wrap">
+                        <div class="call-me__actions">
+                            <button class="call-me__link">
+                                <span class="ya-phone" >+7 (495) 542-64-84</span>
+                            </button>
+                            <div class="call-me__time">
+                                {{workingHours}}
+                            </div>
+                            <button class="btn btn_blue call-me__btn" ng-click="openCallme()">
+                                заказать звонок
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <button class="site-header__menu-toggle" ng-click="toggleOffCanvas('right');">
+                    <div class="icon-menu" ng-class="{'active':(offCanvasSide === 'right')}"><span></span></div>
+                </button>
+            </div>
+        </div>
+    </div>
+    <!-- Main menus -->
+    <div class="container container_menu" ng-include="'includes/main-nav.html'"></div>
+</header>

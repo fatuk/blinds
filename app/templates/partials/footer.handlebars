@@ -1,0 +1,346 @@
+<footer class="site-footer">
+    <!-- Seo -->
+    <div class="seo" ng-if="!!blockContent">
+        <div class="container">
+            <!-- Logo -->
+            <img src="img/logo_footer.png" alt="Дизайн Окна" class="seo__logo hide-in-mobile">
+            <div class="seo__container" ng-bind-html="blockContentHtml"></div>
+        </div>
+    </div>
+    <div class="site-footer__category-info" ng-if="!!advancedFooterInfo.special.title || !!advancedFooterInfo.special.text || !!advancedFooterInfo.material.title || !!advancedFooterInfo.material.text || !!advancedFooterInfo.shipping.title || !!advancedFooterInfo.shipping.text">
+        <div class="container">
+            <div class="category-footer-info-item special-info-block" ng-if="!!advancedFooterInfo.special.title || !!advancedFooterInfo.special.text">
+                <div class="category-footer-info-item__icon-wrapper"></div>
+                <div class="text-block">
+                    <div class="text-block__column text-block__column_padding">
+                        <!-- Title -->
+                        <div class="text-block__title">
+                            {{advancedFooterInfo.special.title}}                        </div>
+                        <div class="text-block__text" itemprop="description" ng-bind-html="advancedFooterInfo.special.text"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="category-footer-info-item material-info-block" ng-if="!!advancedFooterInfo.material.title || !!advancedFooterInfo.material.text">
+                <div class="category-footer-info-item__icon-wrapper"></div>
+                <div class="text-block">
+                    <div class="text-block__column text-block__column_padding">
+                        <!-- Title -->
+                        <div class="text-block__title">
+                            {{advancedFooterInfo.material.title}}                        </div>
+                        <div class="text-block__text" itemprop="description" ng-bind-html="advancedFooterInfo.material.text"></div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="category-footer-info-item delivery-info-block" ng-if="!!advancedFooterInfo.shipping.title || !!advancedFooterInfo.shipping.text">
+                    <div class="category-footer-info-item__icon-wrapper"></div>
+                    <div class="text-block">
+                        <div class="text-block__column text-block__column_padding">
+                            <!-- Title -->
+                            <div class="text-block__title">
+                                {{advancedFooterInfo.shipping.title}}                            </div>
+                            <div class="text-block__text" itemprop="description" ng-bind-html="advancedFooterInfo.shipping.text"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="site-footer__menu">
+        <div class="container">
+            <!-- Top -->
+            <div class="site-footer__row">
+                <!-- Left -->
+                <div class="site-footer__column site-footer__column_left hide-in-tablet show-in-mobile">
+                    <!-- Contacts -->
+                    <div class="contacts">
+                        <!-- Title -->
+                        <div class="site-footer__title">
+                            Наши контакты
+                        </div>
+                        <!-- List -->
+                        <div itemscope itemtype="http://schema.org/Organization"><ul class="contacts__list">
+                            <li class="contacts__item">
+                                <a href="tel:+74955426484" class="contacts__link">
+                                    <span itemprop="telephone">+7 (495) 542-64-84</span>
+                                </a>
+                            </li>
+                            <li class="contacts__item">
+                                <a href="mailto:info@design-okna.ru" class="contacts__link">
+                                    <span itemprop="email">info@design-okna.ru</span>
+                                </a>
+                            </li>
+                            <li class="contacts__item">
+                                <span itemprop="name">Дизайн Окна</span><div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">г. <span itemprop="addressLocality">Москва</span>, <span itemprop="streetAddress">Новочеркасский бульвар,<br>д.41, корп.3</span>, <span itemprop="postalCode">109369</span></div>
+                            </li>
+                        </ul></div>                    </div>
+                    <!-- Socials -->
+                    <div class="socials">
+                        <ul class="socials__list">
+                            <li class="socials__item">
+                                <a href="https://vk.com/design_okna_msk" target="_blank" class="socials__link">
+                                    <svg class="icon icon-vk"><use xlink:href="icons/icons.svg#vk"></use></svg>
+                                </a>
+                            </li>
+                            <li class="socials__item">
+                                <a href="https://www.facebook.com/1379446162362517/" target="_blank" class="socials__link">
+                                    <svg class="icon icon-fb"><use xlink:href="icons/icons.svg#fb"></use></svg>
+                                </a>
+                            </li>
+                            <li class="socials__item">
+                                <a href="http://ok.ru/group/52696953127004" target="_blank" class="socials__link">
+                                    <svg class="icon icon-ok"><use xlink:href="icons/icons.svg#ok"></use></svg>
+                                </a>
+                            </li>
+                            <li class="socials__item">
+                                <a href="https://www.instagram.com/designoknamoscow/" target="_blank" class="socials__link">
+                                    <svg class="icon icon-insta"><use xlink:href="icons/icons.svg#insta"></use></svg>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Right -->
+                <div class="site-footer__column site-footer__column_right">
+                    <!-- Title -->
+                    <div class="site-footer__title">
+                        Виды жалюзи                    </div>
+                    <!-- Menu vertical -->
+                    <div class="menu-vertical">
+                                                <div class="menu-vertical__column">
+                            <a href="#!/catalog/gorizontalnye_zhalyuzi" class="menu-vertical__title">
+                                Горизонтальные жалюзи                            </a>
+                            <ul class="menu-vertical__list">
+                                                                <li class="menu-vertical__item"><a href="#!/catalog/gorizontalnye_zhalyuzi/alyuminevye" class="menu-vertical__link">Алюминиевые</a></li>
+                                                                <li class="menu-vertical__item"><a href="#!/catalog/gorizontalnye_zhalyuzi/plastikovye" class="menu-vertical__link">Пластиковые</a></li>
+                                                                <li class="menu-vertical__item"><a href="#!/catalog/gorizontalnye_zhalyuzi/bambukovye" class="menu-vertical__link">Бамбуковые</a></li>
+                                                                <li class="menu-vertical__item"><a href="#!/catalog/gorizontalnye_zhalyuzi/volna" class="menu-vertical__link">Волна</a></li>
+                                                                <li class="menu-vertical__item"><a href="#!/catalog/gorizontalnye_zhalyuzi/derevyannye" class="menu-vertical__link">Деревянные</a></li>
+                                                            </ul>
+                        </div>
+                                                <div class="menu-vertical__column">
+                            <a href="#!/catalog/vertikalnye_zhalyuzi" class="menu-vertical__title">
+                                Вертикальные жалюзи                            </a>
+                            <ul class="menu-vertical__list">
+                                                                <li class="menu-vertical__item"><a href="#!/catalog/vertikalnye_zhalyuzi/tkanevye" class="menu-vertical__link">Тканевые</a></li>
+                                                                <li class="menu-vertical__item"><a href="#!/catalog/vertikalnye_zhalyuzi/alyuminievye" class="menu-vertical__link">Алюминиевые</a></li>
+                                                                <li class="menu-vertical__item"><a href="#!/catalog/vertikalnye_zhalyuzi/plastikovye" class="menu-vertical__link">Пластиковые</a></li>
+                                                                <li class="menu-vertical__item"><a href="#!/catalog/vertikalnye_zhalyuzi/verevochnye" class="menu-vertical__link">Бриз</a></li>
+                                                                <li class="menu-vertical__item"><a href="#!/product/vertikalnye_zhalyuzi/tkanevye/multifakturnye_vertikalnye_zhalyuzi" class="menu-vertical__link">Мультифактурные</a></li>
+                                                            </ul>
+                        </div>
+                                                <div class="menu-vertical__column">
+                            <a href="#!/catalog/rulonnye_zhalyuzi" class="menu-vertical__title">
+                                Рулонные жалюзи                            </a>
+                            <ul class="menu-vertical__list">
+                                                                <li class="menu-vertical__item"><a href="#!/catalog/rulonnye_zhalyuzi/tkanevye" class="menu-vertical__link">Тканевые</a></li>
+                                                                <li class="menu-vertical__item"><a href="#!/catalog/rulonnye_zhalyuzi/zebra" class="menu-vertical__link">Зебра</a></li>
+                                                                <li class="menu-vertical__item"><a href="#!/product/rulonnye_zhalyuzi/tkanevye/rulonnye_zhalyuzi_mini_s_valom_dlya_namotki_tkani/palanga__bezhevyy" class="menu-vertical__link">Минирулонные</a></li>
+                                                                <li class="menu-vertical__item"><a href="#!/catalog/rulonnye_zhalyuzi/uni" class="menu-vertical__link">Уни (на створку окна)</a></li>
+                                                                <li class="menu-vertical__item"><a href="#!/catalog/mirazh/tkani" class="menu-vertical__link">Жалюзи Мираж</a></li>
+                                                            </ul>
+                        </div>
+                                                <div class="menu-vertical__column">
+                            <a href="#!/product/gorizontalnye_zhalyuzi/alyuminevye/kassetnye_alyuminievye_zhalyuzi" class="menu-vertical__title">
+                                Жалюзи на окна ПВХ                            </a>
+                            <ul class="menu-vertical__list">
+                                                                <li class="menu-vertical__item"><a href="#!/product/gorizontalnye_zhalyuzi/alyuminevye/kassetnye_alyuminievye_zhalyuzi" class="menu-vertical__link">Кассетные горизонтальные</a></li>
+                                                                <li class="menu-vertical__item"><a href="#!/catalog/rulonnye_zhalyuzi/uni" class="menu-vertical__link">Рулонно кассетные</a></li>
+                                                            </ul>
+                        </div>
+                                            </div>
+                </div>
+            </div>
+            <hr class="site-footer__delimeter">
+            <div class="site-footer__row">
+                <div class="site-footer__column site-footer__column_left hide-in-tablet">
+                    <!-- Write us -->
+                    <div class="site-footer__title">
+                        Обратная связь
+                    </div>
+                    <p class="site-footer__text">
+                        Есть вопросы, пожелания, замечания или хотите нас похвалить?
+                    </p>
+                    <button class="btn btn_blue" ng-click="openFeedback()">
+                        Напишите нам
+                    </button>
+                </div>
+                <div class="site-footer__column site-footer__column_right">
+                    <!-- Title -->
+                    <div class="site-footer__title">
+                        Виды штор                    </div>
+                    <!-- Menu vertical -->
+                    <div class="menu-vertical menu-vertical_tablet">
+                                                    <div class="menu-vertical__column">
+                                <a href="#!/catalog/klassicheskie_shtory" class="menu-vertical__title">
+                                    Шторы                                </a>
+                                <ul class="menu-vertical__list">
+                                                                            <li class="menu-vertical__item"><a href="#!/catalog/karnizy" class="menu-vertical__link">Карнизы</a></li>
+                                                                            <li class="menu-vertical__item"><a href="#!/catalog/rimskie_shtory" class="menu-vertical__link">Римские</a></li>
+                                                                    </ul>
+                            </div>
+                                                    <div class="menu-vertical__column">
+                                <a href="#!/catalog/plisse" class="menu-vertical__title">
+                                    Шторы Плиссе                                </a>
+                                <ul class="menu-vertical__list">
+                                                                            <li class="menu-vertical__item"><a href="#!/catalog/plisse/na-plastikovye-okna" class="menu-vertical__link">На пластиковые окна</a></li>
+                                                                            <li class="menu-vertical__item"><a href="#!/catalog/plisse/gofre" class="menu-vertical__link">Гофре</a></li>
+                                                                            <li class="menu-vertical__item"><a href="#!/catalog/plisse/natyazhnye" class="menu-vertical__link">Натяжные шторы плиссе</a></li>
+                                                                            <li class="menu-vertical__item"><a href="#!/catalog/plisse/den_noch" class="menu-vertical__link">Шторы плиссе "день-ночь"</a></li>
+                                                                            <li class="menu-vertical__item"><a href="#!/catalog/plisse/standartnye" class="menu-vertical__link">Ткани для штор плиссе</a></li>
+                                                                    </ul>
+                            </div>
+                                                    <div class="menu-vertical__column">
+                                <a href="#!/catalog/rulonnye_zhalyuzi" class="menu-vertical__title">
+                                    Рулонные шторы                                </a>
+                                <ul class="menu-vertical__list">
+                                                                            <li class="menu-vertical__item"><a href="#!/catalog/rulonnye-shtory/den-noch" class="menu-vertical__link">Двойные "день-ночь"</a></li>
+                                                                            <li class="menu-vertical__item"><a href="#!/catalog/rulonnye-shtory/na-plastikovye-okna" class="menu-vertical__link">На пластиковые окна</a></li>
+                                                                            <li class="menu-vertical__item"><a href="#!/catalog/rulonnye-shtory/bez-sverleniya" class="menu-vertical__link">Без сверления</a></li>
+                                                                            <li class="menu-vertical__item"><a href="#!/catalog/rulonnye-shtory/s-fotopechatyu" class="menu-vertical__link">С фотопечатью</a></li>
+                                                                            <li class="menu-vertical__item"><a href="#!/catalog/rulonnye-shtory/svetonepronicaemye" class="menu-vertical__link">Светонепроницаемые</a></li>
+                                                                    </ul>
+                            </div>
+                                                    <div class="menu-vertical__column">
+                                <a href="#!/question" class="menu-vertical__title">
+                                    Вопрос-ответ (FAQ)                                </a>
+                                <ul class="menu-vertical__list">
+                                                                            <li class="menu-vertical__item"><a href="#!/garanty" class="menu-vertical__link">Гарантии</a></li>
+                                                                            <li class="menu-vertical__item"><a href="#!/algoritm" class="menu-vertical__link">Как заказать</a></li>
+                                                                            <li class="menu-vertical__item"><a href="#!/constructor" class="menu-vertical__link">Конструктор</a></li>
+                                                                            <li class="menu-vertical__item"><a href="#!/skidki_28_protsentov" class="menu-vertical__link">Скидки</a></li>
+                                                                            <li class="menu-vertical__item"><a href="#!/otzyvy" class="menu-vertical__link">Отзывы</a></li>
+                                                                            <li class="menu-vertical__item"><a href="#!/contacts" class="menu-vertical__link">Контакты</a></li>
+                                                                    </ul>
+                            </div>
+                                            </div>
+                </div>
+            </div>
+            <!-- Tablet contacts and socials -->
+            <div class="site-footer__row site-footer__row_tablet hide-in-desktop">
+                <div class="site-footer__column site-footer__column_left">
+                    <!-- Write us -->
+                    <div class="site-footer__title">
+                        Обратная связь
+                    </div>
+                    <p class="site-footer__text">
+                        Есть вопросы, пожелания, замечания или хотите нас похвалить?
+                    </p>
+                    <button class="btn btn_blue" ng-click="openFeedback()">
+                        Напишите нам
+                    </button>
+                </div>
+                <div class="site-footer__column site-footer__column_middle hide-in-mobile">
+                    <!-- Contacts -->
+                    <div class="contacts">
+                        <!-- Title -->
+                        <div class="site-footer__title">
+                            Наши контакты
+                        </div>
+                        <!-- List -->
+                        <div itemscope itemtype="http://schema.org/Organization"><ul class="contacts__list">
+                            <li class="contacts__item">
+                                <a href="tel:+74955426484" class="contacts__link">
+                                    <span itemprop="telephone">+7 (495) 542-64-84</span>
+                                </a>
+                            </li>
+                            <li class="contacts__item">
+                                <a href="mailto:info@design-okna.ru" class="contacts__link">
+                                    <span itemprop="email">info@design-okna.ru</span>
+                                </a>
+                            </li>
+                            <li class="contacts__item">
+                                <span itemprop="name">Дизайн Окна</span><div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">г. <span itemprop="addressLocality">Москва</span>, <span itemprop="streetAddress">Новочеркасский бульвар,<br>д.41, корп.3</span>, <span itemprop="postalCode">109369</span></div>
+                            </li>
+                        </ul></div>                    </div>
+                </div>
+                <div class="site-footer__column site-footer__column_right hide-in-mobile">
+                    <!-- Vendor -->
+                    <div class="vendor vendor_tablet">
+                        <p class="vendor__text">
+                            <svg class="icon icon-lock"><use xlink:href="icons/icons.svg#lock"></use></svg>
+                            Передача данных зашифрована и безопасна
+                        </p>
+                    </div>
+                    <!-- Socials -->
+                    <div class="socials">
+                        <ul class="socials__list">
+                            <li class="socials__item">
+                                <a href="https://vk.com/design_okna_msk" class="socials__link">
+                                    <svg class="icon icon-vk"><use xlink:href="icons/icons.svg#vk"></use></svg>
+                                </a>
+                            </li>
+                            <li class="socials__item">
+                                <a href="https://www.facebook.com/1379446162362517/" class="socials__link">
+                                    <svg class="icon icon-fb"><use xlink:href="icons/icons.svg#fb"></use></svg>
+                                </a>
+                            </li>
+                            <li class="socials__item">
+                                <a href="http://ok.ru/group/52696953127004" class="socials__link">
+                                    <svg class="icon icon-ok"><use xlink:href="icons/icons.svg#ok"></use></svg>
+                                </a>
+                            </li>
+                            <li class="socials__item">
+                                <a href="https://www.instagram.com/designoknamoscow/" class="socials__link">
+                                    <svg class="icon icon-insta"><use xlink:href="icons/icons.svg#insta"></use></svg>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Vendor -->
+    <div class="vendor">
+        <div class="container">
+            <!-- Logo -->
+            <img src="img/vendor_logo.png" alt="" class="vendor__logo">
+            <p
+                    style="display: none;"
+                    class="vendor__text show-in-mobile">
+                Разработано в <a href="http://brainmaze.net"  rel="nofollow" class="vendor__link">brainmaze.net</a>
+            </p>
+            <p class="vendor__text hide-in-mobile">
+                Все придумано и разработано командой <a href="http://brainmaze.net"  rel="nofollow" class="vendor__link">brainmaze.net</a>
+                <span class="hide-in-portrait">, а интерьер для конструктора сделан в <a href="http://abmasterplan.com/"  rel="nofollow" class="vendor__link">ab masterplan</a></span>
+            </p>
+            <p class="vendor__text vendor__text_last hide-in-tablet hide-in-mobile">
+                <svg class="icon icon-lock"><use xlink:href="icons/icons.svg#lock"></use></svg>
+                Передача данных зашифрована и безопасна
+            </p>
+        </div>
+    </div>
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript">
+        (function (d, w, c) {
+            (w[c] = w[c] || []).push(function() {
+                try {
+                    w.yaCounter35856360 = new Ya.Metrika({
+                        id:35856360,
+                        clickmap:true,
+                        trackLinks:true,
+                        accurateTrackBounce:true,
+                        webvisor:true
+                    });
+                } catch(e) { }
+            });
+
+            var n = d.getElementsByTagName("script")[0],
+                s = d.createElement("script"),
+                f = function () { n.parentNode.insertBefore(s, n); };
+            s.type = "text/javascript";
+            s.async = true;
+            s.src = "https://mc.yandex.ru/metrika/watch.js";
+
+            if (w.opera == "[object Opera]") {
+                d.addEventListener("DOMContentLoaded", f, false);
+            } else { f(); }
+        })(document, window, "yandex_metrika_callbacks");
+    </script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/35856360" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <!-- /Yandex.Metrika counter -->
+</footer>

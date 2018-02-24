@@ -1,0 +1,29 @@
+<!-- Main content -->
+<main class="main-content">
+    <!-- Image gradient -->
+    <div class="image-gradient">
+        <div
+            class="image-gradient__image"
+            style="background: url(/img/static/slide-1.jpg) center no-repeat; -webkit-background-size: cover; background-size: cover;">
+        </div>
+    </div>
+
+    <div class="container container_padding">
+        <!-- Heading -->
+        <div class="search-info search-info_marged">
+            <h1 class="search-info__header">Каталог штор и жалюзи</h1>
+        </div>
+    </div>
+    <div class="container container_padding">
+        <!-- Catalog -->
+        <div class="catalog catalog_4">
+            <ul class="catalog__list">
+                <li
+                    ng-repeat="categoryItem in catalogItems"
+                    class="catalog__item">
+                    <div ng-include="'views/directives/categoryItem.html'" scope="" onload=""></div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</main>
