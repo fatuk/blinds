@@ -105,7 +105,9 @@
 				<div ng-if="!!constructorHeader">
 					<div ng-include="'includes/header-constructor.html'"></div>
 				</div>
-				<div ng-view autoscroll></div>
+				<div ng-view autoscroll>
+					{{>home}}
+				</div>
 				{{>footer}}
 				<script src="https://www.youtube.com/iframe_api"></script>
 				<script src="js/plugins.min.js"></script>

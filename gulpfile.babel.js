@@ -157,6 +157,10 @@ gulp.task('browser-sync', () => {
  ******************************/
 gulp.task('watch', () => {
 	gulp.watch('app/less/*.less', ['less']);
+	gulp.watch([
+		'assets/**/*.*', 
+		'!assets/**/*.less'
+	], ['copyAssets']);
 	gulp.watch('app/js/**/*.js', ['jsConcat']);
 	gulp.watch('app/templates/**/*.handlebars', ['handlebars']);
 });

@@ -1,18 +1,18 @@
-<div class="product" ng-class="{'single': product.single, 'active': isHover}" ng-mouseenter="hoverIt(true)" ng-mouseleave="hoverIt(false)" ng-controller="ProductCtrl" ng-click="touchElement ? hoverIt(false) : ''">
+<div class="product" ng-class="{'single': this.single, 'active': isHover}" ng-mouseenter="hoverIt(true)" ng-mouseleave="hoverIt(false)" ng-controller="ProductCtrl" ng-click="touchElement ? hoverIt(false) : ''">
 	<!-- Product view -->
 	<div class="product__wrapper">
 		<!-- Label -->
-		<div ng-if="!!product.sale" class="product__label">
+		<div ng-if="!!this.sale" class="product__label">
 			<div class="product__label-text">
-				-{{product.sale}}%
+				-10%
 			</div>
 		</div>
 		<div class="product__inner">
 			<!-- Img -->
 			<a
-				href="#!/{{product.link}}"
+				href="#!/#"
 				style="background-size: cover"
-				ng-style="{'background-image':'url(' + product.image + ')'}"
+				ng-style="{'background-image':'url(' + this.image + ')'}"
 				class="product__img"
 			>
 			</a>
@@ -25,7 +25,7 @@
 			</span>
 			<div class="product__container">
 				<!-- Review -->
-				<div class="product__review" ng-if="product.reviews_count">
+				<div class="product__review" ng-if="this.reviews_count">
 					<input-stars
 						readonly
 						icon-base="icon"
@@ -34,38 +34,40 @@
 						icon-full="icon-star"
 						list-class="product__review-list"
 						max="5"
-						ng-model="product.rating">
+						ng-model="this.rating">
 					</input-stars>
 					<!-- Review label -->
 					<div class="product__review-label">
-						<span class="product__review-count">{{product.reviews_count}}</span>
-						<span>{{declOfNum(product.reviews_count,['отзыв','отзыва','отзывов'])}}</span>
+						<span class="product__review-count">12</span>
+						<span>2 отзыва</span>
 					</div>
 				</div>
 				<header class="product__header">
 					<!-- Title -->
 					<div class="product__title">
-						<a href="#!/{{product.link}}">{{product.title}}</a>
+						<a href="#!/">
+							Шторы плиссе Гофре с цветными тканями
+						</a>
 					</div>
 					<!-- Subtitle -->
-					<div ng-if="!!product.texture" class="product__subtitle">
-						<span>{{product.texture}}</span>
-						<!-- <a href="/{{product.category_link}}">{{product.category_title}}</a> -->
+					<div ng-if="!!this.texture" class="product__subtitle">
+						<span>{{this.texture}}</span>
+						<!-- <a href="/{{this.category_link}}">{{this.category_title}}</a> -->
 					</div>
 				</header>
 				<!-- Colors -->
-				<div class="product__colors" ng-if="product.textures.length > 0">
+				<div class="product__colors" ng-if="this.textures.length > 0">
 					<div class="product__colors-title">
-						<span>{{product.textures.length}}</span> цветов и текстур
+						<span>{{this.textures.length}}</span> цветов и текстур
 					</div>
-					<ul class="product__colors-list" ng-init="product.texture_id=product.textures[0].id">
-						<li class="product__colors-item" ng-repeat="texture in product.textures">
+					<ul class="product__colors-list" ng-init="this.texture_id=this.textures[0].id">
+						<li class="product__colors-item" ng-repeat="texture in this.textures">
 							<label class="product__colors-label" title="{{texture.model}}">
 								<input
 									type="radio"
-									name="product_texture_{{product.id}}"
+									name="product_texture_{{this.id}}"
 									ng-value="texture.id"
-									ng-model="product.texture_id">
+									ng-model="this.texture_id">
 								<div class="product__colors-dot" ng-style="{'background-image': 'url(' + texture.img + ')'}"></div>
 							</label>
 						</li>
@@ -77,16 +79,17 @@
 				<!-- Price container -->
 				<div class="product__price-container">
 					<!-- Old price -->
-					<div ng-if="!!product.sale" class="product__price-old">
-						{{product.price * (100+product.sale)/100 | number:0}} р./м<sup>2</sup>
+					<div ng-if="!!this.sale" class="product__price-old">
+						{{!-- {{this.price * (100+this.sale)/100 | number:0}} р./м<sup>2</sup> --}}
+						100 р./м<sup>2</sup>
 					</div>
 					<!-- New price -->
 					<div class="product__price-new">
-						<strong>от {{product.price | number:0}} р.</strong>/м<sup>2</sup>
+						<strong>от 100 р.</strong>/м<sup>2</sup>
 					</div>
 				</div>
 				<!-- Btn -->
-                <a href="#!/{{product.link}}" class="btn btn_blue btn_size-1">
+                <a href="#!/#" class="btn btn_blue btn_size-1">
 					Детали
 				</a>
 			</footer>

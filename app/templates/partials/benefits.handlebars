@@ -1,0 +1,46 @@
+<div class="benefits">
+	<!-- Label -->
+	<div class="benefits__label">
+		{{title}}
+	</div>
+	<!-- Left -->
+	<a
+		href
+		ng-click="owlCarousel.benefitsCarousel.prev()"
+		class="benefit__shevron benefit__shevron_left">
+		<svg class="icon icon-shevron-left"><use xlink:href="icons/icons.svg#shevron-left"></use></svg>
+	</a>
+	<!-- Right -->
+	<a
+		href
+		ng-click="owlCarousel.benefitsCarousel.next()"
+		class="benefit__shevron benefit__shevron_right">
+		<svg class="icon icon-shevron-right"><use xlink:href="icons/icons.svg#shevron-right"></use></svg>
+	</a>
+	<!-- Slider -->
+	<div
+		id="benefitsCarousel"
+		single-item="true"
+		pagination="false"
+		mouse-drag="false"
+		touch-drag="false"
+		owl-carousel="benefits">
+		<div class="item">
+			<!-- Benefit -->
+			<div class="benefit">
+				<div class="benefit__inner">
+					<!-- Img -->
+					<img ng-src="{{item.img}}" alt="" class="benefit__img">
+					<!-- Title -->
+					<div class="benefit__title">
+						{{item.title}}
+					</div>
+					<!-- Text -->
+					<p class="benefit__text">
+						{{item.text}}
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
