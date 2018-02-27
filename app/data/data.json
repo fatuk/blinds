@@ -1,94 +1,177 @@
 {
-	"name": "Developer",
-	"products": [{
-        "id": 7,
-        "minimalTexturePrice": 749,
-        "image": "img/static/gorizontalnye_zhaluzi/aluminievye/25mm/preview.jpg",
-        "rating": "5.0000",
-        "reviews_count": 1,
-        "link": "product/gorizontalnye_zhalyuzi/alyuminevye/klassicheskie_alyuminievye_s_shirinoy_planki_25mm",
-        "title": "Классические алюминиевые с шириной планки 25мм",
-        "category_link": "alyuminevye",
-        "category_title": "Алюминевые горизонтальные жалюзи",
-        "sale": 4,
-        "textures": [{
-            "id": 119,
-            "url": "0225__belyy",
-            "model": "0225 - белый",
-            "price": 749,
-            "img": "/img/static/gorizontalnye_zhaluzi/aluminievye/texture/0225.png",
-            "translucent": "0.9",
-            "country": {
-                "id": "1",
-                "name": "Китай"
-            },
-            "width": "25 мм",
-            "structure": "алюминий 0.18"
-        }, {
-            "id": 129,
-            "url": "2703__salatovyy",
-            "model": "2703 - салатовый",
-            "price": 874,
-            "img": "/img/static/gorizontalnye_zhaluzi/aluminievye/texture/2703.png",
-            "translucent": "0.9",
-            "country": {
-                "id": "1",
-                "name": "Китай"
-            },
-            "width": "25 \u043c\u043c",
-            "structure": "алюминий 0.18"
-        }, {
-            "id": 130,
-            "url": "2033__svetlozelenyy",
-            "model": "2033 -светло-зеленый",
-            "price": 874,
-            "img": "/img/static/gorizontalnye_zhaluzi/aluminievye/texture/2033.png",
-            "translucent": "0.9",
-            "country": {
-                "id": "1",
-                "name": "Китай"
-            },
-            "width": "25 мм",
-            "structure": "алюминий 0.18"
-        }, {
-            "id": 131,
-            "url": "telesnyy",
-            "model": "телесный",
-            "price": 874,
-            "img": "/img/static/gorizontalnye_zhaluzi/aluminievye/texture/4.png",
-            "translucent": "0.9",
-            "country": {
-                "id": "1",
-                "name": "Китай"
-            },
-            "width": "25 мм",
-            "structure": "алюминий 0.18"
-        }, {
-            "id": 132,
-            "url": "svetlooranzhevyy",
-            "model": "светло-оранжевый",
-            "price": 874,
-            "img": "/img/static/gorizontalnye_zhaluzi/aluminievye/texture/5.png",
-            "translucent": "0.9",
-            "country": {
-                "id": "1",
-                "name": "Китай"
-            },
-            "width": "25 мм",
-            "structure": "алюминий 0.18"
-        }, {
-            "id": 133,
-            "url": "bordovyy",
-            "model": "бордовый",
-            "price": 874,
-            "img": "/img/static/gorizontalnye_zhaluzi/aluminievye/texture/8.png",
-            "translucent": "0.9",
-            "country": {
-                "id": "1",
-                "name": "Китай"
-            },
-            "width": "25 мм",
-            "structure": "алюминий 0.18"
-		}]
-	}]
+    "news": [
+        {
+            "img": "img/23_06_kitchen_news.jpg",
+            "label": null,
+            "title": "Идеи оформления кухни",
+            "text": "Как правильно подобрать шторы на кухню, чтобы они были красивыми и функциональными? Мы предлагаем вам свежие идеи и фото от нашего дизайнера...",
+            "link": "article/shtory_dlya_kuhni",
+            "link_text": "Читать статью"
+        },
+        {
+            "img": "img/static/article/electric.jpg",
+            "label": null,
+            "title": "Автоматика для жалюзи\r\n",
+            "text": "Стандартный набор функций обеспечивает поворот ламелей, позволяя фиксировать их в любом положении, а также движение вверх-вниз или влево-вправо, в зависимости от вида жалюзи...",
+            "link": "article/avtomaticheskie-zhalyuzi",
+            "link_text": "Читать статью"
+        },
+        {
+            "img": "img/static/mainslider2.jpg",
+            "label": null,
+            "title": "Жалюзи в детской комнате",
+            "text": "Вопреки заблуждениям, рулонные шторы и жалюзи в детской более чем уместны. Основные опасения связывают с особенностями конструкции и качеством материалов.",
+            "link": "article/zhalyuzi_i_shtory_v_detskuyu",
+            "link_text": "Читать дальше"
+        },
+        {
+            "img": "img/static/slider1.jpg",
+            "label": null,
+            "title": "Экономьте до 28% с нами",
+            "text": "При заказе жалюзи и штор мы даем возможность каждому сэкономить до 28%. для этого Вам необходимо найти купоны на скидку на нашем промо сайте",
+            "link": "skidki_28_protsentov",
+            "link_text": "Узнать подробности"
+        },
+        {
+            "img": "img/static/article/sovety.jpg",
+            "label": null,
+            "title": "Три совета по выбору жалюзи",
+            "text": "На какие неочевидные моменты стоит обратить внимание, чтобы жалюзи украшали интерьер, эффективно контролировали световой поток и не вызывали негативных эмоций?",
+            "link": "article/kak-vybrat-zhalyuzi",
+            "link_text": "Читать статью"
+        }
+    ],
+    "qustion": {
+        "number": "5",
+        "title": "Как правильно замерить окно самому?",
+        "description": "отвечает замерщик Николай",
+        "avatarImage": "img/static/question/q5.jpg",
+        "link": "question"
+    },
+    "benefits": [
+        {
+            "bgImg": "img/static/slide-1.jpg",
+            "title": "Экологичность материалов",
+            "img": "img/static/benefit/tree.svg",
+            "text": "У наших поставщиков имеются сертификаты безопасности, в которых подтверждено, что все материалы не токсичны."
+        },
+        {
+            "bgImg": "img/static/slide-2.jpg",
+            "title": "Бесплатно починим",
+            "img": "img/static/benefit/gklyuch.svg",
+            "text": "Если установкой жалюзи занимались наши специалисты, мы даем гарантию 3 года, в течение которой бесплатно приедем и починим жалюзи. "
+        },
+        {
+            "bgImg": "img/static/slide-3.jpg",
+            "title": "Тысячи материалов",
+            "img": "img/static/benefit/palette.svg",
+            "text": "У нас самый большой выбор материалов для жалюзи и штор. Тысячи материалов всевозможных цветов из пластика, метала, дерева, бамбука, тканей."
+        },
+        {
+            "bgImg": "img/static/slide-3.jpg",
+            "title": "Культурные специалисты",
+            "img": "img/static/benefit/monkey.svg",
+            "text": "В нашей команде работают только культурные и трезвые мастера и монтажники, с которыми можно побеседовать о многогранности Шопенгауэра."
+        }
+    ],
+    "products": [
+        {
+            "id": 7,
+            "minimalTexturePrice": 749,
+            "image": "img/static/gorizontalnye_zhaluzi/aluminievye/25mm/preview.jpg",
+            "rating": "5.0000",
+            "reviews_count": 1,
+            "link": "product/gorizontalnye_zhalyuzi/alyuminevye/klassicheskie_alyuminievye_s_shirinoy_planki_25mm",
+            "title": "Классические алюминиевые с шириной планки 25мм",
+            "category_link": "alyuminevye",
+            "category_title": "Алюминевые горизонтальные жалюзи",
+            "sale": 4,
+            "textures": [
+                {
+                    "id": 119,
+                    "url": "0225__belyy",
+                    "model": "0225 - белый",
+                    "price": 749,
+                    "img": "/img/static/gorizontalnye_zhaluzi/aluminievye/texture/0225.png",
+                    "translucent": "0.9",
+                    "country": {
+                        "id": "1",
+                        "name": "Китай"
+                    },
+                    "width": "25 мм",
+                    "structure": "алюминий 0.18"
+                },
+                {
+                    "id": 129,
+                    "url": "2703__salatovyy",
+                    "model": "2703 - салатовый",
+                    "price": 874,
+                    "img": "/img/static/gorizontalnye_zhaluzi/aluminievye/texture/2703.png",
+                    "translucent": "0.9",
+                    "country": {
+                        "id": "1",
+                        "name": "Китай"
+                    },
+                    "width": "25 мм",
+                    "structure": "алюминий 0.18"
+                },
+                {
+                    "id": 130,
+                    "url": "2033__svetlozelenyy",
+                    "model": "2033 -светло-зеленый",
+                    "price": 874,
+                    "img": "/img/static/gorizontalnye_zhaluzi/aluminievye/texture/2033.png",
+                    "translucent": "0.9",
+                    "country": {
+                        "id": "1",
+                        "name": "Китай"
+                    },
+                    "width": "25 мм",
+                    "structure": "алюминий 0.18"
+                },
+                {
+                    "id": 131,
+                    "url": "telesnyy",
+                    "model": "телесный",
+                    "price": 874,
+                    "img": "/img/static/gorizontalnye_zhaluzi/aluminievye/texture/4.png",
+                    "translucent": "0.9",
+                    "country": {
+                        "id": "1",
+                        "name": "Китай"
+                    },
+                    "width": "25 мм",
+                    "structure": "алюминий 0.18"
+                },
+                {
+                    "id": 132,
+                    "url": "svetlooranzhevyy",
+                    "model": "светло-оранжевый",
+                    "price": 874,
+                    "img": "/img/static/gorizontalnye_zhaluzi/aluminievye/texture/5.png",
+                    "translucent": "0.9",
+                    "country": {
+                        "id": "1",
+                        "name": "Китай"
+                    },
+                    "width": "25 мм",
+                    "structure": "алюминий 0.18"
+                },
+                {
+                    "id": 133,
+                    "url": "bordovyy",
+                    "model": "бордовый",
+                    "price": 874,
+                    "img": "/img/static/gorizontalnye_zhaluzi/aluminievye/texture/8.png",
+                    "translucent": "0.9",
+                    "country": {
+                        "id": "1",
+                        "name": "Китай"
+                    },
+                    "width": "25 мм",
+                    "structure": "алюминий 0.18"
+                }
+            ]
+        }
+    ]
 }
