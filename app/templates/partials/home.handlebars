@@ -21,7 +21,9 @@
 			</div>
 		</div>
 	</section>
-	<section class="container main-content__home-nav" ng-include="'includes/main-nav.html'"></section>
+	<section class="container main-content__home-nav">
+		{{>main-nav}}
+	</section>
 	<!-- Steps -->
 	<section class="container container_relative">
 		<div class="call-metermen hide-in-portrait">
@@ -97,6 +99,7 @@
                 
 			</div> --}}
 			<!-- Article preview -->
+			{{>article-preview}}
 			<!-- TODO десь должен быть блок твига article.html.twig -->
 			<article-preview ng-if="!!featuredArticle" slug="{{featuredArticle}}">
 			</article-preview>
