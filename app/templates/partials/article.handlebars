@@ -4,12 +4,14 @@
 	<div class="image-gradient">
 		<div
 		    class="image-gradient__image"
-		    ng-style="{'background-image': 'url(' + article.slider_img + ')'}"></div>
-		<img style="display:none;" itemprop="image" src="{{article.slider_img}}">
+			style="background-image: url('{{article.slider_img }}')">
+		</div>
+		<img itemprop="image" src="{{article.slider_img}}">
 	</div>
-	<div class="container container_tight" style="opacity: {{$parent.showLoader?'0':'1'}};">
-
-		<ng-include src="'views/directives/breadcrumbs.html'"></ng-include>
+	<div 
+		class="container container_tight" 
+		style="opacity: 1">
+		{{>breadcrumbs}}
 		<div class="column-3 article__main">
 			<!-- Article -->
 			<article class="article">
@@ -24,13 +26,13 @@
 						{{article.title}}
 					</h1>
 					<!-- Label -->
-					<div class="article__label" ng-if="article.label">
+					<div class="article__label">
 						<div class="article__label-text">
 							{{article.label}}
 						</div>
 					</div>
 					<!-- Image -->
-					<img class="article__img" src="{{article.main_img}}" ng-attr-alt="{{article.title}}" ng-if="article.main_img">
+					<img class="article__img" src="{{article.main_img}}" alt="{{article.title}}">
 					<!-- Socials -->
 					<div class="share-socials"  ng-if="!article.isMainArticle">
 						<!-- Text -->
@@ -50,12 +52,15 @@
 						{{article.date}}
 					</div>
 				</header>
-				<div class="article__content" ng-bind-html="article.content" itemprop="description"></div>
+				<div class="article__content" itemprop="description">
+					{{{article.text}}}
+				</div>
 			</article>
 
 			<!-- Reviews -->
-			<reviews owner='{"id":"{{article.id}}","type":"article"}' style="opacity: {{$parent.showLoader?'0':'1'}};" ng-if="!!article.id && !!article.isReviewEnabled && !mobile"></reviews>
-        </div>
+			{{!-- <reviews owner='{"id":"{{article.id}}","type":"article"}' style="opacity: {{$parent.showLoader?'0':'1'}};" ng-if="!!article.id && !!article.isReviewEnabled && !mobile"></reviews> --}}
+			{{!-- {{>reviews}} --}}
+		</div>
 		<div class="column-1 article__aside">
 			<!-- Article set -->
 			<div class="article-set">
@@ -65,14 +70,16 @@
 						{{article.aside_title}}
 					</h2>
 					<ul class="article-set__list">
-						<li class="article-set_item" ng-repeat="aside_item in article.aside_links | limitTo: 5">
-							<a href="#!/{{aside_item.url}}" class="article-set__link">
+						{{#each article.aside_links}}
+						<li class="article-set_item">
+							<a href="{{this.url}}" class="article-set__link">
 								<span class="article-set__link-text">
-									{{aside_item.title}}
+									{{this.title}}
 								</span>
 								<svg class="icon icon-shevron-right"><use xlink:href="icons/icons.svg#shevron-right"></use></svg>
 							</a>
 						</li>
+						{{/each}}
 					</ul>
 				</header>
 			</div>
@@ -82,17 +89,17 @@
 					Товары по теме
 				</h2>
 				<ul class="products-set__list">
-					<li class="products-set__item" ng-repeat="product in article.related_products">
-						<div ng-include="'views/directives/product.html'" scope="" onload=""></div>
+					<li class="products-set__item">
+						{{>product}}
 					</li>
 				</ul>
 			</div>
 		</div>
 	</div>
-    <div class="container container_tight"  ng-if="!!article.id && !!article.isReviewEnabled && !!mobile" style="opacity: {{$parent.showLoader?'0':'1'}};">
+    <div class="container container_tight"  ng-if="!!article.id && !!article.isReviewEnabled && !!mobile" style="opacity: 1">
         <div class="column-3 article__reviews">
             <!-- Reviews -->
-            <reviews owner='{"id":"{{article.id}}","type":"article"}'></reviews>
+            {{!-- <reviews owner='{"id":"{{article.id}}","type":"article"}'></reviews> --}}
         </div>
     </div>
 </main>

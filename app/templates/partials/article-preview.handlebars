@@ -1,25 +1,25 @@
 <div class="article-preview hide-in-tablet show-in-mobile">
 	<!-- Img -->
 	<a href="article.html"
-	   style="background: left center no-repeat; background-size: cover; background-image: url({{article.img}})"
+	   style="background: left center no-repeat; background-size: cover; background-image: url({{articlePreview.img}})"
 	   class="article-preview__img"
-	   alt="{{article.name}}">
+	   alt="{{articlePreview.name}}">
 	</a>
 	<div class="article-preview__container">
 		<!-- Title -->
 		<div class="article-preview__title">
-			<a href="article.html">{{article.title}}</a>
+			<a href="article.html">{{articlePreview.title}}</a>
 		</div>
 		<!-- Text -->
 		<p class="article-preview__text">
 			<a href="article.html">
-				{{article.text}} &nbsp;<svg class="icon icon-gt"><use xlink:href="icons/icons.svg#gt"></use></svg>
+				{{articlePreview.text}} &nbsp;<svg class="icon icon-gt"><use xlink:href="icons/icons.svg#gt"></use></svg>
 			</a>
 		</p>
 		<!-- Author -->
 		<div class="article-preview__author">
-			<img src="{{article.avatar}}" alt="{{article.author}}" class="article-preview__author-avatar">
-			<div class="article-preview__author-name">{{article.author}}</div>
+			<img src="{{articlePreview.avatar}}" alt="{{articlePreview.author}}" class="article-preview__author-avatar">
+			<div class="article-preview__author-name">{{articlePreview.author}}</div>
 		</div>
 	</div>
 </div>
