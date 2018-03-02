@@ -12,35 +12,35 @@
     "news": [
         {
             "img": "img/23_06_kitchen_news.jpg",
-            "label": "",
+            "label": "HOT",
             "title": "Идеи оформления кухни",
             "text": "Как правильно подобрать шторы на кухню, чтобы они были красивыми и функциональными? Мы предлагаем вам свежие идеи и фото от нашего дизайнера...",
-            "link": "article/shtory_dlya_kuhni",
+            "link": "article.html",
             "link_text": "Читать статью"
         },
         {
             "img": "img/23_06_kitchen_news.jpg",
-            "label": "",
+            "label": "HOT",
             "title": "Автоматика для жалюзи\r\n",
             "text": "Стандартный набор функций обеспечивает поворот ламелей, позволяя фиксировать их в любом положении, а также движение вверх-вниз или влево-вправо, в зависимости от вида жалюзи...",
-            "link": "article/avtomaticheskie-zhalyuzi",
+            "link": "article.html",
             "link_text": "Читать статью"
         },
         {
             "img": "img/23_06_kitchen_news.jpg",
-            "label": "",
+            "label": "HOT",
             "title": "Жалюзи в детской комнате",
             "text": "Вопреки заблуждениям, рулонные шторы и жалюзи в детской более чем уместны. Основные опасения связывают с особенностями конструкции и качеством материалов.",
-            "link": "article/zhalyuzi_i_shtory_v_detskuyu",
+            "link": "article.html",
             "link_text": "Читать дальше"
         }
     ],
-    "qustion": {
+    "question": {
         "number": "5",
         "title": "Как правильно замерить окно самому?",
         "description": "отвечает замерщик Николай",
-        "avatarImage": "img/static/question/q5.jpg",
-        "link": "question"
+        "avatarImage": "img/question/q5.jpg",
+        "link": "article.html"
     },
     "benefits": [
         {

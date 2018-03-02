@@ -53,6 +53,7 @@ gulp.task('copyAssets', () => {
 		'assets/**/*.*',
 		'!assets/**/*.less'
 	])
+		.pipe(plumber())
 		.pipe(gulp.dest('public'));
 });
 
