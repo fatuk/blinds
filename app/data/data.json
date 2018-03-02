@@ -1,14 +1,12 @@
 {
-    "article": [
-        {
-            "text": "Как правильно подобрать шторы на кухню, чтобы они были красивыми и функциональными? Мы предлагаем вам свежие идеи и фото от нашего дизайнера...",
-            "title": "Жалюзи в детской комнате",
-            "img": "/img/static/main_page_advertise/adv.jpg",
-            "link": "article/tendentsii-2017",
-            "avatar": "/img/static/main_page_advertise/avaadv.jpg",
-            "author": "Светлана Шульц"
-        }
-    ],
+    "article": {
+        "text": "Как правильно подобрать шторы на кухню, чтобы они были красивыми и функциональными? Мы предлагаем вам свежие идеи и фото от нашего дизайнера...",
+        "title": "Жалюзи в детской комнате",
+        "img": "/img/static/adv.jpg",
+        "link": "article/tendentsii-2017",
+        "avatar": "/img/static/avaadv.jpg",
+        "author": "Светлана Шульц"
+    },
     "news": [
         {
             "img": "img/23_06_kitchen_news.jpg",

@@ -1,35 +1,25 @@
-<article class="article-preview hide-in-tablet show-in-mobile">
-	
+<div class="article-preview hide-in-tablet show-in-mobile">
 	<!-- Img -->
-	<a href="#!/article/tendentsii-2017"
-	   style="background: url({{article.img}}) left center no-repeat; background-size: cover;"
-	   ng-style="{'background-image': 'url(' + article.picture + ')'}"
+	<a href="article.html"
+	   style="background: left center no-repeat; background-size: cover; background-image: url({{article.img}})"
 	   class="article-preview__img"
-	   ng-attr-alt="{{article.name}}">
+	   alt="{{article.name}}">
 	</a>
 	<div class="article-preview__container">
 		<!-- Title -->
 		<div class="article-preview__title">
-			<a href="#!/{{article.link}}">ТРЕНДЫ В ОФОРМЛЕНИИ ОКОН 2017</a>
+			<a href="article.html">{{article.title}}</a>
 		</div>
 		<!-- Text -->
 		<p class="article-preview__text">
-			<a href="#!/article/tendentsii-2017">
-				<span ng-bind-html="article.description | unsafe">
-					<p>
-						О последних новинках в индустрии жалюзи и о том, как будет модно оформлять окна в 2017 году
-					</p>
-				</span>
-				&nbsp;
-				<svg class="icon icon-gt">
-					<use xlink:href="icons/icons.svg#gt"></use>
-				</svg>
+			<a href="article.html">
+				{{article.text}} &nbsp;<svg class="icon icon-gt"><use xlink:href="icons/icons.svg#gt"></use></svg>
 			</a>
 		</p>
 		<!-- Author -->
-		<div class="article-preview__author" ng-if="!!article.author">
-			<img ng-src="{{article.avatar}}" alt="{{article.author}}" class="article-preview__author-avatar" ng-if="!!article.avatar">
+		<div class="article-preview__author">
+			<img src="{{article.avatar}}" alt="{{article.author}}" class="article-preview__author-avatar">
 			<div class="article-preview__author-name">{{article.author}}</div>
 		</div>
 	</div>
-</article>
+</div>
