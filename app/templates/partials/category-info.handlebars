@@ -1,0 +1,43 @@
+<div 
+    class="site-footer__category-info"
+    ng-if="!!advancedFooterInfo.special.title || !!advancedFooterInfo.special.text || !!advancedFooterInfo.material.title || !!advancedFooterInfo.material.text || !!advancedFooterInfo.shipping.title || !!advancedFooterInfo.shipping.text">
+    <div class="container">
+        <div class="category-footer-info-item special-info-block" ng-if="!!advancedFooterInfo.special.title || !!advancedFooterInfo.special.text">
+            <div class="category-footer-info-item__icon-wrapper"></div>
+            <div class="text-block">
+                <div class="text-block__column text-block__column_padding">
+                    <!-- Title -->
+                    <div class="text-block__title">
+                        {{advancedFooterInfo.special.title}}                        </div>
+                    <div class="text-block__text" itemprop="description" ng-bind-html="advancedFooterInfo.special.text"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="category-footer-info-item material-info-block" ng-if="!!advancedFooterInfo.material.title || !!advancedFooterInfo.material.text">
+            <div class="category-footer-info-item__icon-wrapper"></div>
+            <div class="text-block">
+                <div class="text-block__column text-block__column_padding">
+                    <!-- Title -->
+                    <div class="text-block__title">
+                        {{advancedFooterInfo.material.title}}                        </div>
+                    <div class="text-block__text" itemprop="description" ng-bind-html="advancedFooterInfo.material.text"></div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="category-footer-info-item delivery-info-block" ng-if="!!advancedFooterInfo.shipping.title || !!advancedFooterInfo.shipping.text">
+                <div class="category-footer-info-item__icon-wrapper"></div>
+                <div class="text-block">
+                    <div class="text-block__column text-block__column_padding">
+                        <!-- Title -->
+                        <div class="text-block__title">
+                            {{advancedFooterInfo.shipping.title}}                            </div>
+                        <div class="text-block__text" itemprop="description" ng-bind-html="advancedFooterInfo.shipping.text"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
