@@ -1,6 +1,6 @@
 <div class="news">
 	{{#each news}}		 
-		<div class="news__item" ng-repeat="(key,item) in news" ng-class="{active: (key === currentNews)}">
+		<div class="news__item active" ng-repeat="(key,item) in news" ng-class="{active: (key === currentNews)}">
 			<div class="news__inner">
 				<!-- Img -->
 				<div 
@@ -9,13 +9,14 @@
 				</div>
 				<div class="news__container">
 					<!-- Status -->
-					<div class="news__label" ng-if="!!item.label">
+					<div class="news__label">
 						<div class="news__label-text">
 							{{this.label}}
 						</div>
 					</div>
 					<!-- Title -->
-					<h2 class="news__title" ng-bind-html="item.trustedTitle">
+					<h2 class="news__title">
+						{{this.title}}
 					</h2>
 					<!-- Text -->
 					<p class="news__text">
@@ -28,5 +29,5 @@
 				</div>
 			</div>
 		</div>
-	</div>
-{{/each}}
+	{{/each}}
+</div>
