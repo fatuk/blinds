@@ -1,0 +1,53 @@
+<div class="gallery">
+    <!-- Title -->
+
+    <ng-include src="'/views/directives/breadcrumbs.html'" class="gallery__breadcrumbs-wrapper"></ng-include>
+    <div class="gallery__title" itemprop="name">
+        <h1>
+            {{product.title}}
+        </h1>
+        <span class="gallery__title-model">модель {{currentTexture.model}}</span>
+    </div>
+    <!-- Main img -->
+    <div class="gallery__container">
+        <div
+              ng-attr-alt="{{product.gallery[gallery.currentImage].alt}}"
+              ng-style="{'background-image': 'url(' + (product.gallery[gallery.currentImage].src) + ')', opacity: (gallery.currentImage !== -1)?1:0 }"
+              class="gallery__main-img">
+        </div>
+        <img ng-if="product.gallery[0]" ng-src="{{product.gallery[0].src}}" ng-attr-alt="{{ product.gallery[0].alt }}" itemprop="image" style="display: none"/>
+        <div class="gallery__controls">
+            <button class="gallery__button left" ng-click="moveGallery(-1)">
+                <svg class="icon icon-shevron-left">
+                    <use xlink:href="icons/icons.svg#shevron-left"></use>
+                </svg>
+            </button>
+            <button class="gallery__button right" ng-click="moveGallery(1)">
+                <svg class="icon icon-shevron-right">
+                    <use xlink:href="icons/icons.svg#shevron-right"></use>
+                </svg>
+            </button>
+        </div>
+    </div>
+
+    <!-- List -->
+    <ul class="gallery__list">
+        <li
+                ng-repeat="(index, galleryItem) in product.gallery"
+                class="gallery__item">
+            <input
+                    type="radio"
+                    ng-value="{{index}}"
+                    ng-model="gallery.currentImage"
+                    ng-checked="{{$first}}"
+                    class="gallery__input"
+                    id="galleryItem-{{index+1}}">
+            <label
+                    style="background: url({{galleryItem.src}}) center no-repeat; background-size: cover;"
+                    ng-attr-alt="{{ galleryItem.alt }}"
+                    class="gallery__item-img"
+                    for="galleryItem-{{index+1}}">
+            </label>
+        </li>
+    </ul>
+</div>

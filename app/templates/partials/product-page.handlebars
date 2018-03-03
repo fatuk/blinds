@@ -1,0 +1,385 @@
+<!-- Product view -->
+<main class="main-content" itemscope itemtype="http://schema.org/Product">
+    <div class="slider">
+        <div style="background-image: url('{{productPage.image_slider}}')" class="slider__img">
+        </div>
+    </div>
+    <div class="container container_product-page">
+        <!-- Ribbon title -->
+        <div class="ribbon-title">
+            <div class="ribbon-title__text">
+                {{productPage.category_title}}
+            </div>
+        </div>
+        <!-- Left -->
+        <div class="column-2 product-page__main product-page__column">
+            <!-- Gallery -->
+            <div ng-include="'includes/product/gallery.html'"></div>
+            <!-- Service Block Mobile -->
+            <div ng-if="mobile">
+                <!-- Price block -->
+                <div ng-include="'includes/product/price.html'"></div>
+                <!-- Textures -->
+                <div ng-include="'includes/product/textures.html'"></div>
+                <!-- Sizes -->
+                <div class="form form_sizes">
+                    <h2 class="form__title">
+                        Укажите размеры конструкции
+                        <span class="desktop-only"> для расчета стоимости</span>
+                    </h2>
+                    <div class="form__row">
+                        <div class="form__cell">
+                            <label class="label">
+                                <span class="label__text">
+                                    Шир.
+                                </span>
+                                <span class="field" ng-if="!!product">
+                                    <input type="number" class="input" ng-model="product.dimensions.width" ng-change="calcPrice()" placeholder="0см">
+                                </span>
+                            </label>
+                        </div>
+                        <div class="form__cell" ng-show="product.allowHeight">
+                            <label class="label">
+                                <span class="label__text">
+                                    Выс.
+                                </span>
+                                <span class="field" ng-if="!!product">
+                                    <input type="number" class="input" ng-model="product.dimensions.height" ng-change="calcPrice()" placeholder="0см">
+                                </span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <!-- Carnice -->
+                <div class="form form_carnice">
+                    <checkbox model="product.withCornice" label="Добавить к заказу {{ product.cornice.name }} + {{ product.cornice.price }} {{ product.cornice.currencySign}}"
+                        name="type2">
+                    </checkbox>
+                </div>
+                <!-- Buttons set -->
+                <div class="btn-set">
+                    <button class="btn btn_red btn_big" ng-click="buyOneClick()">
+                        Купить в 1 клик
+                    </button>
+                    <button class="btn btn_blue btn_big" ng-click="addToCart()">
+                        Отложить в корзину
+                    </button>
+                </div>
+                <!-- Features -->
+                <div class="features">
+                    <!-- Title -->
+                    <h2 class="features__title">
+                        Свойства выбранного материала {{currentTexture.name}}
+                    </h2>
+                    <div class="features__column">
+                        <!-- Translucent -->
+                        <div ng-if="currentTexture.translucent" class="features__item">
+                            <svg class="icon icon-sun">
+                                <use xlink:href="icons/icons.svg#sun"></use>
+                            </svg>
+                            <div class="features__item-text">
+                                {{currentTexture.translucent}}
+                            </div>
+                        </div>
+                        <!-- Country -->
+                        <div ng-if="currentTexture.country" class="features__item">
+                            <svg class="icon icon-country">
+                                <use xlink:href="icons/icons.svg#country"></use>
+                            </svg>
+                            <div class="features__item-text">
+                                {{currentTexture.country}}
+                            </div>
+                        </div>
+                        <!-- Width -->
+                        <div ng-if="currentTexture.width" class="features__item">
+                            <svg class="icon icon-width">
+                                <use xlink:href="icons/icons.svg#width"></use>
+                            </svg>
+                            <div class="features__item-text">
+                                {{currentTexture.width}}
+                            </div>
+                        </div>
+                    </div>
+                    <div class="features__column">
+                        <!-- Structure -->
+                        <div ng-if="currentTexture.structure" class="features__item">
+                            <svg class="icon icon-structure">
+                                <use xlink:href="icons/icons.svg#structure"></use>
+                            </svg>
+                            <div class="features__item-text">
+                                {{currentTexture.structure}}
+                            </div>
+                        </div>
+                        <!-- info -->
+                        <div ng-if="currentTexture.description" class="features__item">
+                            <svg class="icon icon-structure">
+                                <use xlink:href="icons/icons.svg#info"></use>
+                            </svg>
+                            <div class="features__item-text">
+                                {{currentTexture.description}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Text block -->
+            <div class="text-block">
+                <div class="text-block__column text-block__column_padding">
+                    <!-- Title -->
+                    <h2 class="text-block__title">
+                        {{productPage.description.title}}
+                    </h2>
+                    <div class="text-block__text" itemprop="description" ng-bind-html="product.description.text">
+                        {{productPage.metaDescription}}
+                    </div>
+
+                    <div class="share-socials product__social">
+                        <!-- Text -->
+                        <div class="share-socials__text">
+                            Получите 5% скидку поделившись
+                            <span class="hide-in-portrait">продуктом</span> в соц.сетях
+                        </div>
+                        <ul class="share-socials__list">
+                            <li class="share-socials__item" ng-repeat="share in socials">
+                                <a href="vk.com" target="_blank" class="share-socials__link">
+                                    <svg class="icon icon-vk">
+                                        <use xlink:href="icons/icons.svg#vk"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                        </ul>
+                        <ul class="share-socials__list">
+                            <li class="share-socials__item" ng-repeat="share in socials">
+                                <a href="ok.ru" target="_blank" class="share-socials__link">
+                                    <svg class="icon icon-ok">
+                                        <use xlink:href="icons/icons.svg#ok"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                        </ul>
+                        <ul class="share-socials__list">
+                            <li class="share-socials__item" ng-repeat="share in socials">
+                                <a href="vk.facebook.com" target="_blank" class="share-socials__link">
+                                    <svg class="icon icon-fb">
+                                        <use xlink:href="icons/icons.svg#fb"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div ng-if="!desktop" ng-include="'views/directives/construction.html'"></div>
+            <!-- Tablet video -->
+            <div class="text-block video">
+                <h2 class="video__title">
+                    {{productPage.video_title}}
+                </h2>
+                <div class="video__frame-holder">
+                    <iframe video-id="getYoutubeId(product.video)" class="ng-isolate-scope" id="unique-youtube-embed-id-1" frameborder="0" allowfullscreen="1"
+                        allow="autoplay; encrypted-media" title="YouTube video player" width="640" height="390" src="https://www.youtube.com/embed/cHk7LIVJJuE?enablejsapi=1&amp;origin=https%3A%2F%2Fdesign-okna.ru&amp;widgetid=1"></iframe>
+                </div>
+            </div>
+            <!-- Reviews -->
+            <!--<reviews product-id="{{product.id}}" ng-if="!!product.id && !mobile"></reviews>-->
+            <reviews owner='{"id":"{{productPage.id}}","type":"product"}' ng-if="!!product.id && !mobile"></reviews>
+        </div>
+        <!-- Right -->
+        <div class="column-2 product-page__aside product-page__column">
+            <!-- Service Block Desktop -->
+            <div ng-if="!mobile">
+                <!-- Price block -->
+                <div ng-include="'includes/product/price.html'"></div>
+                <!-- Textures -->
+                <div ng-include="'includes/product/textures.html'"></div>
+                <!-- Sizes -->
+                <div class="form form_sizes">
+                    <h2 class="form__title">
+                        Укажите размеры конструкции
+                        <span class="desktop-only"> для расчета стоимости</span>
+                    </h2>
+                    <div class="form__row">
+                        <div class="form__cell">
+                            <label class="label">
+                                <span class="label__text">
+                                    Ширина
+                                </span>
+                                <span class="field" ng-if="!!product">
+                                    <input type="number" class="input" ng-model="product.dimensions.width" ng-change="calcPrice()" placeholder="0см">
+                                </span>
+                            </label>
+                        </div>
+                        <div class="form__cell" ng-show="product.allowHeight">
+                            <label class="label">
+                                <span class="label__text">
+                                    Высота
+                                </span>
+                                <span class="field" ng-if="!!product">
+                                    <input type="number" class="input" ng-model="product.dimensions.height" ng-change="calcPrice()" placeholder="0см">
+                                </span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <!-- Carnice -->
+                <div class="form form_carnice">
+                    <checkbox model="product.withCornice" label="Добавить к заказу {{ productPage.cornice.name }} + {{ productPage.cornice.price }} {{ productPage.cornice.currencySign}}"
+                        name="type2">
+                        {{!-- Добавила!!! --}}
+                        <span class="checkbox__check">
+                            <svg class="icon icon-check">
+                                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="icons/icons.svg#check"></use>
+                            </svg>
+                        </span>
+                        <span class="checkbox__label ng-binding">
+                            Добавить к заказу установку специалистом + 350 р./изд
+                        </span>
+                    </checkbox>
+                </div>
+                <!-- Buttons set -->
+                <div class="btn-set">
+                    <button class="btn btn_red btn_big" ng-click="buyOneClick()">
+                        Купить в 1 клик
+                    </button>
+                    <button class="btn btn_blue btn_big" ng-click="addToCart()">
+                        Отложить в корзину
+                    </button>
+                </div>
+                <!-- Features -->
+                <div class="features">
+                    <!-- Title -->
+                    <h2 class="features__title">
+                        Свойства выбранного материала {{!-- {{currentTexture.name}} --}}
+                    </h2>
+                    <div class="features__column">
+                        <!-- Translucent -->
+                        <div ng-if="currentTexture.translucent" class="features__item">
+                            <svg class="icon icon-sun">
+                                <use xlink:href="icons/icons.svg#sun"></use>
+                            </svg>
+                            <div class="features__item-text">
+                                {{!-- {{currentTexture.translucent}} --}} 50%
+                            </div>
+                        </div>
+                        <!-- Country -->
+                        <div ng-if="currentTexture.country" class="features__item">
+                            <svg class="icon icon-country">
+                                <use xlink:href="icons/icons.svg#country"></use>
+                            </svg>
+                            <div class="features__item-text">
+                                {{!-- {{currentTexture.country}} --}} Китай
+                            </div>
+                        </div>
+                        <!-- Width -->
+                        <div ng-if="currentTexture.width" class="features__item">
+                            <svg class="icon icon-width">
+                                <use xlink:href="icons/icons.svg#width"></use>
+                            </svg>
+                            <div class="features__item-text">
+                                {{!-- {{currentTexture.width}} --}} 16 мм
+                            </div>
+                        </div>
+                    </div>
+                    <div class="features__column">
+                        <!-- Structure -->
+                        <div ng-if="currentTexture.structure" class="features__item">
+                            <svg class="icon icon-structure">
+                                <use xlink:href="icons/icons.svg#structure"></use>
+                            </svg>
+                            <div class="features__item-text">
+                                {{!-- {{currentTexture.structure}} --}} алюминий 0.18
+                            </div>
+                        </div>
+                        <!-- info -->
+                        {{!--
+                        <div ng-if="currentTexture.description" class="features__item">
+                            <svg class="icon icon-structure">
+                                <use xlink:href="icons/icons.svg#info"></use>
+                            </svg>
+                            <div class="features__item-text">
+                                {{currentTexture.description}}
+                            </div>
+                        </div> --}}
+                    </div>
+                </div>
+            </div>
+            <!-- Text block with img-->
+            <div ng-if="desktop" ng-include="'views/directives/construction.html'"></div>
+            <!-- Text block with benefits-->
+            <div class="text-block text-block_benefits">
+                <div class="text-block__column text-block__column_padding">
+                    <div class="text-block__text-holder">
+                        <h2 class="text-block__title">{{productPage.cornice.text}}</h2>
+                        <p class="text-block__text">
+                            Установка горизонтальных алюминиевых жалюзи: до 3 кв.м. - 350 руб., свыше 3 кв.м. - 500 руб. за повес одного изделия. Доставка
+                            в пределах МКАД бесплатно.
+                            <br>
+
+                            <br> При установке нашим специалистом, мы предоставляем гарантию до 3-х лет на всю продукцию, в течение
+                            которой без лишних вопросов приедем и устраним все недостатки, бесплатно заменим неисправные
+                            механизмы.
+                        </p>
+                    </div>
+                    <!-- Price block -->
+                    <div class="price-block price-block_inline">
+                        <div class="price-block__text"></div>
+                        <!-- New price -->
+                        <div class="price-block__new">
+                            <strong>{{productPage.cornice.price}}</strong> {{productPage.cornice.currencySign}}
+                        </div>
+                    </div>
+                </div>
+                <div class="text-block__column">
+                    <!-- Benefits -->
+                    {{>benefits}}
+                </div>
+            </div>
+            <!-- Video -->
+            <div class="text-block video">
+                <h2 class="video__title">
+                    {{productPage.video_title}}
+                </h2>
+                <div class="video__frame-holder">
+                    <iframe video-id="getYoutubeId(product.video)" class="ng-isolate-scope" id="unique-youtube-embed-id-1" frameborder="0" allowfullscreen="1"
+                        allow="autoplay; encrypted-media" title="YouTube video player" width="640" height="390" src="https://www.youtube.com/embed/cHk7LIVJJuE?enablejsapi=1&amp;origin=https%3A%2F%2Fdesign-okna.ru&amp;widgetid=1"></iframe>
+                </div>
+            </div>
+            <!-- Reviews -->
+            <reviews owner='{"id":"{{product.id}}","type":"product"}' ng-if="!!product.id && !!mobile"></reviews>
+        </div>
+    </div>
+    <!-- Catalog -->
+    <div class="cover-past-products" ng-if="pastProducts.length > 0">
+        <div class="container container_product-page">
+            <div class="catalog">
+                <!-- Title -->
+                <h2 class="catalog__title">
+                    Недавно просмотренные товары
+                </h2>
+                <ul class="catalog__list">
+                    {{#each products}}
+                    <li class="catalog__item">
+                        {{>product}}
+                    </li>
+                    {{/each}}
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- Catalog -->
+    <div class="container container_product-page" ng-if="catalogItems.length > 0">
+        <div class="catalog">
+            <!-- Title -->
+            <h2 class="catalog__title">
+                Вам также может понравиться
+            </h2>
+            <ul class="catalog__list">
+                {{#each products}}
+                <li class="catalog__item">
+                    {{>product}}
+                </li>
+                {{/each}}
+            </ul>
+        </div>
+    </div>
+</main>

@@ -1,4 +1,89 @@
 {
+    "productPage": {
+        "id": 6,
+        "blockContent": "",
+        "category": "Горизонтальные жалюзи",
+        "title": "Горизонтальные алюминиевые жалюзи 16мм",
+        "metaTitle": "Купить горизонтальные алюминиевые жалюзи 16мм",
+        "metaDescription": "Тонкие алюминиевые планки шириной 16 миллиметров, расположенные горизонтально одна над другой, хорошо затеняют помещение, не пропуская излишние солнечные лучи. Чёткие ровные линии способствуют созданию офисного стиля, а стойкое покрытие допускает частое мытьё для поддержания безупречной чистоты. Горизонтальные жалюзи - самый компактный способ защитить коллег от солнца, мониторы от бликов. ",
+        "metaKeywords": "жалюзи, 16",
+        "product_name": "Узкие алюминиевые с шириной планки 16мм",
+        "sale": 4,
+        "image": "img/static/gorizontalnye_zhaluzi/aluminievye/16mm/preview.jpg",
+        "previewImageAlt": "",
+        "rating": 4.75,
+        "reviews_count": 4,
+        "link": "product/louvers/gorizontalnye_zhalyuzi/alyuminevye/#5608__svetlozelenyy",
+        "category_link": "gorizontalnye_zhalyuzi",
+        "category_title": "Горизонтальные жалюзи",
+        "constructorTitle": "Горизонтальные",
+        "video": "https:/www.youtube.com/watch?v=cHk7LIVJJuE",
+        "image_slider": "img/static/cover.jpg",
+        "construction": {
+            "title": "Гарантия 3 года",
+            "text": "<p>Срок полезного использования продукции составляет 10 лет. При условии бережной и правильной экспуатации значительно дольше. Предоставляем гарантию до 3-х лет на всю продукцию, в течение которой: Без лишних вопросов устраним все недостатки; Бесплатно заменим неисправные механизмы; Легкая процедура оформления претензии (достаточно просто привезти изделие в нашу мастерскую).<br /> 10 лет мы используем в производстве качественные комплектующие российского и польского производства</p>",
+            "scheme": "img/static/gorizontalnye_zhaluzi/aluminievye/16mm/scheme.png"
+        },
+        "description": {
+            "title": "Что такое тонкие горизонтальные жалюзи",
+            "text": "<p>Тонкие алюминиевые планки шириной 16 миллиметров, расположенные горизонтально одна над другой, хорошо затеняют помещение, не пропуская излишние солнечные лучи. Чёткие ровные линии способствуют созданию офисного стиля, а стойкое покрытие допускает частое мытьё для поддержания безупречной чистоты. Горизонтальные жалюзи - самый компактный способ защитить коллег от солнца, мониторы от бликов. <br /> В комплект заказа входит: карниз из стали, ламели (планки из алюминия толщиной 0.18мм), кронштейны, инструкция по установке. <br /> Срок изготовления 5 рабочих дней.</p>"
+        },
+        "cornice": {
+            "text": "Установка жалюзи специалистом",
+            "name": "установку специалистом",
+            "price": 350,
+            "description": "<p>Установка горизонтальных алюминиевых жалюзи: до 3 кв.м. - 350 руб., свыше 3 кв.м. - 500 руб. за повес одного изделия. Доставка в пределах МКАД бесплатно. <br /> При установке нашим специалистом, мы предоставляем гарантию до 3-х лет на всю продукцию, в течение которой без лишних вопросов приедем и устраним все недостатки, бесплатно заменим неисправные механизмы.</p>",
+            "currencySign": "р./изд"
+        },
+        "gallery": [
+            {
+                "src": "img/static/gorizontalnye_zhaluzi/aluminievye/16mm/1.jpg",
+                "alt": ""
+            },
+            {
+                "src": "img/static/gorizontalnye_zhaluzi/aluminievye/16mm/2.jpg",
+                "alt": ""
+            },
+            {
+                "src": "img/static/gorizontalnye_zhaluzi/aluminievye/16mm/3.jpg",
+                "alt": ""
+            }
+        ],
+        "video_title": "Видео о горизонтальных жалюзи",
+        "colors": [
+            "#2eb071",
+            "#eeeeee",
+            "#d0d0d0",
+            "#c35545",
+            "#a36f2c",
+            "#e8d22e",
+            "#4464bf",
+            "#9ac6df",
+            "#eed4a0",
+            "#eeac28",
+            "#8a5eb8"
+        ],
+        "isHeightVisible": true,
+        "price": 1184,
+        "breadcrumbs": [
+            {
+                "title": "Каталог",
+                "link": "/#!/catalog"
+            },
+            {
+                "title": "Горизонтальные",
+                "link": "/#!/catalog/gorizontalnye_zhalyuzi"
+            },
+            {
+                "title": "Алюминиевые",
+                "link": "/#!/catalog/gorizontalnye_zhalyuzi/alyuminevye"
+            },
+            {
+                "title": "Горизонтальные алюминиевые жалюзи 16мм",
+                "link": ""
+            }
+        ]
+    },
     "catalog": {
         "slider_img": "img/static/slide-1.jpg",
         "title": "Горизонтальные жалюзи",
@@ -140,7 +225,7 @@
                         "model": "7005 - белый",
                         "price": 1122,
                         "img": "/img/static/gorizontalnye_zhaluzi/aluminievye/texture/2200.png",
-                        "translucent": "",
+                        "translucent": "50%",
                         "country": "Китай",
                         "width": "50 мм",
                         "structure": "алюминий 0.18"
@@ -230,7 +315,7 @@
         "image": "img/static/product-preview.jpg",
         "rating": "5.0000",
         "reviews_count": 1,
-        "link": "product.html",
+        "link": "product-page.html",
         "title": "Классические алюминиевые с шириной планки 25мм",
         "category_link": "alyuminevye",
         "category_title": "Алюминевые горизонтальные жалюзи",
@@ -273,7 +358,7 @@
             "image": "img/static/preview.jpg",
             "rating": "5.0000",
             "reviews_count": 1,
-            "link": "product/gorizontalnye_zhalyuzi/alyuminevye/klassicheskie_alyuminievye_s_shirinoy_planki_25mm",
+            "link": "product.html",
             "title": "Классические алюминиевые с шириной планки 25мм",
             "category_link": "alyuminevye",
             "category_title": "Алюминевые горизонтальные жалюзи",
@@ -371,7 +456,7 @@
             "image": "img/static/preview (1).jpg",
             "rating": "5.0000",
             "reviews_count": 1,
-            "link": "product/gorizontalnye_zhalyuzi/alyuminevye/klassicheskie_alyuminievye_s_shirinoy_planki_25mm",
+            "link": "product.html",
             "title": "Классические алюминиевые с шириной планки 25мм",
             "category_link": "alyuminevye",
             "category_title": "Алюминевые горизонтальные жалюзи",
@@ -469,7 +554,7 @@
             "image": "img/static/preview (2).jpg",
             "rating": "5.0000",
             "reviews_count": 1,
-            "link": "product/gorizontalnye_zhalyuzi/alyuminevye/klassicheskie_alyuminievye_s_shirinoy_planki_25mm",
+            "link": "product.html",
             "title": "Классические алюминиевые с шириной планки 25мм",
             "category_link": "alyuminevye",
             "category_title": "Алюминевые горизонтальные жалюзи",
@@ -567,7 +652,7 @@
             "image": "img/static/preview (3).jpg",
             "rating": "5.0000",
             "reviews_count": 1,
-            "link": "product/gorizontalnye_zhalyuzi/alyuminevye/klassicheskie_alyuminievye_s_shirinoy_planki_25mm",
+            "link": "product.html",
             "title": "Классические алюминиевые с шириной планки 25мм",
             "category_link": "alyuminevye",
             "category_title": "Алюминевые горизонтальные жалюзи",
@@ -665,7 +750,7 @@
             "image": "img/static/preview (4).jpg",
             "rating": "5.0000",
             "reviews_count": 1,
-            "link": "product/gorizontalnye_zhalyuzi/alyuminevye/klassicheskie_alyuminievye_s_shirinoy_planki_25mm",
+            "link": "product.html",
             "title": "Классические алюминиевые с шириной планки 25мм",
             "category_link": "alyuminevye",
             "category_title": "Алюминевые горизонтальные жалюзи",
@@ -763,7 +848,7 @@
             "image": "img/static/preview (5).jpg",
             "rating": "5.0000",
             "reviews_count": 1,
-            "link": "product/gorizontalnye_zhalyuzi/alyuminevye/klassicheskie_alyuminievye_s_shirinoy_planki_25mm",
+            "link": "product.html",
             "title": "Классические алюминиевые с шириной планки 25мм",
             "category_link": "alyuminevye",
             "category_title": "Алюминевые горизонтальные жалюзи",
