@@ -34,7 +34,7 @@
 					<!-- Image -->
 					<img class="article__img" src="{{article.main_img}}" alt="{{article.title}}">
 					<!-- Socials -->
-					<div class="share-socials"  ng-if="!article.isMainArticle">
+					{{!-- <div class="share-socials"  ng-if="!article.isMainArticle">
 						<!-- Text -->
 						<div class="share-socials__text">
 							Поделиться <span class="hide-in-portrait">статьей в соцсетях</span>
@@ -50,7 +50,7 @@
 					<!-- Date -->
 					<div class="article__date hide-in-portrait" ng-if="!article.isMainArticle">
 						{{article.date}}
-					</div>
+					</div> --}}
 				</header>
 				<div class="article__content" itemprop="description">
 					{{{article.text}}}
@@ -90,7 +90,7 @@
 				</h2>
 				<ul class="products-set__list">
 					<li class="products-set__item">
-						{{>product}}
+						{{>single-product}}
 					</li>
 				</ul>
 			</div>

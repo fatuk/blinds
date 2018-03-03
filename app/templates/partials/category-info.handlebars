@@ -1,6 +1,4 @@
-<div 
-    class="site-footer__category-info"
-    ng-if="!!advancedFooterInfo.special.title || !!advancedFooterInfo.special.text || !!advancedFooterInfo.material.title || !!advancedFooterInfo.material.text || !!advancedFooterInfo.shipping.title || !!advancedFooterInfo.shipping.text">
+<div class="site-footer__category-info" ng-if="!!advancedFooterInfo.special.title || !!advancedFooterInfo.special.text || !!advancedFooterInfo.material.title || !!advancedFooterInfo.material.text || !!advancedFooterInfo.shipping.title || !!advancedFooterInfo.shipping.text">
     <div class="container">
         <div class="category-footer-info-item special-info-block" ng-if="!!advancedFooterInfo.special.title || !!advancedFooterInfo.special.text">
             <div class="category-footer-info-item__icon-wrapper"></div>
@@ -8,8 +6,21 @@
                 <div class="text-block__column text-block__column_padding">
                     <!-- Title -->
                     <div class="text-block__title">
-                        {{advancedFooterInfo.special.title}}                        </div>
-                    <div class="text-block__text" itemprop="description" ng-bind-html="advancedFooterInfo.special.text"></div>
+                        Виды и способы крепления к оконным рамам
+                    </div>
+                    <div class="text-block__text ng-binding" itemprop="description" ng-bind-html="advancedFooterInfo.special.text">
+                        <p>Огромное разнообразие дизайнерских решений в интерьере коснулось и элементов защиты от палящего солнца.
+                            В качестве материала для изготовления ламелей используют:</p>
+                        <ul>
+                            <li>алюминий;</li>
+                            <li>дерево;</li>
+                            <li>бамбук;</li>
+                            <li>пластик.</li>
+                        </ul>
+                        <p>Жалюзи из пластикового полимера и алюминия отличаются не только широким спектром цветовой гаммы,
+                            но и разнообразием текстур и форм. Дерево и бамбук обладают особой энергетикой, благотворно влияющей
+                            на человека. По способу установки различают крепление без сверления и с помощью специальных кронштейнов.</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -20,22 +31,34 @@
                 <div class="text-block__column text-block__column_padding">
                     <!-- Title -->
                     <div class="text-block__title">
-                        {{advancedFooterInfo.material.title}}                        </div>
-                    <div class="text-block__text" itemprop="description" ng-bind-html="advancedFooterInfo.material.text"></div>
+                        Как подобрать горизонтальные жалюзи
+                    </div>
+                    <div class="text-block__text ng-binding" itemprop="description" ng-bind-html="advancedFooterInfo.material.text">
+                        <p>Самый экономичный вариант – алюминиевые шторы, которые будут выполнять свою основную функцию – солнцезащиту.
+                            Легко моются влажной салфеткой, влагостойкие, долговечные, из недостатков имеют только один –
+                            быстро нагреваются. Идеально подходят для офисных помещений с деловым стилем и жилых с повышенной
+                            влажностью (кухня, прачечная, ванная и т.д.). Наиболее комфортно и уютно на окнах смотрятся экологичные
+                            деревянные и бамбуковые ламели. Пластиковые жалюзи наиболее популярны из-за практичности и большого
+                            выбора цвета и текстуры. Современные технологии позволяют имитировать любую рельефную поверхность,
+                            точно передающую текстурный слой.</p>
+                    </div>
                 </div>
             </div>
         </div>
 
 
         <div class="category-footer-info-item delivery-info-block" ng-if="!!advancedFooterInfo.shipping.title || !!advancedFooterInfo.shipping.text">
-                <div class="category-footer-info-item__icon-wrapper"></div>
-                <div class="text-block">
-                    <div class="text-block__column text-block__column_padding">
-                        <!-- Title -->
-                        <div class="text-block__title">
-                            {{advancedFooterInfo.shipping.title}}                            </div>
-                        <div class="text-block__text" itemprop="description" ng-bind-html="advancedFooterInfo.shipping.text"></div>
+            <div class="category-footer-info-item__icon-wrapper"></div>
+            <div class="text-block">
+                <div class="text-block__column text-block__column_padding">
+                    <!-- Title -->
+                    <div class="text-block__title">
+                        Идеальный выбор от компании "Дизайн окна"
                     </div>
+                    <div class="text-block__text ng-binding" itemprop="description" ng-bind-html="advancedFooterInfo.shipping.text">Затрудняетесь в выборе? Обращайтесь к нам. В легкой непринужденной беседе мы подберем лучший вариант
+                        для вашего интерьера в любом стиле. Откроем для вас новые возможности и модные тенденции дизайнерских
+                        решений. Учтем и предугадаем все ваши желания, подобрав нужный цвет и материал. После установки нашими
+                        специалистами ваши окна в течении трех лет будут под контролем.</div>
                 </div>
             </div>
         </div>

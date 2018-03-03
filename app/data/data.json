@@ -1,4 +1,98 @@
 {
+    "catalog": {
+        "slider_img": "img/static/slide-1.jpg",
+        "title": "Горизонтальные жалюзи",
+        "blockContent": "<p><span id=\"docs-internal-guid-899ae29b-286d-36c1-aff1-e20f4d5af5e8\">Основная функция горизонтальных жалюзи – легкая защита от солнечных лучей. Создавая полутень в помещении, они не дают яркому солнцу проникать в комнату или офис. Простой механизм поворота ламелей позволяет регулировать световой поток. Помимо этого, с их помощью можно укрыться от посторонних взглядов и придать интерьеру неповторимый стиль.</span></p>",
+        "constructorTitle": "Горизонтальные",
+        "filter_title": "",
+        "LinksType": [],
+        "LinksAttention": [
+            {
+                "id": "1",
+                "title": "Алюминиевые горизонтальные жалюзи",
+                "url": "catalog.html",
+                "text": "Алюминиевые горизонтальные жалюзи"
+            },
+            {
+                "id": "2",
+                "title": "Пластиковые горизонтальные жалюзи",
+                "url": "catalog.html",
+                "text": "Пластиковые горизонтальные жалюзи"
+            },
+            {
+                "id": "3",
+                "title": "Жалюзи Волна",
+                "url": "catalog.html",
+                "text": "Жалюзи Волна"
+            },
+            {
+                "id": "4",
+                "title": "Бамбуковые жалюзи",
+                "url": "catalog.html",
+                "text": "Бамбуковые жалюзи"
+            },
+            {
+                "id": "5",
+                "title": "Деревянные жалюзи",
+                "url": "catalog.html",
+                "text": "Деревянные жалюзи"
+            }
+        ],
+        "metaTitle": "Купить горизонтальные жалюзи в Москве",
+        "metaDescription": "Горизонтальные жалюзи в Москве",
+        "metaKeywords": "",
+        "subcategories": [
+            {
+                "slug": "alyuminevye",
+                "constructorTitle": "Алюминиевые",
+                "name": "Алюминевые горизонтальные жалюзи"
+            },
+            {
+                "slug": "plastikovye",
+                "constructorTitle": "Пластиковые",
+                "name": "Пластиковые горизонтальные жалюзи"
+            },
+            {
+                "slug": "volna",
+                "constructorTitle": "Волна",
+                "name": "Жалюзи Волна"
+            },
+            {
+                "slug": "bambukovye",
+                "constructorTitle": "Бамбуковые",
+                "name": "Бамбуковые жалюзи"
+            },
+            {
+                "slug": "derevyannye",
+                "constructorTitle": "Деревянные",
+                "name": "Деревянные жалюзи"
+            }
+        ],
+        "breadcrumbs": [
+            {
+                "title": "Каталог",
+                "link": "catalog.html"
+            },
+            {
+                "title": "Горизонтальные",
+                "link": "/#!/catalog/gorizontalnye_zhalyuzi"
+            }
+        ],
+        "advancedFooterInfo": {
+            "special": {
+                "title": "Виды и способы крепления к оконным рамам",
+                "text": "<p>Огромное разнообразие дизайнерских решений в интерьере коснулось и элементов защиты от палящего солнца. В качестве материала для изготовления ламелей используют:</p>\r\n<ul>\r\n<li>алюминий;</li>\r\n<li>дерево;</li>\r\n<li>бамбук;</li>\r\n<li>пластик.</li>\r\n</ul>\r\n<p>Жалюзи из пластикового полимера и алюминия отличаются не только широким спектром цветовой гаммы, но и разнообразием текстур и форм. Дерево и бамбук обладают особой энергетикой, благотворно влияющей на человека.\r\nПо способу установки различают крепление без сверления и с помощью специальных кронштейнов.</p>\r\n"
+            },
+            "material": {
+                "title": "Как подобрать горизонтальные жалюзи",
+                "text": "<p>Самый экономичный вариант – алюминиевые шторы, которые будут выполнять свою основную функцию – солнцезащиту. Легко моются влажной салфеткой, влагостойкие, долговечные, из недостатков имеют только один – быстро нагреваются. Идеально подходят для офисных помещений с деловым стилем и жилых с повышенной влажностью (кухня, прачечная, ванная и т.д.).\r\nНаиболее комфортно и уютно на окнах смотрятся экологичные деревянные и бамбуковые ламели.\r\nПластиковые жалюзи наиболее популярны из-за практичности и большого выбора цвета и текстуры. Современные технологии позволяют имитировать любую рельефную поверхность, точно передающую текстурный слой.</p>\r\n"
+            },
+            "shipping": {
+                "title": "Идеальный выбор от компании \"Дизайн окна\"",
+                "text": "Затрудняетесь в выборе? Обращайтесь к нам. В легкой непринужденной беседе мы подберем лучший вариант для вашего интерьера в любом стиле. Откроем для вас новые возможности и модные тенденции дизайнерских решений. Учтем и предугадаем все ваши желания, подобрав нужный цвет и материал. После установки нашими специалистами ваши окна в течении трех лет будут под контролем."
+            }
+        }
+    },
     "article": {
         "id": 2,
         "rubric": "Вопросы",
@@ -65,10 +159,10 @@
                 ]
             }
         ],
-        "breadcrumbs": [
+        "breadcrumbsItem": [
             {
                 "title": "Главная",
-                "link": "/"
+                "link": "index.html"
             },
             {
                 "title": "Замер, доставка и установка жалюзи"
@@ -176,14 +270,504 @@
         {
             "id": 7,
             "minimalTexturePrice": 749,
-            "image": "img/static/gorizontalnye_zhaluzi/aluminievye/25mm/preview.jpg",
+            "image": "img/static/preview.jpg",
             "rating": "5.0000",
             "reviews_count": 1,
             "link": "product/gorizontalnye_zhalyuzi/alyuminevye/klassicheskie_alyuminievye_s_shirinoy_planki_25mm",
             "title": "Классические алюминиевые с шириной планки 25мм",
             "category_link": "alyuminevye",
             "category_title": "Алюминевые горизонтальные жалюзи",
-            "sale": 4,
+            "sale": 14,
+            "textures": [
+                {
+                    "id": 119,
+                    "url": "0225__belyy",
+                    "model": "0225 - белый",
+                    "price": 749,
+                    "img": "/img/static/gorizontalnye_zhaluzi/aluminievye/texture/0225.png",
+                    "translucent": "0.9",
+                    "country": {
+                        "id": "1",
+                        "name": "Китай"
+                    },
+                    "width": "25 мм",
+                    "structure": "алюминий 0.18"
+                },
+                {
+                    "id": 129,
+                    "url": "2703__salatovyy",
+                    "model": "2703 - салатовый",
+                    "price": 874,
+                    "img": "/img/static/gorizontalnye_zhaluzi/aluminievye/texture/2703.png",
+                    "translucent": "0.9",
+                    "country": {
+                        "id": "1",
+                        "name": "Китай"
+                    },
+                    "width": "25 мм",
+                    "structure": "алюминий 0.18"
+                },
+                {
+                    "id": 130,
+                    "url": "2033__svetlozelenyy",
+                    "model": "2033 -светло-зеленый",
+                    "price": 874,
+                    "img": "/img/static/gorizontalnye_zhaluzi/aluminievye/texture/2033.png",
+                    "translucent": "0.9",
+                    "country": {
+                        "id": "1",
+                        "name": "Китай"
+                    },
+                    "width": "25 мм",
+                    "structure": "алюминий 0.18"
+                },
+                {
+                    "id": 131,
+                    "url": "telesnyy",
+                    "model": "телесный",
+                    "price": 874,
+                    "img": "/img/static/gorizontalnye_zhaluzi/aluminievye/texture/4.png",
+                    "translucent": "0.9",
+                    "country": {
+                        "id": "1",
+                        "name": "Китай"
+                    },
+                    "width": "25 мм",
+                    "structure": "алюминий 0.18"
+                },
+                {
+                    "id": 132,
+                    "url": "svetlooranzhevyy",
+                    "model": "светло-оранжевый",
+                    "price": 874,
+                    "img": "/img/static/gorizontalnye_zhaluzi/aluminievye/texture/5.png",
+                    "translucent": "0.9",
+                    "country": {
+                        "id": "1",
+                        "name": "Китай"
+                    },
+                    "width": "25 мм",
+                    "structure": "алюминий 0.18"
+                },
+                {
+                    "id": 133,
+                    "url": "bordovyy",
+                    "model": "бордовый",
+                    "price": 874,
+                    "img": "/img/static/gorizontalnye_zhaluzi/aluminievye/texture/8.png",
+                    "translucent": "0.9",
+                    "country": {
+                        "id": "1",
+                        "name": "Китай"
+                    },
+                    "width": "25 мм",
+                    "structure": "алюминий 0.18"
+                }
+            ]
+        },
+        {
+            "id": 8,
+            "minimalTexturePrice": 749,
+            "image": "img/static/preview (1).jpg",
+            "rating": "5.0000",
+            "reviews_count": 1,
+            "link": "product/gorizontalnye_zhalyuzi/alyuminevye/klassicheskie_alyuminievye_s_shirinoy_planki_25mm",
+            "title": "Классические алюминиевые с шириной планки 25мм",
+            "category_link": "alyuminevye",
+            "category_title": "Алюминевые горизонтальные жалюзи",
+            "sale": 14,
+            "textures": [
+                {
+                    "id": 119,
+                    "url": "0225__belyy",
+                    "model": "0225 - белый",
+                    "price": 749,
+                    "img": "/img/static/gorizontalnye_zhaluzi/aluminievye/texture/0225.png",
+                    "translucent": "0.9",
+                    "country": {
+                        "id": "1",
+                        "name": "Китай"
+                    },
+                    "width": "25 мм",
+                    "structure": "алюминий 0.18"
+                },
+                {
+                    "id": 129,
+                    "url": "2703__salatovyy",
+                    "model": "2703 - салатовый",
+                    "price": 874,
+                    "img": "/img/static/gorizontalnye_zhaluzi/aluminievye/texture/2703.png",
+                    "translucent": "0.9",
+                    "country": {
+                        "id": "1",
+                        "name": "Китай"
+                    },
+                    "width": "25 мм",
+                    "structure": "алюминий 0.18"
+                },
+                {
+                    "id": 130,
+                    "url": "2033__svetlozelenyy",
+                    "model": "2033 -светло-зеленый",
+                    "price": 874,
+                    "img": "/img/static/gorizontalnye_zhaluzi/aluminievye/texture/2033.png",
+                    "translucent": "0.9",
+                    "country": {
+                        "id": "1",
+                        "name": "Китай"
+                    },
+                    "width": "25 мм",
+                    "structure": "алюминий 0.18"
+                },
+                {
+                    "id": 131,
+                    "url": "telesnyy",
+                    "model": "телесный",
+                    "price": 874,
+                    "img": "/img/static/gorizontalnye_zhaluzi/aluminievye/texture/4.png",
+                    "translucent": "0.9",
+                    "country": {
+                        "id": "1",
+                        "name": "Китай"
+                    },
+                    "width": "25 мм",
+                    "structure": "алюминий 0.18"
+                },
+                {
+                    "id": 132,
+                    "url": "svetlooranzhevyy",
+                    "model": "светло-оранжевый",
+                    "price": 874,
+                    "img": "/img/static/gorizontalnye_zhaluzi/aluminievye/texture/5.png",
+                    "translucent": "0.9",
+                    "country": {
+                        "id": "1",
+                        "name": "Китай"
+                    },
+                    "width": "25 мм",
+                    "structure": "алюминий 0.18"
+                },
+                {
+                    "id": 133,
+                    "url": "bordovyy",
+                    "model": "бордовый",
+                    "price": 874,
+                    "img": "/img/static/gorizontalnye_zhaluzi/aluminievye/texture/8.png",
+                    "translucent": "0.9",
+                    "country": {
+                        "id": "1",
+                        "name": "Китай"
+                    },
+                    "width": "25 мм",
+                    "structure": "алюминий 0.18"
+                }
+            ]
+        },
+        {
+            "id": 9,
+            "minimalTexturePrice": 749,
+            "image": "img/static/preview (2).jpg",
+            "rating": "5.0000",
+            "reviews_count": 1,
+            "link": "product/gorizontalnye_zhalyuzi/alyuminevye/klassicheskie_alyuminievye_s_shirinoy_planki_25mm",
+            "title": "Классические алюминиевые с шириной планки 25мм",
+            "category_link": "alyuminevye",
+            "category_title": "Алюминевые горизонтальные жалюзи",
+            "sale": 14,
+            "textures": [
+                {
+                    "id": 119,
+                    "url": "0225__belyy",
+                    "model": "0225 - белый",
+                    "price": 749,
+                    "img": "/img/static/gorizontalnye_zhaluzi/aluminievye/texture/0225.png",
+                    "translucent": "0.9",
+                    "country": {
+                        "id": "1",
+                        "name": "Китай"
+                    },
+                    "width": "25 мм",
+                    "structure": "алюминий 0.18"
+                },
+                {
+                    "id": 129,
+                    "url": "2703__salatovyy",
+                    "model": "2703 - салатовый",
+                    "price": 874,
+                    "img": "/img/static/gorizontalnye_zhaluzi/aluminievye/texture/2703.png",
+                    "translucent": "0.9",
+                    "country": {
+                        "id": "1",
+                        "name": "Китай"
+                    },
+                    "width": "25 мм",
+                    "structure": "алюминий 0.18"
+                },
+                {
+                    "id": 130,
+                    "url": "2033__svetlozelenyy",
+                    "model": "2033 -светло-зеленый",
+                    "price": 874,
+                    "img": "/img/static/gorizontalnye_zhaluzi/aluminievye/texture/2033.png",
+                    "translucent": "0.9",
+                    "country": {
+                        "id": "1",
+                        "name": "Китай"
+                    },
+                    "width": "25 мм",
+                    "structure": "алюминий 0.18"
+                },
+                {
+                    "id": 131,
+                    "url": "telesnyy",
+                    "model": "телесный",
+                    "price": 874,
+                    "img": "/img/static/gorizontalnye_zhaluzi/aluminievye/texture/4.png",
+                    "translucent": "0.9",
+                    "country": {
+                        "id": "1",
+                        "name": "Китай"
+                    },
+                    "width": "25 мм",
+                    "structure": "алюминий 0.18"
+                },
+                {
+                    "id": 132,
+                    "url": "svetlooranzhevyy",
+                    "model": "светло-оранжевый",
+                    "price": 874,
+                    "img": "/img/static/gorizontalnye_zhaluzi/aluminievye/texture/5.png",
+                    "translucent": "0.9",
+                    "country": {
+                        "id": "1",
+                        "name": "Китай"
+                    },
+                    "width": "25 мм",
+                    "structure": "алюминий 0.18"
+                },
+                {
+                    "id": 133,
+                    "url": "bordovyy",
+                    "model": "бордовый",
+                    "price": 874,
+                    "img": "/img/static/gorizontalnye_zhaluzi/aluminievye/texture/8.png",
+                    "translucent": "0.9",
+                    "country": {
+                        "id": "1",
+                        "name": "Китай"
+                    },
+                    "width": "25 мм",
+                    "structure": "алюминий 0.18"
+                }
+            ]
+        },
+        {
+            "id": 10,
+            "minimalTexturePrice": 749,
+            "image": "img/static/preview (3).jpg",
+            "rating": "5.0000",
+            "reviews_count": 1,
+            "link": "product/gorizontalnye_zhalyuzi/alyuminevye/klassicheskie_alyuminievye_s_shirinoy_planki_25mm",
+            "title": "Классические алюминиевые с шириной планки 25мм",
+            "category_link": "alyuminevye",
+            "category_title": "Алюминевые горизонтальные жалюзи",
+            "sale": 14,
+            "textures": [
+                {
+                    "id": 119,
+                    "url": "0225__belyy",
+                    "model": "0225 - белый",
+                    "price": 749,
+                    "img": "/img/static/gorizontalnye_zhaluzi/aluminievye/texture/0225.png",
+                    "translucent": "0.9",
+                    "country": {
+                        "id": "1",
+                        "name": "Китай"
+                    },
+                    "width": "25 мм",
+                    "structure": "алюминий 0.18"
+                },
+                {
+                    "id": 129,
+                    "url": "2703__salatovyy",
+                    "model": "2703 - салатовый",
+                    "price": 874,
+                    "img": "/img/static/gorizontalnye_zhaluzi/aluminievye/texture/2703.png",
+                    "translucent": "0.9",
+                    "country": {
+                        "id": "1",
+                        "name": "Китай"
+                    },
+                    "width": "25 мм",
+                    "structure": "алюминий 0.18"
+                },
+                {
+                    "id": 130,
+                    "url": "2033__svetlozelenyy",
+                    "model": "2033 -светло-зеленый",
+                    "price": 874,
+                    "img": "/img/static/gorizontalnye_zhaluzi/aluminievye/texture/2033.png",
+                    "translucent": "0.9",
+                    "country": {
+                        "id": "1",
+                        "name": "Китай"
+                    },
+                    "width": "25 мм",
+                    "structure": "алюминий 0.18"
+                },
+                {
+                    "id": 131,
+                    "url": "telesnyy",
+                    "model": "телесный",
+                    "price": 874,
+                    "img": "/img/static/gorizontalnye_zhaluzi/aluminievye/texture/4.png",
+                    "translucent": "0.9",
+                    "country": {
+                        "id": "1",
+                        "name": "Китай"
+                    },
+                    "width": "25 мм",
+                    "structure": "алюминий 0.18"
+                },
+                {
+                    "id": 132,
+                    "url": "svetlooranzhevyy",
+                    "model": "светло-оранжевый",
+                    "price": 874,
+                    "img": "/img/static/gorizontalnye_zhaluzi/aluminievye/texture/5.png",
+                    "translucent": "0.9",
+                    "country": {
+                        "id": "1",
+                        "name": "Китай"
+                    },
+                    "width": "25 мм",
+                    "structure": "алюминий 0.18"
+                },
+                {
+                    "id": 133,
+                    "url": "bordovyy",
+                    "model": "бордовый",
+                    "price": 874,
+                    "img": "/img/static/gorizontalnye_zhaluzi/aluminievye/texture/8.png",
+                    "translucent": "0.9",
+                    "country": {
+                        "id": "1",
+                        "name": "Китай"
+                    },
+                    "width": "25 мм",
+                    "structure": "алюминий 0.18"
+                }
+            ]
+        },
+        {
+            "id": 11,
+            "minimalTexturePrice": 749,
+            "image": "img/static/preview (4).jpg",
+            "rating": "5.0000",
+            "reviews_count": 1,
+            "link": "product/gorizontalnye_zhalyuzi/alyuminevye/klassicheskie_alyuminievye_s_shirinoy_planki_25mm",
+            "title": "Классические алюминиевые с шириной планки 25мм",
+            "category_link": "alyuminevye",
+            "category_title": "Алюминевые горизонтальные жалюзи",
+            "sale": 14,
+            "textures": [
+                {
+                    "id": 119,
+                    "url": "0225__belyy",
+                    "model": "0225 - белый",
+                    "price": 749,
+                    "img": "/img/static/gorizontalnye_zhaluzi/aluminievye/texture/0225.png",
+                    "translucent": "0.9",
+                    "country": {
+                        "id": "1",
+                        "name": "Китай"
+                    },
+                    "width": "25 мм",
+                    "structure": "алюминий 0.18"
+                },
+                {
+                    "id": 129,
+                    "url": "2703__salatovyy",
+                    "model": "2703 - салатовый",
+                    "price": 874,
+                    "img": "/img/static/gorizontalnye_zhaluzi/aluminievye/texture/2703.png",
+                    "translucent": "0.9",
+                    "country": {
+                        "id": "1",
+                        "name": "Китай"
+                    },
+                    "width": "25 мм",
+                    "structure": "алюминий 0.18"
+                },
+                {
+                    "id": 130,
+                    "url": "2033__svetlozelenyy",
+                    "model": "2033 -светло-зеленый",
+                    "price": 874,
+                    "img": "/img/static/gorizontalnye_zhaluzi/aluminievye/texture/2033.png",
+                    "translucent": "0.9",
+                    "country": {
+                        "id": "1",
+                        "name": "Китай"
+                    },
+                    "width": "25 мм",
+                    "structure": "алюминий 0.18"
+                },
+                {
+                    "id": 131,
+                    "url": "telesnyy",
+                    "model": "телесный",
+                    "price": 874,
+                    "img": "/img/static/gorizontalnye_zhaluzi/aluminievye/texture/4.png",
+                    "translucent": "0.9",
+                    "country": {
+                        "id": "1",
+                        "name": "Китай"
+                    },
+                    "width": "25 мм",
+                    "structure": "алюминий 0.18"
+                },
+                {
+                    "id": 132,
+                    "url": "svetlooranzhevyy",
+                    "model": "светло-оранжевый",
+                    "price": 874,
+                    "img": "/img/static/gorizontalnye_zhaluzi/aluminievye/texture/5.png",
+                    "translucent": "0.9",
+                    "country": {
+                        "id": "1",
+                        "name": "Китай"
+                    },
+                    "width": "25 мм",
+                    "structure": "алюминий 0.18"
+                },
+                {
+                    "id": 133,
+                    "url": "bordovyy",
+                    "model": "бордовый",
+                    "price": 874,
+                    "img": "/img/static/gorizontalnye_zhaluzi/aluminievye/texture/8.png",
+                    "translucent": "0.9",
+                    "country": {
+                        "id": "1",
+                        "name": "Китай"
+                    },
+                    "width": "25 мм",
+                    "structure": "алюминий 0.18"
+                }
+            ]
+        },
+        {
+            "id": 12,
+            "minimalTexturePrice": 749,
+            "image": "img/static/preview (5).jpg",
+            "rating": "5.0000",
+            "reviews_count": 1,
+            "link": "product/gorizontalnye_zhalyuzi/alyuminevye/klassicheskie_alyuminievye_s_shirinoy_planki_25mm",
+            "title": "Классические алюминиевые с шириной планки 25мм",
+            "category_link": "alyuminevye",
+            "category_title": "Алюминевые горизонтальные жалюзи",
+            "sale": 14,
             "textures": [
                 {
                     "id": 119,

@@ -1,20 +1,20 @@
 <div 
 	class="product single" 
-	ng-class="{'single': this.single, 'active': isHover}" 
+	ng-class="{'single': product.single, 'active': isHover}" 
 	ng-click="touchElement ? hoverIt(false) : ''">
 	<!-- Product view -->
 	<div class="product__wrapper">
 		<!-- Label -->
 		<div class="product__label">
 			<div class="product__label-text">
-				-{{this.sale}}%
+				-{{product.sale}}%
 			</div>
 		</div>
 		<div class="product__inner">
 			<!-- Img -->
 			<a
-				href="{{this.link}}"
-				style="background-size: cover; background-image: url('{{this.image}}')"
+				href="{{product.link}}"
+				style="background-size: cover; background-image: url('{{product.image}}')"
 				class="product__img">
 			</a>
 			<!-- Cart btn -->
@@ -26,7 +26,7 @@
 			</span>
 			<div class="product__container">
 				<!-- Review -->
-				<div class="product__review" ng-if="this.reviews_count">
+				<div class="product__review" ng-if="product.reviews_count">
 					{{!-- <input-stars
 						readonly
 						icon-base="icon"
@@ -35,45 +35,45 @@
 						icon-full="icon-star"
 						list-class="product__review-list"
 						max="5"
-						ng-model="this.rating">
+						ng-model="product.rating">
 					</input-stars> --}}
 					<!-- Review label -->
 					<div class="product__review-label">
-						<span class="product__review-count">{{this.reviews_count}}</span>
+						<span class="product__review-count">{{product.reviews_count}}</span>
 						отзыв
 					</div>
 				</div>
 				<header class="product__header">
 					<!-- Title -->
 					<div class="product__title">
-						<a href="{{this.link}}">{{this.title}}</a>
+						<a href="{{product.link}}">{{product.title}}</a>
 					</div>
 					<!-- Subtitle -->
 					<div class="product__subtitle">
-						{{!-- <span>{{this.texture}}</span> --}}
-						<!-- <a href="/{{this.category_link}}">{{this.category_title}}</a> -->
+						{{!-- <span>{{product.texture}}</span> --}}
+						<!-- <a href="/{{product.category_link}}">{{product.category_title}}</a> -->
 					</div>
 				</header>
 				<!-- Colors -->
 				<div class="product__colors">
 					<div class="product__colors-title">
-						<span>{{this.textures.length}}</span> цветов и текстур
+						<span>{{product.textures.length}}</span> цветов и текстур
 					</div>
 					<ul 
 						class="product__colors-list" 
-						ng-init="this.texture_id=this.textures[0].id">
-						{{#each this.textures}}
+						ng-init="product.texture_id=product.textures[0].id">
+						{{#each product.textures}}
 						<li 
 							class="product__colors-item" 
-							ng-repeat="texture in this.textures">
+							ng-repeat="texture in product.textures">
 							<label 
 								class="product__colors-label" 
 								title="{{this.model}}">
 								<input
 									type="radio"
-									name="product_texture_{{this.id}}"
+									name="product_texture_{{product.id}}"
 									value="{{this.id}}"
-									ng-model="this.texture_id">
+									ng-model="product.texture_id">
 								<div 
 									class="product__colors-dot" 
 									style="background-image: url('{{this.img}}')}">
@@ -98,7 +98,7 @@
 					</div>
 				</div>
 				<!-- Btn -->
-                <a href="{{this.link}}" class="btn btn_blue btn_size-1">
+                <a href="{{product.link}}" class="btn btn_blue btn_size-1">
 					Детали
 				</a>
 			</footer>

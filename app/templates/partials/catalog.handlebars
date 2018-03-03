@@ -1,0 +1,133 @@
+<!-- Main content -->
+<main class="main-content">
+    <!-- Image gradient -->
+    <div class="image-gradient">
+        <div
+                class="image-gradient__image"
+                style="background-image: url('{{catalog.slider_img}}')">
+        </div>
+    </div>
+    <div class="container container_padding">
+
+        {{>breadcrumbs}}
+        <!-- Search info -->
+        <div class="search-info">
+            {{!-- <div>
+                <h1 
+                    class="search-info__header" 
+                    ng-repeat="subcategory in pageOptions.subcategories | filter:{ checked : true }">
+                    {{subcategory.name}}
+                </h1>
+            </div> --}}
+            <div ng-if="pageOptions.isCategory == false">
+                <h1 class="search-info__header">
+                    {{catalog.title}}
+                </h1>
+            </div>
+            {{!-- <button class="search-info__filters-toggle btn btn_green" ng-click="toggleOffCanvas('left')">Фильтровать</button> --}}
+        </div>
+        <!-- Sort -->
+        <div class="sort">
+            <div class="sort__text">
+                Сортировать по:
+            </div>
+            <ul class="sort__list">
+                <li class="sort__item">
+                    <button 
+                        class="btn" 
+                        ng-click="toggleSort('price')" 
+                        ng-class="{btn_red: (searchOptions.sort == 'price')}">
+                            <svg class="icon icon-rouble"><use xlink:href="icons/icons.svg#rouble"></use></svg>
+						<span class="btn__text">
+							Стоимости
+						</span>
+                    </button>
+                </li>
+                <li class="sort__item active">
+                    <button 
+                        class="btn" 
+                        ng-click="toggleSort('rating')" 
+                        ng-class="{btn_red: (searchOptions.sort == 'rating')}">
+                            <svg class="icon icon-star"><use xlink:href="icons/icons.svg#star"></use></svg>
+						<span class="btn__text">
+							Рейтингу
+						</span>
+                    </button>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="container container_padding">
+        <aside class="catalog__aside">
+            <!-- Filter -->
+            <div class="form form_filter">
+                <!-- Blinds type -->
+                <fieldset class="form__fieldset" >
+                    <legend class="form__legend">
+                        Типы
+                    </legend>
+                    {{#each catalog.LinksAttention}}
+                    <div class="form__field">
+                        <a href="{{this.url}}" class="attention-category"
+                            bind="categoryFilter.title">
+                            <span>
+                                {{this.text}}
+                            </span>
+                        </a>
+                    </div>
+                    {{/each}}
+                </fieldset>
+                <!-- Prices range -->
+                <fieldset class="form__fieldset">
+                    <legend class="form__legend">
+                        Диапазон цен
+                    </legend>
+                    <!-- Range -->
+                    <div class="form__field">
+                        <!-- Price range -->
+                        <range
+                                min="priceSlider.min"
+                                max="priceSlider.max"
+                                options="{{priceSlider.options}}">
+                        </range>
+                    </div>
+                </fieldset>
+            </div>
+            <!-- Question -->
+            <div class="catalog__question">
+                {{>question}}
+            </div>
+
+            {{!-- <fieldset class="form__fieldset" ng-if="!!pageOptions.LinksType.length">
+                <legend class="form__legend">
+                    Обратите внимание
+                </legend>
+                <div class="form__field" ng-repeat="attentionCategory in pageOptions.LinksType">
+                    <a class="attention-category"
+                       ng-href="{{ attentionCategory.url }}"
+                       ng-attr-title="{{ attentionCategory.text }}"
+                       ng-bind="attentionCategory.title"></a>
+                </div>
+            </fieldset> --}}
+        </aside>
+        <!-- Catalog -->
+        <div class="catalog catalog_3">
+            <ul class="catalog__list">
+                {{#each products}}
+                <li class="catalog__item">
+                    {{>product}}
+                </li>
+                {{/each}}
+            </ul>
+            <!-- More btn -->
+            <div class="more-btn more-btn_red more-btn_home">
+                <a href class="more-btn__link" ng-click="addProductList()">
+                    <span class="icon icon-more"></span>
+					<span class="more-btn__text">
+						Показать еще результаты
+					</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</main>
