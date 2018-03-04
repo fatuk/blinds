@@ -18,9 +18,11 @@
         <!-- Catalog -->
         <div class="catalog catalog_4">
             <ul class="catalog__list">
+                {{#each catalogRoot.subCategories}}
                 <li class="catalog__item">
-                    <div ng-include="'views/directives/categoryItem.html'" scope="" onload=""></div>
+                    {{>categoryItem}}
                 </li>
+                {{/each}}
             </ul>
         </div>
     </div>

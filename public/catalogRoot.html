@@ -533,7 +533,477 @@
 					        <div class="catalog catalog_4">
 					            <ul class="catalog__list">
 					                <li class="catalog__item">
-					                    <div ng-include="'views/directives/categoryItem.html'" scope="" onload=""></div>
+					                    <div 
+					                    	class="product single main-category" 
+					                    	ng-class="{'active': isHover}" ng-mouseenter="hoverIt(true)" ng-mouseleave="hoverIt(false)" ng-click="touchElement ? hoverIt(false) : ''">
+					                    	<!-- Product view -->
+					                    	<div class="product__wrapper">
+					                            <div class="product__inner main-category__inner">
+					                                <!-- Img -->
+					                                <div class="product__img main-category__img">
+					                                    <div class="product__title main-category__title">
+					                                        <a href=""></a>
+					                                    </div>
+					                                    <!-- Btn -->
+					                                    <a href="" class="btn btn_green" >
+					                                         товаров
+					                                    </a>
+					                    
+					                                </div>
+					                            </div>
+					                    	</div>
+					                    </div>
+					                </li>
+					                <li class="catalog__item">
+					                    <div 
+					                    	class="product single" 
+					                    	ng-class="{'active': isHover}" ng-mouseenter="hoverIt(true)" ng-mouseleave="hoverIt(false)" ng-click="touchElement ? hoverIt(false) : ''">
+					                    	<!-- Product view -->
+					                    	<div class="product__wrapper">
+					                    		<div class="product__inner subCategory">
+					                                <!-- Img -->
+					                                <a
+					                                        href="catalog/vertikalnye_zhalyuzi"
+					                    					style="background-image: url('/img/static/article/alumin-vertikal.jpg')"
+					                    					class="product__img subCategory__img">
+					                                    <button class="btn btn_bordering angle-pointer subCategory__btn-cover">перейти в раздел</button>
+					                                </a>
+					                    			<div class="product__container">
+					                    				<header class="product__header">
+					                    					<!-- Title -->
+					                    					<div class="product__title subCategory__title">
+					                    						<a href=""></a>
+					                    					</div>
+					                    				</header>
+					                    
+					                    			</div>
+					                    			<!-- Footer -->
+					                    			<footer class="product__footer">
+					                    				<!-- Price container -->
+					                    				<div class="product__price-container">
+					                    					<!-- New price -->
+					                    					<div class="product__price-new">
+					                    						<strong>от 748 р.</strong><!--/м<sup>2</sup>-->
+					                    					</div>
+					                    				</div>
+					                    				<!-- Btn -->
+					                                    <a href="" class="btn btn_blue btn_size-1">
+					                                         товаров
+					                    				</a>
+					                    			</footer>
+					                    		</div>
+					                    	</div>
+					                    </div>
+					                </li>
+					                <li class="catalog__item">
+					                    <div 
+					                    	class="product single" 
+					                    	ng-class="{'active': isHover}" ng-mouseenter="hoverIt(true)" ng-mouseleave="hoverIt(false)" ng-click="touchElement ? hoverIt(false) : ''">
+					                    	<!-- Product view -->
+					                    	<div class="product__wrapper">
+					                    		<div class="product__inner subCategory">
+					                                <!-- Img -->
+					                                <a
+					                                        href="catalog/rulonnye_zhalyuzi"
+					                    					style="background-image: url('')"
+					                    					class="product__img subCategory__img">
+					                                    <button class="btn btn_bordering angle-pointer subCategory__btn-cover">перейти в раздел</button>
+					                                </a>
+					                    			<div class="product__container">
+					                    				<header class="product__header">
+					                    					<!-- Title -->
+					                    					<div class="product__title subCategory__title">
+					                    						<a href=""></a>
+					                    					</div>
+					                    				</header>
+					                    
+					                    			</div>
+					                    			<!-- Footer -->
+					                    			<footer class="product__footer">
+					                    				<!-- Price container -->
+					                    				<div class="product__price-container">
+					                    					<!-- New price -->
+					                    					<div class="product__price-new">
+					                    						<strong>от 748 р.</strong><!--/м<sup>2</sup>-->
+					                    					</div>
+					                    				</div>
+					                    				<!-- Btn -->
+					                                    <a href="" class="btn btn_blue btn_size-1">
+					                                         товаров
+					                    				</a>
+					                    			</footer>
+					                    		</div>
+					                    	</div>
+					                    </div>
+					                </li>
+					                <li class="catalog__item">
+					                    <div 
+					                    	class="product single" 
+					                    	ng-class="{'active': isHover}" ng-mouseenter="hoverIt(true)" ng-mouseleave="hoverIt(false)" ng-click="touchElement ? hoverIt(false) : ''">
+					                    	<!-- Product view -->
+					                    	<div class="product__wrapper">
+					                    		<div class="product__inner subCategory">
+					                                <!-- Img -->
+					                                <a
+					                                        href="catalog/zhalyuzi-na-plastikovye-okna"
+					                    					style="background-image: url('')"
+					                    					class="product__img subCategory__img">
+					                                    <button class="btn btn_bordering angle-pointer subCategory__btn-cover">перейти в раздел</button>
+					                                </a>
+					                    			<div class="product__container">
+					                    				<header class="product__header">
+					                    					<!-- Title -->
+					                    					<div class="product__title subCategory__title">
+					                    						<a href=""></a>
+					                    					</div>
+					                    				</header>
+					                    
+					                    			</div>
+					                    			<!-- Footer -->
+					                    			<footer class="product__footer">
+					                    				<!-- Price container -->
+					                    				<div class="product__price-container">
+					                    					<!-- New price -->
+					                    					<div class="product__price-new">
+					                    						<strong>от 748 р.</strong><!--/м<sup>2</sup>-->
+					                    					</div>
+					                    				</div>
+					                    				<!-- Btn -->
+					                                    <a href="" class="btn btn_blue btn_size-1">
+					                                         товаров
+					                    				</a>
+					                    			</footer>
+					                    		</div>
+					                    	</div>
+					                    </div>
+					                </li>
+					                <li class="catalog__item">
+					                    <div 
+					                    	class="product single" 
+					                    	ng-class="{'active': isHover}" ng-mouseenter="hoverIt(true)" ng-mouseleave="hoverIt(false)" ng-click="touchElement ? hoverIt(false) : ''">
+					                    	<!-- Product view -->
+					                    	<div class="product__wrapper">
+					                    		<div class="product__inner subCategory">
+					                                <!-- Img -->
+					                                <a
+					                                        href="catalog/zhaluzi"
+					                    					style="background-image: url('/img/static/gorizontalnye_zhaluzi/plastikovye/imitatsiya_dereva/preview.jpg')"
+					                    					class="product__img subCategory__img">
+					                                    <button class="btn btn_bordering angle-pointer subCategory__btn-cover">перейти в раздел</button>
+					                                </a>
+					                    			<div class="product__container">
+					                    				<header class="product__header">
+					                    					<!-- Title -->
+					                    					<div class="product__title subCategory__title">
+					                    						<a href=""></a>
+					                    					</div>
+					                    				</header>
+					                    
+					                    			</div>
+					                    			<!-- Footer -->
+					                    			<footer class="product__footer">
+					                    				<!-- Price container -->
+					                    				<div class="product__price-container">
+					                    					<!-- New price -->
+					                    					<div class="product__price-new">
+					                    						<strong>от 748 р.</strong><!--/м<sup>2</sup>-->
+					                    					</div>
+					                    				</div>
+					                    				<!-- Btn -->
+					                                    <a href="" class="btn btn_blue btn_size-1">
+					                                         товаров
+					                    				</a>
+					                    			</footer>
+					                    		</div>
+					                    	</div>
+					                    </div>
+					                </li>
+					                <li class="catalog__item">
+					                    <div 
+					                    	class="product single" 
+					                    	ng-class="{'active': isHover}" ng-mouseenter="hoverIt(true)" ng-mouseleave="hoverIt(false)" ng-click="touchElement ? hoverIt(false) : ''">
+					                    	<!-- Product view -->
+					                    	<div class="product__wrapper">
+					                    		<div class="product__inner subCategory">
+					                                <!-- Img -->
+					                                <a
+					                                        href="catalog/rimskie_shtory"
+					                    					style="background-image: url('')"
+					                    					class="product__img subCategory__img">
+					                                    <button class="btn btn_bordering angle-pointer subCategory__btn-cover">перейти в раздел</button>
+					                                </a>
+					                    			<div class="product__container">
+					                    				<header class="product__header">
+					                    					<!-- Title -->
+					                    					<div class="product__title subCategory__title">
+					                    						<a href=""></a>
+					                    					</div>
+					                    				</header>
+					                    
+					                    			</div>
+					                    			<!-- Footer -->
+					                    			<footer class="product__footer">
+					                    				<!-- Price container -->
+					                    				<div class="product__price-container">
+					                    					<!-- New price -->
+					                    					<div class="product__price-new">
+					                    						<strong>от 748 р.</strong><!--/м<sup>2</sup>-->
+					                    					</div>
+					                    				</div>
+					                    				<!-- Btn -->
+					                                    <a href="" class="btn btn_blue btn_size-1">
+					                                         товаров
+					                    				</a>
+					                    			</footer>
+					                    		</div>
+					                    	</div>
+					                    </div>
+					                </li>
+					                <li class="catalog__item">
+					                    <div 
+					                    	class="product single" 
+					                    	ng-class="{'active': isHover}" ng-mouseenter="hoverIt(true)" ng-mouseleave="hoverIt(false)" ng-click="touchElement ? hoverIt(false) : ''">
+					                    	<!-- Product view -->
+					                    	<div class="product__wrapper">
+					                    		<div class="product__inner subCategory">
+					                                <!-- Img -->
+					                                <a
+					                                        href="catalog/karnizy"
+					                    					style="background-image: url('')"
+					                    					class="product__img subCategory__img">
+					                                    <button class="btn btn_bordering angle-pointer subCategory__btn-cover">перейти в раздел</button>
+					                                </a>
+					                    			<div class="product__container">
+					                    				<header class="product__header">
+					                    					<!-- Title -->
+					                    					<div class="product__title subCategory__title">
+					                    						<a href=""></a>
+					                    					</div>
+					                    				</header>
+					                    
+					                    			</div>
+					                    			<!-- Footer -->
+					                    			<footer class="product__footer">
+					                    				<!-- Price container -->
+					                    				<div class="product__price-container">
+					                    					<!-- New price -->
+					                    					<div class="product__price-new">
+					                    						<strong>от 748 р.</strong><!--/м<sup>2</sup>-->
+					                    					</div>
+					                    				</div>
+					                    				<!-- Btn -->
+					                                    <a href="" class="btn btn_blue btn_size-1">
+					                                         товаров
+					                    				</a>
+					                    			</footer>
+					                    		</div>
+					                    	</div>
+					                    </div>
+					                </li>
+					                <li class="catalog__item">
+					                    <div 
+					                    	class="product single" 
+					                    	ng-class="{'active': isHover}" ng-mouseenter="hoverIt(true)" ng-mouseleave="hoverIt(false)" ng-click="touchElement ? hoverIt(false) : ''">
+					                    	<!-- Product view -->
+					                    	<div class="product__wrapper">
+					                    		<div class="product__inner subCategory">
+					                                <!-- Img -->
+					                                <a
+					                                        href="catalog/klassicheskie_shtory"
+					                    					style="background-image: url('')"
+					                    					class="product__img subCategory__img">
+					                                    <button class="btn btn_bordering angle-pointer subCategory__btn-cover">перейти в раздел</button>
+					                                </a>
+					                    			<div class="product__container">
+					                    				<header class="product__header">
+					                    					<!-- Title -->
+					                    					<div class="product__title subCategory__title">
+					                    						<a href=""></a>
+					                    					</div>
+					                    				</header>
+					                    
+					                    			</div>
+					                    			<!-- Footer -->
+					                    			<footer class="product__footer">
+					                    				<!-- Price container -->
+					                    				<div class="product__price-container">
+					                    					<!-- New price -->
+					                    					<div class="product__price-new">
+					                    						<strong>от 748 р.</strong><!--/м<sup>2</sup>-->
+					                    					</div>
+					                    				</div>
+					                    				<!-- Btn -->
+					                                    <a href="" class="btn btn_blue btn_size-1">
+					                                         товаров
+					                    				</a>
+					                    			</footer>
+					                    		</div>
+					                    	</div>
+					                    </div>
+					                </li>
+					                <li class="catalog__item">
+					                    <div 
+					                    	class="product single" 
+					                    	ng-class="{'active': isHover}" ng-mouseenter="hoverIt(true)" ng-mouseleave="hoverIt(false)" ng-click="touchElement ? hoverIt(false) : ''">
+					                    	<!-- Product view -->
+					                    	<div class="product__wrapper">
+					                    		<div class="product__inner subCategory">
+					                                <!-- Img -->
+					                                <a
+					                                        href="catalog/mirazh"
+					                    					style="background-image: url('')"
+					                    					class="product__img subCategory__img">
+					                                    <button class="btn btn_bordering angle-pointer subCategory__btn-cover">перейти в раздел</button>
+					                                </a>
+					                    			<div class="product__container">
+					                    				<header class="product__header">
+					                    					<!-- Title -->
+					                    					<div class="product__title subCategory__title">
+					                    						<a href=""></a>
+					                    					</div>
+					                    				</header>
+					                    
+					                    			</div>
+					                    			<!-- Footer -->
+					                    			<footer class="product__footer">
+					                    				<!-- Price container -->
+					                    				<div class="product__price-container">
+					                    					<!-- New price -->
+					                    					<div class="product__price-new">
+					                    						<strong>от 748 р.</strong><!--/м<sup>2</sup>-->
+					                    					</div>
+					                    				</div>
+					                    				<!-- Btn -->
+					                                    <a href="" class="btn btn_blue btn_size-1">
+					                                         товаров
+					                    				</a>
+					                    			</footer>
+					                    		</div>
+					                    	</div>
+					                    </div>
+					                </li>
+					                <li class="catalog__item">
+					                    <div 
+					                    	class="product single" 
+					                    	ng-class="{'active': isHover}" ng-mouseenter="hoverIt(true)" ng-mouseleave="hoverIt(false)" ng-click="touchElement ? hoverIt(false) : ''">
+					                    	<!-- Product view -->
+					                    	<div class="product__wrapper">
+					                    		<div class="product__inner subCategory">
+					                                <!-- Img -->
+					                                <a
+					                                        href="catalog/plisse"
+					                    					style="background-image: url('')"
+					                    					class="product__img subCategory__img">
+					                                    <button class="btn btn_bordering angle-pointer subCategory__btn-cover">перейти в раздел</button>
+					                                </a>
+					                    			<div class="product__container">
+					                    				<header class="product__header">
+					                    					<!-- Title -->
+					                    					<div class="product__title subCategory__title">
+					                    						<a href=""></a>
+					                    					</div>
+					                    				</header>
+					                    
+					                    			</div>
+					                    			<!-- Footer -->
+					                    			<footer class="product__footer">
+					                    				<!-- Price container -->
+					                    				<div class="product__price-container">
+					                    					<!-- New price -->
+					                    					<div class="product__price-new">
+					                    						<strong>от 748 р.</strong><!--/м<sup>2</sup>-->
+					                    					</div>
+					                    				</div>
+					                    				<!-- Btn -->
+					                                    <a href="" class="btn btn_blue btn_size-1">
+					                                         товаров
+					                    				</a>
+					                    			</footer>
+					                    		</div>
+					                    	</div>
+					                    </div>
+					                </li>
+					                <li class="catalog__item">
+					                    <div 
+					                    	class="product single" 
+					                    	ng-class="{'active': isHover}" ng-mouseenter="hoverIt(true)" ng-mouseleave="hoverIt(false)" ng-click="touchElement ? hoverIt(false) : ''">
+					                    	<!-- Product view -->
+					                    	<div class="product__wrapper">
+					                    		<div class="product__inner subCategory">
+					                                <!-- Img -->
+					                                <a
+					                                        href="catalog/rulonnye-shtory"
+					                    					style="background-image: url('')"
+					                    					class="product__img subCategory__img">
+					                                    <button class="btn btn_bordering angle-pointer subCategory__btn-cover">перейти в раздел</button>
+					                                </a>
+					                    			<div class="product__container">
+					                    				<header class="product__header">
+					                    					<!-- Title -->
+					                    					<div class="product__title subCategory__title">
+					                    						<a href=""></a>
+					                    					</div>
+					                    				</header>
+					                    
+					                    			</div>
+					                    			<!-- Footer -->
+					                    			<footer class="product__footer">
+					                    				<!-- Price container -->
+					                    				<div class="product__price-container">
+					                    					<!-- New price -->
+					                    					<div class="product__price-new">
+					                    						<strong>от 748 р.</strong><!--/м<sup>2</sup>-->
+					                    					</div>
+					                    				</div>
+					                    				<!-- Btn -->
+					                                    <a href="" class="btn btn_blue btn_size-1">
+					                                         товаров
+					                    				</a>
+					                    			</footer>
+					                    		</div>
+					                    	</div>
+					                    </div>
+					                </li>
+					                <li class="catalog__item">
+					                    <div 
+					                    	class="product single" 
+					                    	ng-class="{'active': isHover}" ng-mouseenter="hoverIt(true)" ng-mouseleave="hoverIt(false)" ng-click="touchElement ? hoverIt(false) : ''">
+					                    	<!-- Product view -->
+					                    	<div class="product__wrapper">
+					                    		<div class="product__inner subCategory">
+					                                <!-- Img -->
+					                                <a
+					                                        href="catalog/shtory"
+					                    					style="background-image: url('/img/static/gorizontalnye_zhaluzi/plastikovye/imitatsiya_dereva/preview.jpg')"
+					                    					class="product__img subCategory__img">
+					                                    <button class="btn btn_bordering angle-pointer subCategory__btn-cover">перейти в раздел</button>
+					                                </a>
+					                    			<div class="product__container">
+					                    				<header class="product__header">
+					                    					<!-- Title -->
+					                    					<div class="product__title subCategory__title">
+					                    						<a href=""></a>
+					                    					</div>
+					                    				</header>
+					                    
+					                    			</div>
+					                    			<!-- Footer -->
+					                    			<footer class="product__footer">
+					                    				<!-- Price container -->
+					                    				<div class="product__price-container">
+					                    					<!-- New price -->
+					                    					<div class="product__price-new">
+					                    						<strong>от 748 р.</strong><!--/м<sup>2</sup>-->
+					                    					</div>
+					                    				</div>
+					                    				<!-- Btn -->
+					                                    <a href="" class="btn btn_blue btn_size-1">
+					                                         товаров
+					                    				</a>
+					                    			</footer>
+					                    		</div>
+					                    	</div>
+					                    </div>
 					                </li>
 					            </ul>
 					        </div>

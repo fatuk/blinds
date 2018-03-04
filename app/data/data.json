@@ -189,49 +189,13 @@
                 "productsQuantity": 15,
                 "image": "",
                 "price": 748,
-                "subCategories": [
-                    {
-                        "title": "Алюминевые горизонтальные жалюзи",
-                        "link": "catalog/gorizontalnye_zhalyuzi/alyuminevye",
-                        "productsQuantity": 7,
-                        "image": "/img/static/article/catalog/alum-horizontal.jpg",
-                        "price": 748
-                    },
-                    {
-                        "title": "Пластиковые горизонтальные жалюзи",
-                        "link": "catalog/gorizontalnye_zhalyuzi/plastikovye",
-                        "productsQuantity": 1,
-                        "image": "/img/static/article/plastic-horizontal.jpg",
-                        "price": 3179
-                    },
-                    {
-                        "title": "Жалюзи Волна",
-                        "link": "catalog/gorizontalnye_zhalyuzi/volna",
-                        "productsQuantity": 3,
-                        "image": "/img/static/article/catalog/volna-horizontal.jpg",
-                        "price": 3428
-                    },
-                    {
-                        "title": "Бамбуковые жалюзи",
-                        "link": "catalog/gorizontalnye_zhalyuzi/bambukovye",
-                        "productsQuantity": 2,
-                        "image": "/img/static/article/catalog/bambuk-horizontal.jpg",
-                        "price": 4114
-                    },
-                    {
-                        "title": "Деревянные жалюзи",
-                        "link": "catalog/gorizontalnye_zhalyuzi/derevyannye",
-                        "productsQuantity": 2,
-                        "image": "/img/static/article/catalog/derevo-horizontal.jpg",
-                        "price": 3740
-                    }
-                ]
+                "isMainCategory": true
             },
             {
                 "title": "Вертикальные жалюзи",
                 "link": "catalog/vertikalnye_zhalyuzi",
                 "productsQuantity": 13,
-                "image": "",
+                "image": "/img/static/article/alumin-vertikal.jpg",
                 "price": 499,
                 "subCategories": [
                     {
