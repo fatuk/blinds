@@ -4,18 +4,17 @@
     <ng-include src="'/views/directives/breadcrumbs.html'" class="gallery__breadcrumbs-wrapper"></ng-include>
     <div class="gallery__title" itemprop="name">
         <h1>
-            {{product.title}}
+            {{productPage.title}}
         </h1>
-        <span class="gallery__title-model">модель {{currentTexture.model}}</span>
+        <span class="gallery__title-model">модель 4077 - красный</span>
     </div>
     <!-- Main img -->
     <div class="gallery__container">
         <div
-              ng-attr-alt="{{product.gallery[gallery.currentImage].alt}}"
-              ng-style="{'background-image': 'url(' + (product.gallery[gallery.currentImage].src) + ')', opacity: (gallery.currentImage !== -1)?1:0 }"
-              class="gallery__main-img">
+            style="background-image: url('img/static/gallery(1).jpg'); opacity: 1;"
+            class="gallery__main-img">
         </div>
-        <img ng-if="product.gallery[0]" ng-src="{{product.gallery[0].src}}" ng-attr-alt="{{ product.gallery[0].alt }}" itemprop="image" style="display: none"/>
+        <img src="img/static/gallery(1).jpg" alt="" itemprop="image" style="display: none"/>
         <div class="gallery__controls">
             <button class="gallery__button left" ng-click="moveGallery(-1)">
                 <svg class="icon icon-shevron-left">
@@ -33,20 +32,45 @@
     <!-- List -->
     <ul class="gallery__list">
         <li
-                ng-repeat="(index, galleryItem) in product.gallery"
-                class="gallery__item">
+            class="gallery__item">
             <input
-                    type="radio"
-                    ng-value="{{index}}"
-                    ng-model="gallery.currentImage"
-                    ng-checked="{{$first}}"
-                    class="gallery__input"
-                    id="galleryItem-{{index+1}}">
+                type="radio"
+                value="1"
+                checked="checked"
+                class="gallery__input"
+                id="galleryItem-1">
             <label
-                    style="background: url({{galleryItem.src}}) center no-repeat; background-size: cover;"
-                    ng-attr-alt="{{ galleryItem.alt }}"
-                    class="gallery__item-img"
-                    for="galleryItem-{{index+1}}">
+                style="background: url('img/static/gallery(1).jpg') center no-repeat; background-size: cover;"
+                class="gallery__item-img"
+                for="galleryItem-1">
+            </label>
+        </li>
+        <li
+            class="gallery__item">
+            <input
+                type="radio"
+                value="1"
+                checked="checked"
+                class="gallery__input"
+                id="galleryItem-1">
+            <label
+                style="background: url('img/static/gallery(1).jpg') center no-repeat; background-size: cover;"
+                class="gallery__item-img"
+                for="galleryItem-1">
+            </label>
+        </li>
+        <li
+            class="gallery__item">
+            <input
+                type="radio"
+                value="1"
+                checked="checked"
+                class="gallery__input"
+                id="galleryItem-1">
+            <label
+                style="background: url('img/static/gallery(1).jpg') center no-repeat; background-size: cover;"
+                class="gallery__item-img"
+                for="galleryItem-1">
             </label>
         </li>
     </ul>
