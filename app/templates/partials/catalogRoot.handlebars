@@ -4,7 +4,7 @@
     <div class="image-gradient">
         <div
             class="image-gradient__image"
-            style="background: url(/img/static/slide-1.jpg) center no-repeat; -webkit-background-size: cover; background-size: cover;">
+            style="background-image: url('{{catalog.slider_img}}')">
         </div>
     </div>
 
@@ -18,10 +18,8 @@
         <!-- Catalog -->
         <div class="catalog catalog_4">
             <ul class="catalog__list">
-                <li
-                    ng-repeat="categoryItem in catalogItems"
-                    class="catalog__item">
-                    <div ng-include="'views/directives/categoryItem.html'" scope="" onload=""></div>
+                <li class="catalog__item">
+                    {{>categoryItem}}
                 </li>
             </ul>
         </div>

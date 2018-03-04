@@ -512,229 +512,28 @@
 					<div ng-include="'includes/header-constructor.html'"></div>
 				</div>
 				<div ng-view autoscroll>
-					<!-- Article view -->
-					<main class="main-content" itemscope itemtype="http://schema.org/NewsArticle">
-						<!-- Image gradient -->
-						<div class="image-gradient">
-							<div
-							    class="image-gradient__image"
-								style="background-image: url('img/static/article/slide-ship.jpg')">
-							</div>
-							<img itemprop="image" src="img/static/article/slide-ship.jpg">
+					<div class="text-block text-block_line text-block_scheme">
+						<div class="text-block__column text-block__column_padding text-block__column_mobile-margin">
+							<!-- Title -->
+							<h2 class="text-block__title">
+								
+							</h2>
+							<p class="text-block__text" ng-bind-html="product.construction.text"></p>
 						</div>
-						<div 
-							class="container container_tight" 
-							style="opacity: 1">
-							<div class="breadcrumbs">
-							    <a
-							       href="index.html"
-							       class="breadcrumbs__item">Главная</a>
-							    <span 
-							       class="breadcrumbs__item">Замер, доставка и установка жалюзи</span>
-							</div>		<div class="column-3 article__main">
-								<!-- Article -->
-								<article class="article">
-									<!-- Header -->
-									<header class="article__header">
-										<!-- Rubric -->
-										<div class="article__rubric"  itemprop="genre">
-											Вопросы
-										</div>
-										<!-- Title -->
-										<h1 class="article__title" itemprop="headline">
-											Замер, доставка и установка жалюзи
-										</h1>
-										<!-- Label -->
-										<div class="article__label">
-											<div class="article__label-text">
-												
-											</div>
-										</div>
-										<!-- Image -->
-										<img class="article__img" src="img/static/article/ship.jpg" alt="Замер, доставка и установка жалюзи">
-										<!-- Socials -->
-									</header>
-									<div class="article__content" itemprop="description">
-										<p>Мастера, которые выполняют замер, доставку и установку, являются квалифицированными специалистами. Наш корпоративный этикет позволяет набирать только культурных, сдержанных и пунктуальных работников. Общение с нами оставит у Вас приятное ощущение. Если же у Вас появились претензии к качеству обслуживания, Вы можете написать в наш отдел по контролю качества, через кнопку "Напишите нам" внизу сайта.</p>
-					<p> </p>
-					<h2>Вызов замерщика бесплатно</h2>
-					<p>Мы предостовляем услуги замера окна бесплатно и это дает ряд преимуществ: <br />Специалист-замерщик приезжает в удобное время с каталогом продукции и материалов<br /> Грамотная консультация по выбору продукции по месту установки<br /> Опытная оценка условий монтажа<br /> Экономия времени<br /><br />Замер бесплатен при заказе 2 и более изделий или на сумму более 3000 руб в пределах МКАД. По Москве и Московской области за МКАД - 30 руб за 1 км.</p>
-					<p> </p>
-					<h2>Доставка жалюзи и штор бесплатно</h2>
-					<p>Доставка в пределах МКАД - бесплатно Служба доставки аккуратно и в удобное время привезет заказ с 9:00 до 20:00 в будни и выходные. Доставка по Москве и Московской области за МКАД - 30 руб за 1 км. В удобное время с 9:00 до 20:00 с понедельника по воскресение. Если Вы хотите забрать жалюзи или шторы самостоятельно, то милости просим к нам. Самовывоз - бесплатно.</p>
-					<p> </p>
-					<h2>Установка - от 350 до 1000 р.</h2>
-					<p>Установка - от 350 до 1000 рублей в зависимости от кол-ва изделий и сложности работы, за повес одного изделия. Если изделие устанавливают наши специалисты, то мы предоставляем гарантию до 3-х лет на всю продукцию, в течение которой: без лишних вопросов устраним все недостатки, бесплатно заменим неисправные механизмы. Срок полезного использования продукции составляет 10 лет. При условии бережной и правильной экспуатации значительно дольше. Легкая процедура оформления претензии (достаточно просто привезти изделие в нашу мастерскую).<br /> 10 лет мы используем в производстве качественные комплектующие российского и польского производства</p>
-									</div>
-								</article>
-					
-								<!-- Reviews -->
-							</div>
-							<div class="column-1 article__aside">
-								<!-- Article set -->
-								<div class="article-set">
-									<header class="article-set__header">
-										<!-- Title -->
-										<h2 class="article-set__title">
-											Частые вопросы
-										</h2>
-										<ul class="article-set__list">
-											<li class="article-set_item">
-												<a href="Delivery_and_installation" class="article-set__link">
-													<span class="article-set__link-text">
-														Замер, доставка и установка жалюзи
-													</span>
-													<svg class="icon icon-shevron-right"><use xlink:href="icons/icons.svg#shevron-right"></use></svg>
-												</a>
-											</li>
-											<li class="article-set_item">
-												<a href="Payment" class="article-set__link">
-													<span class="article-set__link-text">
-														Способы оплаты
-													</span>
-													<svg class="icon icon-shevron-right"><use xlink:href="icons/icons.svg#shevron-right"></use></svg>
-												</a>
-											</li>
-											<li class="article-set_item">
-												<a href="algoritm" class="article-set__link">
-													<span class="article-set__link-text">
-														Алгоритм заказа
-													</span>
-													<svg class="icon icon-shevron-right"><use xlink:href="icons/icons.svg#shevron-right"></use></svg>
-												</a>
-											</li>
-										</ul>
-									</header>
-								</div>
-								<!-- Products set -->
-								<div class="products-set">
-									<h2 class="products-set__title">
-										Товары по теме
-									</h2>
-									<ul class="products-set__list">
-										<li class="products-set__item">
-											<div 
-												class="product single" 
-												ng-class="{'single': product.single, 'active': isHover}" 
-												ng-click="touchElement ? hoverIt(false) : ''">
-												<!-- Product view -->
-												<div class="product__wrapper">
-													<!-- Label -->
-													<div class="product__label">
-														<div class="product__label-text">
-															-4%
-														</div>
-													</div>
-													<div class="product__inner">
-														<!-- Img -->
-														<a
-															href="product.html"
-															style="background-size: cover; background-image: url('img/static/product-preview.jpg')"
-															class="product__img">
-														</a>
-														<!-- Cart btn -->
-														<span class="product__cart-btn" ng-click="addProductToCart(product)">
-															<svg class="icon icon-cart"><use xlink:href="icons/icons.svg#cart"></use></svg>
-															<span class="product__cart-label">
-																В корзину
-															</span>
-														</span>
-														<div class="product__container">
-															<!-- Review -->
-															<div class="product__review" ng-if="product.reviews_count">
-																<!-- Review label -->
-																<div class="product__review-label">
-																	<span class="product__review-count">1</span>
-																	отзыв
-																</div>
-															</div>
-															<header class="product__header">
-																<!-- Title -->
-																<div class="product__title">
-																	<a href="product.html">Классические алюминиевые с шириной планки 25мм</a>
-																</div>
-																<!-- Subtitle -->
-																<div class="product__subtitle">
-																	<!-- <a href="/alyuminevye">Алюминевые горизонтальные жалюзи</a> -->
-																</div>
-															</header>
-															<!-- Colors -->
-															<div class="product__colors">
-																<div class="product__colors-title">
-																	<span>2</span> цветов и текстур
-																</div>
-																<ul 
-																	class="product__colors-list" 
-																	ng-init="product.texture_id=product.textures[0].id">
-																	<li 
-																		class="product__colors-item" 
-																		ng-repeat="texture in product.textures">
-																		<label 
-																			class="product__colors-label" 
-																			title="0225 - белый">
-																			<input
-																				type="radio"
-																				name="product_texture_"
-																				value="119"
-																				ng-model="product.texture_id">
-																			<div 
-																				class="product__colors-dot" 
-																				style="background-image: url('/img/static/gorizontalnye_zhaluzi/aluminievye/texture/0225.png')}">
-																			</div>
-																		</label>
-																	</li>
-																	<li 
-																		class="product__colors-item" 
-																		ng-repeat="texture in product.textures">
-																		<label 
-																			class="product__colors-label" 
-																			title="2703 - салатовый">
-																			<input
-																				type="radio"
-																				name="product_texture_"
-																				value="129"
-																				ng-model="product.texture_id">
-																			<div 
-																				class="product__colors-dot" 
-																				style="background-image: url('/img/static/gorizontalnye_zhaluzi/aluminievye/texture/2703.png')}">
-																			</div>
-																		</label>
-																	</li>
-																</ul>
-															</div>
-														</div>
-														<!-- Footer -->
-														<footer class="product__footer">
-															<!-- Price container -->
-															<div class="product__price-container">
-																<!-- Old price -->
-																<div class="product__price-old">
-																	7 887 р./м<sup>2</sup>
-																</div>
-																<!-- New price -->
-																<div class="product__price-new">
-																	<strong>от 7 541 р.</strong>/м<sup>2</sup>
-																</div>
-															</div>
-															<!-- Btn -->
-											                <a href="product.html" class="btn btn_blue btn_size-1">
-																Детали
-															</a>
-														</footer>
-													</div>
-												</div>
-											</div>
-										</li>
-									</ul>
-								</div>
-							</div>
+						<div class="text-block__column text-block__column_padding">
+							<!-- Title -->
+							<h2 class="text-block__title">
+								Схема
+							</h2>
+							<img
+								ng-src=""
+								alt=""
+								class="text-block__img">
+							<button class="btn btn_blue btn-size-1" ng-click="showConstruction()">
+								Увеличить
+							</button>
 						</div>
-					    <div class="container container_tight"  ng-if="!!article.id && !!article.isReviewEnabled && !!mobile" style="opacity: 1">
-					        <div class="column-3 article__reviews">
-					            <!-- Reviews -->
-					        </div>
-					    </div>
-					</main>
+					</div>
 				</div>
 				<footer class="site-footer">
 				    <!-- Seo -->
@@ -1170,5 +969,4 @@
 		</div>
 	</div>
 </body>
-
-</html>
+</html>""

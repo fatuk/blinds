@@ -8,10 +8,10 @@
 					<div class="container" style="height: 100%">
 						<div class="slider__link-cont">
 							<div class="slider__link-wrp">
-								<a href="#!/catalog" class="slider__link">
+								<a href="catalogRoot.html" class="slider__link">
 									Посмотреть каталог
 								</a>
-								<a href="#!/about" class="slider__link slider__link_green">
+								<a href="article.html" class="slider__link slider__link_green">
 									Читать о компании
 								</a>
 							</div>
@@ -44,7 +44,7 @@
 					</span>
 					<span class="steps__text">
 						Найдите красивые жалюзи ипользуя
-						<a href="#!/constructor" class="steps__link">конструктор</a>
+						<a href="constructor.html" class="steps__link">конструктор</a>
 					</span>
 				</li>
 				<li class="steps__item">
@@ -117,7 +117,7 @@
 					Сложно подобрать жалюзи или шторы? Ипользуйте наш удобный конструктор, легко меняя типы жалюзи, цвет и текстуры.
 				</p>
 				<!-- Btn -->
-				<a href="#!/constructor" class="btn btn_green">
+				<a href="constructor.html" class="btn btn_green">
 					Перейти в конструктор
 				</a>
 			</div>
@@ -126,14 +126,16 @@
 	<!-- Catalog -->
 	<div class="container">
 		<div class="catalog">
-			<ul class="catalog__list">
-				<li ng-repeat="product in catalogItems" class="catalog__item">
-					<div ng-include="'views/directives/product.html'" scope="" onload=""></div>
-				</li>
+			<ul class="catalog__list">			
+				{{#each products}}
+                <li class="catalog__item">
+                    {{>product}}
+                </li>
+                {{/each}}
 			</ul>
 			<!-- More btn -->
 			<div class="more-btn">
-				<a href class="more-btn__link" ng-click="getProductList()" ng-if="showLoadMoreBtn">
+				<a class="more-btn__link">
 					<span class="icon icon-more"></span>
 					<span class="more-btn__text">
 						Показать больше новинок

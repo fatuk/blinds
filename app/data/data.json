@@ -178,6 +178,597 @@
             }
         }
     },
+    "catalogRoot": {
+        "slider_img": "img/static/slide-1.jpg",
+        "title": "Каталог",
+        "metaTitle": "Каталог",
+        "subCategories": [
+            {
+                "title": "Горизонтальные жалюзи",
+                "link": "catalog/gorizontalnye_zhalyuzi",
+                "productsQuantity": 15,
+                "image": "",
+                "price": 748,
+                "subCategories": [
+                    {
+                        "title": "Алюминевые горизонтальные жалюзи",
+                        "link": "catalog/gorizontalnye_zhalyuzi/alyuminevye",
+                        "productsQuantity": 7,
+                        "image": "/img/static/article/catalog/alum-horizontal.jpg",
+                        "price": 748
+                    },
+                    {
+                        "title": "Пластиковые горизонтальные жалюзи",
+                        "link": "catalog/gorizontalnye_zhalyuzi/plastikovye",
+                        "productsQuantity": 1,
+                        "image": "/img/static/article/plastic-horizontal.jpg",
+                        "price": 3179
+                    },
+                    {
+                        "title": "Жалюзи Волна",
+                        "link": "catalog/gorizontalnye_zhalyuzi/volna",
+                        "productsQuantity": 3,
+                        "image": "/img/static/article/catalog/volna-horizontal.jpg",
+                        "price": 3428
+                    },
+                    {
+                        "title": "Бамбуковые жалюзи",
+                        "link": "catalog/gorizontalnye_zhalyuzi/bambukovye",
+                        "productsQuantity": 2,
+                        "image": "/img/static/article/catalog/bambuk-horizontal.jpg",
+                        "price": 4114
+                    },
+                    {
+                        "title": "Деревянные жалюзи",
+                        "link": "catalog/gorizontalnye_zhalyuzi/derevyannye",
+                        "productsQuantity": 2,
+                        "image": "/img/static/article/catalog/derevo-horizontal.jpg",
+                        "price": 3740
+                    }
+                ]
+            },
+            {
+                "title": "Вертикальные жалюзи",
+                "link": "catalog/vertikalnye_zhalyuzi",
+                "productsQuantity": 13,
+                "image": "",
+                "price": 499,
+                "subCategories": [
+                    {
+                        "title": "Алюминиевые вертикальные жалюзи",
+                        "link": "catalog/vertikalnye_zhalyuzi/alyuminievye",
+                        "productsQuantity": 2,
+                        "image": "/img/static/article/catalog/alumin-vertikal.jpg",
+                        "price": 1807
+                    },
+                    {
+                        "title": "Тканевые вертикальные жалюзи",
+                        "link": "catalog/vertikalnye_zhalyuzi/tkanevye",
+                        "productsQuantity": 4,
+                        "image": "/img/static/article/catalog/tkan-vertikal.jpg",
+                        "price": 499
+                    },
+                    {
+                        "title": "Пластиковые вертикальные жалюзи",
+                        "link": "catalog/vertikalnye_zhalyuzi/plastikovye",
+                        "productsQuantity": 2,
+                        "image": "/img/static/article/catalog/plastik-vertikal.jpg",
+                        "price": 935
+                    },
+                    {
+                        "title": "Веревочные вертикальные жалюзи Бриз",
+                        "link": "catalog/vertikalnye_zhalyuzi/verevochnye",
+                        "productsQuantity": 1,
+                        "image": "/img/static/article/catalog/verevochnye-vertikal.jpg",
+                        "price": 4487
+                    },
+                    {
+                        "title": "Недорогие вертикальные жалюзи",
+                        "link": "catalog/vertikalnye_zhalyuzi/nedorogie",
+                        "productsQuantity": 2,
+                        "image": "/img/static/article/catalog/nedorogie-vertikal.jpg",
+                        "price": 499
+                    },
+                    {
+                        "title": "Недорогие тканевые вертикальные жалюзи",
+                        "link": "catalog/vertikalnye_zhalyuzi/nedorogie-tkanevye",
+                        "productsQuantity": 2,
+                        "image": "/img/static/vertikalnye_zhaluzi/tkanevye/srisunkom/preview.jpg",
+                        "price": 499
+                    }
+                ]
+            },
+            {
+                "title": "Рулонные жалюзи",
+                "link": "catalog/rulonnye_zhalyuzi",
+                "productsQuantity": 21,
+                "image": "",
+                "price": 2618,
+                "subCategories": [
+                    {
+                        "title": "Тканевые рулонные шторы",
+                        "link": "catalog/rulonnye_zhalyuzi/tkanevye",
+                        "productsQuantity": 7,
+                        "image": "/img/static/rulonnye_zhaluzi/tkanevye/poluprozrachnye/preview.jpg",
+                        "price": 2618
+                    },
+                    {
+                        "title": "Кассетные рулонные шторы ",
+                        "link": "catalog/rulonnye_zhalyuzi/uni",
+                        "productsQuantity": 2,
+                        "image": "/img/static/rulonnye_zhaluzi/tkanevye/uni1/preview.jpg",
+                        "price": 3241
+                    },
+                    {
+                        "title": "Рулонные жалюзи Зебра",
+                        "link": "catalog/rulonnye_zhalyuzi/zebra",
+                        "productsQuantity": 4,
+                        "image": "/img/static/rulonnye_zhaluzi/zebra/standartnye/preview.jpg",
+                        "price": 3428
+                    },
+                    {
+                        "title": "Соломенные рулонные жалюзи",
+                        "link": "catalog/rulonnye_zhalyuzi/solomennye",
+                        "productsQuantity": 1,
+                        "image": "/img/static/rulonnye_zhaluzi/tkanevye/natur/preview.jpg",
+                        "price": 3241
+                    },
+                    {
+                        "title": "Недорогие рулонные жалюзи",
+                        "link": "catalog/rulonnye_zhalyuzi/nedorogie",
+                        "productsQuantity": 2,
+                        "image": "/img/static/rulonnye_zhaluzi/tkanevye/prozrachnye/preview.jpg",
+                        "price": 2618
+                    },
+                    {
+                        "title": "Рулонные жалюзи День ночь",
+                        "link": "catalog/rulonnye_zhalyuzi/den-noch",
+                        "productsQuantity": 1,
+                        "image": "/img/static/rulonnye_zhaluzi/zebra/dekor/preview.jpg",
+                        "price": 4051
+                    },
+                    {
+                        "title": "Рулонные жалюзи на балкон",
+                        "link": "catalog/rulonnye_zhalyuzi/na-balkon",
+                        "productsQuantity": 3,
+                        "image": "/img/static/rulonnye_zhaluzi/tkanevye/uni2/preview.jpg",
+                        "price": 2618
+                    },
+                    {
+                        "title": "Недорогие бамбуковые рулонные жалюзи",
+                        "link": "catalog/rulonnye_zhalyuzi/nedorogie-bambukovye",
+                        "productsQuantity": 1,
+                        "image": "/img/static/rulonnye_zhaluzi/tkanevye/mini/solomka-rulon.jpg",
+                        "price": 3241
+                    }
+                ]
+            },
+            {
+                "title": "Жалюзи на пластиковые окна",
+                "link": "catalog/zhalyuzi-na-plastikovye-okna",
+                "productsQuantity": 54,
+                "image": "",
+                "price": 499,
+                "subCategories": [
+                    {
+                        "title": "Недорогие жалюзи на пластиковые окна",
+                        "link": "catalog/zhalyuzi-na-plastikovye-okna/nedorogie",
+                        "productsQuantity": 9,
+                        "image": "/img/static/gorizontalnye_zhaluzi/aluminievye/16mm/preview.jpg",
+                        "price": 499
+                    },
+                    {
+                        "title": "Кассетные жалюзи на пластиковые окна",
+                        "link": "catalog/zhalyuzi-na-plastikovye-okna/kassetnye",
+                        "productsQuantity": 4,
+                        "image": "/img/static/gorizontalnye_zhaluzi/aluminievye/kassetnye/preview.jpg",
+                        "price": 1994
+                    },
+                    {
+                        "title": "Рулонные жалюзи на пластиковые окна",
+                        "link": "catalog/zhalyuzi-na-plastikovye-okna/rulonnye",
+                        "productsQuantity": 12,
+                        "image": "/img/static/rulonnye_zhaluzi/tkanevye/uni2/preview.jpg",
+                        "price": 2618
+                    },
+                    {
+                        "title": "Вертикальные жалюзи на пластиковые окна",
+                        "link": "catalog/zhalyuzi-na-plastikovye-okna/vertikalnye",
+                        "productsQuantity": 5,
+                        "image": "/img/static/vertikalnye_zhaluzi/aluminievye/standartnye/preview2.jpg",
+                        "price": 499
+                    },
+                    {
+                        "title": "Жалюзи на пластиковые окна без сверления",
+                        "link": "catalog/zhalyuzi-na-plastikovye-okna/bez-sverleniya",
+                        "productsQuantity": 3,
+                        "image": "/img/static/gorizontalnye_zhaluzi/aluminievye/50mm/preview.jpg",
+                        "price": 3241
+                    },
+                    {
+                        "title": "Жалюзи день ночь на пластиковые окна",
+                        "link": "catalog/zhalyuzi-na-plastikovye-okna/den-noch",
+                        "productsQuantity": 4,
+                        "image": "/img/static/rulonnye_zhaluzi/zebra/uni1/preview.jpg",
+                        "price": 3428
+                    },
+                    {
+                        "title": "Алюминиевые жалюзи на пластиковые окна",
+                        "link": "catalog/zhalyuzi-na-plastikovye-okna/alyuminievye",
+                        "productsQuantity": 3,
+                        "image": "/img/static/gorizontalnye_zhaluzi/aluminievye/texturirovannye/preview.jpg",
+                        "price": 748
+                    },
+                    {
+                        "title": "Тканевые жалюзи на пластиковые окна",
+                        "link": "catalog/zhalyuzi-na-plastikovye-okna/tkanevye",
+                        "productsQuantity": 13,
+                        "image": "/img/static/vertikalnye_zhaluzi/tkanevye/standartnye/preview.jpg",
+                        "price": 499
+                    },
+                    {
+                        "title": "Горизонтальные жалюзи на пластиковые окна",
+                        "link": "catalog/zhalyuzi-na-plastikovye-okna/gorizontalnye-plastikovye",
+                        "productsQuantity": 1,
+                        "image": "/img/static/gorizontalnye_zhaluzi/plastikovye/imitatsiya_dereva/preview.jpg",
+                        "price": 3179
+                    }
+                ]
+            },
+            {
+                "title": "Жалюзи на заказ в Москве",
+                "link": "catalog/zhaluzi",
+                "productsQuantity": 25,
+                "image": "/img/static/gorizontalnye_zhaluzi/plastikovye/imitatsiya_dereva/preview.jpg",
+                "price": 499,
+                "subCategories": [
+                    {
+                        "title": "Все жалюзи",
+                        "link": "catalog/zhaluzi/all",
+                        "productsQuantity": 25,
+                        "image": "/img/static/gorizontalnye_zhaluzi/plastikovye/imitatsiya_dereva/preview.jpg",
+                        "price": 499
+                    }
+                ]
+            },
+            {
+                "title": "Римские шторы",
+                "link": "catalog/rimskie_shtory",
+                "productsQuantity": 40,
+                "image": "",
+                "price": 1128,
+                "subCategories": [
+                    {
+                        "title": "Ткани для римских штор",
+                        "link": "catalog/rimskie_shtory/tkani",
+                        "productsQuantity": 10,
+                        "image": "/img/static/rimskie_shtory/tkani/kletka/preview.jpg",
+                        "price": 1128
+                    },
+                    {
+                        "title": "Карнизы для римских штор",
+                        "link": "catalog/rimskie_shtory/karnizy",
+                        "productsQuantity": 1,
+                        "image": "/img/static/rimskie_shtory/karniz/antej/preview.jpg",
+                        "price": 2469
+                    },
+                    {
+                        "title": "Недорогие римские шторы",
+                        "link": "catalog/rimskie_shtory/nedorogie",
+                        "productsQuantity": 2,
+                        "image": "/img/static/rimskie_shtory/tkani/standartnye/preview.jpg",
+                        "price": 1685
+                    },
+                    {
+                        "title": "Римские шторы на заказ",
+                        "link": "catalog/rimskie_shtory/na-zakaz",
+                        "productsQuantity": 4,
+                        "image": "/img/static/rimskie_shtory/tkani/porter/preview.jpg",
+                        "price": 1685
+                    },
+                    {
+                        "title": "Римские шторы на пластиковые окна",
+                        "link": "catalog/rimskie_shtory/na-plastikovye-okna",
+                        "productsQuantity": 4,
+                        "image": "/img/static/rimskie_shtory/tkani/royal/preview.jpg",
+                        "price": 1128
+                    },
+                    {
+                        "title": "Римские шторы на кухню",
+                        "link": "catalog/rimskie_shtory/na-kuhnyu",
+                        "productsQuantity": 5,
+                        "image": "/img/static/rimskie_shtory/tkani/nature/preview.jpg",
+                        "price": 1128
+                    },
+                    {
+                        "title": "Римские шторы на дачу",
+                        "link": "catalog/rimskie_shtory/na-dachu",
+                        "productsQuantity": 3,
+                        "image": "/img/static/rimskie_shtory/tkani/spain/preview.jpg",
+                        "price": 1128
+                    },
+                    {
+                        "title": "Римские шторы на балкон",
+                        "link": "catalog/rimskie_shtory/na-balkon",
+                        "productsQuantity": 5,
+                        "image": "/img/static/rimskie_shtory/tkani/plotnye/preview.jpg",
+                        "price": 1128
+                    },
+                    {
+                        "title": "Римские шторы в полоску",
+                        "link": "catalog/rimskie_shtory/v-polosku",
+                        "productsQuantity": 1,
+                        "image": "/img/static/rimskie_shtory/tkani/polosatye/preview.jpg",
+                        "price": 2852
+                    },
+                    {
+                        "title": "Римские шторы на липучках",
+                        "link": "catalog/rimskie_shtory/na-lipuchkah",
+                        "productsQuantity": 5,
+                        "image": "/img/static/rimskie_shtory/tkani/srisunkom/preview.jpg",
+                        "price": 1128
+                    }
+                ]
+            },
+            {
+                "title": "Карнизы",
+                "link": "catalog/karnizy",
+                "productsQuantity": 16,
+                "image": "",
+                "price": 993,
+                "subCategories": [
+                    {
+                        "title": "Багетные карнизы",
+                        "link": "catalog/karnizy/bagetnye",
+                        "productsQuantity": 2,
+                        "image": "/img/static/karnizy/bagetnye/dekor/preview.jpg",
+                        "price": 1989
+                    },
+                    {
+                        "title": "Металлические карнизы",
+                        "link": "catalog/karnizy/metal",
+                        "productsQuantity": 9,
+                        "image": "/img/static/karnizy/metal/kristallo/preview.jpg",
+                        "price": 993
+                    },
+                    {
+                        "title": "Деревянные карнизы",
+                        "link": "catalog/karnizy/derevo",
+                        "productsQuantity": 3,
+                        "image": "/img/static/karnizy/wood/antik/preview.jpg",
+                        "price": 2588
+                    },
+                    {
+                        "title": "Струнные карнизы",
+                        "link": "catalog/karnizy/strunnye",
+                        "productsQuantity": 2,
+                        "image": "/img/static/karnizy/strunnye/sarnico/preview.jpg",
+                        "price": 4929
+                    }
+                ]
+            },
+            {
+                "title": "Классические шторы",
+                "link": "catalog/klassicheskie_shtory",
+                "productsQuantity": 11,
+                "image": "",
+                "price": 884,
+                "subCategories": [
+                    {
+                        "title": "Классические шторы",
+                        "link": "catalog/klassicheskie_shtory/gardiny",
+                        "productsQuantity": 11,
+                        "image": "/img/static/shades/gardiny/citysight/preview.jpg",
+                        "price": 884
+                    }
+                ]
+            },
+            {
+                "title": "Шторы Мираж",
+                "link": "catalog/mirazh",
+                "productsQuantity": 3,
+                "image": "",
+                "price": 9848,
+                "subCategories": [
+                    {
+                        "title": "Шторы Мираж",
+                        "link": "catalog/mirazh/tkani",
+                        "productsQuantity": 3,
+                        "image": "/img/static/shades/mirazh/standartnye/preview.jpg",
+                        "price": 9848
+                    }
+                ]
+            },
+            {
+                "title": "Шторы плиссе",
+                "link": "catalog/plisse",
+                "productsQuantity": 13,
+                "image": "",
+                "price": 4737,
+                "subCategories": [
+                    {
+                        "title": "Шторы плиссе Гофре",
+                        "link": "catalog/plisse/gofre",
+                        "productsQuantity": 3,
+                        "image": "/img/static/plisse/gofre/standartnye/preview.jpg",
+                        "price": 7541
+                    },
+                    {
+                        "title": "Ткани для штор плиссе",
+                        "link": "catalog/plisse/standartnye",
+                        "productsQuantity": 4,
+                        "image": "/img/static/plisse/standartnye/otrazhenie/preview.jpg",
+                        "price": 4737
+                    },
+                    {
+                        "title": "Шторы плиссе \"День-Ночь\"",
+                        "link": "catalog/plisse/den_noch",
+                        "productsQuantity": 1,
+                        "image": "/img/static/plisse/den_noch/standartnye/preview.jpg",
+                        "price": 9910
+                    },
+                    {
+                        "title": "Шторы и жалюзи плиссе на пластиковые окна",
+                        "link": "catalog/plisse/na-plastikovye-okna",
+                        "productsQuantity": 2,
+                        "image": "/img/static/plisse/standartnye/poloski/preview.jpg",
+                        "price": 4737
+                    },
+                    {
+                        "title": "Натяжные шторы плиссе",
+                        "link": "catalog/plisse/natyazhnye",
+                        "productsQuantity": 3,
+                        "image": "/img/static/plisse/standartnye/srisunkom/preview.jpg",
+                        "price": 4737
+                    }
+                ]
+            },
+            {
+                "title": "Рулонные шторы",
+                "link": "catalog/rulonnye-shtory",
+                "productsQuantity": 42,
+                "image": "",
+                "price": 1685,
+                "subCategories": [
+                    {
+                        "title": "Рулонные шторы день ночь",
+                        "link": "catalog/rulonnye-shtory/den-noch",
+                        "productsQuantity": 4,
+                        "image": "/img/static/rulonnye_zhaluzi/zebra/dekor/preview.jpg",
+                        "price": 3428
+                    },
+                    {
+                        "title": "Рулонные шторы с фотопечатью",
+                        "link": "catalog/rulonnye-shtory/s-fotopechatyu",
+                        "productsQuantity": 1,
+                        "image": "/img/static/rulonnye_zhaluzi/tkanevye/print/preview.jpg",
+                        "price": 2720
+                    },
+                    {
+                        "title": "Рулонные шторы без сверления",
+                        "link": "catalog/rulonnye-shtory/bez-sverleniya",
+                        "productsQuantity": 2,
+                        "image": "/img/static/rulonnye_zhaluzi/zebra/uni1/preview.jpg",
+                        "price": 3241
+                    },
+                    {
+                        "title": "Недорогие рулонные шторы",
+                        "link": "catalog/rulonnye-shtory/nedorogie",
+                        "productsQuantity": 2,
+                        "image": "/img/static/rulonnye_zhaluzi/tkanevye/poluprozrachnye/preview.jpg",
+                        "price": 2618
+                    },
+                    {
+                        "title": "Рулонные шторы на пластиковые окна",
+                        "link": "catalog/rulonnye-shtory/na-plastikovye-okna",
+                        "productsQuantity": 4,
+                        "image": "/img/static/rulonnye_zhaluzi/tkanevye/uni1/preview.jpg",
+                        "price": 3241
+                    },
+                    {
+                        "title": "Кассетные рулонные шторы",
+                        "link": "catalog/rulonnye-shtory/kassetnye",
+                        "productsQuantity": 2,
+                        "image": "/img/static/rulonnye_zhaluzi/tkanevye/uni2/preview.jpg",
+                        "price": 3241
+                    },
+                    {
+                        "title": "Рулонные шторы Зебра",
+                        "link": "catalog/rulonnye-shtory/zebra",
+                        "productsQuantity": 4,
+                        "image": "/img/static/rulonnye_zhaluzi/zebra/standartnye/preview.jpg",
+                        "price": 3428
+                    },
+                    {
+                        "title": "Светонепроницаемые рулонные шторы",
+                        "link": "catalog/rulonnye-shtory/svetonepronicaemye",
+                        "productsQuantity": 2,
+                        "image": "/img/static/rulonnye_zhaluzi/tkanevye/blackout/preview.jpg",
+                        "price": 1685
+                    },
+                    {
+                        "title": "Рулонные шторы Мини",
+                        "link": "catalog/rulonnye-shtory/mini",
+                        "productsQuantity": 2,
+                        "image": "/img/static/rulonnye_zhaluzi/tkanevye/mini/preview.jpg",
+                        "price": 2618
+                    },
+                    {
+                        "title": "Рулонные шторы Снизу вверх",
+                        "link": "catalog/rulonnye-shtory/snizu-vverh",
+                        "productsQuantity": 3,
+                        "image": "/img/static/rulonnye_zhaluzi/zebra/dekor/preview.jpg",
+                        "price": 2618
+                    },
+                    {
+                        "title": "Рулонные шторы с рисунком",
+                        "link": "catalog/rulonnye-shtory/s-risunkom",
+                        "productsQuantity": 2,
+                        "image": "/img/static/rulonnye_zhaluzi/tkanevye/dekor/preview.jpg",
+                        "price": 3241
+                    },
+                    {
+                        "title": "Рулонные шторы на кухню",
+                        "link": "catalog/rulonnye-shtory/na-kuhnyu",
+                        "productsQuantity": 3,
+                        "image": "/img/static/rulonnye_zhaluzi/tkanevye/prozrachnye/preview.jpg",
+                        "price": 2618
+                    },
+                    {
+                        "title": "Рулонные шторы из соломки",
+                        "link": "catalog/rulonnye-shtory/iz-solomki",
+                        "productsQuantity": 1,
+                        "image": "/img/static/rulonnye_zhaluzi/tkanevye/natur/preview.jpg",
+                        "price": 3241
+                    },
+                    {
+                        "title": "Рулонные шторы Уни",
+                        "link": "catalog/rulonnye-shtory/uni",
+                        "productsQuantity": 3,
+                        "image": "/img/static/rulonnye_zhaluzi/tkanevye/uni2/preview.jpg",
+                        "price": 3241
+                    },
+                    {
+                        "title": "Рулонные шторы для террасы",
+                        "link": "catalog/rulonnye-shtory/dlya-terrasy",
+                        "productsQuantity": 1,
+                        "image": "/img/static/rulonnye_zhaluzi/tkanevye/mini/solomka-rulon.jpg",
+                        "price": 3241
+                    },
+                    {
+                        "title": "Двойные рулонные шторы",
+                        "link": "catalog/rulonnye-shtory/dvojnye",
+                        "productsQuantity": 4,
+                        "image": "/img/static/rulonnye_zhaluzi/zebra/mini/preview.jpg",
+                        "price": 3428
+                    },
+                    {
+                        "title": "Недорогие рулонные шторы на пластиковые окна ",
+                        "link": "catalog/rulonnye-shtory/nedorogie-na-plastikovye-okna",
+                        "productsQuantity": 2,
+                        "image": "/img/static/rulonnye_zhaluzi/tkanevye/blackout/preview.jpg",
+                        "price": 2618
+                    }
+                ]
+            },
+            {
+                "title": "Пошив штор на заказ в Москве",
+                "link": "catalog/shtory",
+                "productsQuantity": 12,
+                "image": "/img/static/gorizontalnye_zhaluzi/plastikovye/imitatsiya_dereva/preview.jpg",
+                "price": 1128,
+                "subCategories": [
+                    {
+                        "title": "Все шторы",
+                        "link": "catalog/shtory/all",
+                        "productsQuantity": 12,
+                        "image": "/img/static/gorizontalnye_zhaluzi/plastikovye/imitatsiya_dereva/preview.jpg",
+                        "price": 1128
+                    }
+                ]
+            }
+        ]
+    },
     "article": {
         "id": 2,
         "rubric": "Вопросы",
@@ -315,7 +906,7 @@
         "image": "img/static/product-preview.jpg",
         "rating": "5.0000",
         "reviews_count": 1,
-        "link": "product-page.html",
+        "link": "product.html",
         "title": "Классические алюминиевые с шириной планки 25мм",
         "category_link": "alyuminevye",
         "category_title": "Алюминевые горизонтальные жалюзи",
