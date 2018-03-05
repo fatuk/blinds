@@ -12,11 +12,11 @@
             <!-- Img -->
             <div class="product__img main-category__img">
                 <div class="product__title main-category__title">
-                    <a href="{{catalogRoot.link}}">{{catalogRoot.title}}</a>
+                    <a href="{{this.link}}">{{this.title}}</a>
                 </div>
                 <!-- Btn -->
-                <a href="{{catalogRoot.link}}" class="btn btn_green" >
-                    {{categoryItem.productsQuantity}} товаров
+                <a href="{{this.link}}" class="btn btn_green" >
+                    {{this.productsQuantity}} товаров
                 </a>
 
             </div>
@@ -35,7 +35,7 @@
 				<header class="product__header">
 					<!-- Title -->
 					<div class="product__title subCategory__title">
-						<a href="{{catalogRoot.link}}">{{catalogRoot.title}}</a>
+						<a href="{{this.link}}">{{this.title}}</a>
 					</div>
 				</header>
 
@@ -46,12 +46,12 @@
 				<div class="product__price-container">
 					<!-- New price -->
 					<div class="product__price-new">
-						<strong>от 748 р.</strong><!--/м<sup>2</sup>-->
+						<strong>от {{this.price}} р.</strong><!--/м<sup>2</sup>-->
 					</div>
 				</div>
 				<!-- Btn -->
-                <a href="{{catalogRoot.link}}" class="btn btn_blue btn_size-1">
-                    {{catalogRoot.productsQuantity}} товаров
+                <a href="{{this.link}}" class="btn btn_blue btn_size-1">
+                    {{this.productsQuantity}} товаров
 				</a>
 			</footer>
 		</div>
