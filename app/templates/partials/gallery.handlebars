@@ -1,7 +1,7 @@
 <div class="gallery">
     <!-- Title -->
 
-    <ng-include src="'/views/directives/breadcrumbs.html'" class="gallery__breadcrumbs-wrapper"></ng-include>
+    {{>breadcrumbs}}
     <div class="gallery__title" itemprop="name">
         <h1>
             {{productPage.title}}
@@ -52,11 +52,11 @@
                 value="1"
                 checked="checked"
                 class="gallery__input"
-                id="galleryItem-1">
+                id="galleryItem-2">
             <label
-                style="background: url('img/static/gallery(1).jpg') center no-repeat; background-size: cover;"
+                style="background: url('img/static/gallery(2).jpg') center no-repeat; background-size: cover;"
                 class="gallery__item-img"
-                for="galleryItem-1">
+                for="galleryItem-2">
             </label>
         </li>
         <li
@@ -66,11 +66,11 @@
                 value="1"
                 checked="checked"
                 class="gallery__input"
-                id="galleryItem-1">
+                id="galleryItem-3">
             <label
-                style="background: url('img/static/gallery(1).jpg') center no-repeat; background-size: cover;"
+                style="background: url('img/static/gallery(3).jpg') center no-repeat; background-size: cover;"
                 class="gallery__item-img"
-                for="galleryItem-1">
+                for="galleryItem-3">
             </label>
         </li>
     </ul>

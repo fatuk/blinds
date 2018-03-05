@@ -55,7 +55,7 @@
                         <button
                                 ng-click="minPrice !== maxPrice ? onClickRange() : ''"
                                 class="textures__filters-btn"
-                                ng-class="{'active': $parent.togglePricePopup && minPrice !== maxPrice, 'disactive': minPrice === maxPrice}">
+                                class="{'active': $parent.togglePricePopup && minPrice !== maxPrice, 'disactive': minPrice === maxPrice}">
                             цена
                             <svg class="icon icon-shevron-down"><use xlink:href="icons/icons.svg#shevron-down"></use></svg>
                         </button>
@@ -77,12 +77,12 @@
                         </div>
                     </li>
                     <!-- By color -->
-
+                    
                     <li class="textures__filters-item">
                         <button
                                 ng-click="totalColors.length > 0 ? onClickColor():''"
                                 class="textures__filters-btn"
-                                ng-class="{'active': $parent.toggleColorsPopup && totalColors.length > 1, 'disactive': $parent.totalColors.length === 0}">
+                                class="{'active': $parent.toggleColorsPopup && totalColors.length > 1, 'disactive': $parent.totalColors.length === 0}">
                             цвет
                             <svg class="icon icon-shevron-down"><use xlink:href="icons/icons.svg#shevron-down"></use></svg>
                         </button>
@@ -126,12 +126,10 @@
                 class="textures__item">
             <div ng-mouseenter="$parent.$parent.$parent.previewTextureModel = texture.id;" ng-mouseleave="$parent.$parent.$parent.previewTextureModel = null">
                 <texture
-                        title="{{texture.model}}"
-                        model="$parent.$parent.$parent.textureModel"
-                        name="texture"
-                        checked="{{texture.id === textureModel || $first}}"
-                        fill="{{texture.texture}}"
-                        value="{{texture.id}}">
+                        title="{{textures.model}}"
+                        checked="checked"
+                        fill="{{textures.texture}}"
+                        value="{{textures.id}}">
                 </texture>
             </div>
         </li>

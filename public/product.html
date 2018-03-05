@@ -531,8 +531,13 @@
 					            <div class="gallery">
 					                <!-- Title -->
 					            
-					                <ng-include src="'/views/directives/breadcrumbs.html'" class="gallery__breadcrumbs-wrapper"></ng-include>
-					                <div class="gallery__title" itemprop="name">
+					                <div class="breadcrumbs">
+					                    <a
+					                       href="index.html"
+					                       class="breadcrumbs__item">Главная</a>
+					                    <span 
+					                       class="breadcrumbs__item">Замер, доставка и установка жалюзи</span>
+					                </div>    <div class="gallery__title" itemprop="name">
 					                    <h1>
 					                        Горизонтальные алюминиевые жалюзи 16мм
 					                    </h1>
@@ -582,11 +587,11 @@
 					                            value="1"
 					                            checked="checked"
 					                            class="gallery__input"
-					                            id="galleryItem-1">
+					                            id="galleryItem-2">
 					                        <label
-					                            style="background: url('img/static/gallery(1).jpg') center no-repeat; background-size: cover;"
+					                            style="background: url('img/static/gallery(2).jpg') center no-repeat; background-size: cover;"
 					                            class="gallery__item-img"
-					                            for="galleryItem-1">
+					                            for="galleryItem-2">
 					                        </label>
 					                    </li>
 					                    <li
@@ -596,121 +601,15 @@
 					                            value="1"
 					                            checked="checked"
 					                            class="gallery__input"
-					                            id="galleryItem-1">
+					                            id="galleryItem-3">
 					                        <label
-					                            style="background: url('img/static/gallery(1).jpg') center no-repeat; background-size: cover;"
+					                            style="background: url('img/static/gallery(3).jpg') center no-repeat; background-size: cover;"
 					                            class="gallery__item-img"
-					                            for="galleryItem-1">
+					                            for="galleryItem-3">
 					                        </label>
 					                    </li>
 					                </ul>
 					            </div>            <!-- Service Block Mobile -->
-					            <div ng-if="mobile">
-					                <!-- Price block -->
-					                <div ng-include="'includes/product/price.html'"></div>
-					                <!-- Textures -->
-					                <div ng-include="'includes/product/textures.html'"></div>
-					                <!-- Sizes -->
-					                <div class="form form_sizes">
-					                    <h2 class="form__title">
-					                        Укажите размеры конструкции
-					                        <span class="desktop-only"> для расчета стоимости</span>
-					                    </h2>
-					                    <div class="form__row">
-					                        <div class="form__cell">
-					                            <label class="label">
-					                                <span class="label__text">
-					                                    Шир.
-					                                </span>
-					                                <span class="field" ng-if="!!product">
-					                                    <input type="number" class="input" ng-model="product.dimensions.width" ng-change="calcPrice()" placeholder="0см">
-					                                </span>
-					                            </label>
-					                        </div>
-					                        <div class="form__cell" ng-show="product.allowHeight">
-					                            <label class="label">
-					                                <span class="label__text">
-					                                    Выс.
-					                                </span>
-					                                <span class="field" ng-if="!!product">
-					                                    <input type="number" class="input" ng-model="product.dimensions.height" ng-change="calcPrice()" placeholder="0см">
-					                                </span>
-					                            </label>
-					                        </div>
-					                    </div>
-					                </div>
-					                <!-- Carnice -->
-					                <div class="form form_carnice">
-					                    <checkbox model="product.withCornice" label="Добавить к заказу  +  "
-					                        name="type2">
-					                    </checkbox>
-					                </div>
-					                <!-- Buttons set -->
-					                <div class="btn-set">
-					                    <button class="btn btn_red btn_big" ng-click="buyOneClick()">
-					                        Купить в 1 клик
-					                    </button>
-					                    <button class="btn btn_blue btn_big" ng-click="addToCart()">
-					                        Отложить в корзину
-					                    </button>
-					                </div>
-					                <!-- Features -->
-					                <div class="features">
-					                    <!-- Title -->
-					                    <h2 class="features__title">
-					                        Свойства выбранного материала 
-					                    </h2>
-					                    <div class="features__column">
-					                        <!-- Translucent -->
-					                        <div ng-if="currentTexture.translucent" class="features__item">
-					                            <svg class="icon icon-sun">
-					                                <use xlink:href="icons/icons.svg#sun"></use>
-					                            </svg>
-					                            <div class="features__item-text">
-					                                
-					                            </div>
-					                        </div>
-					                        <!-- Country -->
-					                        <div ng-if="currentTexture.country" class="features__item">
-					                            <svg class="icon icon-country">
-					                                <use xlink:href="icons/icons.svg#country"></use>
-					                            </svg>
-					                            <div class="features__item-text">
-					                                
-					                            </div>
-					                        </div>
-					                        <!-- Width -->
-					                        <div ng-if="currentTexture.width" class="features__item">
-					                            <svg class="icon icon-width">
-					                                <use xlink:href="icons/icons.svg#width"></use>
-					                            </svg>
-					                            <div class="features__item-text">
-					                                
-					                            </div>
-					                        </div>
-					                    </div>
-					                    <div class="features__column">
-					                        <!-- Structure -->
-					                        <div ng-if="currentTexture.structure" class="features__item">
-					                            <svg class="icon icon-structure">
-					                                <use xlink:href="icons/icons.svg#structure"></use>
-					                            </svg>
-					                            <div class="features__item-text">
-					                                
-					                            </div>
-					                        </div>
-					                        <!-- info -->
-					                        <div ng-if="currentTexture.description" class="features__item">
-					                            <svg class="icon icon-structure">
-					                                <use xlink:href="icons/icons.svg#info"></use>
-					                            </svg>
-					                            <div class="features__item-text">
-					                                
-					                            </div>
-					                        </div>
-					                    </div>
-					                </div>
-					            </div>
 					            <!-- Text block -->
 					            <div class="text-block">
 					                <div class="text-block__column text-block__column_padding">
@@ -736,7 +635,7 @@
 					                                    </svg>
 					                                </a>
 					                            </li>
-					                        
+					
 					                            <li class="share-socials__item" ng-repeat="share in socials">
 					                                <a href="http://ok.ru/group/52696953127004" target="_blank" class="share-socials__link">
 					                                    <svg class="icon icon-ok">
@@ -744,7 +643,7 @@
 					                                    </svg>
 					                                </a>
 					                            </li>
-					                        
+					
 					                            <li class="share-socials__item" ng-repeat="share in socials">
 					                                <a href="https://www.facebook.com/1379446162362517/" target="_blank" class="share-socials__link">
 					                                    <svg class="icon icon-fb">
@@ -758,28 +657,294 @@
 					            </div>
 					            <div ng-if="!desktop" ng-include="'views/directives/construction.html'"></div>
 					            <!-- Tablet video -->
-					            <div class="text-block video">
-					                <h2 class="video__title">
-					                    Видео о горизонтальных жалюзи
-					                </h2>
-					                <div class="video__frame-holder">
-					                    <iframe video-id="getYoutubeId(product.video)" class="ng-isolate-scope" id="unique-youtube-embed-id-1" frameborder="0" allowfullscreen="1"
-					                        allow="autoplay; encrypted-media" title="YouTube video player" width="640" height="390" src="https://www.youtube.com/embed/cHk7LIVJJuE?enablejsapi=1&amp;origin=https%3A%2F%2Fdesign-okna.ru&amp;widgetid=1"></iframe>
-					                </div>
-					            </div>
 					            <!-- Reviews -->
 					            <!--<reviews product-id="7" ng-if="!!product.id && !mobile"></reviews>-->
 					            <reviews owner='{"id":"6","type":"product"}' ng-if="!!product.id && !mobile"></reviews>
+					            <section owner="{&quot;id&quot;:&quot;6&quot;,&quot;type&quot;:&quot;product&quot;}" ng-if="!!product.id &amp;&amp; !mobile"
+					                class="ng-isolate-scope">
+					                <div class="reviews">
+					                    <!-- Header -->
+					                    <header class="reviews__header">
+					                        <!-- Title -->
+					                        <h2 class="reviews__title ng-binding">
+					                            Отзывы о <span class="ng-scope">товаре</span>
+					                        </h2>
+					                        <!-- Rating -->
+					                        <div class="reviews__rating">
+					                            <h3 class="reviews__subtitle">
+					                                Общий рейтинг:
+					                            </h3>
+					                            <div class="reviews__rating-container">
+					                                <!-- Rating -->
+					                                <div class="reviews__rating-text" itemprop="aggregateRating" itemscope="" itemtype="http://schema.org/AggregateRating">
+					                                    <meta itemprop="bestRating" content="5">
+					                                    <meta itemprop="ratingValue" content="4.7">
+					                                    <meta itemprop="ratingCount" content="3">
+					                                    <strong class="ng-binding">4.7</strong>
+					                                    <ng-pluralize count="reviews.total" when="{
+													'one': '({} отзыв)',
+													'few': '({} отзыва)',
+													'many': '({} отзывов)' }">(3 отзыва)</ng-pluralize>
+					                                </div>
+					                            </div>
+					                        </div>
+					                    </header>
+					                    <!-- Content -->
+					                    <ul class="reviews__list">
+					                        <li ng-repeat="review in reviews.list track by $index" class="reviews__item ng-scope">
+					                            <!-- Review -->
+					                            <div class="review">
+					                                <!-- Author -->
+					                                <div class="review__author ng-binding">
+					                                    Алена
+					                                </div>
+					                                <!-- Rating -->
+					                                <!-- Text -->
+					                                <p class="review__text ng-binding">
+					                                    Мне не понравилось что установка стоила 350 рублей, хотя на сайте об этом я нигде не увидела. Но мне понравилось то, что
+					                                    замерщик привез с собой много вариантв цветов для жалюзи. Я даже была шокирована что
+					                                    бывает столько цветов.
+					                                </p>
+					                                <!-- Date -->
+					                                <time datetime="2013-09-27" class="review__date ng-binding">
+					                                    20 сентября 2015 г.
+					                                </time>
+					                            </div>
+					                        </li>
+					                        <li ng-repeat="review in reviews.list track by $index" class="reviews__item ng-scope">
+					                            <!-- Review -->
+					                            <div class="review">
+					                                <!-- Author -->
+					                                <div class="review__author ng-binding">
+					                                    Михаил
+					                                </div>
+					                                <!-- Rating -->
+					                                <!-- Text -->
+					                                <p class="review__text ng-binding">
+					                                    С самого первого разговора чуствуется заинтересованность в человеке как к клиенту, очень подробно все рассказали. Четко сработали
+					                                    с доставкой и установкой. Приехали в назначенное время.
+					                                </p>
+					                                <!-- Date -->
+					                                <time datetime="2013-09-27" class="review__date ng-binding">
+					                                    22 мая 2014 г.
+					                                </time>
+					                            </div>
+					                        </li>
+					                        <li ng-repeat="review in reviews.list track by $index" class="reviews__item ng-scope">
+					                            <!-- Review -->
+					                            <div class="review">
+					                                <!-- Author -->
+					                                <div class="review__author ng-binding">
+					                                    Андрей Маркин
+					                                </div>
+					                                <!-- Rating -->
+					                                <!-- Text -->
+					                                <p class="review__text ng-binding">
+					                                    Очень быстрая реакция на заказ - моментально перезвонили и договорились о приезде замерщика с вариантами цветов для жалюзи.
+					                                    Доставили в удобное мне время. Водитель помог выгрузить товар, ведь мы заказали жалюзи
+					                                    на всю школу, довольно много жалюзей получилось, хотя разгрузку я не оплачивал. Товар
+					                                    соответствует качеству.
+					                                </p>
+					                                <!-- Date -->
+					                                <time datetime="2013-09-27" class="review__date ng-binding">
+					                                    22 января 2013 г.
+					                                </time>
+					                            </div>
+					                        </li>
+					                    </ul>
+					                    <!-- Footer -->
+					                    <footer class="reviews__footer">
+					                        <!-- More btn -->
+					                        <div class="more-btn">
+					                            <a href="" class="more-btn__link ng-hide" ng-click="loadMoreReviews()" ng-show="showLoadMoreBtn">
+					                                <span class="icon icon-more"></span>
+					                                <span class="more-btn__text"> Показать еще </span>
+					                            </a>
+					                        </div>
+					                        <!-- Add new review -->
+					                        <button class="btn btn_blue btn_size-2 hide-in-mobile" ng-click="toggleReviewForm()">
+					                            Написать отзыв
+					                        </button>
+					                        <button class="btn btn_blue btn_big reviews__mobBtn show-in-mobile" ng-click="toggleReviewForm()">
+					                            Написать отзыв
+					                        </button>
+					                    </footer>
+					                </div>
+					                <!-- New review -->
+					            </section>
 					        </div>
 					        <!-- Right -->
 					        <div class="column-2 product-page__aside product-page__column">
 					            <!-- Service Block Desktop -->
 					            <div ng-if="!mobile">
 					                <!-- Price block -->
-					                <div ng-include="'includes/product/price.html'"></div>
-					                <!-- Textures -->
-					                <div ng-include="'includes/product/textures.html'"></div>
-					                <!-- Sizes -->
+					                <div class="price-block" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+					                    <div class="price-block__container">
+					                        <!-- Old price -->
+					                        <div class="price-block__old" ng-show="!!product.sale">
+					                            <span>от 1 231р.<span>/м<sup>2</sup></span>
+					                        </div>
+					                        <!-- New price -->
+					                        <div class="price-block__new">
+					                            <strong>
+					                                <span>от</span>1184 р.</strong><span>/м<sup>2</sup></span>
+					                        </div>
+					                        <span style="display:none;" itemprop="price">1184</span>
+					                        <span style="display:none;" itemprop="priceCurrency">RUB</span>
+					                    </div>
+					                    <!-- Description -->
+					                    <p class="price-block__text">
+					                        Стоимость зависит от выбора материала и размеров
+					                    </p>
+					                    <div class="price-block__label">
+					                        <div class="price-block__label-text">
+					                            -4%
+					                        </div>
+					                    </div>
+					                </div>                <!-- Textures -->
+					                <div class="textures">
+					                    <header class="textures__header">
+					                        <h2 class="textures__title">
+					                            Выберите цвет или текстуру
+					                			<span class="textures__mobile-icon" ng-click="mobileFilterMenu(); refreshRange()" ng-class="{'active': $parent.toggleMobilePopup}" ng-show="totalColors.length > 1 || minPrice !== maxPrice">
+					                				<span class="textures__filter-mask" ng-click="toggleMobilePopup = false"></span>
+					                				<svg class="icon icon-filter"><use xlink:href="icons/icons.svg#filter"></use></svg>
+					                			</span>
+					                            <!-- Mobile Popup -->
+					                            <div class="popup" ng-show="$parent.toggleMobilePopup">
+					                                <div class="popup__inside">
+					                                    <h2 class="popup__title" ng-show="minPrice !== maxPrice">
+					                                        Стоимость материала за м<sup>2</sup>
+					                                    </h2>
+					                                    <div class="popup__content popup__content_mobile" ng-if="priceSlider" ng-show="minPrice !== maxPrice">
+					                                        <!-- Price range -->
+					                                        <range
+					                                                min="priceSlider.min"
+					                                                max="priceSlider.max"
+					                                                options="">
+					                                        </range>
+					                                    </div>
+					                                    <h2 class="popup__title" ng-show="totalColors.length > 1">
+					                                        Выберите цвет материала
+					                                    </h2>
+					                                    <div class="popup__content" ng-show="totalColors.length > 1">
+					                                        <!-- Colors set -->
+					                                        <ul class="colors-set">
+					                                            <li class="colors-set__item" ng-repeat="color in product.colors">
+					                                                <color
+					                                                        model="textureColors[color]"
+					                                                        name="color"
+					                                                        fill="">
+					                                                </color>
+					                                            </li>
+					                                        </ul>
+					                                    </div>
+					                                    <footer class="popup__footer">
+					                                        <button class="popup__link" ng-click="clearMobileTextureColor()">
+					                                            <svg class="icon icon-close"><use xlink:href="icons/icons.svg#close"></use></svg>
+					                                            Снять выделение
+					                                        </button>
+					                                    </footer>
+					                                </div>
+					                            </div>
+					                            <!-- Filters -->
+					                            <div class="textures__filters">
+					                                <h2 class="textures__filters-title">
+					                                    фильтровать:
+					                                </h2>
+					                
+					                                <ul class="textures__filters-list" >
+					                                    <!-- By price -->
+					                                    <li class="textures__filters-item">
+					                                        <button
+					                                                ng-click="minPrice !== maxPrice ? onClickRange() : ''"
+					                                                class="textures__filters-btn"
+					                                                class="{'active': $parent.togglePricePopup && minPrice !== maxPrice, 'disactive': minPrice === maxPrice}">
+					                                            цена
+					                                            <svg class="icon icon-shevron-down"><use xlink:href="icons/icons.svg#shevron-down"></use></svg>
+					                                        </button>
+					                                        <!-- Popup -->
+					                                        <div class="popup" ng-show="$parent.togglePricePopup">
+					                                            <div class="popup__inside">
+					                                                <h2 class="popup__title">
+					                                                    Стоимость материала за м<sup>2</sup>
+					                                                </h2>
+					                                                <div class="popup__content" ng-if="priceSlider">
+					                                                    <!-- Price range -->
+					                                                    <range
+					                                                            min="priceSlider.min"
+					                                                            max="priceSlider.max"
+					                                                            options="">
+					                                                    </range>
+					                                                </div>
+					                                            </div>
+					                                        </div>
+					                                    </li>
+					                                    <!-- By color -->
+					                                    
+					                                    <li class="textures__filters-item">
+					                                        <button
+					                                                ng-click="totalColors.length > 0 ? onClickColor():''"
+					                                                class="textures__filters-btn"
+					                                                class="{'active': $parent.toggleColorsPopup && totalColors.length > 1, 'disactive': $parent.totalColors.length === 0}">
+					                                            цвет
+					                                            <svg class="icon icon-shevron-down"><use xlink:href="icons/icons.svg#shevron-down"></use></svg>
+					                                        </button>
+					                                        <!-- Popup -->
+					                                        <div class="popup" ng-show="$parent.toggleColorsPopup">
+					                                            <div class="popup__inside">
+					                                                <h2 class="popup__title">
+					                                                    Выберите цвет материала
+					                                                </h2>
+					                                                <div class="popup__content">
+					                                                    <!-- Colors set -->
+					                                                    <ul class="colors-set">
+					                                                        <li class="colors-set__item" ng-repeat="color in product.colors">
+					                                                            <color
+					                                                                    model="textureColors[color]"
+					                                                                    name="color"
+					                                                                    fill="">
+					                                                            </color>
+					                                                        </li>
+					                                                    </ul>
+					                                                </div>
+					                                                <footer class="popup__footer">
+					                                                    <button class="popup__link" ng-click="clearTextureColor();">
+					                                                        <svg class="icon icon-close"><use xlink:href="icons/icons.svg#close"></use></svg>
+					                                                        Снять выделение
+					                                                    </button>
+					                                                </footer>
+					                                            </div>
+					                                        </div>
+					                                    </li>
+					                                </ul>
+					                            </div>
+					                        </h2>
+					                    </header>
+					                    <!-- Content -->
+					                    <ul class="textures__list">
+					                
+					                        <li
+					                                ng-repeat="(key,texture) in textures"
+					                                ng-show="(key<=12)||(showAllTextures)"
+					                                class="textures__item">
+					                            <div ng-mouseenter="$parent.$parent.$parent.previewTextureModel = texture.id;" ng-mouseleave="$parent.$parent.$parent.previewTextureModel = null">
+					                                <texture
+					                                        title=""
+					                                        checked="checked"
+					                                        fill=""
+					                                        value="">
+					                                </texture>
+					                            </div>
+					                        </li>
+					                    </ul>
+					                    <button class="textures__show-all" ng-show="(textures.length > 12)" ng-click="showAllTextures=!showAllTextures;">
+					                        <span ng-if="!showAllTextures">развернуть</span>
+					                        <span ng-if="showAllTextures">свернуть</span>
+					                        <span class="hide-in-tablet">все </span>материалы (22)
+					                        <svg class="icon icon-shevron-down" ng-class="{'rotated': showAllTextures}"><use xlink:href="icons/icons.svg#shevron-down"></use></svg>
+					                    </button>
+					                </div>                <!-- Sizes -->
 					                <div class="form form_sizes">
 					                    <h2 class="form__title">
 					                        Укажите размеры конструкции
@@ -881,8 +1046,31 @@
 					                </div>
 					            </div>
 					            <!-- Text block with img-->
-					            <div ng-if="desktop" ng-include="'views/directives/construction.html'"></div>
-					            <!-- Text block with benefits-->
+					            <div class="text-block text-block_line text-block_scheme">
+					            	<div class="text-block__column text-block__column_padding text-block__column_mobile-margin">
+					            		<!-- Title -->
+					            		<h2 class="text-block__title">
+					            			Гарантия 3 года
+					            		</h2>
+					            		<p class="text-block__text">
+					            			Срок полезного использования продукции составляет 10 лет. При условии бережной и правильной экспуатации значительно дольше.
+					            			Предоставляем гарантию до 3-х лет на всю продукцию, в течение которой: Без лишних вопросов устраним все недостатки; Бесплатно
+					            			заменим неисправные механизмы; Легкая процедура оформления претензии (достаточно просто привезти изделие в нашу мастерскую).
+					            			<br>
+					            			10 лет мы используем в производстве качественные комплектующие российского и польского производства.
+					            		</p>
+					            	</div>
+					            	<div class="text-block__column text-block__column_padding">
+					            		<!-- Title -->
+					            		<h2 class="text-block__title">
+					            			Схема
+					            		</h2>
+					            		<img src="img/static/construction.png" class="text-block__img">
+					            		<button class="btn btn_blue btn-size-1" ng-click="showConstruction()">
+					            			Увеличить
+					            		</button>
+					            	</div>
+					            </div>            <!-- Text block with benefits-->
 					            <div class="text-block text-block_benefits">
 					                <div class="text-block__column text-block__column_padding">
 					                    <div class="text-block__text-holder">
