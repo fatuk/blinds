@@ -864,24 +864,9 @@
 					                                            <svg class="icon icon-shevron-down"><use xlink:href="icons/icons.svg#shevron-down"></use></svg>
 					                                        </button>
 					                                        <!-- Popup -->
-					                                        <div class="popup" ng-show="$parent.togglePricePopup">
-					                                            <div class="popup__inside">
-					                                                <h2 class="popup__title">
-					                                                    Стоимость материала за м<sup>2</sup>
-					                                                </h2>
-					                                                <div class="popup__content" ng-if="priceSlider">
-					                                                    <!-- Price range -->
-					                                                    <range
-					                                                            min="priceSlider.min"
-					                                                            max="priceSlider.max"
-					                                                            options="">
-					                                                    </range>
-					                                                </div>
-					                                            </div>
-					                                        </div>
 					                                    </li>
 					                                    <!-- By color -->
-					                                    
+					                            
 					                                    <li class="textures__filters-item">
 					                                        <button
 					                                                ng-click="totalColors.length > 0 ? onClickColor():''"
@@ -891,31 +876,6 @@
 					                                            <svg class="icon icon-shevron-down"><use xlink:href="icons/icons.svg#shevron-down"></use></svg>
 					                                        </button>
 					                                        <!-- Popup -->
-					                                        <div class="popup" ng-show="$parent.toggleColorsPopup">
-					                                            <div class="popup__inside">
-					                                                <h2 class="popup__title">
-					                                                    Выберите цвет материала
-					                                                </h2>
-					                                                <div class="popup__content">
-					                                                    <!-- Colors set -->
-					                                                    <ul class="colors-set">
-					                                                        <li class="colors-set__item" ng-repeat="color in product.colors">
-					                                                            <color
-					                                                                    model="textureColors[color]"
-					                                                                    name="color"
-					                                                                    fill="">
-					                                                            </color>
-					                                                        </li>
-					                                                    </ul>
-					                                                </div>
-					                                                <footer class="popup__footer">
-					                                                    <button class="popup__link" ng-click="clearTextureColor();">
-					                                                        <svg class="icon icon-close"><use xlink:href="icons/icons.svg#close"></use></svg>
-					                                                        Снять выделение
-					                                                    </button>
-					                                                </footer>
-					                                            </div>
-					                                        </div>
 					                                    </li>
 					                                </ul>
 					                            </div>
@@ -923,18 +883,422 @@
 					                    </header>
 					                    <!-- Content -->
 					                    <ul class="textures__list">
-					                
 					                        <li
 					                                ng-repeat="(key,texture) in textures"
 					                                ng-show="(key<=12)||(showAllTextures)"
 					                                class="textures__item">
 					                            <div ng-mouseenter="$parent.$parent.$parent.previewTextureModel = texture.id;" ng-mouseleave="$parent.$parent.$parent.previewTextureModel = null">
-					                                <texture
-					                                        title=""
+					                                <label
+					                                        class="texture"
+					                                        title="5608 - светло-зеленый"
 					                                        checked="checked"
-					                                        fill=""
-					                                        value="">
-					                                </texture>
+					                                        fill="img/static/textures/5608.png"
+					                                        value="96">
+					                                        <span 
+					                                            class="texture__bg"
+					                                            style="background-image: url('img/static/textures/5608.png')"
+					                                        ></span>
+					                                        
+					                                </label>
+					                            </div>
+					                        </li>
+					                        <li
+					                                ng-repeat="(key,texture) in textures"
+					                                ng-show="(key<=12)||(showAllTextures)"
+					                                class="textures__item">
+					                            <div ng-mouseenter="$parent.$parent.$parent.previewTextureModel = texture.id;" ng-mouseleave="$parent.$parent.$parent.previewTextureModel = null">
+					                                <label
+					                                        class="texture"
+					                                        title="0225 - белый"
+					                                        checked="checked"
+					                                        fill="img/static/textures/0225.png"
+					                                        value="97">
+					                                        <span 
+					                                            class="texture__bg"
+					                                            style="background-image: url('img/static/textures/0225.png')"
+					                                        ></span>
+					                                        
+					                                </label>
+					                            </div>
+					                        </li>
+					                        <li
+					                                ng-repeat="(key,texture) in textures"
+					                                ng-show="(key<=12)||(showAllTextures)"
+					                                class="textures__item">
+					                            <div ng-mouseenter="$parent.$parent.$parent.previewTextureModel = texture.id;" ng-mouseleave="$parent.$parent.$parent.previewTextureModel = null">
+					                                <label
+					                                        class="texture"
+					                                        title="1852 - серый"
+					                                        checked="checked"
+					                                        fill="img/static/textures/1852.png"
+					                                        value="98">
+					                                        <span 
+					                                            class="texture__bg"
+					                                            style="background-image: url('img/static/textures/1852.png')"
+					                                        ></span>
+					                                        
+					                                </label>
+					                            </div>
+					                        </li>
+					                        <li
+					                                ng-repeat="(key,texture) in textures"
+					                                ng-show="(key<=12)||(showAllTextures)"
+					                                class="textures__item">
+					                            <div ng-mouseenter="$parent.$parent.$parent.previewTextureModel = texture.id;" ng-mouseleave="$parent.$parent.$parent.previewTextureModel = null">
+					                                <label
+					                                        class="texture"
+					                                        title="4082 - розовый"
+					                                        checked="checked"
+					                                        fill="img/static/textures/4082.png"
+					                                        value="99">
+					                                        <span 
+					                                            class="texture__bg"
+					                                            style="background-image: url('img/static/textures/4082.png')"
+					                                        ></span>
+					                                        
+					                                </label>
+					                            </div>
+					                        </li>
+					                        <li
+					                                ng-repeat="(key,texture) in textures"
+					                                ng-show="(key<=12)||(showAllTextures)"
+					                                class="textures__item">
+					                            <div ng-mouseenter="$parent.$parent.$parent.previewTextureModel = texture.id;" ng-mouseleave="$parent.$parent.$parent.previewTextureModel = null">
+					                                <label
+					                                        class="texture"
+					                                        title="2871 - коричневый"
+					                                        checked="checked"
+					                                        fill="img/static/textures/2871.png"
+					                                        value="100">
+					                                        <span 
+					                                            class="texture__bg"
+					                                            style="background-image: url('img/static/textures/2871.png')"
+					                                        ></span>
+					                                        
+					                                </label>
+					                            </div>
+					                        </li>
+					                        <li
+					                                ng-repeat="(key,texture) in textures"
+					                                ng-show="(key<=12)||(showAllTextures)"
+					                                class="textures__item">
+					                            <div ng-mouseenter="$parent.$parent.$parent.previewTextureModel = texture.id;" ng-mouseleave="$parent.$parent.$parent.previewTextureModel = null">
+					                                <label
+					                                        class="texture"
+					                                        title="4077 - красный"
+					                                        checked="checked"
+					                                        fill="img/static/textures/4077.png"
+					                                        value="101">
+					                                        <span 
+					                                            class="texture__bg"
+					                                            style="background-image: url('img/static/textures/4077.png')"
+					                                        ></span>
+					                                        
+					                                </label>
+					                            </div>
+					                        </li>
+					                        <li
+					                                ng-repeat="(key,texture) in textures"
+					                                ng-show="(key<=12)||(showAllTextures)"
+					                                class="textures__item">
+					                            <div ng-mouseenter="$parent.$parent.$parent.previewTextureModel = texture.id;" ng-mouseleave="$parent.$parent.$parent.previewTextureModel = null">
+					                                <label
+					                                        class="texture"
+					                                        title="3465 - желтый"
+					                                        checked="checked"
+					                                        fill="img/static/textures/3465.png"
+					                                        value="102">
+					                                        <span 
+					                                            class="texture__bg"
+					                                            style="background-image: url('img/static/textures/3465.png')"
+					                                        ></span>
+					                                        
+					                                </label>
+					                            </div>
+					                        </li>
+					                        <li
+					                                ng-repeat="(key,texture) in textures"
+					                                ng-show="(key<=12)||(showAllTextures)"
+					                                class="textures__item">
+					                            <div ng-mouseenter="$parent.$parent.$parent.previewTextureModel = texture.id;" ng-mouseleave="$parent.$parent.$parent.previewTextureModel = null">
+					                                <label
+					                                        class="texture"
+					                                        title="5259 - синий"
+					                                        checked="checked"
+					                                        fill="img/static/textures/5259.png"
+					                                        value="103">
+					                                        <span 
+					                                            class="texture__bg"
+					                                            style="background-image: url('img/static/textures/5259.png')"
+					                                        ></span>
+					                                        
+					                                </label>
+					                            </div>
+					                        </li>
+					                        <li
+					                                ng-repeat="(key,texture) in textures"
+					                                ng-show="(key<=12)||(showAllTextures)"
+					                                class="textures__item">
+					                            <div ng-mouseenter="$parent.$parent.$parent.previewTextureModel = texture.id;" ng-mouseleave="$parent.$parent.$parent.previewTextureModel = null">
+					                                <label
+					                                        class="texture"
+					                                        title="2025 - голубой"
+					                                        checked="checked"
+					                                        fill="img/static/textures/2025.png"
+					                                        value="104">
+					                                        <span 
+					                                            class="texture__bg"
+					                                            style="background-image: url('img/static/textures/2025.png')"
+					                                        ></span>
+					                                        
+					                                </label>
+					                            </div>
+					                        </li>
+					                        <li
+					                                ng-repeat="(key,texture) in textures"
+					                                ng-show="(key<=12)||(showAllTextures)"
+					                                class="textures__item">
+					                            <div ng-mouseenter="$parent.$parent.$parent.previewTextureModel = texture.id;" ng-mouseleave="$parent.$parent.$parent.previewTextureModel = null">
+					                                <label
+					                                        class="texture"
+					                                        title="2013 - светло-коричневый"
+					                                        checked="checked"
+					                                        fill="img/static/textures/2013.png"
+					                                        value="105">
+					                                        <span 
+					                                            class="texture__bg"
+					                                            style="background-image: url('img/static/textures/2013.png')"
+					                                        ></span>
+					                                        
+					                                </label>
+					                            </div>
+					                        </li>
+					                        <li
+					                                ng-repeat="(key,texture) in textures"
+					                                ng-show="(key<=12)||(showAllTextures)"
+					                                class="textures__item">
+					                            <div ng-mouseenter="$parent.$parent.$parent.previewTextureModel = texture.id;" ng-mouseleave="$parent.$parent.$parent.previewTextureModel = null">
+					                                <label
+					                                        class="texture"
+					                                        title="2034 - зеленый"
+					                                        checked="checked"
+					                                        fill="img/static/textures/2034.png"
+					                                        value="106">
+					                                        <span 
+					                                            class="texture__bg"
+					                                            style="background-image: url('img/static/textures/2034.png')"
+					                                        ></span>
+					                                        
+					                                </label>
+					                            </div>
+					                        </li>
+					                        <li
+					                                ng-repeat="(key,texture) in textures"
+					                                ng-show="(key<=12)||(showAllTextures)"
+					                                class="textures__item">
+					                            <div ng-mouseenter="$parent.$parent.$parent.previewTextureModel = texture.id;" ng-mouseleave="$parent.$parent.$parent.previewTextureModel = null">
+					                                <label
+					                                        class="texture"
+					                                        title="2703 - салатовый"
+					                                        checked="checked"
+					                                        fill="img/static/textures/2703.png"
+					                                        value="107">
+					                                        <span 
+					                                            class="texture__bg"
+					                                            style="background-image: url('img/static/textures/2703.png')"
+					                                        ></span>
+					                                        
+					                                </label>
+					                            </div>
+					                        </li>
+					                        <li
+					                                ng-repeat="(key,texture) in textures"
+					                                ng-show="(key<=12)||(showAllTextures)"
+					                                class="textures__item">
+					                            <div ng-mouseenter="$parent.$parent.$parent.previewTextureModel = texture.id;" ng-mouseleave="$parent.$parent.$parent.previewTextureModel = null">
+					                                <label
+					                                        class="texture"
+					                                        title="2033 - светло-зеленый"
+					                                        checked="checked"
+					                                        fill="img/static/textures/2033.png"
+					                                        value="108">
+					                                        <span 
+					                                            class="texture__bg"
+					                                            style="background-image: url('img/static/textures/2033.png')"
+					                                        ></span>
+					                                        
+					                                </label>
+					                            </div>
+					                        </li>
+					                        <li
+					                                ng-repeat="(key,texture) in textures"
+					                                ng-show="(key<=12)||(showAllTextures)"
+					                                class="textures__item">
+					                            <div ng-mouseenter="$parent.$parent.$parent.previewTextureModel = texture.id;" ng-mouseleave="$parent.$parent.$parent.previewTextureModel = null">
+					                                <label
+					                                        class="texture"
+					                                        title="телесный"
+					                                        checked="checked"
+					                                        fill="img/static/textures/4.png"
+					                                        value="109">
+					                                        <span 
+					                                            class="texture__bg"
+					                                            style="background-image: url('img/static/textures/4.png')"
+					                                        ></span>
+					                                        
+					                                </label>
+					                            </div>
+					                        </li>
+					                        <li
+					                                ng-repeat="(key,texture) in textures"
+					                                ng-show="(key<=12)||(showAllTextures)"
+					                                class="textures__item">
+					                            <div ng-mouseenter="$parent.$parent.$parent.previewTextureModel = texture.id;" ng-mouseleave="$parent.$parent.$parent.previewTextureModel = null">
+					                                <label
+					                                        class="texture"
+					                                        title="светло-оранжевый"
+					                                        checked="checked"
+					                                        fill="img/static/textures/5.png"
+					                                        value="110">
+					                                        <span 
+					                                            class="texture__bg"
+					                                            style="background-image: url('img/static/textures/5.png')"
+					                                        ></span>
+					                                        
+					                                </label>
+					                            </div>
+					                        </li>
+					                        <li
+					                                ng-repeat="(key,texture) in textures"
+					                                ng-show="(key<=12)||(showAllTextures)"
+					                                class="textures__item">
+					                            <div ng-mouseenter="$parent.$parent.$parent.previewTextureModel = texture.id;" ng-mouseleave="$parent.$parent.$parent.previewTextureModel = null">
+					                                <label
+					                                        class="texture"
+					                                        title="бордовый"
+					                                        checked="checked"
+					                                        fill="img/static/textures/8.png"
+					                                        value="111">
+					                                        <span 
+					                                            class="texture__bg"
+					                                            style="background-image: url('img/static/textures/8.png')"
+					                                        ></span>
+					                                        
+					                                </label>
+					                            </div>
+					                        </li>
+					                        <li
+					                                ng-repeat="(key,texture) in textures"
+					                                ng-show="(key<=12)||(showAllTextures)"
+					                                class="textures__item">
+					                            <div ng-mouseenter="$parent.$parent.$parent.previewTextureModel = texture.id;" ng-mouseleave="$parent.$parent.$parent.previewTextureModel = null">
+					                                <label
+					                                        class="texture"
+					                                        title="розовато-лиловый"
+					                                        checked="checked"
+					                                        fill="img/static/textures/10.png"
+					                                        value="112">
+					                                        <span 
+					                                            class="texture__bg"
+					                                            style="background-image: url('img/static/textures/10.png')"
+					                                        ></span>
+					                                        
+					                                </label>
+					                            </div>
+					                        </li>
+					                        <li
+					                                ng-repeat="(key,texture) in textures"
+					                                ng-show="(key<=12)||(showAllTextures)"
+					                                class="textures__item">
+					                            <div ng-mouseenter="$parent.$parent.$parent.previewTextureModel = texture.id;" ng-mouseleave="$parent.$parent.$parent.previewTextureModel = null">
+					                                <label
+					                                        class="texture"
+					                                        title="лиловый"
+					                                        checked="checked"
+					                                        fill="img/static/textures/11.png"
+					                                        value="113">
+					                                        <span 
+					                                            class="texture__bg"
+					                                            style="background-image: url('img/static/textures/11.png')"
+					                                        ></span>
+					                                        
+					                                </label>
+					                            </div>
+					                        </li>
+					                        <li
+					                                ng-repeat="(key,texture) in textures"
+					                                ng-show="(key<=12)||(showAllTextures)"
+					                                class="textures__item">
+					                            <div ng-mouseenter="$parent.$parent.$parent.previewTextureModel = texture.id;" ng-mouseleave="$parent.$parent.$parent.previewTextureModel = null">
+					                                <label
+					                                        class="texture"
+					                                        title="тропический лес"
+					                                        checked="checked"
+					                                        fill="img/static/textures/12.png"
+					                                        value="114">
+					                                        <span 
+					                                            class="texture__bg"
+					                                            style="background-image: url('img/static/textures/12.png')"
+					                                        ></span>
+					                                        
+					                                </label>
+					                            </div>
+					                        </li>
+					                        <li
+					                                ng-repeat="(key,texture) in textures"
+					                                ng-show="(key<=12)||(showAllTextures)"
+					                                class="textures__item">
+					                            <div ng-mouseenter="$parent.$parent.$parent.previewTextureModel = texture.id;" ng-mouseleave="$parent.$parent.$parent.previewTextureModel = null">
+					                                <label
+					                                        class="texture"
+					                                        title="горчичный"
+					                                        checked="checked"
+					                                        fill="img/static/textures/13.png"
+					                                        value="115">
+					                                        <span 
+					                                            class="texture__bg"
+					                                            style="background-image: url('img/static/textures/13.png')"
+					                                        ></span>
+					                                        
+					                                </label>
+					                            </div>
+					                        </li>
+					                        <li
+					                                ng-repeat="(key,texture) in textures"
+					                                ng-show="(key<=12)||(showAllTextures)"
+					                                class="textures__item">
+					                            <div ng-mouseenter="$parent.$parent.$parent.previewTextureModel = texture.id;" ng-mouseleave="$parent.$parent.$parent.previewTextureModel = null">
+					                                <label
+					                                        class="texture"
+					                                        title="персиковый"
+					                                        checked="checked"
+					                                        fill="img/static/textures/14.png"
+					                                        value="116">
+					                                        <span 
+					                                            class="texture__bg"
+					                                            style="background-image: url('img/static/textures/14.png')"
+					                                        ></span>
+					                                        
+					                                </label>
+					                            </div>
+					                        </li>
+					                        <li
+					                                ng-repeat="(key,texture) in textures"
+					                                ng-show="(key<=12)||(showAllTextures)"
+					                                class="textures__item">
+					                            <div ng-mouseenter="$parent.$parent.$parent.previewTextureModel = texture.id;" ng-mouseleave="$parent.$parent.$parent.previewTextureModel = null">
+					                                <label
+					                                        class="texture"
+					                                        title="блекло-синий"
+					                                        checked="checked"
+					                                        fill="img/static/textures/19.png"
+					                                        value="117">
+					                                        <span 
+					                                            class="texture__bg"
+					                                            style="background-image: url('img/static/textures/19.png')"
+					                                        ></span>
+					                                        
+					                                </label>
 					                            </div>
 					                        </li>
 					                    </ul>
@@ -1891,368 +2255,6 @@
 					                        	</div>
 					                        </div>
 					                    </li>
-					                    <li class="catalog__item">
-					                        <div 
-					                        	class="product single" 
-					                        	ng-class="{'single': this.single, 'active': isHover}" 
-					                        	ng-click="touchElement ? hoverIt(false) : ''">
-					                        	<!-- Product view -->
-					                        	<div class="product__wrapper">
-					                        		<!-- Label -->
-					                        		<div class="product__label">
-					                        			<div class="product__label-text">
-					                        				-14%
-					                        			</div>
-					                        		</div>
-					                        		<div class="product__inner">
-					                        			<!-- Img -->
-					                        			<a
-					                        				href="product.html"
-					                        				style="background-size: cover; background-image: url('img/static/preview (4).jpg')"
-					                        				class="product__img">
-					                        			</a>
-					                        			<!-- Cart btn -->
-					                        			<span class="product__cart-btn" ng-click="addProductToCart(product)">
-					                        				<svg class="icon icon-cart"><use xlink:href="icons/icons.svg#cart"></use></svg>
-					                        				<span class="product__cart-label">
-					                        					В корзину
-					                        				</span>
-					                        			</span>
-					                        			<div class="product__container">
-					                        				<!-- Review -->
-					                        				<div class="product__review" ng-if="this.reviews_count">
-					                        					<!-- Review label -->
-					                        					<div class="product__review-label">
-					                        						<span class="product__review-count">1</span>
-					                        						отзыв
-					                        					</div>
-					                        				</div>
-					                        				<header class="product__header">
-					                        					<!-- Title -->
-					                        					<div class="product__title">
-					                        						<a href="product.html">Классические алюминиевые с шириной планки 25мм</a>
-					                        					</div>
-					                        					<!-- Subtitle -->
-					                        					<div class="product__subtitle">
-					                        						<!-- <a href="/alyuminevye">Алюминевые горизонтальные жалюзи</a> -->
-					                        					</div>
-					                        				</header>
-					                        				<!-- Colors -->
-					                        				<div class="product__colors">
-					                        					<div class="product__colors-title">
-					                        						<span>6</span> цветов и текстур
-					                        					</div>
-					                        					<ul 
-					                        						class="product__colors-list" 
-					                        						ng-init="this.texture_id=this.textures[0].id">
-					                        						<li 
-					                        							class="product__colors-item" 
-					                        							ng-repeat="texture in this.textures">
-					                        							<label 
-					                        								class="product__colors-label" 
-					                        								title="0225 - белый">
-					                        								<input
-					                        									type="radio"
-					                        									name="product_texture_119"
-					                        									value="119"
-					                        									ng-model="this.texture_id">
-					                        								<div 
-					                        									class="product__colors-dot" 
-					                        									style="background-image: url('/img/static/gorizontalnye_zhaluzi/aluminievye/texture/0225.png')}">
-					                        								</div>
-					                        							</label>
-					                        						</li>
-					                        						<li 
-					                        							class="product__colors-item" 
-					                        							ng-repeat="texture in this.textures">
-					                        							<label 
-					                        								class="product__colors-label" 
-					                        								title="2703 - салатовый">
-					                        								<input
-					                        									type="radio"
-					                        									name="product_texture_129"
-					                        									value="129"
-					                        									ng-model="this.texture_id">
-					                        								<div 
-					                        									class="product__colors-dot" 
-					                        									style="background-image: url('/img/static/gorizontalnye_zhaluzi/aluminievye/texture/2703.png')}">
-					                        								</div>
-					                        							</label>
-					                        						</li>
-					                        						<li 
-					                        							class="product__colors-item" 
-					                        							ng-repeat="texture in this.textures">
-					                        							<label 
-					                        								class="product__colors-label" 
-					                        								title="2033 -светло-зеленый">
-					                        								<input
-					                        									type="radio"
-					                        									name="product_texture_130"
-					                        									value="130"
-					                        									ng-model="this.texture_id">
-					                        								<div 
-					                        									class="product__colors-dot" 
-					                        									style="background-image: url('/img/static/gorizontalnye_zhaluzi/aluminievye/texture/2033.png')}">
-					                        								</div>
-					                        							</label>
-					                        						</li>
-					                        						<li 
-					                        							class="product__colors-item" 
-					                        							ng-repeat="texture in this.textures">
-					                        							<label 
-					                        								class="product__colors-label" 
-					                        								title="телесный">
-					                        								<input
-					                        									type="radio"
-					                        									name="product_texture_131"
-					                        									value="131"
-					                        									ng-model="this.texture_id">
-					                        								<div 
-					                        									class="product__colors-dot" 
-					                        									style="background-image: url('/img/static/gorizontalnye_zhaluzi/aluminievye/texture/4.png')}">
-					                        								</div>
-					                        							</label>
-					                        						</li>
-					                        						<li 
-					                        							class="product__colors-item" 
-					                        							ng-repeat="texture in this.textures">
-					                        							<label 
-					                        								class="product__colors-label" 
-					                        								title="светло-оранжевый">
-					                        								<input
-					                        									type="radio"
-					                        									name="product_texture_132"
-					                        									value="132"
-					                        									ng-model="this.texture_id">
-					                        								<div 
-					                        									class="product__colors-dot" 
-					                        									style="background-image: url('/img/static/gorizontalnye_zhaluzi/aluminievye/texture/5.png')}">
-					                        								</div>
-					                        							</label>
-					                        						</li>
-					                        						<li 
-					                        							class="product__colors-item" 
-					                        							ng-repeat="texture in this.textures">
-					                        							<label 
-					                        								class="product__colors-label" 
-					                        								title="бордовый">
-					                        								<input
-					                        									type="radio"
-					                        									name="product_texture_133"
-					                        									value="133"
-					                        									ng-model="this.texture_id">
-					                        								<div 
-					                        									class="product__colors-dot" 
-					                        									style="background-image: url('/img/static/gorizontalnye_zhaluzi/aluminievye/texture/8.png')}">
-					                        								</div>
-					                        							</label>
-					                        						</li>
-					                        					</ul>
-					                        				</div>
-					                        			</div>
-					                        			<!-- Footer -->
-					                        			<footer class="product__footer">
-					                        				<!-- Price container -->
-					                        				<div class="product__price-container">
-					                        					<!-- Old price -->
-					                        					<div class="product__price-old">
-					                        						7 887 р./м<sup>2</sup>
-					                        					</div>
-					                        					<!-- New price -->
-					                        					<div class="product__price-new">
-					                        						<strong>от 7 541 р.</strong>/м<sup>2</sup>
-					                        					</div>
-					                        				</div>
-					                        				<!-- Btn -->
-					                                        <a href="product.html" class="btn btn_blue btn_size-1">
-					                        					Детали
-					                        				</a>
-					                        			</footer>
-					                        		</div>
-					                        	</div>
-					                        </div>
-					                    </li>
-					                    <li class="catalog__item">
-					                        <div 
-					                        	class="product single" 
-					                        	ng-class="{'single': this.single, 'active': isHover}" 
-					                        	ng-click="touchElement ? hoverIt(false) : ''">
-					                        	<!-- Product view -->
-					                        	<div class="product__wrapper">
-					                        		<!-- Label -->
-					                        		<div class="product__label">
-					                        			<div class="product__label-text">
-					                        				-14%
-					                        			</div>
-					                        		</div>
-					                        		<div class="product__inner">
-					                        			<!-- Img -->
-					                        			<a
-					                        				href="product.html"
-					                        				style="background-size: cover; background-image: url('img/static/preview (5).jpg')"
-					                        				class="product__img">
-					                        			</a>
-					                        			<!-- Cart btn -->
-					                        			<span class="product__cart-btn" ng-click="addProductToCart(product)">
-					                        				<svg class="icon icon-cart"><use xlink:href="icons/icons.svg#cart"></use></svg>
-					                        				<span class="product__cart-label">
-					                        					В корзину
-					                        				</span>
-					                        			</span>
-					                        			<div class="product__container">
-					                        				<!-- Review -->
-					                        				<div class="product__review" ng-if="this.reviews_count">
-					                        					<!-- Review label -->
-					                        					<div class="product__review-label">
-					                        						<span class="product__review-count">1</span>
-					                        						отзыв
-					                        					</div>
-					                        				</div>
-					                        				<header class="product__header">
-					                        					<!-- Title -->
-					                        					<div class="product__title">
-					                        						<a href="product.html">Классические алюминиевые с шириной планки 25мм</a>
-					                        					</div>
-					                        					<!-- Subtitle -->
-					                        					<div class="product__subtitle">
-					                        						<!-- <a href="/alyuminevye">Алюминевые горизонтальные жалюзи</a> -->
-					                        					</div>
-					                        				</header>
-					                        				<!-- Colors -->
-					                        				<div class="product__colors">
-					                        					<div class="product__colors-title">
-					                        						<span>6</span> цветов и текстур
-					                        					</div>
-					                        					<ul 
-					                        						class="product__colors-list" 
-					                        						ng-init="this.texture_id=this.textures[0].id">
-					                        						<li 
-					                        							class="product__colors-item" 
-					                        							ng-repeat="texture in this.textures">
-					                        							<label 
-					                        								class="product__colors-label" 
-					                        								title="0225 - белый">
-					                        								<input
-					                        									type="radio"
-					                        									name="product_texture_119"
-					                        									value="119"
-					                        									ng-model="this.texture_id">
-					                        								<div 
-					                        									class="product__colors-dot" 
-					                        									style="background-image: url('/img/static/gorizontalnye_zhaluzi/aluminievye/texture/0225.png')}">
-					                        								</div>
-					                        							</label>
-					                        						</li>
-					                        						<li 
-					                        							class="product__colors-item" 
-					                        							ng-repeat="texture in this.textures">
-					                        							<label 
-					                        								class="product__colors-label" 
-					                        								title="2703 - салатовый">
-					                        								<input
-					                        									type="radio"
-					                        									name="product_texture_129"
-					                        									value="129"
-					                        									ng-model="this.texture_id">
-					                        								<div 
-					                        									class="product__colors-dot" 
-					                        									style="background-image: url('/img/static/gorizontalnye_zhaluzi/aluminievye/texture/2703.png')}">
-					                        								</div>
-					                        							</label>
-					                        						</li>
-					                        						<li 
-					                        							class="product__colors-item" 
-					                        							ng-repeat="texture in this.textures">
-					                        							<label 
-					                        								class="product__colors-label" 
-					                        								title="2033 -светло-зеленый">
-					                        								<input
-					                        									type="radio"
-					                        									name="product_texture_130"
-					                        									value="130"
-					                        									ng-model="this.texture_id">
-					                        								<div 
-					                        									class="product__colors-dot" 
-					                        									style="background-image: url('/img/static/gorizontalnye_zhaluzi/aluminievye/texture/2033.png')}">
-					                        								</div>
-					                        							</label>
-					                        						</li>
-					                        						<li 
-					                        							class="product__colors-item" 
-					                        							ng-repeat="texture in this.textures">
-					                        							<label 
-					                        								class="product__colors-label" 
-					                        								title="телесный">
-					                        								<input
-					                        									type="radio"
-					                        									name="product_texture_131"
-					                        									value="131"
-					                        									ng-model="this.texture_id">
-					                        								<div 
-					                        									class="product__colors-dot" 
-					                        									style="background-image: url('/img/static/gorizontalnye_zhaluzi/aluminievye/texture/4.png')}">
-					                        								</div>
-					                        							</label>
-					                        						</li>
-					                        						<li 
-					                        							class="product__colors-item" 
-					                        							ng-repeat="texture in this.textures">
-					                        							<label 
-					                        								class="product__colors-label" 
-					                        								title="светло-оранжевый">
-					                        								<input
-					                        									type="radio"
-					                        									name="product_texture_132"
-					                        									value="132"
-					                        									ng-model="this.texture_id">
-					                        								<div 
-					                        									class="product__colors-dot" 
-					                        									style="background-image: url('/img/static/gorizontalnye_zhaluzi/aluminievye/texture/5.png')}">
-					                        								</div>
-					                        							</label>
-					                        						</li>
-					                        						<li 
-					                        							class="product__colors-item" 
-					                        							ng-repeat="texture in this.textures">
-					                        							<label 
-					                        								class="product__colors-label" 
-					                        								title="бордовый">
-					                        								<input
-					                        									type="radio"
-					                        									name="product_texture_133"
-					                        									value="133"
-					                        									ng-model="this.texture_id">
-					                        								<div 
-					                        									class="product__colors-dot" 
-					                        									style="background-image: url('/img/static/gorizontalnye_zhaluzi/aluminievye/texture/8.png')}">
-					                        								</div>
-					                        							</label>
-					                        						</li>
-					                        					</ul>
-					                        				</div>
-					                        			</div>
-					                        			<!-- Footer -->
-					                        			<footer class="product__footer">
-					                        				<!-- Price container -->
-					                        				<div class="product__price-container">
-					                        					<!-- Old price -->
-					                        					<div class="product__price-old">
-					                        						7 887 р./м<sup>2</sup>
-					                        					</div>
-					                        					<!-- New price -->
-					                        					<div class="product__price-new">
-					                        						<strong>от 7 541 р.</strong>/м<sup>2</sup>
-					                        					</div>
-					                        				</div>
-					                        				<!-- Btn -->
-					                                        <a href="product.html" class="btn btn_blue btn_size-1">
-					                        					Детали
-					                        				</a>
-					                        			</footer>
-					                        		</div>
-					                        	</div>
-					                        </div>
-					                    </li>
 					                </ul>
 					            </div>
 					        </div>
@@ -2826,368 +2828,6 @@
 					                    			<a
 					                    				href="product.html"
 					                    				style="background-size: cover; background-image: url('img/static/preview (3).jpg')"
-					                    				class="product__img">
-					                    			</a>
-					                    			<!-- Cart btn -->
-					                    			<span class="product__cart-btn" ng-click="addProductToCart(product)">
-					                    				<svg class="icon icon-cart"><use xlink:href="icons/icons.svg#cart"></use></svg>
-					                    				<span class="product__cart-label">
-					                    					В корзину
-					                    				</span>
-					                    			</span>
-					                    			<div class="product__container">
-					                    				<!-- Review -->
-					                    				<div class="product__review" ng-if="this.reviews_count">
-					                    					<!-- Review label -->
-					                    					<div class="product__review-label">
-					                    						<span class="product__review-count">1</span>
-					                    						отзыв
-					                    					</div>
-					                    				</div>
-					                    				<header class="product__header">
-					                    					<!-- Title -->
-					                    					<div class="product__title">
-					                    						<a href="product.html">Классические алюминиевые с шириной планки 25мм</a>
-					                    					</div>
-					                    					<!-- Subtitle -->
-					                    					<div class="product__subtitle">
-					                    						<!-- <a href="/alyuminevye">Алюминевые горизонтальные жалюзи</a> -->
-					                    					</div>
-					                    				</header>
-					                    				<!-- Colors -->
-					                    				<div class="product__colors">
-					                    					<div class="product__colors-title">
-					                    						<span>6</span> цветов и текстур
-					                    					</div>
-					                    					<ul 
-					                    						class="product__colors-list" 
-					                    						ng-init="this.texture_id=this.textures[0].id">
-					                    						<li 
-					                    							class="product__colors-item" 
-					                    							ng-repeat="texture in this.textures">
-					                    							<label 
-					                    								class="product__colors-label" 
-					                    								title="0225 - белый">
-					                    								<input
-					                    									type="radio"
-					                    									name="product_texture_119"
-					                    									value="119"
-					                    									ng-model="this.texture_id">
-					                    								<div 
-					                    									class="product__colors-dot" 
-					                    									style="background-image: url('/img/static/gorizontalnye_zhaluzi/aluminievye/texture/0225.png')}">
-					                    								</div>
-					                    							</label>
-					                    						</li>
-					                    						<li 
-					                    							class="product__colors-item" 
-					                    							ng-repeat="texture in this.textures">
-					                    							<label 
-					                    								class="product__colors-label" 
-					                    								title="2703 - салатовый">
-					                    								<input
-					                    									type="radio"
-					                    									name="product_texture_129"
-					                    									value="129"
-					                    									ng-model="this.texture_id">
-					                    								<div 
-					                    									class="product__colors-dot" 
-					                    									style="background-image: url('/img/static/gorizontalnye_zhaluzi/aluminievye/texture/2703.png')}">
-					                    								</div>
-					                    							</label>
-					                    						</li>
-					                    						<li 
-					                    							class="product__colors-item" 
-					                    							ng-repeat="texture in this.textures">
-					                    							<label 
-					                    								class="product__colors-label" 
-					                    								title="2033 -светло-зеленый">
-					                    								<input
-					                    									type="radio"
-					                    									name="product_texture_130"
-					                    									value="130"
-					                    									ng-model="this.texture_id">
-					                    								<div 
-					                    									class="product__colors-dot" 
-					                    									style="background-image: url('/img/static/gorizontalnye_zhaluzi/aluminievye/texture/2033.png')}">
-					                    								</div>
-					                    							</label>
-					                    						</li>
-					                    						<li 
-					                    							class="product__colors-item" 
-					                    							ng-repeat="texture in this.textures">
-					                    							<label 
-					                    								class="product__colors-label" 
-					                    								title="телесный">
-					                    								<input
-					                    									type="radio"
-					                    									name="product_texture_131"
-					                    									value="131"
-					                    									ng-model="this.texture_id">
-					                    								<div 
-					                    									class="product__colors-dot" 
-					                    									style="background-image: url('/img/static/gorizontalnye_zhaluzi/aluminievye/texture/4.png')}">
-					                    								</div>
-					                    							</label>
-					                    						</li>
-					                    						<li 
-					                    							class="product__colors-item" 
-					                    							ng-repeat="texture in this.textures">
-					                    							<label 
-					                    								class="product__colors-label" 
-					                    								title="светло-оранжевый">
-					                    								<input
-					                    									type="radio"
-					                    									name="product_texture_132"
-					                    									value="132"
-					                    									ng-model="this.texture_id">
-					                    								<div 
-					                    									class="product__colors-dot" 
-					                    									style="background-image: url('/img/static/gorizontalnye_zhaluzi/aluminievye/texture/5.png')}">
-					                    								</div>
-					                    							</label>
-					                    						</li>
-					                    						<li 
-					                    							class="product__colors-item" 
-					                    							ng-repeat="texture in this.textures">
-					                    							<label 
-					                    								class="product__colors-label" 
-					                    								title="бордовый">
-					                    								<input
-					                    									type="radio"
-					                    									name="product_texture_133"
-					                    									value="133"
-					                    									ng-model="this.texture_id">
-					                    								<div 
-					                    									class="product__colors-dot" 
-					                    									style="background-image: url('/img/static/gorizontalnye_zhaluzi/aluminievye/texture/8.png')}">
-					                    								</div>
-					                    							</label>
-					                    						</li>
-					                    					</ul>
-					                    				</div>
-					                    			</div>
-					                    			<!-- Footer -->
-					                    			<footer class="product__footer">
-					                    				<!-- Price container -->
-					                    				<div class="product__price-container">
-					                    					<!-- Old price -->
-					                    					<div class="product__price-old">
-					                    						7 887 р./м<sup>2</sup>
-					                    					</div>
-					                    					<!-- New price -->
-					                    					<div class="product__price-new">
-					                    						<strong>от 7 541 р.</strong>/м<sup>2</sup>
-					                    					</div>
-					                    				</div>
-					                    				<!-- Btn -->
-					                                    <a href="product.html" class="btn btn_blue btn_size-1">
-					                    					Детали
-					                    				</a>
-					                    			</footer>
-					                    		</div>
-					                    	</div>
-					                    </div>
-					                </li>
-					                <li class="catalog__item">
-					                    <div 
-					                    	class="product single" 
-					                    	ng-class="{'single': this.single, 'active': isHover}" 
-					                    	ng-click="touchElement ? hoverIt(false) : ''">
-					                    	<!-- Product view -->
-					                    	<div class="product__wrapper">
-					                    		<!-- Label -->
-					                    		<div class="product__label">
-					                    			<div class="product__label-text">
-					                    				-14%
-					                    			</div>
-					                    		</div>
-					                    		<div class="product__inner">
-					                    			<!-- Img -->
-					                    			<a
-					                    				href="product.html"
-					                    				style="background-size: cover; background-image: url('img/static/preview (4).jpg')"
-					                    				class="product__img">
-					                    			</a>
-					                    			<!-- Cart btn -->
-					                    			<span class="product__cart-btn" ng-click="addProductToCart(product)">
-					                    				<svg class="icon icon-cart"><use xlink:href="icons/icons.svg#cart"></use></svg>
-					                    				<span class="product__cart-label">
-					                    					В корзину
-					                    				</span>
-					                    			</span>
-					                    			<div class="product__container">
-					                    				<!-- Review -->
-					                    				<div class="product__review" ng-if="this.reviews_count">
-					                    					<!-- Review label -->
-					                    					<div class="product__review-label">
-					                    						<span class="product__review-count">1</span>
-					                    						отзыв
-					                    					</div>
-					                    				</div>
-					                    				<header class="product__header">
-					                    					<!-- Title -->
-					                    					<div class="product__title">
-					                    						<a href="product.html">Классические алюминиевые с шириной планки 25мм</a>
-					                    					</div>
-					                    					<!-- Subtitle -->
-					                    					<div class="product__subtitle">
-					                    						<!-- <a href="/alyuminevye">Алюминевые горизонтальные жалюзи</a> -->
-					                    					</div>
-					                    				</header>
-					                    				<!-- Colors -->
-					                    				<div class="product__colors">
-					                    					<div class="product__colors-title">
-					                    						<span>6</span> цветов и текстур
-					                    					</div>
-					                    					<ul 
-					                    						class="product__colors-list" 
-					                    						ng-init="this.texture_id=this.textures[0].id">
-					                    						<li 
-					                    							class="product__colors-item" 
-					                    							ng-repeat="texture in this.textures">
-					                    							<label 
-					                    								class="product__colors-label" 
-					                    								title="0225 - белый">
-					                    								<input
-					                    									type="radio"
-					                    									name="product_texture_119"
-					                    									value="119"
-					                    									ng-model="this.texture_id">
-					                    								<div 
-					                    									class="product__colors-dot" 
-					                    									style="background-image: url('/img/static/gorizontalnye_zhaluzi/aluminievye/texture/0225.png')}">
-					                    								</div>
-					                    							</label>
-					                    						</li>
-					                    						<li 
-					                    							class="product__colors-item" 
-					                    							ng-repeat="texture in this.textures">
-					                    							<label 
-					                    								class="product__colors-label" 
-					                    								title="2703 - салатовый">
-					                    								<input
-					                    									type="radio"
-					                    									name="product_texture_129"
-					                    									value="129"
-					                    									ng-model="this.texture_id">
-					                    								<div 
-					                    									class="product__colors-dot" 
-					                    									style="background-image: url('/img/static/gorizontalnye_zhaluzi/aluminievye/texture/2703.png')}">
-					                    								</div>
-					                    							</label>
-					                    						</li>
-					                    						<li 
-					                    							class="product__colors-item" 
-					                    							ng-repeat="texture in this.textures">
-					                    							<label 
-					                    								class="product__colors-label" 
-					                    								title="2033 -светло-зеленый">
-					                    								<input
-					                    									type="radio"
-					                    									name="product_texture_130"
-					                    									value="130"
-					                    									ng-model="this.texture_id">
-					                    								<div 
-					                    									class="product__colors-dot" 
-					                    									style="background-image: url('/img/static/gorizontalnye_zhaluzi/aluminievye/texture/2033.png')}">
-					                    								</div>
-					                    							</label>
-					                    						</li>
-					                    						<li 
-					                    							class="product__colors-item" 
-					                    							ng-repeat="texture in this.textures">
-					                    							<label 
-					                    								class="product__colors-label" 
-					                    								title="телесный">
-					                    								<input
-					                    									type="radio"
-					                    									name="product_texture_131"
-					                    									value="131"
-					                    									ng-model="this.texture_id">
-					                    								<div 
-					                    									class="product__colors-dot" 
-					                    									style="background-image: url('/img/static/gorizontalnye_zhaluzi/aluminievye/texture/4.png')}">
-					                    								</div>
-					                    							</label>
-					                    						</li>
-					                    						<li 
-					                    							class="product__colors-item" 
-					                    							ng-repeat="texture in this.textures">
-					                    							<label 
-					                    								class="product__colors-label" 
-					                    								title="светло-оранжевый">
-					                    								<input
-					                    									type="radio"
-					                    									name="product_texture_132"
-					                    									value="132"
-					                    									ng-model="this.texture_id">
-					                    								<div 
-					                    									class="product__colors-dot" 
-					                    									style="background-image: url('/img/static/gorizontalnye_zhaluzi/aluminievye/texture/5.png')}">
-					                    								</div>
-					                    							</label>
-					                    						</li>
-					                    						<li 
-					                    							class="product__colors-item" 
-					                    							ng-repeat="texture in this.textures">
-					                    							<label 
-					                    								class="product__colors-label" 
-					                    								title="бордовый">
-					                    								<input
-					                    									type="radio"
-					                    									name="product_texture_133"
-					                    									value="133"
-					                    									ng-model="this.texture_id">
-					                    								<div 
-					                    									class="product__colors-dot" 
-					                    									style="background-image: url('/img/static/gorizontalnye_zhaluzi/aluminievye/texture/8.png')}">
-					                    								</div>
-					                    							</label>
-					                    						</li>
-					                    					</ul>
-					                    				</div>
-					                    			</div>
-					                    			<!-- Footer -->
-					                    			<footer class="product__footer">
-					                    				<!-- Price container -->
-					                    				<div class="product__price-container">
-					                    					<!-- Old price -->
-					                    					<div class="product__price-old">
-					                    						7 887 р./м<sup>2</sup>
-					                    					</div>
-					                    					<!-- New price -->
-					                    					<div class="product__price-new">
-					                    						<strong>от 7 541 р.</strong>/м<sup>2</sup>
-					                    					</div>
-					                    				</div>
-					                    				<!-- Btn -->
-					                                    <a href="product.html" class="btn btn_blue btn_size-1">
-					                    					Детали
-					                    				</a>
-					                    			</footer>
-					                    		</div>
-					                    	</div>
-					                    </div>
-					                </li>
-					                <li class="catalog__item">
-					                    <div 
-					                    	class="product single" 
-					                    	ng-class="{'single': this.single, 'active': isHover}" 
-					                    	ng-click="touchElement ? hoverIt(false) : ''">
-					                    	<!-- Product view -->
-					                    	<div class="product__wrapper">
-					                    		<!-- Label -->
-					                    		<div class="product__label">
-					                    			<div class="product__label-text">
-					                    				-14%
-					                    			</div>
-					                    		</div>
-					                    		<div class="product__inner">
-					                    			<!-- Img -->
-					                    			<a
-					                    				href="product.html"
-					                    				style="background-size: cover; background-image: url('img/static/preview (5).jpg')"
 					                    				class="product__img">
 					                    			</a>
 					                    			<!-- Cart btn -->

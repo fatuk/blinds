@@ -15,7 +15,7 @@
             "country": "Китай",
             "width": "16 мм",
             "structure": "алюминий 0.18",
-            "texture": "img/static/gorizontalnye_zhaluzi/aluminievye/texture/5608.png",
+            "texture": "img/static/textures/5608.png",
             "description": "",
             "preview": "img/static/gorizontalnye_zhaluzi/aluminievye/transparent/5608.png",
             "counstructorImage": "img/static/gorizontalnye_zhaluzi/aluminievye/room/5608.jpg",
@@ -36,7 +36,7 @@
             "country": "Китай",
             "width": "16 мм",
             "structure": "алюминий 0.18",
-            "texture": "img/static/gorizontalnye_zhaluzi/aluminievye/texture/0225.png",
+            "texture": "img/static/textures/0225.png",
             "description": "",
             "preview": "img/static/gorizontalnye_zhaluzi/aluminievye/transparent/0225.png",
             "counstructorImage": "img/static/gorizontalnye_zhaluzi/aluminievye/room/0225.jpg",
@@ -57,7 +57,7 @@
             "country": "Китай",
             "width": "16 мм",
             "structure": "алюминий 0.18",
-            "texture": "img/static/gorizontalnye_zhaluzi/aluminievye/texture/1852.png",
+            "texture": "img/static/textures/1852.png",
             "description": "",
             "preview": "img/static/gorizontalnye_zhaluzi/aluminievye/transparent/1852.png",
             "counstructorImage": "img/static/gorizontalnye_zhaluzi/aluminievye/room/1852.jpg",
@@ -78,7 +78,7 @@
             "country": "Китай",
             "width": "16 мм",
             "structure": "алюминий 0.18",
-            "texture": "img/static/gorizontalnye_zhaluzi/aluminievye/texture/4082.png",
+            "texture": "img/static/textures/4082.png",
             "description": "",
             "preview": "img/static/gorizontalnye_zhaluzi/aluminievye/transparent/4082.png",
             "counstructorImage": "img/static/gorizontalnye_zhaluzi/aluminievye/room/4082.jpg",
@@ -99,7 +99,7 @@
             "country": "Китай",
             "width": "16 мм",
             "structure": "алюминий 0.18",
-            "texture": "img/static/gorizontalnye_zhaluzi/aluminievye/texture/2871.png",
+            "texture": "img/static/textures/2871.png",
             "description": "",
             "preview": "img/static/gorizontalnye_zhaluzi/aluminievye/transparent/2871.png",
             "counstructorImage": "img/static/gorizontalnye_zhaluzi/aluminievye/room/2871.jpg",
@@ -120,7 +120,7 @@
             "country": "Китай",
             "width": "16 мм",
             "structure": "алюминий 0.18",
-            "texture": "img/static/gorizontalnye_zhaluzi/aluminievye/texture/4077.png",
+            "texture": "img/static/textures/4077.png",
             "description": "",
             "preview": "img/static/gorizontalnye_zhaluzi/aluminievye/transparent/4077.png",
             "counstructorImage": "img/static/gorizontalnye_zhaluzi/aluminievye/room/4077.jpg",
@@ -141,7 +141,7 @@
             "country": "Китай",
             "width": "16 мм",
             "structure": "алюминий 0.18",
-            "texture": "img/static/gorizontalnye_zhaluzi/aluminievye/texture/3465.png",
+            "texture": "img/static/textures/3465.png",
             "description": "",
             "preview": "img/static/gorizontalnye_zhaluzi/aluminievye/transparent/3465.png",
             "counstructorImage": "img/static/gorizontalnye_zhaluzi/aluminievye/room/3465.jpg",
@@ -162,7 +162,7 @@
             "country": "Китай",
             "width": "16 мм",
             "structure": "алюминий 0.18",
-            "texture": "img/static/gorizontalnye_zhaluzi/aluminievye/texture/5259.png",
+            "texture": "img/static/textures/5259.png",
             "description": "",
             "preview": "img/static/gorizontalnye_zhaluzi/aluminievye/transparent/5259.png",
             "counstructorImage": "img/static/gorizontalnye_zhaluzi/aluminievye/room/5259.jpg",
@@ -183,7 +183,7 @@
             "country": "Китай",
             "width": "16 мм",
             "structure": "алюминий 0.18",
-            "texture": "img/static/gorizontalnye_zhaluzi/aluminievye/texture/2025.png",
+            "texture": "img/static/textures/2025.png",
             "description": "",
             "preview": "img/static/gorizontalnye_zhaluzi/aluminievye/transparent/2025.png",
             "counstructorImage": "img/static/gorizontalnye_zhaluzi/aluminievye/room/2025.jpg",
@@ -204,7 +204,7 @@
             "country": "Китай",
             "width": "16 мм",
             "structure": "алюминий 0.18",
-            "texture": "img/static/gorizontalnye_zhaluzi/aluminievye/texture/2013.png",
+            "texture": "img/static/textures/2013.png",
             "description": "",
             "preview": "img/static/gorizontalnye_zhaluzi/aluminievye/transparent/2013.png",
             "counstructorImage": "img/static/gorizontalnye_zhaluzi/aluminievye/room/2013.jpg",
@@ -225,7 +225,7 @@
             "country": "Китай",
             "width": "16 мм",
             "structure": "алюминий 0.18",
-            "texture": "img/static/gorizontalnye_zhaluzi/aluminievye/texture/2034.png",
+            "texture": "img/static/textures/2034.png",
             "description": "",
             "preview": "img/static/gorizontalnye_zhaluzi/aluminievye/transparent/2034.png",
             "counstructorImage": "img/static/gorizontalnye_zhaluzi/aluminievye/room/2034.jpg",
@@ -246,7 +246,7 @@
             "country": "Китай",
             "width": "16 мм",
             "structure": "алюминий 0.18",
-            "texture": "img/static/gorizontalnye_zhaluzi/aluminievye/texture/2703.png",
+            "texture": "img/static/textures/2703.png",
             "description": "",
             "preview": "img/static/gorizontalnye_zhaluzi/aluminievye/transparent/2703.png",
             "counstructorImage": "img/static/gorizontalnye_zhaluzi/aluminievye/room/2703.jpg",
@@ -267,7 +267,7 @@
             "country": "Китай",
             "width": "16 мм",
             "structure": "алюминий 0.18",
-            "texture": "img/static/gorizontalnye_zhaluzi/aluminievye/texture/2033.png",
+            "texture": "img/static/textures/2033.png",
             "description": "",
             "preview": "img/static/gorizontalnye_zhaluzi/aluminievye/transparent/2033.png",
             "counstructorImage": "img/static/gorizontalnye_zhaluzi/aluminievye/room/2033.jpg",
@@ -288,7 +288,7 @@
             "country": "Китай",
             "width": "16 мм",
             "structure": "алюминий 0.18",
-            "texture": "img/static/gorizontalnye_zhaluzi/aluminievye/texture/4.png",
+            "texture": "img/static/textures/4.png",
             "description": "",
             "preview": "img/static/gorizontalnye_zhaluzi/aluminievye/transparent/4.png",
             "counstructorImage": "img/static/gorizontalnye_zhaluzi/aluminievye/room/4.jpg",
@@ -309,7 +309,7 @@
             "country": "Китай",
             "width": "16 мм",
             "structure": "алюминий 0.18",
-            "texture": "img/static/gorizontalnye_zhaluzi/aluminievye/texture/5.png",
+            "texture": "img/static/textures/5.png",
             "description": "",
             "preview": "img/static/gorizontalnye_zhaluzi/aluminievye/transparent/5.png",
             "counstructorImage": "img/static/gorizontalnye_zhaluzi/aluminievye/room/5.jpg",
@@ -330,7 +330,7 @@
             "country": "Китай",
             "width": "16 мм",
             "structure": "алюминий 0.18",
-            "texture": "img/static/gorizontalnye_zhaluzi/aluminievye/texture/8.png",
+            "texture": "img/static/textures/8.png",
             "description": "",
             "preview": "img/static/gorizontalnye_zhaluzi/aluminievye/transparent/8.png",
             "counstructorImage": "img/static/gorizontalnye_zhaluzi/aluminievye/room/8.jpg",
@@ -351,7 +351,7 @@
             "country": "Китай",
             "width": "16 мм",
             "structure": "алюминий 0.18",
-            "texture": "img/static/gorizontalnye_zhaluzi/aluminievye/texture/10.png",
+            "texture": "img/static/textures/10.png",
             "description": "",
             "preview": "img/static/gorizontalnye_zhaluzi/aluminievye/transparent/10.png",
             "counstructorImage": "img/static/gorizontalnye_zhaluzi/aluminievye/room/10.jpg",
@@ -372,7 +372,7 @@
             "country": "Китай",
             "width": "16 мм",
             "structure": "алюминий 0.18",
-            "texture": "img/static/gorizontalnye_zhaluzi/aluminievye/texture/11.png",
+            "texture": "img/static/textures/11.png",
             "description": "",
             "preview": "img/static/gorizontalnye_zhaluzi/aluminievye/transparent/11.png",
             "counstructorImage": "img/static/gorizontalnye_zhaluzi/aluminievye/room/11.jpg",
@@ -393,7 +393,7 @@
             "country": "Китай",
             "width": "16 мм",
             "structure": "алюминий 0.18",
-            "texture": "img/static/gorizontalnye_zhaluzi/aluminievye/texture/12.png",
+            "texture": "img/static/textures/12.png",
             "description": "",
             "preview": "img/static/gorizontalnye_zhaluzi/aluminievye/transparent/12.png",
             "counstructorImage": "img/static/gorizontalnye_zhaluzi/aluminievye/room/12.jpg",
@@ -414,7 +414,7 @@
             "country": "Китай",
             "width": "16 мм",
             "structure": "алюминий 0.18",
-            "texture": "img/static/gorizontalnye_zhaluzi/aluminievye/texture/13.png",
+            "texture": "img/static/textures/13.png",
             "description": "",
             "preview": "img/static/gorizontalnye_zhaluzi/aluminievye/transparent/13.png",
             "counstructorImage": "img/static/gorizontalnye_zhaluzi/aluminievye/room/13.jpg",
@@ -435,7 +435,7 @@
             "country": "Китай",
             "width": "16 мм",
             "structure": "алюминий 0.18",
-            "texture": "img/static/gorizontalnye_zhaluzi/aluminievye/texture/14.png",
+            "texture": "img/static/textures/14.png",
             "description": "",
             "preview": "img/static/gorizontalnye_zhaluzi/aluminievye/transparent/14.png",
             "counstructorImage": "img/static/gorizontalnye_zhaluzi/aluminievye/room/14.jpg",
@@ -456,11 +456,405 @@
             "country": "Китай",
             "width": "16 мм",
             "structure": "алюминий 0.18",
-            "texture": "img/static/gorizontalnye_zhaluzi/aluminievye/texture/19.png",
+            "texture": "img/static/textures/19.png",
             "description": "",
             "preview": "img/static/gorizontalnye_zhaluzi/aluminievye/transparent/19.png",
             "counstructorImage": "img/static/gorizontalnye_zhaluzi/aluminievye/room/19.jpg",
             "color": "#4464bf"
+        }
+    ],
+    "productOptional": [
+        {
+            "id": 7,
+            "minimalTexturePrice": 749,
+            "image": "img/static/preview.jpg",
+            "rating": "5.0000",
+            "reviews_count": 1,
+            "link": "product.html",
+            "title": "Классические алюминиевые с шириной планки 25мм",
+            "category_link": "alyuminevye",
+            "category_title": "Алюминевые горизонтальные жалюзи",
+            "sale": 14,
+            "textures": [
+                {
+                    "id": 119,
+                    "url": "0225__belyy",
+                    "model": "0225 - белый",
+                    "price": 749,
+                    "img": "/img/static/gorizontalnye_zhaluzi/aluminievye/texture/0225.png",
+                    "translucent": "0.9",
+                    "country": {
+                        "id": "1",
+                        "name": "Китай"
+                    },
+                    "width": "25 мм",
+                    "structure": "алюминий 0.18"
+                },
+                {
+                    "id": 129,
+                    "url": "2703__salatovyy",
+                    "model": "2703 - салатовый",
+                    "price": 874,
+                    "img": "/img/static/gorizontalnye_zhaluzi/aluminievye/texture/2703.png",
+                    "translucent": "0.9",
+                    "country": {
+                        "id": "1",
+                        "name": "Китай"
+                    },
+                    "width": "25 мм",
+                    "structure": "алюминий 0.18"
+                },
+                {
+                    "id": 130,
+                    "url": "2033__svetlozelenyy",
+                    "model": "2033 -светло-зеленый",
+                    "price": 874,
+                    "img": "/img/static/gorizontalnye_zhaluzi/aluminievye/texture/2033.png",
+                    "translucent": "0.9",
+                    "country": {
+                        "id": "1",
+                        "name": "Китай"
+                    },
+                    "width": "25 мм",
+                    "structure": "алюминий 0.18"
+                },
+                {
+                    "id": 131,
+                    "url": "telesnyy",
+                    "model": "телесный",
+                    "price": 874,
+                    "img": "/img/static/gorizontalnye_zhaluzi/aluminievye/texture/4.png",
+                    "translucent": "0.9",
+                    "country": {
+                        "id": "1",
+                        "name": "Китай"
+                    },
+                    "width": "25 мм",
+                    "structure": "алюминий 0.18"
+                },
+                {
+                    "id": 132,
+                    "url": "svetlooranzhevyy",
+                    "model": "светло-оранжевый",
+                    "price": 874,
+                    "img": "/img/static/gorizontalnye_zhaluzi/aluminievye/texture/5.png",
+                    "translucent": "0.9",
+                    "country": {
+                        "id": "1",
+                        "name": "Китай"
+                    },
+                    "width": "25 мм",
+                    "structure": "алюминий 0.18"
+                },
+                {
+                    "id": 133,
+                    "url": "bordovyy",
+                    "model": "бордовый",
+                    "price": 874,
+                    "img": "/img/static/gorizontalnye_zhaluzi/aluminievye/texture/8.png",
+                    "translucent": "0.9",
+                    "country": {
+                        "id": "1",
+                        "name": "Китай"
+                    },
+                    "width": "25 мм",
+                    "structure": "алюминий 0.18"
+                }
+            ]
+        },
+        {
+            "id": 8,
+            "minimalTexturePrice": 749,
+            "image": "img/static/preview (1).jpg",
+            "rating": "5.0000",
+            "reviews_count": 1,
+            "link": "product.html",
+            "title": "Классические алюминиевые с шириной планки 25мм",
+            "category_link": "alyuminevye",
+            "category_title": "Алюминевые горизонтальные жалюзи",
+            "sale": 14,
+            "textures": [
+                {
+                    "id": 119,
+                    "url": "0225__belyy",
+                    "model": "0225 - белый",
+                    "price": 749,
+                    "img": "/img/static/gorizontalnye_zhaluzi/aluminievye/texture/0225.png",
+                    "translucent": "0.9",
+                    "country": {
+                        "id": "1",
+                        "name": "Китай"
+                    },
+                    "width": "25 мм",
+                    "structure": "алюминий 0.18"
+                },
+                {
+                    "id": 129,
+                    "url": "2703__salatovyy",
+                    "model": "2703 - салатовый",
+                    "price": 874,
+                    "img": "/img/static/gorizontalnye_zhaluzi/aluminievye/texture/2703.png",
+                    "translucent": "0.9",
+                    "country": {
+                        "id": "1",
+                        "name": "Китай"
+                    },
+                    "width": "25 мм",
+                    "structure": "алюминий 0.18"
+                },
+                {
+                    "id": 130,
+                    "url": "2033__svetlozelenyy",
+                    "model": "2033 -светло-зеленый",
+                    "price": 874,
+                    "img": "/img/static/gorizontalnye_zhaluzi/aluminievye/texture/2033.png",
+                    "translucent": "0.9",
+                    "country": {
+                        "id": "1",
+                        "name": "Китай"
+                    },
+                    "width": "25 мм",
+                    "structure": "алюминий 0.18"
+                },
+                {
+                    "id": 131,
+                    "url": "telesnyy",
+                    "model": "телесный",
+                    "price": 874,
+                    "img": "/img/static/gorizontalnye_zhaluzi/aluminievye/texture/4.png",
+                    "translucent": "0.9",
+                    "country": {
+                        "id": "1",
+                        "name": "Китай"
+                    },
+                    "width": "25 мм",
+                    "structure": "алюминий 0.18"
+                },
+                {
+                    "id": 132,
+                    "url": "svetlooranzhevyy",
+                    "model": "светло-оранжевый",
+                    "price": 874,
+                    "img": "/img/static/gorizontalnye_zhaluzi/aluminievye/texture/5.png",
+                    "translucent": "0.9",
+                    "country": {
+                        "id": "1",
+                        "name": "Китай"
+                    },
+                    "width": "25 мм",
+                    "structure": "алюминий 0.18"
+                },
+                {
+                    "id": 133,
+                    "url": "bordovyy",
+                    "model": "бордовый",
+                    "price": 874,
+                    "img": "/img/static/gorizontalnye_zhaluzi/aluminievye/texture/8.png",
+                    "translucent": "0.9",
+                    "country": {
+                        "id": "1",
+                        "name": "Китай"
+                    },
+                    "width": "25 мм",
+                    "structure": "алюминий 0.18"
+                }
+            ]
+        },
+        {
+            "id": 9,
+            "minimalTexturePrice": 749,
+            "image": "img/static/preview (2).jpg",
+            "rating": "5.0000",
+            "reviews_count": 1,
+            "link": "product.html",
+            "title": "Классические алюминиевые с шириной планки 25мм",
+            "category_link": "alyuminevye",
+            "category_title": "Алюминевые горизонтальные жалюзи",
+            "sale": 14,
+            "textures": [
+                {
+                    "id": 119,
+                    "url": "0225__belyy",
+                    "model": "0225 - белый",
+                    "price": 749,
+                    "img": "/img/static/gorizontalnye_zhaluzi/aluminievye/texture/0225.png",
+                    "translucent": "0.9",
+                    "country": {
+                        "id": "1",
+                        "name": "Китай"
+                    },
+                    "width": "25 мм",
+                    "structure": "алюминий 0.18"
+                },
+                {
+                    "id": 129,
+                    "url": "2703__salatovyy",
+                    "model": "2703 - салатовый",
+                    "price": 874,
+                    "img": "/img/static/gorizontalnye_zhaluzi/aluminievye/texture/2703.png",
+                    "translucent": "0.9",
+                    "country": {
+                        "id": "1",
+                        "name": "Китай"
+                    },
+                    "width": "25 мм",
+                    "structure": "алюминий 0.18"
+                },
+                {
+                    "id": 130,
+                    "url": "2033__svetlozelenyy",
+                    "model": "2033 -светло-зеленый",
+                    "price": 874,
+                    "img": "/img/static/gorizontalnye_zhaluzi/aluminievye/texture/2033.png",
+                    "translucent": "0.9",
+                    "country": {
+                        "id": "1",
+                        "name": "Китай"
+                    },
+                    "width": "25 мм",
+                    "structure": "алюминий 0.18"
+                },
+                {
+                    "id": 131,
+                    "url": "telesnyy",
+                    "model": "телесный",
+                    "price": 874,
+                    "img": "/img/static/gorizontalnye_zhaluzi/aluminievye/texture/4.png",
+                    "translucent": "0.9",
+                    "country": {
+                        "id": "1",
+                        "name": "Китай"
+                    },
+                    "width": "25 мм",
+                    "structure": "алюминий 0.18"
+                },
+                {
+                    "id": 132,
+                    "url": "svetlooranzhevyy",
+                    "model": "светло-оранжевый",
+                    "price": 874,
+                    "img": "/img/static/gorizontalnye_zhaluzi/aluminievye/texture/5.png",
+                    "translucent": "0.9",
+                    "country": {
+                        "id": "1",
+                        "name": "Китай"
+                    },
+                    "width": "25 мм",
+                    "structure": "алюминий 0.18"
+                },
+                {
+                    "id": 133,
+                    "url": "bordovyy",
+                    "model": "бордовый",
+                    "price": 874,
+                    "img": "/img/static/gorizontalnye_zhaluzi/aluminievye/texture/8.png",
+                    "translucent": "0.9",
+                    "country": {
+                        "id": "1",
+                        "name": "Китай"
+                    },
+                    "width": "25 мм",
+                    "structure": "алюминий 0.18"
+                }
+            ]
+        },
+        {
+            "id": 10,
+            "minimalTexturePrice": 749,
+            "image": "img/static/preview (3).jpg",
+            "rating": "5.0000",
+            "reviews_count": 1,
+            "link": "product.html",
+            "title": "Классические алюминиевые с шириной планки 25мм",
+            "category_link": "alyuminevye",
+            "category_title": "Алюминевые горизонтальные жалюзи",
+            "sale": 14,
+            "textures": [
+                {
+                    "id": 119,
+                    "url": "0225__belyy",
+                    "model": "0225 - белый",
+                    "price": 749,
+                    "img": "/img/static/gorizontalnye_zhaluzi/aluminievye/texture/0225.png",
+                    "translucent": "0.9",
+                    "country": {
+                        "id": "1",
+                        "name": "Китай"
+                    },
+                    "width": "25 мм",
+                    "structure": "алюминий 0.18"
+                },
+                {
+                    "id": 129,
+                    "url": "2703__salatovyy",
+                    "model": "2703 - салатовый",
+                    "price": 874,
+                    "img": "/img/static/gorizontalnye_zhaluzi/aluminievye/texture/2703.png",
+                    "translucent": "0.9",
+                    "country": {
+                        "id": "1",
+                        "name": "Китай"
+                    },
+                    "width": "25 мм",
+                    "structure": "алюминий 0.18"
+                },
+                {
+                    "id": 130,
+                    "url": "2033__svetlozelenyy",
+                    "model": "2033 -светло-зеленый",
+                    "price": 874,
+                    "img": "/img/static/gorizontalnye_zhaluzi/aluminievye/texture/2033.png",
+                    "translucent": "0.9",
+                    "country": {
+                        "id": "1",
+                        "name": "Китай"
+                    },
+                    "width": "25 мм",
+                    "structure": "алюминий 0.18"
+                },
+                {
+                    "id": 131,
+                    "url": "telesnyy",
+                    "model": "телесный",
+                    "price": 874,
+                    "img": "/img/static/gorizontalnye_zhaluzi/aluminievye/texture/4.png",
+                    "translucent": "0.9",
+                    "country": {
+                        "id": "1",
+                        "name": "Китай"
+                    },
+                    "width": "25 мм",
+                    "structure": "алюминий 0.18"
+                },
+                {
+                    "id": 132,
+                    "url": "svetlooranzhevyy",
+                    "model": "светло-оранжевый",
+                    "price": 874,
+                    "img": "/img/static/gorizontalnye_zhaluzi/aluminievye/texture/5.png",
+                    "translucent": "0.9",
+                    "country": {
+                        "id": "1",
+                        "name": "Китай"
+                    },
+                    "width": "25 мм",
+                    "structure": "алюминий 0.18"
+                },
+                {
+                    "id": 133,
+                    "url": "bordovyy",
+                    "model": "бордовый",
+                    "price": 874,
+                    "img": "/img/static/gorizontalnye_zhaluzi/aluminievye/texture/8.png",
+                    "translucent": "0.9",
+                    "country": {
+                        "id": "1",
+                        "name": "Китай"
+                    },
+                    "width": "25 мм",
+                    "structure": "алюминий 0.18"
+                }
+            ]
         }
     ],
     "productPage": {

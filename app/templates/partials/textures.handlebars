@@ -60,7 +60,7 @@
                             <svg class="icon icon-shevron-down"><use xlink:href="icons/icons.svg#shevron-down"></use></svg>
                         </button>
                         <!-- Popup -->
-                        <div class="popup" ng-show="$parent.togglePricePopup">
+                        {{!-- <div class="popup" ng-show="$parent.togglePricePopup">
                             <div class="popup__inside">
                                 <h2 class="popup__title">
                                     Стоимость материала за м<sup>2</sup>
@@ -74,10 +74,10 @@
                                     </range>
                                 </div>
                             </div>
-                        </div>
+                        </div> --}}
                     </li>
                     <!-- By color -->
-                    
+            
                     <li class="textures__filters-item">
                         <button
                                 ng-click="totalColors.length > 0 ? onClickColor():''"
@@ -87,7 +87,7 @@
                             <svg class="icon icon-shevron-down"><use xlink:href="icons/icons.svg#shevron-down"></use></svg>
                         </button>
                         <!-- Popup -->
-                        <div class="popup" ng-show="$parent.toggleColorsPopup">
+                        {{!-- <div class="popup" ng-show="$parent.toggleColorsPopup">
                             <div class="popup__inside">
                                 <h2 class="popup__title">
                                     Выберите цвет материала
@@ -111,7 +111,7 @@
                                     </button>
                                 </footer>
                             </div>
-                        </div>
+                        </div> --}}
                     </li>
                 </ul>
             </div>
@@ -119,20 +119,27 @@
     </header>
     <!-- Content -->
     <ul class="textures__list">
-
+        {{#each textures}}
         <li
                 ng-repeat="(key,texture) in textures"
                 ng-show="(key<=12)||(showAllTextures)"
                 class="textures__item">
             <div ng-mouseenter="$parent.$parent.$parent.previewTextureModel = texture.id;" ng-mouseleave="$parent.$parent.$parent.previewTextureModel = null">
-                <texture
-                        title="{{textures.model}}"
+                <label
+                        class="texture"
+                        title="{{this.model}}"
                         checked="checked"
-                        fill="{{textures.texture}}"
-                        value="{{textures.id}}">
-                </texture>
+                        fill="{{this.texture}}"
+                        value="{{this.id}}">
+                        <span 
+                            class="texture__bg"
+                            style="background-image: url('{{this.texture}}')"
+                        ></span>
+                        
+                </label>
             </div>
         </li>
+        {{/each}}
     </ul>
     <button class="textures__show-all" ng-show="(textures.length > 12)" ng-click="showAllTextures=!showAllTextures;">
         <span ng-if="!showAllTextures">развернуть</span>
