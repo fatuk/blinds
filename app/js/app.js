@@ -19,4 +19,18 @@ $(() => {
 			$hideOnScroll.removeClass($hideOnScroll.data('scroll-class'));
 		}
 	});
+
+	// Open search
+	$('.js-openSearch').click(() => {
+		$('.js-dialog-search').removeClass('hide');
+	});
+	$('.js-close-search').click(() => {
+		$('.js-dialog-search').addClass('hide');
+	});
+	$('.js-openFeedback').click(() => {
+		$('.js-dialog-feedback').removeClass('hide');
+	});
+	$('.js-close-feedback').click(() => {
+		$('.js-dialog-feedback').addClass('hide');
+	});
 });

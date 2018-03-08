@@ -21,5 +21,19 @@ $(function () {
 			$hideOnScroll.removeClass($hideOnScroll.data('scroll-class'));
 		}
 	});
+
+	// Open search
+	$('.js-openSearch').click(function () {
+		$('.js-dialog-search').removeClass('hide');
+	});
+	$('.js-close-search').click(function () {
+		$('.js-dialog-search').addClass('hide');
+	});
+	$('.js-openFeedback').click(function () {
+		$('.js-dialog-feedback').removeClass('hide');
+	});
+	$('.js-close-feedback').click(function () {
+		$('.js-dialog-feedback').addClass('hide');
+	});
 });
 //# sourceMappingURL=../js/app.js.map
