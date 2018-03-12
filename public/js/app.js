@@ -29,11 +29,21 @@ $(function () {
 	$('.js-close-search').click(function () {
 		$('.js-dialog-search').addClass('hide');
 	});
+
+	// Open feedback
 	$('.js-openFeedback').click(function () {
 		$('.js-dialog-feedback').removeClass('hide');
 	});
 	$('.js-close-feedback').click(function () {
 		$('.js-dialog-feedback').addClass('hide');
+	});
+
+	//Open callMe
+	$('.js-openCallMe').click(function () {
+		$('.js-dialog-order').removeClass('hide');
+	});
+	$('.js-close-CallMe').click(function () {
+		$('.js-dialog-order').addClass('hide');
 	});
 });
 //# sourceMappingURL=../js/app.js.map

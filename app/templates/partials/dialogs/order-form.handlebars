@@ -10,7 +10,7 @@
 	<section class="order-form__body" ng-if="!state.complete && !state.loading">
 		<ol class="order-form__list" ng-if="context !== 'callme'">
 			<li class="order-form__item" ng-repeat="(key,product) in products track by $index">
-				<strong ng-if="products.length > 1">{{key+1}}.</strong>
+				<strong ng-if="products.length > 1"></strong>
 				{{product.title}}
 				<span ng-if="!!product.texture">модель {{product.texture}}</span>
 				<span ng-if="product.withCornice && product.cornice.cartText" ng-bind="' + ' + product.cornice.cartText"></span>
@@ -21,9 +21,9 @@
 					({{product.dimensions.width}} cм)
 				</span>
 				- <strong>
-					{{product.price | number:0}} р.
+					{{product.price}} р.
 				</strong><span ng-if="!product.priceExactly">/м<sup>2</sup></span>
-			</li>
+			</li>	
 		</ol>
 		<input type="text" class="order-form__input" placeholder="Ваше имя" ng-model="order.name" ng-required="true" >
 		<input type="tel" class="order-form__input" placeholder="Ваш телефон" ng-model="order.phone" ng-required="true" ng-focus="phoneFocus();">

@@ -27,10 +27,20 @@ $(() => {
 	$('.js-close-search').click(() => {
 		$('.js-dialog-search').addClass('hide');
 	});
+
+	// Open feedback
 	$('.js-openFeedback').click(() => {
 		$('.js-dialog-feedback').removeClass('hide');
 	});
 	$('.js-close-feedback').click(() => {
 		$('.js-dialog-feedback').addClass('hide');
+	});
+
+	//Open callMe
+	$('.js-openCallMe').click(() => {
+		$('.js-dialog-order').removeClass('hide');
+	});
+	$('.js-close-CallMe').click(() => {
+		$('.js-dialog-order').addClass('hide');
 	});
 });
