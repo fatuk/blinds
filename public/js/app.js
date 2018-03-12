@@ -42,7 +42,7 @@ $(function () {
 	$('.js-openCallMe').click(function () {
 		$('.js-dialog-order').removeClass('hide');
 	});
-	$('.js-close-CallMe').click(function () {
+	$('.js-close-order').click(function () {
 		$('.js-dialog-order').addClass('hide');
 	});
 });

@@ -1322,7 +1322,7 @@
                     "url": "0225__belyy",
                     "model": "0225 - белый",
                     "price": 749,
-                    "img": "/img/static/gorizontalnye_zhaluzi/aluminievye/texture/0225.png",
+                    "img": "/img/static/textures/0225.png",
                     "translucent": "0.9",
                     "country": {
                         "id": "1",
@@ -1336,7 +1336,7 @@
                     "url": "2703__salatovyy",
                     "model": "2703 - салатовый",
                     "price": 874,
-                    "img": "/img/static/gorizontalnye_zhaluzi/aluminievye/texture/2703.png",
+                    "img": "/img/static/textures/2703.png",
                     "translucent": "0.9",
                     "country": {
                         "id": "1",
@@ -1350,7 +1350,7 @@
                     "url": "2033__svetlozelenyy",
                     "model": "2033 -светло-зеленый",
                     "price": 874,
-                    "img": "/img/static/gorizontalnye_zhaluzi/aluminievye/texture/2033.png",
+                    "img": "/img/static/textures/2033.png",
                     "translucent": "0.9",
                     "country": {
                         "id": "1",
@@ -1364,7 +1364,7 @@
                     "url": "telesnyy",
                     "model": "телесный",
                     "price": 874,
-                    "img": "/img/static/gorizontalnye_zhaluzi/aluminievye/texture/4.png",
+                    "img": "/img/static/textures/4.png",
                     "translucent": "0.9",
                     "country": {
                         "id": "1",
@@ -1378,7 +1378,7 @@
                     "url": "svetlooranzhevyy",
                     "model": "светло-оранжевый",
                     "price": 874,
-                    "img": "/img/static/gorizontalnye_zhaluzi/aluminievye/texture/5.png",
+                    "img": "/img/static/textures/5.png",
                     "translucent": "0.9",
                     "country": {
                         "id": "1",
@@ -1392,7 +1392,7 @@
                     "url": "bordovyy",
                     "model": "бордовый",
                     "price": 874,
-                    "img": "/img/static/gorizontalnye_zhaluzi/aluminievye/texture/8.png",
+                    "img": "/img/static/textures/8.png",
                     "translucent": "0.9",
                     "country": {
                         "id": "1",
@@ -1420,7 +1420,7 @@
                     "url": "0225__belyy",
                     "model": "0225 - белый",
                     "price": 749,
-                    "img": "/img/static/gorizontalnye_zhaluzi/aluminievye/texture/0225.png",
+                    "img": "/img/static/textures/0225.png",
                     "translucent": "0.9",
                     "country": {
                         "id": "1",
@@ -1434,7 +1434,7 @@
                     "url": "2703__salatovyy",
                     "model": "2703 - салатовый",
                     "price": 874,
-                    "img": "/img/static/gorizontalnye_zhaluzi/aluminievye/texture/2703.png",
+                    "img": "/img/static/textures/2703.png",
                     "translucent": "0.9",
                     "country": {
                         "id": "1",
@@ -1448,7 +1448,7 @@
                     "url": "2033__svetlozelenyy",
                     "model": "2033 -светло-зеленый",
                     "price": 874,
-                    "img": "/img/static/gorizontalnye_zhaluzi/aluminievye/texture/2033.png",
+                    "img": "/img/static/textures/2033.png",
                     "translucent": "0.9",
                     "country": {
                         "id": "1",
@@ -1462,7 +1462,7 @@
                     "url": "telesnyy",
                     "model": "телесный",
                     "price": 874,
-                    "img": "/img/static/gorizontalnye_zhaluzi/aluminievye/texture/4.png",
+                    "img": "/img/static/textures/4.png",
                     "translucent": "0.9",
                     "country": {
                         "id": "1",
@@ -1476,7 +1476,7 @@
                     "url": "svetlooranzhevyy",
                     "model": "светло-оранжевый",
                     "price": 874,
-                    "img": "/img/static/gorizontalnye_zhaluzi/aluminievye/texture/5.png",
+                    "img": "/img/static/textures/5.png",
                     "translucent": "0.9",
                     "country": {
                         "id": "1",
@@ -1490,7 +1490,7 @@
                     "url": "bordovyy",
                     "model": "бордовый",
                     "price": 874,
-                    "img": "/img/static/gorizontalnye_zhaluzi/aluminievye/texture/8.png",
+                    "img": "/img/static/textures/8.png",
                     "translucent": "0.9",
                     "country": {
                         "id": "1",
@@ -1518,7 +1518,7 @@
                     "url": "0225__belyy",
                     "model": "0225 - белый",
                     "price": 749,
-                    "img": "/img/static/gorizontalnye_zhaluzi/aluminievye/texture/0225.png",
+                    "img": "/img/static/textures/0225.png",
                     "translucent": "0.9",
                     "country": {
                         "id": "1",
@@ -1532,7 +1532,7 @@
                     "url": "2703__salatovyy",
                     "model": "2703 - салатовый",
                     "price": 874,
-                    "img": "/img/static/gorizontalnye_zhaluzi/aluminievye/texture/2703.png",
+                    "img": "/img/static/textures/2703.png",
                     "translucent": "0.9",
                     "country": {
                         "id": "1",
@@ -1546,7 +1546,7 @@
                     "url": "2033__svetlozelenyy",
                     "model": "2033 -светло-зеленый",
                     "price": 874,
-                    "img": "/img/static/gorizontalnye_zhaluzi/aluminievye/texture/2033.png",
+                    "img": "/img/static/textures/2033.png",
                     "translucent": "0.9",
                     "country": {
                         "id": "1",
@@ -1560,7 +1560,7 @@
                     "url": "telesnyy",
                     "model": "телесный",
                     "price": 874,
-                    "img": "/img/static/gorizontalnye_zhaluzi/aluminievye/texture/4.png",
+                    "img": "/img/static/textures/4.png",
                     "translucent": "0.9",
                     "country": {
                         "id": "1",
@@ -1574,7 +1574,7 @@
                     "url": "svetlooranzhevyy",
                     "model": "светло-оранжевый",
                     "price": 874,
-                    "img": "/img/static/gorizontalnye_zhaluzi/aluminievye/texture/5.png",
+                    "img": "/img/static/textures/5.png",
                     "translucent": "0.9",
                     "country": {
                         "id": "1",
@@ -1588,7 +1588,7 @@
                     "url": "bordovyy",
                     "model": "бордовый",
                     "price": 874,
-                    "img": "/img/static/gorizontalnye_zhaluzi/aluminievye/texture/8.png",
+                    "img": "/img/static/textures/8.png",
                     "translucent": "0.9",
                     "country": {
                         "id": "1",
@@ -1616,7 +1616,7 @@
                     "url": "0225__belyy",
                     "model": "0225 - белый",
                     "price": 749,
-                    "img": "/img/static/gorizontalnye_zhaluzi/aluminievye/texture/0225.png",
+                    "img": "/img/static/textures/0225.png",
                     "translucent": "0.9",
                     "country": {
                         "id": "1",
@@ -1630,7 +1630,7 @@
                     "url": "2703__salatovyy",
                     "model": "2703 - салатовый",
                     "price": 874,
-                    "img": "/img/static/gorizontalnye_zhaluzi/aluminievye/texture/2703.png",
+                    "img": "/img/static/textures/2703.png",
                     "translucent": "0.9",
                     "country": {
                         "id": "1",
@@ -1644,7 +1644,7 @@
                     "url": "2033__svetlozelenyy",
                     "model": "2033 -светло-зеленый",
                     "price": 874,
-                    "img": "/img/static/gorizontalnye_zhaluzi/aluminievye/texture/2033.png",
+                    "img": "/img/static/textures/2033.png",
                     "translucent": "0.9",
                     "country": {
                         "id": "1",
@@ -1658,7 +1658,7 @@
                     "url": "telesnyy",
                     "model": "телесный",
                     "price": 874,
-                    "img": "/img/static/gorizontalnye_zhaluzi/aluminievye/texture/4.png",
+                    "img": "/img/static/textures/4.png",
                     "translucent": "0.9",
                     "country": {
                         "id": "1",
@@ -1672,7 +1672,7 @@
                     "url": "svetlooranzhevyy",
                     "model": "светло-оранжевый",
                     "price": 874,
-                    "img": "/img/static/gorizontalnye_zhaluzi/aluminievye/texture/5.png",
+                    "img": "/img/static/textures/5.png",
                     "translucent": "0.9",
                     "country": {
                         "id": "1",
@@ -1686,7 +1686,7 @@
                     "url": "bordovyy",
                     "model": "бордовый",
                     "price": 874,
-                    "img": "/img/static/gorizontalnye_zhaluzi/aluminievye/texture/8.png",
+                    "img": "/img/static/textures/8.png",
                     "translucent": "0.9",
                     "country": {
                         "id": "1",
@@ -1714,7 +1714,7 @@
                     "url": "0225__belyy",
                     "model": "0225 - белый",
                     "price": 749,
-                    "img": "/img/static/gorizontalnye_zhaluzi/aluminievye/texture/0225.png",
+                    "img": "/img/static/textures/0225.png",
                     "translucent": "0.9",
                     "country": {
                         "id": "1",
@@ -1728,7 +1728,7 @@
                     "url": "2703__salatovyy",
                     "model": "2703 - салатовый",
                     "price": 874,
-                    "img": "/img/static/gorizontalnye_zhaluzi/aluminievye/texture/2703.png",
+                    "img": "/img/static/textures/2703.png",
                     "translucent": "0.9",
                     "country": {
                         "id": "1",
@@ -1742,7 +1742,7 @@
                     "url": "2033__svetlozelenyy",
                     "model": "2033 -светло-зеленый",
                     "price": 874,
-                    "img": "/img/static/gorizontalnye_zhaluzi/aluminievye/texture/2033.png",
+                    "img": "/img/static/textures/2033.png",
                     "translucent": "0.9",
                     "country": {
                         "id": "1",
@@ -1756,7 +1756,7 @@
                     "url": "telesnyy",
                     "model": "телесный",
                     "price": 874,
-                    "img": "/img/static/gorizontalnye_zhaluzi/aluminievye/texture/4.png",
+                    "img": "/img/static/textures/4.png",
                     "translucent": "0.9",
                     "country": {
                         "id": "1",
@@ -1770,7 +1770,7 @@
                     "url": "svetlooranzhevyy",
                     "model": "светло-оранжевый",
                     "price": 874,
-                    "img": "/img/static/gorizontalnye_zhaluzi/aluminievye/texture/5.png",
+                    "img": "/img/static/textures/5.png",
                     "translucent": "0.9",
                     "country": {
                         "id": "1",
@@ -1784,7 +1784,7 @@
                     "url": "bordovyy",
                     "model": "бордовый",
                     "price": 874,
-                    "img": "/img/static/gorizontalnye_zhaluzi/aluminievye/texture/8.png",
+                    "img": "/img/static/textures/8.png",
                     "translucent": "0.9",
                     "country": {
                         "id": "1",
@@ -1812,7 +1812,7 @@
                     "url": "0225__belyy",
                     "model": "0225 - белый",
                     "price": 749,
-                    "img": "/img/static/gorizontalnye_zhaluzi/aluminievye/texture/0225.png",
+                    "img": "/img/static/textures/0225.png",
                     "translucent": "0.9",
                     "country": {
                         "id": "1",
@@ -1826,7 +1826,7 @@
                     "url": "2703__salatovyy",
                     "model": "2703 - салатовый",
                     "price": 874,
-                    "img": "/img/static/gorizontalnye_zhaluzi/aluminievye/texture/2703.png",
+                    "img": "/img/static/textures/2703.png",
                     "translucent": "0.9",
                     "country": {
                         "id": "1",
@@ -1840,7 +1840,7 @@
                     "url": "2033__svetlozelenyy",
                     "model": "2033 -светло-зеленый",
                     "price": 874,
-                    "img": "/img/static/gorizontalnye_zhaluzi/aluminievye/texture/2033.png",
+                    "img": "/img/static/textures/2033.png",
                     "translucent": "0.9",
                     "country": {
                         "id": "1",
@@ -1854,7 +1854,7 @@
                     "url": "telesnyy",
                     "model": "телесный",
                     "price": 874,
-                    "img": "/img/static/gorizontalnye_zhaluzi/aluminievye/texture/4.png",
+                    "img": "/img/static/textures/4.png",
                     "translucent": "0.9",
                     "country": {
                         "id": "1",
@@ -1868,7 +1868,7 @@
                     "url": "svetlooranzhevyy",
                     "model": "светло-оранжевый",
                     "price": 874,
-                    "img": "/img/static/gorizontalnye_zhaluzi/aluminievye/texture/5.png",
+                    "img": "/img/static/textures/5.png",
                     "translucent": "0.9",
                     "country": {
                         "id": "1",
@@ -1882,7 +1882,7 @@
                     "url": "bordovyy",
                     "model": "бордовый",
                     "price": 874,
-                    "img": "/img/static/gorizontalnye_zhaluzi/aluminievye/texture/8.png",
+                    "img": "/img/static/textures/8.png",
                     "translucent": "0.9",
                     "country": {
                         "id": "1",

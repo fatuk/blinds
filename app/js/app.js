@@ -40,7 +40,7 @@ $(() => {
 	$('.js-openCallMe').click(() => {
 		$('.js-dialog-order').removeClass('hide');
 	});
-	$('.js-close-CallMe').click(() => {
+	$('.js-close-order').click(() => {
 		$('.js-dialog-order').addClass('hide');
 	});
 });
