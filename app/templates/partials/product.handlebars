@@ -1,6 +1,7 @@
 <div 
-	class="product single" 
-	ng-class="{'single': this.single, 'active': isHover}" 
+	class="product single js-hover" 
+	ng-class="{'single': this.single, 'active': isHover}"
+	data-class="active" 
 	ng-click="touchElement ? hoverIt(false) : ''">
 	<!-- Product view -->
 	<div class="product__wrapper">
@@ -90,11 +91,11 @@
 				<div class="product__price-container">
 					<!-- Old price -->
 					<div class="product__price-old">
-						7 887 р./м<sup>2</sup>
+						{{this.oldPrice}} р./м<sup>2</sup>
 					</div>
 					<!-- New price -->
 					<div class="product__price-new">
-						<strong>от 7 541 р.</strong>/м<sup>2</sup>
+						<strong>от {{this.newPrice}} р.</strong>/м<sup>2</sup>
 					</div>
 				</div>
 				<!-- Btn -->

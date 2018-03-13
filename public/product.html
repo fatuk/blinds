@@ -280,7 +280,7 @@
 					                            </a>
 					                        </li>
 					                        <li class="links-set__item show-in-portrait">
-					                            <button class="links-set__link" ng-click="openCallme()">
+					                            <button class="links-set__link js-openCallme" ng-click="openCallme()">
 					                                <svg class="icon icon-callme" xmlns="http://www.w3.org/2000/svg" version="1.1"><use xlink:href="icons/icons.svg#callme"></use></svg>
 													<span class="links-set__text">
 														Звонок
@@ -288,7 +288,7 @@
 					                            </button>
 					                        </li>
 					                        <li class="links-set__item">
-					                            <span class="links-set__link" ng-click="openSearch()">
+					                            <span class="links-set__link js-openSearch" ng-click="openSearch()">
 					                                <svg class="icon icon-search" xmlns="http://www.w3.org/2000/svg" version="1.1"><use xlink:href="icons/icons.svg#search"></use></svg>
 													<span class="links-set__text">
 														Поиск
@@ -393,7 +393,9 @@
 					    <!-- Main menus -->
 					    <div class="container container_menu">
 					        <!-- Main menu green -->
-					        <nav hider hider-point="330" class="main-menu main-menu_green main-menu_left">
+					        <nav hider 
+					            data-scroll-class="hidden"
+					            class="main-menu main-menu_green main-menu_left">
 					            <a href="catalog.html" class="main-menu__title">
 					                Жалюзи
 					            </a>
@@ -443,9 +445,11 @@
 					                    </ul>
 					                </li>
 					            </ul>
-					        </nav><!--
-					         Main menu blue
-					        --><nav hider hider-point="330" class="main-menu main-menu_blue main-menu_right">
+					        </nav>
+					        <!--Main menu blue-->
+					            <nav hider 
+					                data-scroll-class="hidden"
+					                class="main-menu main-menu_blue main-menu_right">
 					            <a href="catalog.html" class="main-menu__title">
 					                Шторы
 					            </a>
@@ -1533,8 +1537,9 @@
 					                <ul class="catalog__list">
 					                    <li class="catalog__item">
 					                        <div 
-					                        	class="product single" 
-					                        	ng-class="{'single': this.single, 'active': isHover}" 
+					                        	class="product single js-hover" 
+					                        	ng-class="{'single': this.single, 'active': isHover}"
+					                        	data-class="active" 
 					                        	ng-click="touchElement ? hoverIt(false) : ''">
 					                        	<!-- Product view -->
 					                        	<div class="product__wrapper">
@@ -1696,11 +1701,11 @@
 					                        				<div class="product__price-container">
 					                        					<!-- Old price -->
 					                        					<div class="product__price-old">
-					                        						7 887 р./м<sup>2</sup>
+					                        						7887 р./м<sup>2</sup>
 					                        					</div>
 					                        					<!-- New price -->
 					                        					<div class="product__price-new">
-					                        						<strong>от 7 541 р.</strong>/м<sup>2</sup>
+					                        						<strong>от 7541 р.</strong>/м<sup>2</sup>
 					                        					</div>
 					                        				</div>
 					                        				<!-- Btn -->
@@ -1714,8 +1719,9 @@
 					                    </li>
 					                    <li class="catalog__item">
 					                        <div 
-					                        	class="product single" 
-					                        	ng-class="{'single': this.single, 'active': isHover}" 
+					                        	class="product single js-hover" 
+					                        	ng-class="{'single': this.single, 'active': isHover}"
+					                        	data-class="active" 
 					                        	ng-click="touchElement ? hoverIt(false) : ''">
 					                        	<!-- Product view -->
 					                        	<div class="product__wrapper">
@@ -1877,11 +1883,11 @@
 					                        				<div class="product__price-container">
 					                        					<!-- Old price -->
 					                        					<div class="product__price-old">
-					                        						7 887 р./м<sup>2</sup>
+					                        						784 р./м<sup>2</sup>
 					                        					</div>
 					                        					<!-- New price -->
 					                        					<div class="product__price-new">
-					                        						<strong>от 7 541 р.</strong>/м<sup>2</sup>
+					                        						<strong>от 754 р.</strong>/м<sup>2</sup>
 					                        					</div>
 					                        				</div>
 					                        				<!-- Btn -->
@@ -1895,8 +1901,9 @@
 					                    </li>
 					                    <li class="catalog__item">
 					                        <div 
-					                        	class="product single" 
-					                        	ng-class="{'single': this.single, 'active': isHover}" 
+					                        	class="product single js-hover" 
+					                        	ng-class="{'single': this.single, 'active': isHover}"
+					                        	data-class="active" 
 					                        	ng-click="touchElement ? hoverIt(false) : ''">
 					                        	<!-- Product view -->
 					                        	<div class="product__wrapper">
@@ -2058,11 +2065,11 @@
 					                        				<div class="product__price-container">
 					                        					<!-- Old price -->
 					                        					<div class="product__price-old">
-					                        						7 887 р./м<sup>2</sup>
+					                        						2678 р./м<sup>2</sup>
 					                        					</div>
 					                        					<!-- New price -->
 					                        					<div class="product__price-new">
-					                        						<strong>от 7 541 р.</strong>/м<sup>2</sup>
+					                        						<strong>от 2575 р.</strong>/м<sup>2</sup>
 					                        					</div>
 					                        				</div>
 					                        				<!-- Btn -->
@@ -2076,8 +2083,9 @@
 					                    </li>
 					                    <li class="catalog__item">
 					                        <div 
-					                        	class="product single" 
-					                        	ng-class="{'single': this.single, 'active': isHover}" 
+					                        	class="product single js-hover" 
+					                        	ng-class="{'single': this.single, 'active': isHover}"
+					                        	data-class="active" 
 					                        	ng-click="touchElement ? hoverIt(false) : ''">
 					                        	<!-- Product view -->
 					                        	<div class="product__wrapper">
@@ -2205,11 +2213,11 @@
 					                        				<div class="product__price-container">
 					                        					<!-- Old price -->
 					                        					<div class="product__price-old">
-					                        						7 887 р./м<sup>2</sup>
+					                        						1278 р./м<sup>2</sup>
 					                        					</div>
 					                        					<!-- New price -->
 					                        					<div class="product__price-new">
-					                        						<strong>от 7 541 р.</strong>/м<sup>2</sup>
+					                        						<strong>от 1131 р.</strong>/м<sup>2</sup>
 					                        					</div>
 					                        				</div>
 					                        				<!-- Btn -->
@@ -2235,8 +2243,9 @@
 					            <ul class="catalog__list">
 					                <li class="catalog__item">
 					                    <div 
-					                    	class="product single" 
-					                    	ng-class="{'single': this.single, 'active': isHover}" 
+					                    	class="product single js-hover" 
+					                    	ng-class="{'single': this.single, 'active': isHover}"
+					                    	data-class="active" 
 					                    	ng-click="touchElement ? hoverIt(false) : ''">
 					                    	<!-- Product view -->
 					                    	<div class="product__wrapper">
@@ -2398,11 +2407,11 @@
 					                    				<div class="product__price-container">
 					                    					<!-- Old price -->
 					                    					<div class="product__price-old">
-					                    						7 887 р./м<sup>2</sup>
+					                    						7887 р./м<sup>2</sup>
 					                    					</div>
 					                    					<!-- New price -->
 					                    					<div class="product__price-new">
-					                    						<strong>от 7 541 р.</strong>/м<sup>2</sup>
+					                    						<strong>от 7541 р.</strong>/м<sup>2</sup>
 					                    					</div>
 					                    				</div>
 					                    				<!-- Btn -->
@@ -2416,8 +2425,9 @@
 					                </li>
 					                <li class="catalog__item">
 					                    <div 
-					                    	class="product single" 
-					                    	ng-class="{'single': this.single, 'active': isHover}" 
+					                    	class="product single js-hover" 
+					                    	ng-class="{'single': this.single, 'active': isHover}"
+					                    	data-class="active" 
 					                    	ng-click="touchElement ? hoverIt(false) : ''">
 					                    	<!-- Product view -->
 					                    	<div class="product__wrapper">
@@ -2579,11 +2589,11 @@
 					                    				<div class="product__price-container">
 					                    					<!-- Old price -->
 					                    					<div class="product__price-old">
-					                    						7 887 р./м<sup>2</sup>
+					                    						784 р./м<sup>2</sup>
 					                    					</div>
 					                    					<!-- New price -->
 					                    					<div class="product__price-new">
-					                    						<strong>от 7 541 р.</strong>/м<sup>2</sup>
+					                    						<strong>от 754 р.</strong>/м<sup>2</sup>
 					                    					</div>
 					                    				</div>
 					                    				<!-- Btn -->
@@ -2597,8 +2607,9 @@
 					                </li>
 					                <li class="catalog__item">
 					                    <div 
-					                    	class="product single" 
-					                    	ng-class="{'single': this.single, 'active': isHover}" 
+					                    	class="product single js-hover" 
+					                    	ng-class="{'single': this.single, 'active': isHover}"
+					                    	data-class="active" 
 					                    	ng-click="touchElement ? hoverIt(false) : ''">
 					                    	<!-- Product view -->
 					                    	<div class="product__wrapper">
@@ -2760,11 +2771,11 @@
 					                    				<div class="product__price-container">
 					                    					<!-- Old price -->
 					                    					<div class="product__price-old">
-					                    						7 887 р./м<sup>2</sup>
+					                    						2678 р./м<sup>2</sup>
 					                    					</div>
 					                    					<!-- New price -->
 					                    					<div class="product__price-new">
-					                    						<strong>от 7 541 р.</strong>/м<sup>2</sup>
+					                    						<strong>от 2575 р.</strong>/м<sup>2</sup>
 					                    					</div>
 					                    				</div>
 					                    				<!-- Btn -->
@@ -2778,8 +2789,9 @@
 					                </li>
 					                <li class="catalog__item">
 					                    <div 
-					                    	class="product single" 
-					                    	ng-class="{'single': this.single, 'active': isHover}" 
+					                    	class="product single js-hover" 
+					                    	ng-class="{'single': this.single, 'active': isHover}"
+					                    	data-class="active" 
 					                    	ng-click="touchElement ? hoverIt(false) : ''">
 					                    	<!-- Product view -->
 					                    	<div class="product__wrapper">
@@ -2907,11 +2919,11 @@
 					                    				<div class="product__price-container">
 					                    					<!-- Old price -->
 					                    					<div class="product__price-old">
-					                    						7 887 р./м<sup>2</sup>
+					                    						1278 р./м<sup>2</sup>
 					                    					</div>
 					                    					<!-- New price -->
 					                    					<div class="product__price-new">
-					                    						<strong>от 7 541 р.</strong>/м<sup>2</sup>
+					                    						<strong>от 1131 р.</strong>/м<sup>2</sup>
 					                    					</div>
 					                    				</div>
 					                    				<!-- Btn -->
@@ -3112,7 +3124,7 @@
 				                    <p class="site-footer__text">
 				                        Есть вопросы, пожелания, замечания или хотите нас похвалить?
 				                    </p>
-				                    <button class="btn btn_blue" ng-click="openFeedback()">
+				                    <button class="btn btn_blue js-openFeedback" ng-click="openFeedback()">
 				                        Напишите нам
 				                    </button>
 				                </div>

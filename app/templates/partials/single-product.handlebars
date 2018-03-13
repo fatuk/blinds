@@ -1,6 +1,7 @@
 <div 
-	class="product single" 
+	class="product single js-hover" 
 	ng-class="{'single': product.single, 'active': isHover}" 
+	data-class="active"
 	ng-click="touchElement ? hoverIt(false) : ''">
 	<!-- Product view -->
 	<div class="product__wrapper">
@@ -71,7 +72,7 @@
 								title="{{this.model}}">
 								<input
 									type="radio"
-									name="product_texture_{{product.id}}"
+									name="product_texture_{{this.id}}"
 									value="{{this.id}}"
 									ng-model="product.texture_id">
 								<div 
@@ -90,12 +91,12 @@
 				<div class="product__price-container">
 					<!-- Old price -->
 					<div class="product__price-old">
-						{{products.oldPrice}} р./м<sup>2</sup>
+						{{product.oldPrice}} р./м<sup>2</sup>
 					</div>
 					<!-- New price -->
 					<div class="product__price-new">
 						<strong>
-							<span>от</span> {{products.newPrice}} р.</strong><span>/м<sup>2</sup></span>
+							<span>от</span> {{product.newPrice}} р.</strong><span>/м<sup>2</sup></span>
 					</div>
 				</div>
 				<!-- Btn -->

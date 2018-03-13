@@ -1,22 +1,26 @@
-<div class="dialog">
-	<div class="dialog__closer" ng-click="CloseDialog();"></div>
+<div class="dialog hide js-dialog-{{state}}">
+	<div 
+		class="dialog__closer js-close-{{state}}" 
+		ng-click="CloseDialog();"></div>
 	<div class="dialog__content dialog__content_{{state}}" ng-class="{picture: !!picture}">
 		{{!-- <div ng-include="'views/directives/search.html'" ng-if="state === 'search'"></div> --}}
-		{{#if search}}
-		{{>dialogs/search}}
-		{{/if}}
-		<div class="dialog__window" ng-show="state !== 'search'">
-			<button class="dialog__close" ng-click="CloseDialog()">
+		{{#if window}}
+		<div class="dialog__window">
+			<button class="dialog__close js-close-{{state}}">
 				<span class="icon icon-close-png"></span>
 			</button>
-			{{#if picture}}
-			<img class="dialog__image" ng-src="{{picture}}">
+		{{/if}}
+			{{#if search}}
+			{{>dialogs/search}}
 			{{/if}}
-			<div ng-include="'views/directives/order-form.html'" ng-if="(state === 'order') || (state === 'callme') || (state === 'oneclick')"></div>
-			{{!-- <div ng-include="'views/directives/feedback.html'" ng-if="state === 'feedback'"></div> --}}
 			{{#if feedback}}
 			{{>dialogs/feedback}}
 			{{/if}}
+			{{#if order-form}}
+			{{>dialogs/order-form}}
+			{{/if}}
+		{{#if window}}
 		</div>
+		{{/if}}
 	</div>
 </div>
