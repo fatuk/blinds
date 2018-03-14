@@ -29,6 +29,7 @@ $(function () {
 	$('.js-close-search').click(function () {
 		$('.js-dialog-search').addClass('hide');
 	});
+
 	// Open feedback
 	$('.js-openFeedback').click(function () {
 		$('.js-dialog-feedback').removeClass('hide');
@@ -36,9 +37,13 @@ $(function () {
 	$('.js-close-feedback').click(function () {
 		$('.js-dialog-feedback').addClass('hide');
 	});
-	// Open Order-Form
-	$('.js-openCallme').click(function () {
-		$('js-dialog-callme').removeClass('hide');
+
+	//Open callMe
+	$('.js-openCallMe').click(function () {
+		$('.js-dialog-callme').removeClass('hide');
+	});
+	$('.js-close-callme').click(function () {
+		$('.js-dialog-callme').addClass('hide');
 	});
 });
 //# sourceMappingURL=../js/app.js.map

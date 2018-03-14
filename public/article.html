@@ -361,7 +361,7 @@
 					                			</div>
 					                		</div>
 					                		<footer class="cart__footer">
-					                			<button class="cart__phone-button btn btn_green" ng-click="openOrder()">Оформить заказ</button>
+					                			<button class="cart__phone-button btn btn_green js-openCallMe" ng-click="openOrder()">Оформить заказ</button>
 					                		</footer>
 					                	</div>
 					                </div>
@@ -378,7 +378,7 @@
 					                            <div class="call-me__time">
 					                                9:00 - 18:00
 					                            </div>
-					                            <button class="btn btn_blue call-me__btn" ng-click="openCallme()">
+					                            <button class="btn btn_blue call-me__btn js-openCallMe" ng-click="openCallme()">
 					                                заказать звонок
 					                            </button>
 					                        </div>
@@ -679,12 +679,12 @@
 																			title="0225 - белый">
 																			<input
 																				type="radio"
-																				name="product_texture_119"
+																				name="product_texture"
 																				value="119"
 																				ng-model="product.texture_id">
 																			<div 
 																				class="product__colors-dot" 
-																				style="background-image: url('/img/static/textures/0225.png')}">
+																				style="background-image: url('/img/static/textures/0225.png')">
 																			</div>
 																		</label>
 																	</li>
@@ -696,12 +696,12 @@
 																			title="2703 - салатовый">
 																			<input
 																				type="radio"
-																				name="product_texture_129"
+																				name="product_texture"
 																				value="129"
 																				ng-model="product.texture_id">
 																			<div 
 																				class="product__colors-dot" 
-																				style="background-image: url('/img/static/textures/2703.png')}">
+																				style="background-image: url('/img/static/textures/2703.png')">
 																			</div>
 																		</label>
 																	</li>
@@ -1175,6 +1175,146 @@
 			</div>
 		</div>
 	</div>
+	<div class="dialog hide js-dialog-search">
+		<div 
+			class="dialog__closer js-close-search" 
+			ng-click="CloseDialog();"></div>
+		<div class="dialog__content dialog__content_search" ng-class="{picture: !!picture}">
+				<div class="search" ng-controller="SearchCtrl">
+					<label for="search_input" class="search__label">Поиск на сайте</label>
+					<form class="search__form" ng-submit="search()">
+						<input 
+							id="search_input" 
+							type="text" 
+							class="search__input" 
+							ui-auto-focus 
+							placeholder="Введите запрос">
+						<button class="search__button" type="submit">
+							<span class="search__icon" ng-show="!loading">
+								<svg class="icon icon-search-big"><use xlink:href="icons/icons.svg#search-big"></use></svg>
+							</span>
+						</button>
+					</form>
+				</div>
+		</div>
+	</div>
+	<div class="dialog hide js-dialog-feedback">
+		<div 
+			class="dialog__closer js-close-feedback" 
+			ng-click="CloseDialog();"></div>
+		<div class="dialog__content dialog__content_feedback" ng-class="{picture: !!picture}">
+			<div class="dialog__window">
+				<button class="dialog__close js-close-feedback">
+					<span class="icon icon-close-png"></span>
+				</button>
+				<form class="order-form" ng-controller="FeedbackCtrl" ng-submit="submitForm()">
+					<h3 class="order-form__title">Напишите нам</h3>
+					<section class="order-form__body" ng-if="!state.complete && !state.loading">
+						<input type="text" class="order-form__input" placeholder="Ваше имя" ng-model="message.name">
+						<input type="text" class="order-form__input" placeholder="Ваш email" ng-model="message.email">
+						<textarea rows="10" class="order-form__input" placeholder="Сообщение" ng-model="message.text"></textarea>
+					</section>
+					<section class="order-form__body" ng-if="state.complete">
+						<p>
+							Спасибо за обращение!
+						</p>
+					</section>
+					<footer class="order-form__footer" ng-if="!state.complete && !state.loading">
+						<label class="order-form__policy-agreement checkbox">
+							<input
+									type="checkbox"
+									ng-model="policyAgreement.isChecked"
+									name="confidencial_policy_agreement" />
+							<span class="checkbox__check" >
+								<svg class="icon icon-check"><use xlink:href="icons/icons.svg#check"></use></svg>
+							</span>
+							<span class="checkbox__label">Я прочитал и согласен с <a href="/#!/privacy" target="_blank" class="policy-link">Политикой конфиденциальности</a></span>
+						</label>
+						<button class="btn btn_blue btn_big order-form__submit" ng-disabled="!policyAgreement.isChecked">Отправить</button>
+					</footer>
+				</form>
+			</div>
+		</div>
+	</div>
+	<div class="dialog hide js-dialog-callme">
+		<div 
+			class="dialog__closer js-close-callme" 
+			ng-click="CloseDialog();"></div>
+		<div class="dialog__content dialog__content_callme" ng-class="{picture: !!picture}">
+			<div class="dialog__window">
+				<button class="dialog__close js-close-callme">
+					<span class="icon icon-close-png"></span>
+				</button>
+				<form class="order-form" ng-controller="OrderCtrl" ng-submit="submitForm()">
+					<header>
+						<h3 class="order-form__title">
+							<svg ng-if="context !== 'callme' && !mobile" class="icon icon-cart"><use xlink:href="icons/icons.svg#cart"></use></svg>
+							<span ng-if="context === 'callme'">Перезвоните мне</span>
+							<span ng-if="context === 'order'">Оформить заказ</span>
+							<span ng-if="context === 'oneclick'">Купить в 1 клик</span>
+						</h3>
+					</header>
+					<section class="order-form__body" ng-if="!state.complete && !state.loading">
+						<ol class="order-form__list" ng-if="context !== 'callme'">
+							<li class="order-form__item" ng-repeat="(key,product) in products track by $index">
+								<strong ng-if="products.length > 1"></strong>
+								Классические алюминиевые с шириной планки 25мм
+								<span ng-if="!!product.texture">модель </span>
+								<span ng-if="product.withCornice && product.cornice.cartText" ng-bind="' + ' + product.cornice.cartText"></span>
+								- <strong>
+									2 187 р.
+								</strong><span ng-if="!product.priceExactly">/м<sup>2</sup></span>
+							</li>	
+						</ol>
+						<input type="text" class="order-form__input" placeholder="Ваше имя" ng-model="order.name" ng-required="true" >
+						<input type="tel" class="order-form__input" placeholder="Ваш телефон" ng-model="order.phone" ng-required="true" ng-focus="phoneFocus();">
+					</section>
+					<section class="order-form__body" ng-if="state.complete">
+						<p>
+							<span ng-if="context !== 'callme'">Ваш заказ отправлен!</span>
+							<span ng-if="context === 'callme'">Готово!</span>
+							<br>
+							Ожидайте звонка в назначенное время.
+						</p>
+					</section>
+					<footer class="order-form__footer" ng-if="!state.complete && !state.loading">
+						<p class="order-form__text" ng-if="(context !== 'callme') && (workingTime)">
+							Наш менеджер перезвонит Вам для подтверждения заказа.
+						</p>
+						<p class="order-form__text" ng-if="(context !== 'callme') && (!workingTime)">
+							Сегодня мы уже не работаем, но завтра наш менеджер
+							обязательно перезвонит Вам для подтверждения заказа.
+						</p>
+				
+						<label class="order-form__policy-agreement checkbox">
+							<input
+								type="checkbox"
+								ng-model="policyAgreement.isChecked"
+								name="confidencial_policy_agreement" />
+							<span class="checkbox__check" >
+								<svg class="icon icon-check"><use xlink:href="icons/icons.svg#check"></use></svg>
+							</span>
+							<span class="checkbox__label">Я прочитал и согласен с <a href="/#!/privacy" target="_blank"  class="policy-link">Политикой конфиденциальности</a></span>
+						</label>
+				
+						<div class="order-form__call-title">Время звонка</div>
+						<div class="order-form__time">
+							<div dropdown-select="hours"
+								dropdown-model="order.hour"
+								dropdown-item-label="label">
+							</div>
+						</div>
+						<div class="order-form__time">
+							<div dropdown-select="minutes"
+								dropdown-model="order.min"
+								dropdown-item-label="label">
+							</div>
+						</div>
+						<button class="btn btn_blue btn_big order-form__submit" ng-disabled="!policyAgreement.isChecked">Перезвоните мне</button>
+					</footer>
+				</form>
+			</div>
+		</div>
+	</div>
 </body>
-
 </html>
