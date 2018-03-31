@@ -1,4 +1,28 @@
-<div class="cart" ng-mouseenter="showDropdown()" ng-mouseleave="hideDropdown()" ng-touchend="touchTogle()">
+<div 
+	class="cart" 
+	ng-mouseenter="$ctrl.showDropdown()" 
+	ng-mouseleave="$ctrl.hideDropdown()" 
+	ng-touchend="touchTogle()">
+	<div>
+		<div 
+			class="cart__container" 
+			ng-class="{'pulse': $ctrl.cartItems.length>0}">
+			<svg class="icon icon-cart" xmlns="http://www.w3.org/2000/svg" version="1.1"><use xlink:href="icons/icons.svg#cart"></use></svg>
+			<div class="cart__counter" ng-bind="$ctrl.cartItems.length"></div>
+		</div>
+		<div class="cart__text">
+			Корзина
+		</div>
+	</div>
+</div>
+
+
+
+{{!-- <div 
+	class="cart" 
+	ng-mouseenter="$ctrl.showDropdown()" 
+	ng-mouseleave="$ctrl.hideDropdown()" 
+	ng-touchend="$ctrl.touchTogle()">
 	<div>
 		<div class="cart__container" ng-class="{'pulse': items.length>0}">
 			<svg class="icon icon-cart" xmlns="http://www.w3.org/2000/svg" version="1.1"><use xlink:href="icons/icons.svg#cart"></use></svg>
@@ -30,7 +54,6 @@
 							<img ng-src="{{product.image}}" class="cart-product__img" />
 							<div class="cart-product__title">
 								{{product.title}}
-								<!-- <span ng-if="product.withCornice && product.cornice.cartText" ng-bind="' + ' + product.cornice.cartText"></span> -->
 							</div>
 							<div class="cart-product__price">
 								<strong>
@@ -55,4 +78,4 @@
 			<button class="cart__phone-button btn btn_green js-openCallMe" ng-click="openOrder()">Оформить заказ</button>
 		</footer>
 	</div>
-</div>
+</div> --}}

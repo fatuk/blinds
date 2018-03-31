@@ -1,8 +1,10 @@
 <div 
 	class="product single js-hover" 
-	ng-class="{'single': product.single, 'active': isHover}" 
+	ng-mouseenter="$ctrl.hoverIt(true)" 
+	ng-mouseleave="$ctrl.hoverIt(false)"
+	ng-class="{'single': product.single, 'active': $ctrl.isHover}" 
 	data-class="active"
-	ng-click="touchElement ? hoverIt(false) : ''">
+	ng-click="touchElement ? $ctrl.hoverIt(false) : ''">
 	<!-- Product view -->
 	<div class="product__wrapper">
 		<!-- Label -->
@@ -19,7 +21,9 @@
 				class="product__img">
 			</a>
 			<!-- Cart btn -->
-			<span class="product__cart-btn" ng-click="addProductToCart(product)">
+			<span 
+				class="product__cart-btn" 
+				ng-click="$ctrl.addProductToCart({{toJson product}})">
 				<svg class="icon icon-cart"><use xlink:href="icons/icons.svg#cart"></use></svg>
 				<span class="product__cart-label">
 					В корзину
@@ -27,17 +31,25 @@
 			</span>
 			<div class="product__container">
 				<!-- Review -->
-				<div class="product__review" ng-if="product.reviews_count">
-					{{!-- <input-stars
-						readonly
-						icon-base="icon"
-						icon-empty="icon-star inactive"
-						icon-hover="icon-rating-hover-star"
-						icon-full="icon-star"
-						list-class="product__review-list"
-						max="5"
-						ng-model="product.rating">
-					</input-stars> --}}
+				<div 
+					class="product__review">
+					<ul class="ng-isolate-scope ng-valid product__review-list">
+						<li>
+							<i class="icon icon-star active readonly"></i>
+						</li>
+						<li>
+							<i class="icon icon-star active readonly"></i>
+						</li>
+						<li>
+							<i class="icon icon-star active readonly"></i>
+						</li>
+						<li>
+							<i class="icon icon-star inactive readonly"></i>
+						</li>
+						<li>
+							<i class="icon icon-star inactive readonly"></i>
+						</li>
+					</ul>
 					<!-- Review label -->
 					<div class="product__review-label">
 						<span class="product__review-count">{{product.reviews_count}}</span>
@@ -51,8 +63,7 @@
 					</div>
 					<!-- Subtitle -->
 					<div class="product__subtitle">
-						{{!-- <span>{{product.texture}}</span> --}}
-						<!-- <a href="/{{product.category_link}}">{{product.category_title}}</a> -->
+						<span ng-bind="$ctrl.texture.model"></span>
 					</div>
 				</header>
 				<!-- Colors -->
@@ -65,16 +76,15 @@
 						ng-init="product.texture_id=product.textures[0].id">
 						{{#each product.textures}}
 						<li 
-							class="product__colors-item" 
-							ng-repeat="texture in product.textures">
+							class="product__colors-item">
 							<label 
-								class="product__colors-label" 
+								class="product__colors-label"
 								title="{{this.model}}">
 								<input
 									type="radio"
 									name="product_texture"
-									value="{{this.id}}"
-									ng-model="product.texture_id">
+									value="{{toJson this}}"
+									ng-model="$ctrl.currentTexture">
 								<div 
 									class="product__colors-dot" 
 									style="background-image: url('{{this.img}}')">
@@ -96,7 +106,7 @@
 					<!-- New price -->
 					<div class="product__price-new">
 						<strong>
-							<span>от</span> {{product.newPrice}} р.</strong><span>/м<sup>2</sup></span>
+							<span>от</span> <span ng-bind="$ctrl.texture.price"></span> р.</strong><span>/м<sup>2</sup></span>
 					</div>
 				</div>
 				<!-- Btn -->

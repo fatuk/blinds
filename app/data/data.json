@@ -1243,48 +1243,168 @@
         }
     ],
     "product": {
-        "id": 7,
-        "newPrice": 7541,
-        "oldPrice": 7887,
-        "minimalTexturePrice": 749,
-        "image": "img/static/product-preview.jpg",
-        "rating": "5.0000",
-        "reviews_count": 1,
+        "id": 50,
+        "image": "img/static/preview (1).jpg",
+        "previewImageAlt": "",
+        "rating": "3.0000",
+        "reviews_count": 3,
         "link": "product.html",
-        "title": "Классические алюминиевые с шириной планки 25мм",
-        "category_link": "alyuminevye",
-        "category_title": "Алюминевые горизонтальные жалюзи",
-        "sale": 4,
-        "textures": [
-            {
-                "id": 119,
-                "url": "0225__belyy",
-                "model": "0225 - белый",
-                "price": 749,
-                "img": "/img/static/textures/0225.png",
-                "translucent": "0.9",
-                "country": {
-                    "id": "1",
-                    "name": "Китай"
-                },
-                "width": "25 мм",
-                "structure": "алюминий 0.18"
-            },
-            {
-                "id": 129,
-                "url": "2703__salatovyy",
-                "model": "2703 - салатовый",
-                "price": 874,
-                "img": "/img/static/textures/2703.png",
-                "translucent": "0.9",
-                "country": {
-                    "id": "1",
-                    "name": "Китай"
-                },
-                "width": "25 мм",
-                "structure": "алюминий 0.18"
-            }
-        ]
+        "title": "Шторы плиссе Гофре с цветными тканями",
+        "category_link": "plisse",
+        "category_title": "Шторы плиссе",
+        "oldPrice": 8000,
+        "sale": 5,
+        "textures": [{
+            "id": 608,
+            "url": "chernyy",
+            "model": "Черный",
+            "price": 7688,
+            "img": "/img/static/textures/0225.png",
+            "translucent": "",
+            "country": "Италия",
+            "width": "ламель 25 мм",
+            "structure": "100% полиэстер"
+        }, {
+            "id": 609,
+            "url": "temnosiniy",
+            "model": "Темно-синий",
+            "price": 7688,
+            "img": "/img/static/textures/1852.png",
+            "translucent": "",
+            "country": "Италия",
+            "width": "ламель 25 мм",
+            "structure": "100% полиэстер"
+        }, {
+            "id": 610,
+            "url": "siniy",
+            "model": "Синий",
+            "price": 7688,
+            "img": "/img/static/textures/2013.png",
+            "translucent": "",
+            "country": "Италия",
+            "width": "ламель 25 мм",
+            "structure": "100% полиэстер"
+        }, {
+            "id": 611,
+            "url": "zelenyy",
+            "model": "Зеленый",
+            "price": 7688,
+            "img": "/img/static/textures/4.png",
+            "translucent": "",
+            "country": "Италия",
+            "width": "ламель 25 мм",
+            "structure": "100% полиэстер"
+        }, {
+            "id": 612,
+            "url": "rozovyy",
+            "model": "Розовый",
+            "price": 7688,
+            "img": "/img/static/textures/5.png",
+            "translucent": "",
+            "country": "Италия",
+            "width": "ламель 25 мм",
+            "structure": "100% полиэстер"
+        }, {
+            "id": 613,
+            "url": "fioletovyy",
+            "model": "Фиолетовый",
+            "price": 7688,
+            "img": "/img/static/textures/2025.png",
+            "translucent": "",
+            "country": "Италия",
+            "width": "ламель 25 мм",
+            "structure": "100% полиэстер"
+        }, {
+            "id": 614,
+            "url": "biryuzovyy",
+            "model": "Бирюзовый",
+            "price": 7688,
+            "img": "/img/static/textures/2033.png",
+            "translucent": "",
+            "country": "Италия",
+            "width": "ламель 25 мм",
+            "structure": "100% полиэстер"
+        }, {
+            "id": 615,
+            "url": "goluboy",
+            "model": "Голубой",
+            "price": 7688,
+            "img": "/img/static/textures/8.png",
+            "translucent": "",
+            "country": "Италия",
+            "width": "ламель 25 мм",
+            "structure": "100% полиэстер"
+        }, {
+            "id": 616,
+            "url": "oranzhevyy",
+            "model": "Оранжевый",
+            "price": 7688,
+            "img": "/img/static/textures/2703.png",
+            "translucent": "",
+            "country": "Италия",
+            "width": "ламель 25 мм",
+            "structure": "100% полиэстер"
+        }, {
+            "id": 617,
+            "url": "krasnyy",
+            "model": "Красный",
+            "price": 7688,
+            "img": "/img/static/textures/10.png",
+            "translucent": "",
+            "country": "Италия",
+            "width": "ламель 25 мм",
+            "structure": "100% полиэстер"
+        }, {
+            "id": 618,
+            "url": "kirpichnyy",
+            "model": "Кирпичный",
+            "price": 7688,
+            "img": "/img/static/textures/11.png",
+            "translucent": "",
+            "country": "Италия",
+            "width": "ламель 25 мм",
+            "structure": "100% полиэстер"
+        }, {
+            "id": 619,
+            "url": "salatovyy",
+            "model": "Салатовый",
+            "price": 7688,
+            "img": "/img/static/textures/12.png",
+            "translucent": "",
+            "country": "Италия",
+            "width": "ламель 25 мм",
+            "structure": "100% полиэстер"
+        }, {
+            "id": 620,
+            "url": "belyy",
+            "model": "Белый",
+            "price": 7688,
+            "img": "/img/static/textures/13.png",
+            "translucent": "",
+            "country": "Италия",
+            "width": "ламель 25 мм",
+            "structure": "100% полиэстер"
+        }, {
+            "id": 621,
+            "url": "zheltyy",
+            "model": "Желтый",
+            "price": 7688,
+            "img": "/img/static/textures/14.png",
+            "translucent": "",
+            "country": "Италия",
+            "width": "ламель 25 мм",
+            "structure": "100% полиэстер"
+        }, {
+            "id": 622,
+            "url": "svetlozheltyy",
+            "model": "Светло-желтый",
+            "price": 7688,
+            "img": "/img/static/textures/2871.png",
+            "translucent": "",
+            "country": "Италия",
+            "width": "ламель 25 мм",
+            "structure": "100% полиэстер"
+        }]
     },
     "products": [
         {

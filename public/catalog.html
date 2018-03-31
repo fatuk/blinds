@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru" ng-app="myApp">
+<html lang="ru" ng-app="app">
 
 <head>
 	<meta name="fragment" content="!" />
@@ -25,11 +25,6 @@
 	<meta property="og:title" content="Дизайн окна. Мастерская по изготовлению жалюзи в Москве.">
 	<meta property="og:description" content="Современное оформление окон: жалюзи, карнизы, шторы, текстиль, рольставни в Москве.">
 	<meta property="og:image" content="https://design-okna.ru/img/fb.jpg">
-	<script>
-		// See params list in configService.js
-		window.appLicationConfig = {};
-		window.IS_PHANTOMJS_VIEW = /PhantomJS/.test(window.navigator.userAgent);
-	</script>
 	<!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
@@ -48,7 +43,6 @@
 		ga('send', 'pageview');
 	</script>
 </head>
-
 <body ng-controller="MainCtrl" ng-class="filterOpened?'opened-filter':''">
 	<img src="/icons/icons.svg" alt='main-svg' style="display: none" />
 	<div class="main-wrapper off-canvas" off-canvas>
@@ -307,64 +301,26 @@
 					            </div>
 					            <div class="site-header__container site-header__container_right">
 					                <!-- Cart -->
-					                <div class="cart" ng-mouseenter="showDropdown()" ng-mouseleave="hideDropdown()" ng-touchend="touchTogle()">
+					                <div 
+					                	class="cart" 
+					                	ng-mouseenter="$ctrl.showDropdown()" 
+					                	ng-mouseleave="$ctrl.hideDropdown()" 
+					                	ng-touchend="touchTogle()">
 					                	<div>
-					                		<div class="cart__container" ng-class="{'pulse': items.length>0}">
+					                		<div 
+					                			class="cart__container" 
+					                			ng-class="{'pulse': $ctrl.cartItems.length>0}">
 					                			<svg class="icon icon-cart" xmlns="http://www.w3.org/2000/svg" version="1.1"><use xlink:href="icons/icons.svg#cart"></use></svg>
-					                			<div class="cart__counter">12</div>
+					                			<div class="cart__counter" ng-bind="$ctrl.cartItems.length"></div>
 					                		</div>
 					                		<div class="cart__text">
 					                			Корзина
 					                		</div>
 					                	</div>
-					                	<div 
-					                		class="cart__dropdown" 
-					                		style="display: none"
-					                		ng-mouseenter="showDropdown()" 
-					                		ng-mouseleave="hideDropdown()" 
-					                		ng-class="{expanded : (items.length>0 && dropdownVisible)}">
-					                		<div class="cart__title">В корзине
-					                			<ng-pluralize count="items.length"
-					                				when="{
-					                				'one': '{} отложенный товар:',
-					                				'few': '{} отложенных товара:',
-					                				'many': '{} отложенных товаров:'}"></ng-pluralize>
-					                		</div>
-					                		<div class="cart__list-wrapper">
-					                			<div class="cart__list-holder js-customScroll">
-					                				<ul class="cart__list">
-					                					<li
-					                						ng-repeat="(key, product) in items track by $index"
-					                						class="cart__item cart-product">
-					                							<img ng-src="img/static/product-preview.jpg" class="cart-product__img" />
-					                							<div class="cart-product__title">
-					                								Классические алюминиевые с шириной планки 25мм
-					                								<!-- <span ng-if="product.withCornice && product.cornice.cartText" ng-bind="' + ' + product.cornice.cartText"></span> -->
-					                							</div>
-					                							<div class="cart-product__price">
-					                								<strong>
-					                									0 р.
-					                								</strong><span ng-if="!product.priceExactly">/см<sup>2</sup></span>
-					                								<span class="cart-product__dimensions" ng-if="!!product.allowHeight && !!product.dimensions.width && !!product.dimensions.height">
-					                									( см x  cм)
-					                								</span>
-					                								<span class="cart-product__dimensions" ng-if="!product.allowHeight && !!product.dimensions.width">
-					                									( см)
-					                								</span>
-					                							</div>
-					                							<div class="cart-product__model" ng-if="!!product.texture">модель </div>
-					                							<button class="cart-product__dismiss" ng-click="removeProduct(key)">
-					                								<svg class="icon icon-close"><use xlink:href="icons/icons.svg#close"></use></svg>
-					                							</button>
-					                					</li>
-					                				</ul>
-					                			</div>
-					                		</div>
-					                		<footer class="cart__footer">
-					                			<button class="cart__phone-button btn btn_green js-openCallMe" ng-click="openOrder()">Оформить заказ</button>
-					                		</footer>
-					                	</div>
 					                </div>
+					                
+					                
+					                
 					                <!-- Call me -->
 					                <div class="call-me hide-in-portrait">
 					                    <div class="call-me__icon">
@@ -511,7 +467,68 @@
 					            </ul>
 					        </nav>
 					    </div>
-					</header>				</div>
+					    <!-- Cart dropdown -->
+					    <div
+					        class="cart__dropdown" 
+					        ng-mouseenter="$ctrl.showDropdown()"
+					        ng-mouseleave="$ctrl.hideDropdown()"
+					        ng-class="{expanded : ($ctrl.cartItems.length>0 && $ctrl.dropdownVisible)}">
+					        <div class="cart__title">В корзине
+					            <ng-pluralize count="$ctrl.cartItems.length"
+					                when="{
+					                    '0': 'ничего нет',
+					                    '1': '{} отложенный товар:',
+					                    '2': '{} отложенных товара:',
+					                    '3': '{} отложенных товара:',
+					                    '4': '{} отложенных товара:',
+					                    'other': '{} отложенных товаров:'}">
+					            </ng-pluralize>
+					        </div>
+					        <div class="cart__list-wrapper">
+					            <div class="cart__list-holder js-customScroll">
+					                <ul class="cart__list">
+					                    <li
+					                        ng-repeat="(key, product) in $ctrl.cartItems track by $index"
+					                        class="cart__item cart-product">
+					                            <img ng-src="img/static/preview (1).jpg" class="cart-product__img" />
+					                            <div 
+					                                ng-bind="product.title"
+					                                class="cart-product__title">
+					                            </div>
+					                            <div class="cart-product__price">
+					                                <strong
+					                                    ng-bind="product.price + 'р.'">
+					                                </strong>
+					                                <span ng-if="!product.priceExactly">/см<sup>2</sup></span>
+					                                <span 
+					                                    class="cart-product__dimensions" 
+					                                    ng-if="!!product.allowHeight && !!product.dimensions.width && !!product.dimensions.height">
+					                                    (<span ng-bind="product.dimensions.width"></span> см x 
+					                                    <span ng-bind="product.dimensions.height"></span> см)
+					                                </span>
+					                                <span class="cart-product__dimensions" ng-if="!product.allowHeight && !!product.dimensions.width">
+					                                    ( см)
+					                                </span>
+					                            </div>
+					                            <div 
+					                                class="cart-product__model" 
+					                                ng-if="!!product.texture">модель <span ng-bind="product.texture"></span>
+					                            </div>
+					                            <button class="cart-product__dismiss" ng-click="$ctrl.removeProduct(key)">
+					                                <svg class="icon icon-close"><use xlink:href="icons/icons.svg#close"></use></svg>
+					                            </button>
+					                    </li>
+					                </ul>
+					            </div>
+					        </div>
+					        <footer class="cart__footer">
+					            <button 
+					                class="cart__phone-button btn btn_green" 
+					                ng-click="openOrder()">
+					                Оформить заказ
+					            </button>
+					        </footer>
+					    </div></header>				</div>
 				<div ng-if="!!constructorHeader">
 					<div ng-include="'includes/header-constructor.html'"></div>
 				</div>
@@ -2370,7 +2387,7 @@
 						<ol class="order-form__list" ng-if="context !== 'callme'">
 							<li class="order-form__item" ng-repeat="(key,product) in products track by $index">
 								<strong ng-if="products.length > 1"></strong>
-								Классические алюминиевые с шириной планки 25мм
+								Шторы плиссе Гофре с цветными тканями
 								<span ng-if="!!product.texture">модель </span>
 								<span ng-if="product.withCornice && product.cornice.cartText" ng-bind="' + ' + product.cornice.cartText"></span>
 								- <strong>

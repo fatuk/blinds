@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru" ng-app="myApp">
+<html lang="ru" ng-app="app">
 
 <head>
 	<meta name="fragment" content="!" />
@@ -25,11 +25,6 @@
 	<meta property="og:title" content="Дизайн окна. Мастерская по изготовлению жалюзи в Москве.">
 	<meta property="og:description" content="Современное оформление окон: жалюзи, карнизы, шторы, текстиль, рольставни в Москве.">
 	<meta property="og:image" content="https://design-okna.ru/img/fb.jpg">
-	<script>
-		// See params list in configService.js
-		window.appLicationConfig = {};
-		window.IS_PHANTOMJS_VIEW = /PhantomJS/.test(window.navigator.userAgent);
-	</script>
 	<!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
@@ -48,8 +43,7 @@
 		ga('send', 'pageview');
 	</script>
 </head>
-
-<body ng-controller="MainCtrl" ng-class="filterOpened?'opened-filter':''">
+<body ng-controller="MainCtrl as $ctrl" ng-class="filterOpened?'opened-filter':''">
 	<img src="/icons/icons.svg" alt='main-svg' style="display: none" />
 	<div class="main-wrapper off-canvas" off-canvas>
 		<div class="off-canvas__menu left show-in-portrait">
@@ -307,64 +301,26 @@
 					            </div>
 					            <div class="site-header__container site-header__container_right">
 					                <!-- Cart -->
-					                <div class="cart" ng-mouseenter="showDropdown()" ng-mouseleave="hideDropdown()" ng-touchend="touchTogle()">
+					                <div 
+					                	class="cart" 
+					                	ng-mouseenter="$ctrl.showDropdown()" 
+					                	ng-mouseleave="$ctrl.hideDropdown()" 
+					                	ng-touchend="touchTogle()">
 					                	<div>
-					                		<div class="cart__container" ng-class="{'pulse': items.length>0}">
+					                		<div 
+					                			class="cart__container" 
+					                			ng-class="{'pulse': $ctrl.cartItems.length>0}">
 					                			<svg class="icon icon-cart" xmlns="http://www.w3.org/2000/svg" version="1.1"><use xlink:href="icons/icons.svg#cart"></use></svg>
-					                			<div class="cart__counter">12</div>
+					                			<div class="cart__counter" ng-bind="$ctrl.cartItems.length"></div>
 					                		</div>
 					                		<div class="cart__text">
 					                			Корзина
 					                		</div>
 					                	</div>
-					                	<div 
-					                		class="cart__dropdown" 
-					                		style="display: none"
-					                		ng-mouseenter="showDropdown()" 
-					                		ng-mouseleave="hideDropdown()" 
-					                		ng-class="{expanded : (items.length>0 && dropdownVisible)}">
-					                		<div class="cart__title">В корзине
-					                			<ng-pluralize count="items.length"
-					                				when="{
-					                				'one': '{} отложенный товар:',
-					                				'few': '{} отложенных товара:',
-					                				'many': '{} отложенных товаров:'}"></ng-pluralize>
-					                		</div>
-					                		<div class="cart__list-wrapper">
-					                			<div class="cart__list-holder js-customScroll">
-					                				<ul class="cart__list">
-					                					<li
-					                						ng-repeat="(key, product) in items track by $index"
-					                						class="cart__item cart-product">
-					                							<img ng-src="img/static/product-preview.jpg" class="cart-product__img" />
-					                							<div class="cart-product__title">
-					                								Классические алюминиевые с шириной планки 25мм
-					                								<!-- <span ng-if="product.withCornice && product.cornice.cartText" ng-bind="' + ' + product.cornice.cartText"></span> -->
-					                							</div>
-					                							<div class="cart-product__price">
-					                								<strong>
-					                									0 р.
-					                								</strong><span ng-if="!product.priceExactly">/см<sup>2</sup></span>
-					                								<span class="cart-product__dimensions" ng-if="!!product.allowHeight && !!product.dimensions.width && !!product.dimensions.height">
-					                									( см x  cм)
-					                								</span>
-					                								<span class="cart-product__dimensions" ng-if="!product.allowHeight && !!product.dimensions.width">
-					                									( см)
-					                								</span>
-					                							</div>
-					                							<div class="cart-product__model" ng-if="!!product.texture">модель </div>
-					                							<button class="cart-product__dismiss" ng-click="removeProduct(key)">
-					                								<svg class="icon icon-close"><use xlink:href="icons/icons.svg#close"></use></svg>
-					                							</button>
-					                					</li>
-					                				</ul>
-					                			</div>
-					                		</div>
-					                		<footer class="cart__footer">
-					                			<button class="cart__phone-button btn btn_green js-openCallMe" ng-click="openOrder()">Оформить заказ</button>
-					                		</footer>
-					                	</div>
 					                </div>
+					                
+					                
+					                
 					                <!-- Call me -->
 					                <div class="call-me hide-in-portrait">
 					                    <div class="call-me__icon">
@@ -511,7 +467,68 @@
 					            </ul>
 					        </nav>
 					    </div>
-					</header>				</div>
+					    <!-- Cart dropdown -->
+					    <div
+					        class="cart__dropdown" 
+					        ng-mouseenter="$ctrl.showDropdown()"
+					        ng-mouseleave="$ctrl.hideDropdown()"
+					        ng-class="{expanded : ($ctrl.cartItems.length>0 && $ctrl.dropdownVisible)}">
+					        <div class="cart__title">В корзине
+					            <ng-pluralize count="$ctrl.cartItems.length"
+					                when="{
+					                    '0': 'ничего нет',
+					                    '1': '{} отложенный товар:',
+					                    '2': '{} отложенных товара:',
+					                    '3': '{} отложенных товара:',
+					                    '4': '{} отложенных товара:',
+					                    'other': '{} отложенных товаров:'}">
+					            </ng-pluralize>
+					        </div>
+					        <div class="cart__list-wrapper">
+					            <div class="cart__list-holder js-customScroll">
+					                <ul class="cart__list">
+					                    <li
+					                        ng-repeat="(key, product) in $ctrl.cartItems track by $index"
+					                        class="cart__item cart-product">
+					                            <img ng-src="img/static/preview (1).jpg" class="cart-product__img" />
+					                            <div 
+					                                ng-bind="product.title"
+					                                class="cart-product__title">
+					                            </div>
+					                            <div class="cart-product__price">
+					                                <strong
+					                                    ng-bind="product.price + 'р.'">
+					                                </strong>
+					                                <span ng-if="!product.priceExactly">/см<sup>2</sup></span>
+					                                <span 
+					                                    class="cart-product__dimensions" 
+					                                    ng-if="!!product.allowHeight && !!product.dimensions.width && !!product.dimensions.height">
+					                                    (<span ng-bind="product.dimensions.width"></span> см x 
+					                                    <span ng-bind="product.dimensions.height"></span> см)
+					                                </span>
+					                                <span class="cart-product__dimensions" ng-if="!product.allowHeight && !!product.dimensions.width">
+					                                    ( см)
+					                                </span>
+					                            </div>
+					                            <div 
+					                                class="cart-product__model" 
+					                                ng-if="!!product.texture">модель <span ng-bind="product.texture"></span>
+					                            </div>
+					                            <button class="cart-product__dismiss" ng-click="$ctrl.removeProduct(key)">
+					                                <svg class="icon icon-close"><use xlink:href="icons/icons.svg#close"></use></svg>
+					                            </button>
+					                    </li>
+					                </ul>
+					            </div>
+					        </div>
+					        <footer class="cart__footer">
+					            <button 
+					                class="cart__phone-button btn btn_green" 
+					                ng-click="openOrder()">
+					                Оформить заказ
+					            </button>
+					        </footer>
+					    </div></header>				</div>
 				<div ng-if="!!constructorHeader">
 					<div ng-include="'includes/header-constructor.html'"></div>
 				</div>
@@ -896,26 +913,209 @@
 								<!-- Product -->
 					            <div 
 					            	class="product single js-hover" 
-					            	ng-class="{'single': product.single, 'active': isHover}" 
+					            	ng-mouseenter="$ctrl.hoverIt(true)" 
+					            	ng-mouseleave="$ctrl.hoverIt(false)"
+					            	ng-class="{'single': product.single, 'active': $ctrl.isHover}" 
 					            	data-class="active"
-					            	ng-click="touchElement ? hoverIt(false) : ''">
+					            	ng-click="touchElement ? $ctrl.hoverIt(false) : ''">
 					            	<!-- Product view -->
 					            	<div class="product__wrapper">
 					            		<!-- Label -->
 					            		<div class="product__label">
 					            			<div class="product__label-text">
-					            				-4%
+					            				-5%
 					            			</div>
 					            		</div>
 					            		<div class="product__inner">
 					            			<!-- Img -->
 					            			<a
 					            				href="product.html"
-					            				style="background-size: cover; background-image: url('img/static/product-preview.jpg')"
+					            				style="background-size: cover; background-image: url('img/static/preview (1).jpg')"
 					            				class="product__img">
 					            			</a>
 					            			<!-- Cart btn -->
-					            			<span class="product__cart-btn" ng-click="addProductToCart(product)">
+					            			<span 
+					            				class="product__cart-btn" 
+					            				ng-click="$ctrl.addProductToCart({
+					               &quot;id&quot;: 50,
+					               &quot;image&quot;: &quot;img/static/preview (1).jpg&quot;,
+					               &quot;previewImageAlt&quot;: &quot;&quot;,
+					               &quot;rating&quot;: &quot;3.0000&quot;,
+					               &quot;reviews_count&quot;: 3,
+					               &quot;link&quot;: &quot;product.html&quot;,
+					               &quot;title&quot;: &quot;Шторы плиссе Гофре с цветными тканями&quot;,
+					               &quot;category_link&quot;: &quot;plisse&quot;,
+					               &quot;category_title&quot;: &quot;Шторы плиссе&quot;,
+					               &quot;oldPrice&quot;: 8000,
+					               &quot;sale&quot;: 5,
+					               &quot;textures&quot;: [
+					                  {
+					                     &quot;id&quot;: 608,
+					                     &quot;url&quot;: &quot;chernyy&quot;,
+					                     &quot;model&quot;: &quot;Черный&quot;,
+					                     &quot;price&quot;: 7688,
+					                     &quot;img&quot;: &quot;/img/static/textures/0225.png&quot;,
+					                     &quot;translucent&quot;: &quot;&quot;,
+					                     &quot;country&quot;: &quot;Италия&quot;,
+					                     &quot;width&quot;: &quot;ламель 25 мм&quot;,
+					                     &quot;structure&quot;: &quot;100% полиэстер&quot;
+					                  },
+					                  {
+					                     &quot;id&quot;: 609,
+					                     &quot;url&quot;: &quot;temnosiniy&quot;,
+					                     &quot;model&quot;: &quot;Темно-синий&quot;,
+					                     &quot;price&quot;: 7688,
+					                     &quot;img&quot;: &quot;/img/static/textures/1852.png&quot;,
+					                     &quot;translucent&quot;: &quot;&quot;,
+					                     &quot;country&quot;: &quot;Италия&quot;,
+					                     &quot;width&quot;: &quot;ламель 25 мм&quot;,
+					                     &quot;structure&quot;: &quot;100% полиэстер&quot;
+					                  },
+					                  {
+					                     &quot;id&quot;: 610,
+					                     &quot;url&quot;: &quot;siniy&quot;,
+					                     &quot;model&quot;: &quot;Синий&quot;,
+					                     &quot;price&quot;: 7688,
+					                     &quot;img&quot;: &quot;/img/static/textures/2013.png&quot;,
+					                     &quot;translucent&quot;: &quot;&quot;,
+					                     &quot;country&quot;: &quot;Италия&quot;,
+					                     &quot;width&quot;: &quot;ламель 25 мм&quot;,
+					                     &quot;structure&quot;: &quot;100% полиэстер&quot;
+					                  },
+					                  {
+					                     &quot;id&quot;: 611,
+					                     &quot;url&quot;: &quot;zelenyy&quot;,
+					                     &quot;model&quot;: &quot;Зеленый&quot;,
+					                     &quot;price&quot;: 7688,
+					                     &quot;img&quot;: &quot;/img/static/textures/4.png&quot;,
+					                     &quot;translucent&quot;: &quot;&quot;,
+					                     &quot;country&quot;: &quot;Италия&quot;,
+					                     &quot;width&quot;: &quot;ламель 25 мм&quot;,
+					                     &quot;structure&quot;: &quot;100% полиэстер&quot;
+					                  },
+					                  {
+					                     &quot;id&quot;: 612,
+					                     &quot;url&quot;: &quot;rozovyy&quot;,
+					                     &quot;model&quot;: &quot;Розовый&quot;,
+					                     &quot;price&quot;: 7688,
+					                     &quot;img&quot;: &quot;/img/static/textures/5.png&quot;,
+					                     &quot;translucent&quot;: &quot;&quot;,
+					                     &quot;country&quot;: &quot;Италия&quot;,
+					                     &quot;width&quot;: &quot;ламель 25 мм&quot;,
+					                     &quot;structure&quot;: &quot;100% полиэстер&quot;
+					                  },
+					                  {
+					                     &quot;id&quot;: 613,
+					                     &quot;url&quot;: &quot;fioletovyy&quot;,
+					                     &quot;model&quot;: &quot;Фиолетовый&quot;,
+					                     &quot;price&quot;: 7688,
+					                     &quot;img&quot;: &quot;/img/static/textures/2025.png&quot;,
+					                     &quot;translucent&quot;: &quot;&quot;,
+					                     &quot;country&quot;: &quot;Италия&quot;,
+					                     &quot;width&quot;: &quot;ламель 25 мм&quot;,
+					                     &quot;structure&quot;: &quot;100% полиэстер&quot;
+					                  },
+					                  {
+					                     &quot;id&quot;: 614,
+					                     &quot;url&quot;: &quot;biryuzovyy&quot;,
+					                     &quot;model&quot;: &quot;Бирюзовый&quot;,
+					                     &quot;price&quot;: 7688,
+					                     &quot;img&quot;: &quot;/img/static/textures/2033.png&quot;,
+					                     &quot;translucent&quot;: &quot;&quot;,
+					                     &quot;country&quot;: &quot;Италия&quot;,
+					                     &quot;width&quot;: &quot;ламель 25 мм&quot;,
+					                     &quot;structure&quot;: &quot;100% полиэстер&quot;
+					                  },
+					                  {
+					                     &quot;id&quot;: 615,
+					                     &quot;url&quot;: &quot;goluboy&quot;,
+					                     &quot;model&quot;: &quot;Голубой&quot;,
+					                     &quot;price&quot;: 7688,
+					                     &quot;img&quot;: &quot;/img/static/textures/8.png&quot;,
+					                     &quot;translucent&quot;: &quot;&quot;,
+					                     &quot;country&quot;: &quot;Италия&quot;,
+					                     &quot;width&quot;: &quot;ламель 25 мм&quot;,
+					                     &quot;structure&quot;: &quot;100% полиэстер&quot;
+					                  },
+					                  {
+					                     &quot;id&quot;: 616,
+					                     &quot;url&quot;: &quot;oranzhevyy&quot;,
+					                     &quot;model&quot;: &quot;Оранжевый&quot;,
+					                     &quot;price&quot;: 7688,
+					                     &quot;img&quot;: &quot;/img/static/textures/2703.png&quot;,
+					                     &quot;translucent&quot;: &quot;&quot;,
+					                     &quot;country&quot;: &quot;Италия&quot;,
+					                     &quot;width&quot;: &quot;ламель 25 мм&quot;,
+					                     &quot;structure&quot;: &quot;100% полиэстер&quot;
+					                  },
+					                  {
+					                     &quot;id&quot;: 617,
+					                     &quot;url&quot;: &quot;krasnyy&quot;,
+					                     &quot;model&quot;: &quot;Красный&quot;,
+					                     &quot;price&quot;: 7688,
+					                     &quot;img&quot;: &quot;/img/static/textures/10.png&quot;,
+					                     &quot;translucent&quot;: &quot;&quot;,
+					                     &quot;country&quot;: &quot;Италия&quot;,
+					                     &quot;width&quot;: &quot;ламель 25 мм&quot;,
+					                     &quot;structure&quot;: &quot;100% полиэстер&quot;
+					                  },
+					                  {
+					                     &quot;id&quot;: 618,
+					                     &quot;url&quot;: &quot;kirpichnyy&quot;,
+					                     &quot;model&quot;: &quot;Кирпичный&quot;,
+					                     &quot;price&quot;: 7688,
+					                     &quot;img&quot;: &quot;/img/static/textures/11.png&quot;,
+					                     &quot;translucent&quot;: &quot;&quot;,
+					                     &quot;country&quot;: &quot;Италия&quot;,
+					                     &quot;width&quot;: &quot;ламель 25 мм&quot;,
+					                     &quot;structure&quot;: &quot;100% полиэстер&quot;
+					                  },
+					                  {
+					                     &quot;id&quot;: 619,
+					                     &quot;url&quot;: &quot;salatovyy&quot;,
+					                     &quot;model&quot;: &quot;Салатовый&quot;,
+					                     &quot;price&quot;: 7688,
+					                     &quot;img&quot;: &quot;/img/static/textures/12.png&quot;,
+					                     &quot;translucent&quot;: &quot;&quot;,
+					                     &quot;country&quot;: &quot;Италия&quot;,
+					                     &quot;width&quot;: &quot;ламель 25 мм&quot;,
+					                     &quot;structure&quot;: &quot;100% полиэстер&quot;
+					                  },
+					                  {
+					                     &quot;id&quot;: 620,
+					                     &quot;url&quot;: &quot;belyy&quot;,
+					                     &quot;model&quot;: &quot;Белый&quot;,
+					                     &quot;price&quot;: 7688,
+					                     &quot;img&quot;: &quot;/img/static/textures/13.png&quot;,
+					                     &quot;translucent&quot;: &quot;&quot;,
+					                     &quot;country&quot;: &quot;Италия&quot;,
+					                     &quot;width&quot;: &quot;ламель 25 мм&quot;,
+					                     &quot;structure&quot;: &quot;100% полиэстер&quot;
+					                  },
+					                  {
+					                     &quot;id&quot;: 621,
+					                     &quot;url&quot;: &quot;zheltyy&quot;,
+					                     &quot;model&quot;: &quot;Желтый&quot;,
+					                     &quot;price&quot;: 7688,
+					                     &quot;img&quot;: &quot;/img/static/textures/14.png&quot;,
+					                     &quot;translucent&quot;: &quot;&quot;,
+					                     &quot;country&quot;: &quot;Италия&quot;,
+					                     &quot;width&quot;: &quot;ламель 25 мм&quot;,
+					                     &quot;structure&quot;: &quot;100% полиэстер&quot;
+					                  },
+					                  {
+					                     &quot;id&quot;: 622,
+					                     &quot;url&quot;: &quot;svetlozheltyy&quot;,
+					                     &quot;model&quot;: &quot;Светло-желтый&quot;,
+					                     &quot;price&quot;: 7688,
+					                     &quot;img&quot;: &quot;/img/static/textures/2871.png&quot;,
+					                     &quot;translucent&quot;: &quot;&quot;,
+					                     &quot;country&quot;: &quot;Италия&quot;,
+					                     &quot;width&quot;: &quot;ламель 25 мм&quot;,
+					                     &quot;structure&quot;: &quot;100% полиэстер&quot;
+					                  }
+					               ]
+					            })">
 					            				<svg class="icon icon-cart"><use xlink:href="icons/icons.svg#cart"></use></svg>
 					            				<span class="product__cart-label">
 					            					В корзину
@@ -923,42 +1123,69 @@
 					            			</span>
 					            			<div class="product__container">
 					            				<!-- Review -->
-					            				<div class="product__review" ng-if="product.reviews_count">
+					            				<div 
+					            					class="product__review">
+					            					<ul class="ng-isolate-scope ng-valid product__review-list">
+					            						<li>
+					            							<i class="icon icon-star active readonly"></i>
+					            						</li>
+					            						<li>
+					            							<i class="icon icon-star active readonly"></i>
+					            						</li>
+					            						<li>
+					            							<i class="icon icon-star active readonly"></i>
+					            						</li>
+					            						<li>
+					            							<i class="icon icon-star inactive readonly"></i>
+					            						</li>
+					            						<li>
+					            							<i class="icon icon-star inactive readonly"></i>
+					            						</li>
+					            					</ul>
 					            					<!-- Review label -->
 					            					<div class="product__review-label">
-					            						<span class="product__review-count">1</span>
+					            						<span class="product__review-count">3</span>
 					            						отзыв
 					            					</div>
 					            				</div>
 					            				<header class="product__header">
 					            					<!-- Title -->
 					            					<div class="product__title">
-					            						<a href="product.html">Классические алюминиевые с шириной планки 25мм</a>
+					            						<a href="product.html">Шторы плиссе Гофре с цветными тканями</a>
 					            					</div>
 					            					<!-- Subtitle -->
 					            					<div class="product__subtitle">
-					            						<!-- <a href="/alyuminevye">Алюминевые горизонтальные жалюзи</a> -->
+					            						<span ng-bind="$ctrl.texture.model"></span>
 					            					</div>
 					            				</header>
 					            				<!-- Colors -->
 					            				<div class="product__colors">
 					            					<div class="product__colors-title">
-					            						<span>2</span> цветов и текстур
+					            						<span>15</span> цветов и текстур
 					            					</div>
 					            					<ul 
 					            						class="product__colors-list" 
 					            						ng-init="product.texture_id=product.textures[0].id">
 					            						<li 
-					            							class="product__colors-item" 
-					            							ng-repeat="texture in product.textures">
+					            							class="product__colors-item">
 					            							<label 
-					            								class="product__colors-label" 
-					            								title="0225 - белый">
+					            								class="product__colors-label"
+					            								title="Черный">
 					            								<input
 					            									type="radio"
 					            									name="product_texture"
-					            									value="119"
-					            									ng-model="product.texture_id">
+					            									value="{
+					               &quot;id&quot;: 608,
+					               &quot;url&quot;: &quot;chernyy&quot;,
+					               &quot;model&quot;: &quot;Черный&quot;,
+					               &quot;price&quot;: 7688,
+					               &quot;img&quot;: &quot;/img/static/textures/0225.png&quot;,
+					               &quot;translucent&quot;: &quot;&quot;,
+					               &quot;country&quot;: &quot;Италия&quot;,
+					               &quot;width&quot;: &quot;ламель 25 мм&quot;,
+					               &quot;structure&quot;: &quot;100% полиэстер&quot;
+					            }"
+					            									ng-model="$ctrl.currentTexture">
 					            								<div 
 					            									class="product__colors-dot" 
 					            									style="background-image: url('/img/static/textures/0225.png')">
@@ -966,19 +1193,366 @@
 					            							</label>
 					            						</li>
 					            						<li 
-					            							class="product__colors-item" 
-					            							ng-repeat="texture in product.textures">
+					            							class="product__colors-item">
 					            							<label 
-					            								class="product__colors-label" 
-					            								title="2703 - салатовый">
+					            								class="product__colors-label"
+					            								title="Темно-синий">
 					            								<input
 					            									type="radio"
 					            									name="product_texture"
-					            									value="129"
-					            									ng-model="product.texture_id">
+					            									value="{
+					               &quot;id&quot;: 609,
+					               &quot;url&quot;: &quot;temnosiniy&quot;,
+					               &quot;model&quot;: &quot;Темно-синий&quot;,
+					               &quot;price&quot;: 7688,
+					               &quot;img&quot;: &quot;/img/static/textures/1852.png&quot;,
+					               &quot;translucent&quot;: &quot;&quot;,
+					               &quot;country&quot;: &quot;Италия&quot;,
+					               &quot;width&quot;: &quot;ламель 25 мм&quot;,
+					               &quot;structure&quot;: &quot;100% полиэстер&quot;
+					            }"
+					            									ng-model="$ctrl.currentTexture">
+					            								<div 
+					            									class="product__colors-dot" 
+					            									style="background-image: url('/img/static/textures/1852.png')">
+					            								</div>
+					            							</label>
+					            						</li>
+					            						<li 
+					            							class="product__colors-item">
+					            							<label 
+					            								class="product__colors-label"
+					            								title="Синий">
+					            								<input
+					            									type="radio"
+					            									name="product_texture"
+					            									value="{
+					               &quot;id&quot;: 610,
+					               &quot;url&quot;: &quot;siniy&quot;,
+					               &quot;model&quot;: &quot;Синий&quot;,
+					               &quot;price&quot;: 7688,
+					               &quot;img&quot;: &quot;/img/static/textures/2013.png&quot;,
+					               &quot;translucent&quot;: &quot;&quot;,
+					               &quot;country&quot;: &quot;Италия&quot;,
+					               &quot;width&quot;: &quot;ламель 25 мм&quot;,
+					               &quot;structure&quot;: &quot;100% полиэстер&quot;
+					            }"
+					            									ng-model="$ctrl.currentTexture">
+					            								<div 
+					            									class="product__colors-dot" 
+					            									style="background-image: url('/img/static/textures/2013.png')">
+					            								</div>
+					            							</label>
+					            						</li>
+					            						<li 
+					            							class="product__colors-item">
+					            							<label 
+					            								class="product__colors-label"
+					            								title="Зеленый">
+					            								<input
+					            									type="radio"
+					            									name="product_texture"
+					            									value="{
+					               &quot;id&quot;: 611,
+					               &quot;url&quot;: &quot;zelenyy&quot;,
+					               &quot;model&quot;: &quot;Зеленый&quot;,
+					               &quot;price&quot;: 7688,
+					               &quot;img&quot;: &quot;/img/static/textures/4.png&quot;,
+					               &quot;translucent&quot;: &quot;&quot;,
+					               &quot;country&quot;: &quot;Италия&quot;,
+					               &quot;width&quot;: &quot;ламель 25 мм&quot;,
+					               &quot;structure&quot;: &quot;100% полиэстер&quot;
+					            }"
+					            									ng-model="$ctrl.currentTexture">
+					            								<div 
+					            									class="product__colors-dot" 
+					            									style="background-image: url('/img/static/textures/4.png')">
+					            								</div>
+					            							</label>
+					            						</li>
+					            						<li 
+					            							class="product__colors-item">
+					            							<label 
+					            								class="product__colors-label"
+					            								title="Розовый">
+					            								<input
+					            									type="radio"
+					            									name="product_texture"
+					            									value="{
+					               &quot;id&quot;: 612,
+					               &quot;url&quot;: &quot;rozovyy&quot;,
+					               &quot;model&quot;: &quot;Розовый&quot;,
+					               &quot;price&quot;: 7688,
+					               &quot;img&quot;: &quot;/img/static/textures/5.png&quot;,
+					               &quot;translucent&quot;: &quot;&quot;,
+					               &quot;country&quot;: &quot;Италия&quot;,
+					               &quot;width&quot;: &quot;ламель 25 мм&quot;,
+					               &quot;structure&quot;: &quot;100% полиэстер&quot;
+					            }"
+					            									ng-model="$ctrl.currentTexture">
+					            								<div 
+					            									class="product__colors-dot" 
+					            									style="background-image: url('/img/static/textures/5.png')">
+					            								</div>
+					            							</label>
+					            						</li>
+					            						<li 
+					            							class="product__colors-item">
+					            							<label 
+					            								class="product__colors-label"
+					            								title="Фиолетовый">
+					            								<input
+					            									type="radio"
+					            									name="product_texture"
+					            									value="{
+					               &quot;id&quot;: 613,
+					               &quot;url&quot;: &quot;fioletovyy&quot;,
+					               &quot;model&quot;: &quot;Фиолетовый&quot;,
+					               &quot;price&quot;: 7688,
+					               &quot;img&quot;: &quot;/img/static/textures/2025.png&quot;,
+					               &quot;translucent&quot;: &quot;&quot;,
+					               &quot;country&quot;: &quot;Италия&quot;,
+					               &quot;width&quot;: &quot;ламель 25 мм&quot;,
+					               &quot;structure&quot;: &quot;100% полиэстер&quot;
+					            }"
+					            									ng-model="$ctrl.currentTexture">
+					            								<div 
+					            									class="product__colors-dot" 
+					            									style="background-image: url('/img/static/textures/2025.png')">
+					            								</div>
+					            							</label>
+					            						</li>
+					            						<li 
+					            							class="product__colors-item">
+					            							<label 
+					            								class="product__colors-label"
+					            								title="Бирюзовый">
+					            								<input
+					            									type="radio"
+					            									name="product_texture"
+					            									value="{
+					               &quot;id&quot;: 614,
+					               &quot;url&quot;: &quot;biryuzovyy&quot;,
+					               &quot;model&quot;: &quot;Бирюзовый&quot;,
+					               &quot;price&quot;: 7688,
+					               &quot;img&quot;: &quot;/img/static/textures/2033.png&quot;,
+					               &quot;translucent&quot;: &quot;&quot;,
+					               &quot;country&quot;: &quot;Италия&quot;,
+					               &quot;width&quot;: &quot;ламель 25 мм&quot;,
+					               &quot;structure&quot;: &quot;100% полиэстер&quot;
+					            }"
+					            									ng-model="$ctrl.currentTexture">
+					            								<div 
+					            									class="product__colors-dot" 
+					            									style="background-image: url('/img/static/textures/2033.png')">
+					            								</div>
+					            							</label>
+					            						</li>
+					            						<li 
+					            							class="product__colors-item">
+					            							<label 
+					            								class="product__colors-label"
+					            								title="Голубой">
+					            								<input
+					            									type="radio"
+					            									name="product_texture"
+					            									value="{
+					               &quot;id&quot;: 615,
+					               &quot;url&quot;: &quot;goluboy&quot;,
+					               &quot;model&quot;: &quot;Голубой&quot;,
+					               &quot;price&quot;: 7688,
+					               &quot;img&quot;: &quot;/img/static/textures/8.png&quot;,
+					               &quot;translucent&quot;: &quot;&quot;,
+					               &quot;country&quot;: &quot;Италия&quot;,
+					               &quot;width&quot;: &quot;ламель 25 мм&quot;,
+					               &quot;structure&quot;: &quot;100% полиэстер&quot;
+					            }"
+					            									ng-model="$ctrl.currentTexture">
+					            								<div 
+					            									class="product__colors-dot" 
+					            									style="background-image: url('/img/static/textures/8.png')">
+					            								</div>
+					            							</label>
+					            						</li>
+					            						<li 
+					            							class="product__colors-item">
+					            							<label 
+					            								class="product__colors-label"
+					            								title="Оранжевый">
+					            								<input
+					            									type="radio"
+					            									name="product_texture"
+					            									value="{
+					               &quot;id&quot;: 616,
+					               &quot;url&quot;: &quot;oranzhevyy&quot;,
+					               &quot;model&quot;: &quot;Оранжевый&quot;,
+					               &quot;price&quot;: 7688,
+					               &quot;img&quot;: &quot;/img/static/textures/2703.png&quot;,
+					               &quot;translucent&quot;: &quot;&quot;,
+					               &quot;country&quot;: &quot;Италия&quot;,
+					               &quot;width&quot;: &quot;ламель 25 мм&quot;,
+					               &quot;structure&quot;: &quot;100% полиэстер&quot;
+					            }"
+					            									ng-model="$ctrl.currentTexture">
 					            								<div 
 					            									class="product__colors-dot" 
 					            									style="background-image: url('/img/static/textures/2703.png')">
+					            								</div>
+					            							</label>
+					            						</li>
+					            						<li 
+					            							class="product__colors-item">
+					            							<label 
+					            								class="product__colors-label"
+					            								title="Красный">
+					            								<input
+					            									type="radio"
+					            									name="product_texture"
+					            									value="{
+					               &quot;id&quot;: 617,
+					               &quot;url&quot;: &quot;krasnyy&quot;,
+					               &quot;model&quot;: &quot;Красный&quot;,
+					               &quot;price&quot;: 7688,
+					               &quot;img&quot;: &quot;/img/static/textures/10.png&quot;,
+					               &quot;translucent&quot;: &quot;&quot;,
+					               &quot;country&quot;: &quot;Италия&quot;,
+					               &quot;width&quot;: &quot;ламель 25 мм&quot;,
+					               &quot;structure&quot;: &quot;100% полиэстер&quot;
+					            }"
+					            									ng-model="$ctrl.currentTexture">
+					            								<div 
+					            									class="product__colors-dot" 
+					            									style="background-image: url('/img/static/textures/10.png')">
+					            								</div>
+					            							</label>
+					            						</li>
+					            						<li 
+					            							class="product__colors-item">
+					            							<label 
+					            								class="product__colors-label"
+					            								title="Кирпичный">
+					            								<input
+					            									type="radio"
+					            									name="product_texture"
+					            									value="{
+					               &quot;id&quot;: 618,
+					               &quot;url&quot;: &quot;kirpichnyy&quot;,
+					               &quot;model&quot;: &quot;Кирпичный&quot;,
+					               &quot;price&quot;: 7688,
+					               &quot;img&quot;: &quot;/img/static/textures/11.png&quot;,
+					               &quot;translucent&quot;: &quot;&quot;,
+					               &quot;country&quot;: &quot;Италия&quot;,
+					               &quot;width&quot;: &quot;ламель 25 мм&quot;,
+					               &quot;structure&quot;: &quot;100% полиэстер&quot;
+					            }"
+					            									ng-model="$ctrl.currentTexture">
+					            								<div 
+					            									class="product__colors-dot" 
+					            									style="background-image: url('/img/static/textures/11.png')">
+					            								</div>
+					            							</label>
+					            						</li>
+					            						<li 
+					            							class="product__colors-item">
+					            							<label 
+					            								class="product__colors-label"
+					            								title="Салатовый">
+					            								<input
+					            									type="radio"
+					            									name="product_texture"
+					            									value="{
+					               &quot;id&quot;: 619,
+					               &quot;url&quot;: &quot;salatovyy&quot;,
+					               &quot;model&quot;: &quot;Салатовый&quot;,
+					               &quot;price&quot;: 7688,
+					               &quot;img&quot;: &quot;/img/static/textures/12.png&quot;,
+					               &quot;translucent&quot;: &quot;&quot;,
+					               &quot;country&quot;: &quot;Италия&quot;,
+					               &quot;width&quot;: &quot;ламель 25 мм&quot;,
+					               &quot;structure&quot;: &quot;100% полиэстер&quot;
+					            }"
+					            									ng-model="$ctrl.currentTexture">
+					            								<div 
+					            									class="product__colors-dot" 
+					            									style="background-image: url('/img/static/textures/12.png')">
+					            								</div>
+					            							</label>
+					            						</li>
+					            						<li 
+					            							class="product__colors-item">
+					            							<label 
+					            								class="product__colors-label"
+					            								title="Белый">
+					            								<input
+					            									type="radio"
+					            									name="product_texture"
+					            									value="{
+					               &quot;id&quot;: 620,
+					               &quot;url&quot;: &quot;belyy&quot;,
+					               &quot;model&quot;: &quot;Белый&quot;,
+					               &quot;price&quot;: 7688,
+					               &quot;img&quot;: &quot;/img/static/textures/13.png&quot;,
+					               &quot;translucent&quot;: &quot;&quot;,
+					               &quot;country&quot;: &quot;Италия&quot;,
+					               &quot;width&quot;: &quot;ламель 25 мм&quot;,
+					               &quot;structure&quot;: &quot;100% полиэстер&quot;
+					            }"
+					            									ng-model="$ctrl.currentTexture">
+					            								<div 
+					            									class="product__colors-dot" 
+					            									style="background-image: url('/img/static/textures/13.png')">
+					            								</div>
+					            							</label>
+					            						</li>
+					            						<li 
+					            							class="product__colors-item">
+					            							<label 
+					            								class="product__colors-label"
+					            								title="Желтый">
+					            								<input
+					            									type="radio"
+					            									name="product_texture"
+					            									value="{
+					               &quot;id&quot;: 621,
+					               &quot;url&quot;: &quot;zheltyy&quot;,
+					               &quot;model&quot;: &quot;Желтый&quot;,
+					               &quot;price&quot;: 7688,
+					               &quot;img&quot;: &quot;/img/static/textures/14.png&quot;,
+					               &quot;translucent&quot;: &quot;&quot;,
+					               &quot;country&quot;: &quot;Италия&quot;,
+					               &quot;width&quot;: &quot;ламель 25 мм&quot;,
+					               &quot;structure&quot;: &quot;100% полиэстер&quot;
+					            }"
+					            									ng-model="$ctrl.currentTexture">
+					            								<div 
+					            									class="product__colors-dot" 
+					            									style="background-image: url('/img/static/textures/14.png')">
+					            								</div>
+					            							</label>
+					            						</li>
+					            						<li 
+					            							class="product__colors-item">
+					            							<label 
+					            								class="product__colors-label"
+					            								title="Светло-желтый">
+					            								<input
+					            									type="radio"
+					            									name="product_texture"
+					            									value="{
+					               &quot;id&quot;: 622,
+					               &quot;url&quot;: &quot;svetlozheltyy&quot;,
+					               &quot;model&quot;: &quot;Светло-желтый&quot;,
+					               &quot;price&quot;: 7688,
+					               &quot;img&quot;: &quot;/img/static/textures/2871.png&quot;,
+					               &quot;translucent&quot;: &quot;&quot;,
+					               &quot;country&quot;: &quot;Италия&quot;,
+					               &quot;width&quot;: &quot;ламель 25 мм&quot;,
+					               &quot;structure&quot;: &quot;100% полиэстер&quot;
+					            }"
+					            									ng-model="$ctrl.currentTexture">
+					            								<div 
+					            									class="product__colors-dot" 
+					            									style="background-image: url('/img/static/textures/2871.png')">
 					            								</div>
 					            							</label>
 					            						</li>
@@ -991,12 +1565,12 @@
 					            				<div class="product__price-container">
 					            					<!-- Old price -->
 					            					<div class="product__price-old">
-					            						7887 р./м<sup>2</sup>
+					            						8000 р./м<sup>2</sup>
 					            					</div>
 					            					<!-- New price -->
 					            					<div class="product__price-new">
 					            						<strong>
-					            							<span>от</span> 7541 р.</strong><span>/м<sup>2</sup></span>
+					            							<span>от</span> <span ng-bind="$ctrl.texture.price"></span> р.</strong><span>/м<sup>2</sup></span>
 					            					</div>
 					            				</div>
 					            				<!-- Btn -->
@@ -2698,7 +3272,7 @@
 						<ol class="order-form__list" ng-if="context !== 'callme'">
 							<li class="order-form__item" ng-repeat="(key,product) in products track by $index">
 								<strong ng-if="products.length > 1"></strong>
-								Классические алюминиевые с шириной планки 25мм
+								Шторы плиссе Гофре с цветными тканями
 								<span ng-if="!!product.texture">модель </span>
 								<span ng-if="product.withCornice && product.cornice.cartText" ng-bind="' + ' + product.cornice.cartText"></span>
 								- <strong>

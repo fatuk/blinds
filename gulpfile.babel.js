@@ -3,7 +3,8 @@ import less from 'gulp-less';
 import sourcemaps from 'gulp-sourcemaps';
 import watch from 'gulp-watch';
 import browserSync from 'browser-sync';
-import cleanCSS from 'gulp-clean-css';
+import minifyCSS from 'gulp-minify-css';
+import mainBowerFiles from 'main-bower-files';
 import uglify from 'gulp-uglify';
 import concat from 'gulp-concat';
 import autoprefixer from 'gulp-autoprefixer';
@@ -11,23 +12,25 @@ import handlebars from 'gulp-compile-handlebars';
 import rename from 'gulp-rename';
 import plumber from 'gulp-plumber';
 import notify from 'gulp-notify';
+import url from 'url';
+import path from 'path';
+import util from 'gulp-util';
+import eslint from 'gulp-eslint';
 import babel from 'gulp-babel';
-import templateData from './app/data/data.json';
-import mainBowerFiles from 'main-bower-files';
-let bowerFiles = mainBowerFiles();
+import gulpif from 'gulp-if';
+import ngAnnotate from 'gulp-ng-annotate';
 
-console.info(`
-********** Bower Files **********
-${bowerFiles}
-`);
+const bowerFiles = mainBowerFiles();
+import templateData from './app/data/data.json';
 
 /******************************
  * Default task
  ******************************/
 gulp.task('default', [
 	'copyAssets',
-	'browser-sync',
 	'handlebars',
+	'browser-sync',
+	'bower-me',
 	'pluginsConcat',
 	'jsConcat',
 	'less',
@@ -44,6 +47,14 @@ gulp.task('build', [
 	'jsConcatBuild',
 	'lessBuild'
 ]);
+
+/******************************
+ * Bower files task
+ ******************************/
+gulp.task('bower-me', () => {
+	console.info('********** Bower Files [' + bowerFiles.length + '] **********');
+	console.info(bowerFiles);
+});
 
 /******************************
  * Copy assets to public
@@ -71,7 +82,8 @@ gulp.task('handlebars', () => {
 			},
 			batch: ['./app/templates/partials'],
 			helpers: {
-				capitals: function (str) {
+				toJson: (obj) => JSON.stringify(obj, null, 3),
+				capitals: str => {
 					return str.fn(this).toUpperCase();
 				}
 			}

@@ -20,14 +20,18 @@
   "overrides": {
     "normalize.less": {
       "ignore": "normalize.less"
-	},
-	"multirange": {
-		"main": "multirange.js"
-	}
+    },
+    "multirange": {
+      "main": "multirange.js"
+    }
   },
   "dependencies": {
-    "jquery": "~2.1.1",
+    "jquery": "2.2.4",
+    "angular": "1.6.4",
+    "angular-loader": "1.6.4",
     "normalize.less": "^1.0.0",
-    "multirange": "https://github.com/LeaVerou/multirange.git#gh-pages"
+    "multirange": "https://github.com/LeaVerou/multirange.git#gh-pages",
+    "angular-local-storage": "^0.7.1",
+    "lodash": "^4.17.5"
   }
 }
