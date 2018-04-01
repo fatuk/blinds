@@ -1,6 +1,7 @@
 (() => {
 	angular.module('app', [
-		'LocalStorageModule'
+		'LocalStorageModule',
+		'ngDropdowns'
 	])
 		.constant('API_PATH', 'data/');
 })();

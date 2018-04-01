@@ -1,17 +1,25 @@
-<div class="dialog hide js-dialog-{{state}}">
+<div 
+	ng-if="$ctrl['is-{{state}}-open']"
+	class="dialog js-dialog-{{state}}">
 	<div 
-		class="dialog__closer js-close-{{state}}" 
-		ng-click="CloseDialog();"></div>
+		class="dialog__closer" 
+		ng-click="$ctrl.closeDialogs()">
+	</div>
 	<div class="dialog__content dialog__content_{{state}}" ng-class="{picture: !!picture}">
 		{{!-- <div ng-include="'views/directives/search.html'" ng-if="state === 'search'"></div> --}}
 		{{#if window}}
 		<div class="dialog__window">
-			<button class="dialog__close js-close-{{state}}">
+			<button 
+				ng-click="$ctrl.closeDialogs()"
+				class="dialog__close">
 				<span class="icon icon-close-png"></span>
 			</button>
 		{{/if}}
 			{{#if search}}
 			{{>dialogs/search}}
+			{{/if}}
+			{{#if callme}}
+			{{>dialogs/callme}}
 			{{/if}}
 			{{#if feedback}}
 			{{>dialogs/feedback}}

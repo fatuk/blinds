@@ -282,7 +282,9 @@
 					                            </button>
 					                        </li>
 					                        <li class="links-set__item">
-					                            <span class="links-set__link js-openSearch" ng-click="openSearch()">
+					                            <span 
+					                                class="links-set__link" 
+					                                ng-click="$ctrl.openSearch()">
 					                                <svg class="icon icon-search" xmlns="http://www.w3.org/2000/svg" version="1.1"><use xlink:href="icons/icons.svg#search"></use></svg>
 													<span class="links-set__text">
 														Поиск
@@ -334,7 +336,9 @@
 					                            <div class="call-me__time">
 					                                9:00 - 18:00
 					                            </div>
-					                            <button class="btn btn_blue call-me__btn js-openCallMe" ng-click="openCallme()">
+					                            <button 
+					                                class="btn btn_blue call-me__btn" 
+					                                ng-click="$ctrl.openCallme()">
 					                                заказать звонок
 					                            </button>
 					                        </div>
@@ -524,7 +528,7 @@
 					        <footer class="cart__footer">
 					            <button 
 					                class="cart__phone-button btn btn_green" 
-					                ng-click="openOrder()">
+					                ng-click="$ctrl.openOrder()">
 					                Оформить заказ
 					            </button>
 					        </footer>
@@ -1749,10 +1753,13 @@
 			</div>
 		</div>
 	</div>
-	<div class="dialog hide js-dialog-search">
+	<div 
+		ng-if="$ctrl['is-search-open']"
+		class="dialog js-dialog-search">
 		<div 
-			class="dialog__closer js-close-search" 
-			ng-click="CloseDialog();"></div>
+			class="dialog__closer" 
+			ng-click="$ctrl.closeDialogs()">
+		</div>
 		<div class="dialog__content dialog__content_search" ng-class="{picture: !!picture}">
 				<div class="search" ng-controller="SearchCtrl">
 					<label for="search_input" class="search__label">Поиск на сайте</label>
@@ -1772,13 +1779,18 @@
 				</div>
 		</div>
 	</div>
-	<div class="dialog hide js-dialog-feedback">
+	<div 
+		ng-if="$ctrl['is-feedback-open']"
+		class="dialog js-dialog-feedback">
 		<div 
-			class="dialog__closer js-close-feedback" 
-			ng-click="CloseDialog();"></div>
+			class="dialog__closer" 
+			ng-click="$ctrl.closeDialogs()">
+		</div>
 		<div class="dialog__content dialog__content_feedback" ng-class="{picture: !!picture}">
 			<div class="dialog__window">
-				<button class="dialog__close js-close-feedback">
+				<button 
+					ng-click="$ctrl.closeDialogs()"
+					class="dialog__close">
 					<span class="icon icon-close-png"></span>
 				</button>
 				<form class="order-form" ng-controller="FeedbackCtrl" ng-submit="submitForm()">
@@ -1810,19 +1822,26 @@
 			</div>
 		</div>
 	</div>
-	<div class="dialog hide js-dialog-callme">
+	<div 
+		ng-if="$ctrl['is-callme-open']"
+		class="dialog js-dialog-callme">
 		<div 
-			class="dialog__closer js-close-callme" 
-			ng-click="CloseDialog();"></div>
+			class="dialog__closer" 
+			ng-click="$ctrl.closeDialogs()">
+		</div>
 		<div class="dialog__content dialog__content_callme" ng-class="{picture: !!picture}">
 			<div class="dialog__window">
-				<button class="dialog__close js-close-callme">
+				<button 
+					ng-click="$ctrl.closeDialogs()"
+					class="dialog__close">
 					<span class="icon icon-close-png"></span>
 				</button>
 				<form class="order-form" ng-controller="OrderCtrl" ng-submit="submitForm()">
 					<header>
 						<h3 class="order-form__title">
-							<svg ng-if="context !== 'callme' && !mobile" class="icon icon-cart"><use xlink:href="icons/icons.svg#cart"></use></svg>
+							<svg ng-if="context !== 'callme' && !mobile" class="icon icon-cart">
+								<use xlink:href="icons/icons.svg#cart"></use>
+							</svg>
 							<span ng-if="context === 'callme'">Перезвоните мне</span>
 							<span ng-if="context === 'order'">Оформить заказ</span>
 							<span ng-if="context === 'oneclick'">Купить в 1 клик</span>

@@ -1,40 +1,22 @@
-<form class="order-form" ng-controller="OrderCtrl" ng-submit="submitForm()">
+<form class="order-form" ng-submit="$ctrl.callmeSubmit()">
 	<header>
 		<h3 class="order-form__title">
-			<svg ng-if="context !== 'callme' && !mobile" class="icon icon-cart">
-				<use xlink:href="icons/icons.svg#cart"></use>
-			</svg>
-			<span ng-if="context === 'callme'">Перезвоните мне</span>
-			<span ng-if="context === 'order'">Оформить заказ</span>
-			<span ng-if="context === 'oneclick'">Купить в 1 клик</span>
+            {{!-- ng-if="context === 'callme'" --}}
+			<span>Перезвоните мне</span>
 		</h3>
 	</header>
-	<section class="order-form__body" ng-if="!state.complete && !state.loading">
-		<ol class="order-form__list" ng-if="context !== 'callme'">
-			<li class="order-form__item" ng-repeat="(key,product) in products track by $index">
-				<strong ng-if="products.length > 1"></strong>
-				{{product.title}}
-				<span ng-if="!!product.texture">модель {{product.texture}}</span>
-				<span ng-if="product.withCornice && product.cornice.cartText" ng-bind="' + ' + product.cornice.cartText"></span>
-				{{!-- <span class="dimenstions" ng-if="!!product.allowHeight && !!product.dimensions.width && !!product.dimensions.height">
-					({{product.dimensions.width}} см x {{product.dimensions.height}} см)
-				</span> --}}
-				{{!-- <span class="dimenstions" ng-if="!product.allowHeight && !!product.dimensions.width">
-					({{product.dimensions.width}} cм)
-				</span> --}}
-				- <strong>
-					{{!-- {{product.price}} р. --}}
-					2 187 р.
-				</strong><span ng-if="!product.priceExactly">/м<sup>2</sup></span>
-			</li>	
-		</ol>
+	<section 
+        class="order-form__body" 
+        ng-if="!state.complete && !state.loading">
 		<input type="text" class="order-form__input" placeholder="Ваше имя" ng-model="order.name" ng-required="true" >
 		<input type="tel" class="order-form__input" placeholder="Ваш телефон" ng-model="order.phone" ng-required="true" ng-focus="phoneFocus();">
 	</section>
-	<section class="order-form__body" ng-if="state.complete">
+	<section 
+        class="order-form__body" 
+        ng-if="state.complete">
 		<p>
-			<span ng-if="context !== 'callme'">Ваш заказ отправлен!</span>
-			<span ng-if="context === 'callme'">Готово!</span>
+            {{!-- ng-if="context === 'callme'" --}}
+			<span>Готово!</span>
 			<br>
 			Ожидайте звонка в назначенное время.
 		</p>

@@ -21,17 +21,17 @@
     "normalize.less": {
       "ignore": "normalize.less"
     },
-    "multirange": {
-      "main": "multirange.js"
+    "angular-dropdowns": {
+      "main": "dist/angular-dropdowns.js"
     }
   },
   "dependencies": {
     "jquery": "2.2.4",
     "angular": "1.6.4",
     "angular-loader": "1.6.4",
+    "angular-dropdowns": "1.5.1",
     "normalize.less": "^1.0.0",
-    "multirange": "https://github.com/LeaVerou/multirange.git#gh-pages",
-    "angular-local-storage": "^0.7.1",
-    "lodash": "^4.17.5"
+    "angular-local-storage": "0.7.1",
+    "lodash": "4.17.5"
   }
 }

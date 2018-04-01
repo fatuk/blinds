@@ -38,7 +38,9 @@
                             </button>
                         </li>
                         <li class="links-set__item">
-                            <span class="links-set__link js-openSearch" ng-click="openSearch()">
+                            <span 
+                                class="links-set__link" 
+                                ng-click="$ctrl.openSearch()">
                                 <svg class="icon icon-search" xmlns="http://www.w3.org/2000/svg" version="1.1"><use xlink:href="icons/icons.svg#search"></use></svg>
 								<span class="links-set__text">
 									Поиск
@@ -71,7 +73,9 @@
                             <div class="call-me__time">
                                 9:00 - 18:00
                             </div>
-                            <button class="btn btn_blue call-me__btn js-openCallMe" ng-click="openCallme()">
+                            <button 
+                                class="btn btn_blue call-me__btn" 
+                                ng-click="$ctrl.openCallme()">
                                 заказать звонок
                             </button>
                         </div>

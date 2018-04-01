@@ -1,7 +1,7 @@
 'use strict';
 
 (function () {
-	angular.module('app', ['LocalStorageModule']).constant('API_PATH', 'data/');
+	angular.module('app', ['LocalStorageModule', 'ngDropdowns']).constant('API_PATH', 'data/');
 })();
 
 // $(() => {
@@ -73,11 +73,29 @@
 (function () {
     angular.module('app').controller('MainCtrl', controller);
 
-    function controller($scope, CartService) {
+    function controller($scope, CartService, DialogService, ConfigService) {
         console.log('Main ctrl');
         var self = this;
         self.isHover = false;
         self.currentTexture = {};
+        $scope.state = {
+            complete: false,
+            loading: false
+        };
+        $scope.hours = [];
+        for (var i = ConfigService.openHour; i < ConfigService.closeHour; i++) {
+            $scope.hours.push({
+                id: i,
+                label: (i < 10 ? '0' + i : i.toString()) + ' ч'
+            });
+        }
+        $scope.minutes = [];
+        for (var _i = 0; _i < 60; _i += 15) {
+            $scope.minutes.push({
+                id: _i,
+                label: (_i < 10 ? '0' + _i : _i.toString()) + ' м'
+            });
+        }
 
         $scope.$watch(function () {
             return self.currentTexture;
@@ -87,6 +105,13 @@
 
         self.hoverIt = function (bValue) {
             self.isHover = bValue;
+        };
+
+        $scope.order = {
+            phone: '',
+            name: '',
+            hour: $scope.hours[0],
+            min: $scope.minutes[0]
         };
 
         self.addProductToCart = function (product) {
@@ -106,12 +131,54 @@
             }
         };
 
+        self.openSearch = function () {
+            self['is-search-open'] = true;
+        };
+
+        self.openCallme = function () {
+            $scope.state.complete = false;
+            $scope.state.loading = false;
+            $scope.order = {
+                phone: '',
+                name: '',
+                hour: $scope.hours[0],
+                min: $scope.minutes[0]
+            };
+            self['is-callme-open'] = true;
+        };
+
+        self.closeDialogs = function () {
+            self['is-search-open'] = false;
+            self['is-feedback-open'] = false;
+            self['is-callme-open'] = false;
+        };
+
         self.showDropdown = function () {
             self.dropdownVisible = true;
         };
 
         self.hideDropdown = function () {
             self.dropdownVisible = false;
+        };
+
+        self.callmeSubmit = function () {
+            var params = {};
+            $scope.state.loading = true;
+            angular.extend(params, {
+                context: $scope.context
+            }, $scope.order);
+
+            console.log($scope.order);
+            $scope.state.complete = true;
+
+            // CartService.submitCallMe(params)
+            //     .then(function(data){
+            //         // window.ga('send', 'event', 'knopka_perezvonite', 'perezvonit');
+            //         $scope.state.loading = false;
+            //         $scope.state.complete = true;
+            //     }, function(err){
+            //         $scope.state.loading = false;
+            //     });
         };
 
         self.cartItems = CartService.getProducts();
@@ -303,6 +370,43 @@
 
 		}, window.appLicationConfig);
 		return config;
+	}
+})();
+'use strict';
+
+(function () {
+	'use strict';
+
+	angular.module('app').factory('DialogService', service);
+
+	function service($rootScope) {
+		var opened = false;
+		var image = '';
+
+		var setState = function setState(newState) {
+			opened = newState;
+			$rootScope.$broadcast('DialogService.updateState');
+		};
+
+		var getState = function getState() {
+			return opened;
+		};
+
+		var setImage = function setImage(picture) {
+			image = picture;
+		};
+		var getImage = function getImage() {
+			return image;
+		};
+
+		var service = {
+			getState: getState,
+			setState: setState,
+			getImage: getImage,
+			setImage: setImage
+		};
+
+		return service;
 	}
 })();
 //# sourceMappingURL=../js/app.js.map
