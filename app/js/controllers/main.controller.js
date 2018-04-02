@@ -69,6 +69,11 @@
             self['is-order-open'] = true;
             $rootScope.modalOpen = true;
         }
+        
+        self.openFeedback = () => {
+            self['is-feedback-open'] = true;
+            $rootScope.modalOpen = true;
+        }
 
         self.openCallme = () => {
             $scope.state.complete = false;

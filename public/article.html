@@ -1503,7 +1503,7 @@
 				                    <p class="site-footer__text">
 				                        Есть вопросы, пожелания, замечания или хотите нас похвалить?
 				                    </p>
-				                    <button class="btn btn_blue js-openFeedback" ng-click="openFeedback()">
+				                    <button class="btn btn_blue" ng-click="$ctrl.openFeedback()">
 				                        Напишите нам
 				                    </button>
 				                </div>
@@ -1791,7 +1791,7 @@
 					class="dialog__close">
 					<span class="icon icon-close-png"></span>
 				</button>
-				<form class="order-form" ng-controller="FeedbackCtrl" ng-submit="submitForm()">
+				<form class="order-form" ng-submit="submitForm()">
 					<h3 class="order-form__title">Напишите нам</h3>
 					<section class="order-form__body" ng-if="!state.complete && !state.loading">
 						<input type="text" class="order-form__input" placeholder="Ваше имя" ng-model="message.name">
@@ -1806,9 +1806,9 @@
 					<footer class="order-form__footer" ng-if="!state.complete && !state.loading">
 						<label class="order-form__policy-agreement checkbox">
 							<input
-									type="checkbox"
-									ng-model="policyAgreement.isChecked"
-									name="confidencial_policy_agreement" />
+								type="checkbox"
+								ng-model="policyAgreement.isChecked"
+								name="confidencial_policy_agreement" />
 							<span class="checkbox__check" >
 								<svg class="icon icon-check"><use xlink:href="icons/icons.svg#check"></use></svg>
 							</span>

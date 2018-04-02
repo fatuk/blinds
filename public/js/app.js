@@ -94,6 +94,11 @@
             $rootScope.modalOpen = true;
         };
 
+        self.openFeedback = function () {
+            self['is-feedback-open'] = true;
+            $rootScope.modalOpen = true;
+        };
+
         self.openCallme = function () {
             $scope.state.complete = false;
             $scope.state.loading = false;
