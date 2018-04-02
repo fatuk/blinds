@@ -42,6 +42,12 @@
             hour: $scope.hours[0],
             min: $scope.minutes[0]
         };
+
+        $scope.message = {
+            name: '',
+            email: '',
+            text: ''
+        };
         
         self.addProductToCart = product => {
             // window.ga ('send', 'event', 'knopka_vkorzinu', 'vkorzinu');
@@ -61,16 +67,22 @@
         };
         
         self.openSearch = () => {
+            $scope.state.complete = false;
+            $scope.state.loading = false;
             self['is-search-open'] = true;
             $rootScope.modalOpen = true;
         }
         
         self.openOrder = () => {
+            $scope.state.complete = false;
+            $scope.state.loading = false;
             self['is-order-open'] = true;
             $rootScope.modalOpen = true;
         }
         
         self.openFeedback = () => {
+            $scope.state.complete = false;
+            $scope.state.loading = false;
             self['is-feedback-open'] = true;
             $rootScope.modalOpen = true;
         }
@@ -114,14 +126,44 @@
             console.log($scope.order);
             $scope.state.complete = true;
 
-            // CartService.submitCallMe(params)
-            //     .then(function(data){
-            //         // window.ga('send', 'event', 'knopka_perezvonite', 'perezvonit');
-            //         $scope.state.loading = false;
-            //         $scope.state.complete = true;
-            //     }, function(err){
-            //         $scope.state.loading = false;
-            //     });
+            CartService.submitCallMe(params)
+                .then(function(data){
+                    // window.ga('send', 'event', 'knopka_perezvonite', 'perezvonit');
+                    $scope.state.loading = false;
+                    $scope.state.complete = true;
+                }, function(err){
+                    $scope.state.loading = false;
+                });
+        };
+
+        self.orderSubmit = () => {
+            let params = {};
+			$scope.state.loading = true;
+            angular.extend(params, {context: $scope.context}, $scope.order);
+            params.context = 'order';
+			// if (params.context === 'order') {
+                //     window.ga('send', 'event', 'knopka_vkorzinu', 'vkorzinu');
+                // } else if (params.context === 'oneclick') {
+                //     window.ga('send', 'event', 'knopka_perezvonite_oneclick', 'perezvonit_oneclick');
+                // }
+            CartService.submitOrder(params)
+                .then(data => {
+                    $scope.state.loading = false;
+                    $scope.state.complete = true;
+                }, err => {
+                    $scope.state.loading = false;
+                });
+        };
+
+        self.feedbackSubmit = () => {
+            $scope.state.loading = true;
+			CartService.submitFeedback($scope.message)
+				.then(data => {
+					$scope.state.loading = false;
+					$scope.state.complete = true;
+				}, err => {
+					$scope.state.loading = false;
+				});
         };
 
         self.cartItems = CartService.getProducts();

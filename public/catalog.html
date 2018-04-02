@@ -2347,7 +2347,7 @@
 					class="dialog__close">
 					<span class="icon icon-close-png"></span>
 				</button>
-				<form class="order-form" ng-submit="submitForm()">
+				<form class="order-form" ng-submit="$ctrl.feedbackSubmit()">
 					<h3 class="order-form__title">Напишите нам</h3>
 					<section class="order-form__body" ng-if="!state.complete && !state.loading">
 						<input type="text" class="order-form__input" placeholder="Ваше имя" ng-model="message.name">
@@ -2390,7 +2390,7 @@
 					class="dialog__close">
 					<span class="icon icon-close-png"></span>
 				</button>
-				<form class="order-form" ng-controller="OrderCtrl" ng-submit="submitForm()">
+				<form class="order-form" ng-submit="$ctrl.orderSubmit()">
 					<header>
 						<h3 class="order-form__title">
 							<svg ng-if="context !== 'callme' && !mobile" class="icon icon-cart">
@@ -2418,8 +2418,7 @@
 					</section>
 					<section class="order-form__body" ng-if="state.complete">
 						<p>
-							<span ng-if="context !== 'callme'">Ваш заказ отправлен!</span>
-							<span ng-if="context === 'callme'">Готово!</span>
+							Ваш заказ отправлен!
 							<br>
 							Ожидайте звонка в назначенное время.
 						</p>
