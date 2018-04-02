@@ -4,17 +4,17 @@
 			<svg ng-if="context !== 'callme' && !mobile" class="icon icon-cart">
 				<use xlink:href="icons/icons.svg#cart"></use>
 			</svg>
-			Оформить заказ
+			<span ng-if="context === 'callme'">Перезвоните мне</span>
+			<span ng-if="context === 'order'"></span>
+			<span ng-if="context === 'oneclick'">Купить в 1 клик</span>
 		</h3>
 	</header>
 	<section class="order-form__body" ng-if="!state.complete && !state.loading">
-		<ol class="order-form__list">
-			<li 
-				class="order-form__item" 
-				ng-repeat="(key, product) in $ctrl.cartItems track by $index">
+		<ol class="order-form__list" ng-if="context !== 'callme'">
+			<li class="order-form__item" ng-repeat="(key,product) in products track by $index">
 				<strong ng-if="products.length > 1"></strong>
-				<span ng-bind="product.title"></span>
-				<span ng-if="!!product.texture">модель <span ng-bind="product.texture"></span></span>
+				{{product.title}}
+				<span ng-if="!!product.texture">модель {{product.texture}}</span>
 				<span ng-if="product.withCornice && product.cornice.cartText" ng-bind="' + ' + product.cornice.cartText"></span>
 				{{!-- <span class="dimenstions" ng-if="!!product.allowHeight && !!product.dimensions.width && !!product.dimensions.height">
 					({{product.dimensions.width}} см x {{product.dimensions.height}} см)
@@ -23,7 +23,8 @@
 					({{product.dimensions.width}} cм)
 				</span> --}}
 				- <strong>
-					<span ng-bind="product.price"></span> р.
+					{{!-- {{product.price}} р. --}}
+					2 187 р.
 				</strong><span ng-if="!product.priceExactly">/м<sup>2</sup></span>
 			</li>	
 		</ol>

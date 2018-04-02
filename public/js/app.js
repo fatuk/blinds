@@ -3,53 +3,6 @@
 (function () {
 	angular.module('app', ['LocalStorageModule', 'ngDropdowns']).constant('API_PATH', 'data/');
 })();
-
-// $(() => {
-// 	// Mouse hover
-// 	$('.js-hover').on('mouseover', (e) => {
-// 		const $target = $(e.currentTarget);
-// 		$target.addClass($target.data('class'));
-// 	});
-
-// 	$('.js-hover').on('mouseout', (e) => {
-// 		const $target = $(e.currentTarget);
-// 		$target.removeClass($target.data('class'));
-// 	});
-
-// 	// Hide on scroll
-// 	const $hideOnScroll = $('[data-scroll-class]');
-// 	$(window).on('scroll', () => {
-// 		if ($(window).scrollTop() >= 330) {
-// 			$hideOnScroll.addClass($hideOnScroll.data('scroll-class'));
-// 		} else {
-// 			$hideOnScroll.removeClass($hideOnScroll.data('scroll-class'));
-// 		}
-// 	});
-
-// 	// Open search
-// 	$('.js-openSearch').click(() => {
-// 		$('.js-dialog-search').removeClass('hide');
-// 	});
-// 	$('.js-close-search').click(() => {
-// 		$('.js-dialog-search').addClass('hide');
-// 	});
-
-// 	// Open feedback
-// 	$('.js-openFeedback').click(() => {
-// 		$('.js-dialog-feedback').removeClass('hide');
-// 	});
-// 	$('.js-close-feedback').click(() => {
-// 		$('.js-dialog-feedback').addClass('hide');
-// 	});
-
-// 	//Open callMe
-// 	$('.js-openCallMe').click(() => {
-// 		$('.js-dialog-callme').removeClass('hide');
-// 	});
-// 	$('.js-close-callme').click(() => {
-// 		$('.js-dialog-callme').addClass('hide');
-// 	});
-// });
 'use strict';
 
 (function () {
@@ -73,10 +26,10 @@
 (function () {
     angular.module('app').controller('MainCtrl', controller);
 
-    function controller($scope, CartService, DialogService, ConfigService) {
+    function controller($rootScope, $scope, CartService, DialogService, ConfigService) {
         console.log('Main ctrl');
         var self = this;
-        self.isHover = false;
+        self.isHover = {};
         self.currentTexture = {};
         $scope.state = {
             complete: false,
@@ -103,8 +56,8 @@
             self.texture = angular.fromJson(self.currentTexture);
         }, true);
 
-        self.hoverIt = function (bValue) {
-            self.isHover = bValue;
+        self.hoverIt = function (id, bValue) {
+            self.isHover[id] = bValue;
         };
 
         $scope.order = {
@@ -133,6 +86,12 @@
 
         self.openSearch = function () {
             self['is-search-open'] = true;
+            $rootScope.modalOpen = true;
+        };
+
+        self.openOrder = function () {
+            self['is-order-open'] = true;
+            $rootScope.modalOpen = true;
         };
 
         self.openCallme = function () {
@@ -145,12 +104,15 @@
                 min: $scope.minutes[0]
             };
             self['is-callme-open'] = true;
+            $rootScope.modalOpen = true;
         };
 
         self.closeDialogs = function () {
             self['is-search-open'] = false;
             self['is-feedback-open'] = false;
             self['is-callme-open'] = false;
+            self['is-order-open'] = false;
+            $rootScope.modalOpen = false;
         };
 
         self.showDropdown = function () {

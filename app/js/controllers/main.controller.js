@@ -2,10 +2,10 @@
     angular.module('app')
         .controller('MainCtrl', controller);
 
-    function controller($scope, CartService, DialogService, ConfigService) {
+    function controller($rootScope, $scope, CartService, DialogService, ConfigService) {
         console.log('Main ctrl');
         const self = this;
-        self.isHover = false;
+        self.isHover = {};
         self.currentTexture = {};
         $scope.state = {
             complete: false,
@@ -32,8 +32,8 @@
             self.texture = angular.fromJson(self.currentTexture);
         }, true);
 
-        self.hoverIt = function(bValue){
-			self.isHover = bValue;
+        self.hoverIt = function(id, bValue){
+			self.isHover[id] = bValue;
         };
 
         $scope.order = {
@@ -49,7 +49,7 @@
             product.texture = angular.fromJson(self.currentTexture).model;
             product.price = angular.fromJson(self.currentTexture).price;
             console.log(product);
-			CartService.addProduct(product);
+            CartService.addProduct(product);
         };
 
         self.removeProduct = key => {
@@ -62,6 +62,12 @@
         
         self.openSearch = () => {
             self['is-search-open'] = true;
+            $rootScope.modalOpen = true;
+        }
+        
+        self.openOrder = () => {
+            self['is-order-open'] = true;
+            $rootScope.modalOpen = true;
         }
 
         self.openCallme = () => {
@@ -74,12 +80,15 @@
                 min: $scope.minutes[0]
             };
             self['is-callme-open'] = true;
+            $rootScope.modalOpen = true;
         };
 
         self.closeDialogs = () => {
             self['is-search-open'] = false;
             self['is-feedback-open'] = false;
             self['is-callme-open'] = false;
+            self['is-order-open'] = false;
+            $rootScope.modalOpen = false;
         }
 
         self.showDropdown = () => {

@@ -2314,7 +2314,7 @@
 			class="dialog__closer" 
 			ng-click="$ctrl.closeDialogs()">
 		</div>
-		<div class="dialog__content dialog__content_search" ng-class="{picture: !!picture}">
+		<div class="dialog__content dialog__content_search">
 				<div class="search" ng-controller="SearchCtrl">
 					<label for="search_input" class="search__label">Поиск на сайте</label>
 					<form class="search__form" ng-submit="search()">
@@ -2340,7 +2340,7 @@
 			class="dialog__closer" 
 			ng-click="$ctrl.closeDialogs()">
 		</div>
-		<div class="dialog__content dialog__content_feedback" ng-class="{picture: !!picture}">
+		<div class="dialog__content dialog__content_feedback">
 			<div class="dialog__window">
 				<button 
 					ng-click="$ctrl.closeDialogs()"
@@ -2383,7 +2383,7 @@
 			class="dialog__closer" 
 			ng-click="$ctrl.closeDialogs()">
 		</div>
-		<div class="dialog__content dialog__content_callme" ng-class="{picture: !!picture}">
+		<div class="dialog__content dialog__content_callme">
 			<div class="dialog__window">
 				<button 
 					ng-click="$ctrl.closeDialogs()"
@@ -2396,20 +2396,20 @@
 							<svg ng-if="context !== 'callme' && !mobile" class="icon icon-cart">
 								<use xlink:href="icons/icons.svg#cart"></use>
 							</svg>
-							<span ng-if="context === 'callme'">Перезвоните мне</span>
-							<span ng-if="context === 'order'">Оформить заказ</span>
-							<span ng-if="context === 'oneclick'">Купить в 1 клик</span>
+							Оформить заказ
 						</h3>
 					</header>
 					<section class="order-form__body" ng-if="!state.complete && !state.loading">
-						<ol class="order-form__list" ng-if="context !== 'callme'">
-							<li class="order-form__item" ng-repeat="(key,product) in products track by $index">
+						<ol class="order-form__list">
+							<li 
+								class="order-form__item" 
+								ng-repeat="(key, product) in $ctrl.cartItems track by $index">
 								<strong ng-if="products.length > 1"></strong>
-								Шторы плиссе Гофре с цветными тканями
-								<span ng-if="!!product.texture">модель </span>
+								<span ng-bind="product.title"></span>
+								<span ng-if="!!product.texture">модель <span ng-bind="product.texture"></span></span>
 								<span ng-if="product.withCornice && product.cornice.cartText" ng-bind="' + ' + product.cornice.cartText"></span>
 								- <strong>
-									2 187 р.
+									<span ng-bind="product.price"></span> р.
 								</strong><span ng-if="!product.priceExactly">/м<sup>2</sup></span>
 							</li>	
 						</ol>

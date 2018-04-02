@@ -1,7 +1,6 @@
 <form class="order-form" ng-submit="$ctrl.callmeSubmit()">
 	<header>
 		<h3 class="order-form__title">
-            {{!-- ng-if="context === 'callme'" --}}
 			<span>Перезвоните мне</span>
 		</h3>
 	</header>
@@ -15,7 +14,6 @@
         class="order-form__body" 
         ng-if="state.complete">
 		<p>
-            {{!-- ng-if="context === 'callme'" --}}
 			<span>Готово!</span>
 			<br>
 			Ожидайте звонка в назначенное время.

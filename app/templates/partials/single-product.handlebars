@@ -1,9 +1,8 @@
 <div 
-	class="product single js-hover" 
+	class="product single" 
 	ng-mouseenter="$ctrl.hoverIt(true)" 
 	ng-mouseleave="$ctrl.hoverIt(false)"
 	ng-class="{'single': product.single, 'active': $ctrl.isHover}" 
-	data-class="active"
 	ng-click="touchElement ? $ctrl.hoverIt(false) : ''">
 	<!-- Product view -->
 	<div class="product__wrapper">

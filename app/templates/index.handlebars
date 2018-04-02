@@ -3,7 +3,12 @@
 
 {{>head}}
 
-<body ng-controller="MainCtrl as $ctrl" ng-class="filterOpened?'opened-filter':''">
+<body 
+	ng-controller="MainCtrl as $ctrl" 
+	ng-class="{
+		'opened-filter': filterOpened,
+		'modal-open': modalOpen
+	}">
 	<img src="/icons/icons.svg" alt='main-svg' style="display: none" />
 	<div class="main-wrapper off-canvas" off-canvas>
 		<div class="off-canvas__menu left show-in-portrait">
@@ -42,6 +47,7 @@
 		</div>
 	</div>
 	{{>dialog search="true" state="search"}}
+	{{>dialog order-form="true" state="order" window="true"}}
 	{{>dialog feedback="true" state="feedback" window="true"}}
 	{{>dialog callme="true" state="callme" window="true"}}
 </body>

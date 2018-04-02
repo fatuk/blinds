@@ -5,8 +5,8 @@
 		class="dialog__closer" 
 		ng-click="$ctrl.closeDialogs()">
 	</div>
-	<div class="dialog__content dialog__content_{{state}}" ng-class="{picture: !!picture}">
-		{{!-- <div ng-include="'views/directives/search.html'" ng-if="state === 'search'"></div> --}}
+	{{!-- ng-class="{picture: !!picture}" --}}
+	<div class="dialog__content dialog__content_{{state}}">
 		{{#if window}}
 		<div class="dialog__window">
 			<button 
