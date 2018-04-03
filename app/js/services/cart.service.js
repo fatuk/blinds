@@ -93,7 +93,7 @@
             delete data.hour;
             delete data.min;
             $http.post(url, data)
-                .success(function (response) {
+                .then(function (response) {
                     defer.resolve(response);
                 }, function (err) {
                     $log.log(err);
@@ -113,7 +113,7 @@
             delete data.hour;
             delete data.min;
             $http.post(url, data)
-                .success(function (response) {
+                .then(function (response) {
                     defer.resolve(response);
                 }, function (err) {
                     $log.log(err);
@@ -125,7 +125,7 @@
             var url = API_PATH + ConfigService.feedbackPath;
             var defer = $q.defer();
             $http.post(url, params)
-                .success(function (response) {
+                .then(function (response) {
                     defer.resolve(response);
                 }, function (err) {
                     $log.log(err);

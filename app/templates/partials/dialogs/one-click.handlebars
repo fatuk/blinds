@@ -1,12 +1,10 @@
-<form class="order-form" ng-controller="OrderCtrl" ng-submit="submitForm()">
+<form class="order-form" ng-submit='oneClickSubmit()'>
 	<header>
 		<h3 class="order-form__title">
-			<svg ng-if="context !== 'callme' && !mobile" class="icon icon-cart">
+			<svg class="icon icon-cart">
 				<use xlink:href="icons/icons.svg#cart"></use>
 			</svg>
-			<span ng-if="context === 'callme'">Перезвоните мне</span>
-			<span ng-if="context === 'order'"></span>
-			<span ng-if="context === 'oneclick'">Купить в 1 клик</span>
+			Купить в 1 клик
 		</h3>
 	</header>
 	<section class="order-form__body" ng-if="!state.complete && !state.loading">

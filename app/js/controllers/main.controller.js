@@ -80,6 +80,13 @@
             $rootScope.modalOpen = true;
         }
         
+        self.buyOneClick = () => {
+            $scope.state.complete = false;
+            $scope.state.loading = false;
+            self['is-oneclick-open'] = true;
+            $rootScope.modalOpen = true;
+        }
+        
         self.openFeedback = () => {
             $scope.state.complete = false;
             $scope.state.loading = false;

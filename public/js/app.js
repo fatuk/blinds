@@ -104,6 +104,13 @@
             $rootScope.modalOpen = true;
         };
 
+        self.buyOneClick = function () {
+            $scope.state.complete = false;
+            $scope.state.loading = false;
+            self['is-oneclick-open'] = true;
+            $rootScope.modalOpen = true;
+        };
+
         self.openFeedback = function () {
             $scope.state.complete = false;
             $scope.state.loading = false;
@@ -295,7 +302,7 @@
             delete data.context;
             delete data.hour;
             delete data.min;
-            $http.post(url, data).success(function (response) {
+            $http.post(url, data).then(function (response) {
                 defer.resolve(response);
             }, function (err) {
                 $log.log(err);
@@ -314,7 +321,7 @@
             delete data.context;
             delete data.hour;
             delete data.min;
-            $http.post(url, data).success(function (response) {
+            $http.post(url, data).then(function (response) {
                 defer.resolve(response);
             }, function (err) {
                 $log.log(err);
@@ -325,7 +332,7 @@
         function submitFeedback(params) {
             var url = API_PATH + ConfigService.feedbackPath;
             var defer = $q.defer();
-            $http.post(url, params).success(function (response) {
+            $http.post(url, params).then(function (response) {
                 defer.resolve(response);
             }, function (err) {
                 $log.log(err);
