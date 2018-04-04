@@ -1,4 +1,4 @@
-<form class="order-form" ng-submit='oneClickSubmit()'>
+<form class="order-form" ng-submit='$ctrl.oneClickSubmit()'>
 	<header>
 		<h3 class="order-form__title">
 			<svg class="icon icon-cart">
@@ -9,25 +9,21 @@
 	</header>
 	<section class="order-form__body" ng-if="!state.complete && !state.loading">
 		<ol class="order-form__list" ng-if="context !== 'callme'">
-			<li class="order-form__item" ng-repeat="(key,product) in products track by $index">
-				<strong ng-if="products.length > 1"></strong>
-				{{product.title}}
-				<span ng-if="!!product.texture">модель {{product.texture}}</span>
-				<span ng-if="product.withCornice && product.cornice.cartText" ng-bind="' + ' + product.cornice.cartText"></span>
-				{{!-- <span class="dimenstions" ng-if="!!product.allowHeight && !!product.dimensions.width && !!product.dimensions.height">
-					({{product.dimensions.width}} см x {{product.dimensions.height}} см)
-				</span> --}}
-				{{!-- <span class="dimenstions" ng-if="!product.allowHeight && !!product.dimensions.width">
-					({{product.dimensions.width}} cм)
-				</span> --}}
+			<li class="order-form__item">
+				{{!-- oneClickProduct --}}
+				<strong ng-if="$ctrl.oneClickProduct"></strong>
+				<span ng-bind="$ctrl.oneClickProduct.title"></span>
+				<span ng-if="!!product.texture">
+					модель <span ng-bind="$ctrl.oneClickProduct.texture"></span>
+				</span>
+				<span ng-if="$ctrl.oneClickProduct.withCornice && $ctrl.oneClickProduct.cornice.cartText" ng-bind="' + ' + $ctrl.oneClickProduct.cornice.cartText"></span>
 				- <strong>
-					{{!-- {{product.price}} р. --}}
-					2 187 р.
-				</strong><span ng-if="!product.priceExactly">/м<sup>2</sup></span>
-			</li>	
+					<span ng-bind="$ctrl.oneClickProduct.priceExactly"></span> р.
+				{{!-- </strong><span ng-if="!$ctrl.oneClickProduct.priceExactly">/м<sup>2</sup></span> --}}
+			</li>
 		</ol>
-		<input type="text" class="order-form__input" placeholder="Ваше имя" ng-model="order.name" ng-required="true" >
-		<input type="tel" class="order-form__input" placeholder="Ваш телефон" ng-model="order.phone" ng-required="true" ng-focus="phoneFocus();">
+		<input type="text" class="order-form__input" placeholder="Ваше имя" ng-model="$ctrl.oneClickProduct.name" ng-required="true" >
+		<input type="tel" class="order-form__input" placeholder="Ваш телефон" ng-model="$ctrl.oneClickProduct.phone" ng-required="true" ng-focus="phoneFocus();">
 	</section>
 	<section class="order-form__body" ng-if="state.complete">
 		<p>
@@ -60,13 +56,13 @@
 		<div class="order-form__call-title">Время звонка</div>
 		<div class="order-form__time">
 			<div dropdown-select="hours"
-				dropdown-model="order.hour"
+				dropdown-model="$ctrl.oneClickProduct.hour"
 				dropdown-item-label="label">
 			</div>
 		</div>
 		<div class="order-form__time">
 			<div dropdown-select="minutes"
-				dropdown-model="order.min"
+				dropdown-model="$ctrl.oneClickProduct.min"
 				dropdown-item-label="label">
 			</div>
 		</div>

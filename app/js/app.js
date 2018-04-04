@@ -1,7 +1,8 @@
 (() => {
 	angular.module('app', [
 		'LocalStorageModule',
-		'ngDropdowns'
+		'ngDropdowns',
+		'angular-owl-carousel'
 	])
 		.constant('API_PATH', 'data/');
 })();

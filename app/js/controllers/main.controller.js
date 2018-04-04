@@ -43,6 +43,13 @@
             min: $scope.minutes[0]
         };
 
+        self.oneClickProduct = {
+            phone: '',
+            name: '',
+            hour: $scope.hours[0],
+            min: $scope.minutes[0]
+        };
+
         $scope.message = {
             name: '',
             email: '',
@@ -80,7 +87,9 @@
             $rootScope.modalOpen = true;
         }
         
-        self.buyOneClick = () => {
+        self.buyOneClick = (product) => {
+            self.oneClickProduct = angular.fromJson(product);
+            self.oneClickProduct.priceExactly = self.oneClickProduct.oldPrice - (self.oneClickProduct.oldPrice * self.oneClickProduct.sale / 100);
             $scope.state.complete = false;
             $scope.state.loading = false;
             self['is-oneclick-open'] = true;
@@ -112,6 +121,7 @@
             self['is-feedback-open'] = false;
             self['is-callme-open'] = false;
             self['is-order-open'] = false;
+            self['is-oneclick-open'] = false;
             $rootScope.modalOpen = false;
         }
 
@@ -153,6 +163,20 @@
                 // } else if (params.context === 'oneclick') {
                 //     window.ga('send', 'event', 'knopka_perezvonite_oneclick', 'perezvonit_oneclick');
                 // }
+            CartService.submitOrder(params)
+                .then(data => {
+                    $scope.state.loading = false;
+                    $scope.state.complete = true;
+                }, err => {
+                    $scope.state.loading = false;
+                });
+        };
+        
+        self.oneClickSubmit = () => {
+            let params = {};
+			$scope.state.loading = true;
+            angular.extend(params, {context: $scope.context}, self.oneClickProduct);
+            params.context = 'order';
             CartService.submitOrder(params)
                 .then(data => {
                     $scope.state.loading = false;
